@@ -1,0 +1,25 @@
+.header {
+  @apply z-50 relative;
+  height: 4rem;
+}
+
+.header nav {
+  @apply flex h-full w-screen justify-between items-center;
+
+  border-bottom: 1px solid var(--border-color);
+}
+.header-items {
+  @apply flex;
+}
+
+.header-items span {
+  margin: auto 1rem;
+}
+.navigation {
+  @apply rounded-2xl p-2 flex items-center justify-center h-8 w-8; 
+  border: 1px solid var(--light-grey);
+}
+
+.navigation img {
+  @apply h-auto max-h-full w-auto max-w-full; 
+}
