@@ -1,0 +1,105 @@
+
+.front-page {
+  @apply md:w-full h-[101vh] relative top-[-9.5vh] left-0 z-10 flex overflow-hidden ; 
+  background: {
+    image: url("./assets/images/main_bnr.png");
+    size: contain; 
+    repeat: no-repeat;
+    position: right; 
+  }
+}
+
+@media (max-width: 1024px) {
+  .front-page {
+    background-size: 90% 100%; 
+  }
+}
+
+/* Mobile-specific background */
+@media (max-width: 768px) {
+  .front-page {
+    background-image: url("./assets/images/bnr_mobile.png");
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    padding: 0 1rem; 
+  }
+}
+
+/* Left-side navigation */
+.side-nav {
+  @apply w-[4rem] hidden md:flex flex-col p-5;
+  border-right: 1px solid var(--border-color);
+
+  div {
+    margin-top: auto;
+
+    img {
+      @apply mt-2 mb-2;
+    }
+  }
+}
+
+/* Heading section */
+.front-page_heading {
+  @apply md:w-[30vw] md:mt-auto md:mr-0 md:mb-auto md:ml-[6rem] font-gilroy ;
+
+  h1 {
+    @apply font-bold text-[3.5rem];
+
+    span {
+      background: linear-gradient(90deg, var(--primary-text) 70%, var(--green));
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  h4 {
+    @apply text-[1rem] font-semibold w-[90%] mt-4 mb-10;
+    color: var(--secondary-text);
+  }
+}
+
+/* text styles on smaller screens */
+
+@media (max-width: 768px) {
+  .front-page_heading {
+    @apply mb-auto mt-[5rem] mr-10 w-auto;
+    h1 {
+      @apply text-[3rem];
+      color: white;
+
+      span {
+        color: white;
+        background: none;
+        -webkit-background-clip: unset;
+        background-clip: unset;
+        -webkit-text-fill-color: unset;
+      }
+    }
+
+    h4{
+      @apply font-semibold  text-[1.2rem];
+      color: white;
+    }
+  }
+}
+
+
+
+@media (max-width: 426px) {
+  .front-page_heading {
+    @apply w-auto mt-40;
+    h1 {
+      @apply text-[2rem] ;
+    }
+
+    h4{
+      @apply font-semibold text-[1rem];
+    }
+  }
+}
