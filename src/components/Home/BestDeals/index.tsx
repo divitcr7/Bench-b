@@ -1,4 +1,4 @@
-import "./bestDeals.scss";
+import "./bestdeals.scss";
 
 import HowToCards from "../../Common/HowToCards";
 
