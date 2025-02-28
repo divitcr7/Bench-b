@@ -1,17 +1,28 @@
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { useEffect } from "react";
 
-interface MetaType{
-    title:string;
-    description:string
+interface MetaType {
+  title: string;
+  description: string;
 }
 
 export default function MetaComponent({ meta }: { meta: MetaType }) {
-  return (
-    <HelmetProvider>
-      <Helmet>
-        <title>{meta?.title}</title>
-        <meta name="description" content={meta?.description} />
-      </Helmet>
-    </HelmetProvider>
-  );
+  useEffect(() => {
+    document.title = meta.title;
+
+    // selecting existing meta tag
+    let metaTag = document.querySelector(
+      'meta[name="description"]'
+    ) as HTMLMetaElement | null;
+
+    if (metaTag) {
+      metaTag.content = meta.description;
+    } else {
+      metaTag = document.createElement("meta") as HTMLMetaElement;
+      metaTag.name = "description";
+      metaTag.content = meta.description;
+      document.head.appendChild(metaTag);
+    }
+  }, [meta]);
+
+  return null;
 }
