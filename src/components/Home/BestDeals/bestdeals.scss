@@ -1,0 +1,44 @@
+.bestDeals {
+  @apply h-auto w-[100vw];
+
+  h4 {
+    @apply text-center text-[1rem] font-semibold mb-1;
+    color: var(--indigo);
+  }
+
+  h2 {
+    @apply text-[2.2rem] md:text-[3.8rem] text-center font-bold;
+  }
+
+  .highlight {
+    @apply relative inline-block;
+  }
+
+  .highlight::after {
+    @apply absolute left-1/2 w-[100%] h-[10px] -z-10 bottom-[10px] md:bottom-[20px];
+    background-color: var(--gold);
+    content: ""; 
+    transform: translateX(-50%); 
+  }
+
+  &_cards {
+    @apply w-[90%] md:w-[70%] m-auto grid md:grid-cols-3;
+  }
+
+  &-container {
+    @apply pt-[5rem] pb-[5rem] md:pt-[7rem] md:pb-[7rem];
+  }
+
+  &_button {
+    @apply w-full text-center;
+
+    button {
+      @apply pt-3 pb-3 pl-[32vw] pr-[32vw] md:pl-28 md:pr-28;
+      border: 2px solid var(--green);
+    }
+  }
+
+  &-title {
+    @apply w-[70%] md:w-[50%] m-auto mb-[5rem];
+  }
+}

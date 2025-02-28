@@ -41,7 +41,8 @@ export default function Banner() {
         pagination={{ clickable: true }}
         modules={[Pagination]}
         breakpoints={{
-          768: { slidesPerView: images.length }, // Show all images on big screens
+          768: { slidesPerView: 3 }, 
+          1024: { slidesPerView: images.length },
         }}
         className="banner-slider"
       >

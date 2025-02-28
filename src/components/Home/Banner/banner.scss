@@ -31,7 +31,7 @@
 
   /* images on large screen */
   .banner-images {
-    @apply flex w-[80vw] h-[50%] m-auto justify-between;
+    @apply flex w-[80vw] h-[50%] m-auto justify-between ;
 
     img {
       @apply object-contain w-[8rem];
@@ -98,3 +98,5 @@
     }
   }
 }
+
+
