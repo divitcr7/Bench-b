@@ -1,0 +1,21 @@
+/* common styles */
+
+.btn {
+  @apply font-abel;
+
+  border-radius: 0px 8px 0px 8px;
+  font-size: 0.9rem;
+
+  &-empty {
+    @apply font-bold  pt-1 pb-2 pr-7 pl-7;
+    border: 1px solid var(--green);
+    color: var(--green);
+  }
+
+  &-filled {
+    @apply font-semibold pt-3 pb-3 pr-10 pl-10;
+    /* border:1px solid white ; */
+    background-color: var(--green);
+    color: white;
+  }
+}

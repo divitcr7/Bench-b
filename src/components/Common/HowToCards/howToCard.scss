@@ -1,0 +1,58 @@
+.howToCard {
+  @apply w-[95%] bg-white
+         p-6 flex flex-col items-center text-center relative ml-auto mr-auto mb-[5rem];
+  border: 1px solid var(--divider);
+
+  .bgImage {
+    @apply absolute left-0 w-[20%] ml-5;
+    bottom: 55%;
+    // transform: translateY(50%);
+    z-index: 10;
+  }
+
+  .iconContainer {
+    @apply w-[120px] h-[120px] bg-white flex items-center justify-center -mt-20 mb-4;
+    border-radius: 0% 20%;
+    box-shadow: 0 1px 10px var(--divider);
+  }
+
+  .icon {
+    @apply w-14 h-14;
+  }
+
+  .textContainer {
+    @apply flex flex-col z-20;
+  }
+
+  .title {
+    @apply text-[1.4rem] font-semibold mt-2 text-left;
+    color: var(--primary-text);
+  }
+
+  .info {
+    @apply mt-1 text-left font-medium;
+    color: var(--primary-text);
+  }
+
+  .goldDash {
+    @apply w-[15%] h-[4px] mt-2 mb-2;
+    background-color: var(--gold);
+  }
+}
+
+@media (max-width:1024px){
+  .bgImage {
+    transform: translateY(-100%);
+  }
+}
+
+@media (max-width:768px){
+  .bgImage {
+    transform: translateY(-320%);
+  }
+}
+@media (max-width:426px){
+  .bgImage {
+    transform: translateY(0%);
+  }
+}

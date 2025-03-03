@@ -1,0 +1,42 @@
+@use "./styles/fonts.scss";
+@use "./styles/common.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* for dark themes */
+/* [data-theme="dark"]{
+  --bg-color:black;
+  --primary-text:white;
+}  */
+
+:root {
+  /* background colors */
+  --bg-color: white;
+  --light-bg:#F7F7FA;
+
+  /* text colors */
+  --primary-text: #07092d;
+  --secondary-text: #616381;
+  --light-grey: #a7a9d1;
+  --green: #19c19e;
+  --indigo:#2901E8;
+  --gold:#E0C18D;
+
+  /* border colors */
+  --border-color: rgba(139, 149, 216, 0.3);
+  --divider:#e2e2e9;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--primary-text);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Abel", sans-serif;
+}
