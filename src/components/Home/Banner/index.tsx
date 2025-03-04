@@ -22,9 +22,9 @@ export default function Banner() {
           alt="Trusted Icon"
           className="icon"
         />
-        <h3>
+        <h4>
           <span>Trusted by</span> Hundreds of Enterprises Worldwide
-        </h3>
+        </h4>
       </div>
 
       {/* Images for Large Screens */}

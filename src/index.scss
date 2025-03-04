@@ -23,10 +23,18 @@
   --green: #19c19e;
   --indigo:#2901E8;
   --gold:#E0C18D;
+  --dark-blue:#07092D;
+  --light-blue:#1E204A;
+  --blue-border:#6C6EA6;
 
   /* border colors */
   --border-color: rgba(139, 149, 216, 0.3);
   --divider:#e2e2e9;
+
+
+  // font sizes
+  --h2-big:3.8rem;
+  --h2-small:2.2rem;
 }
 
 body {

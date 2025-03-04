@@ -1,4 +1,4 @@
-import {Meta,Hero,Banner,BestDeals} from "./../../components"
+import {Meta,Hero,Banner,BestDeals,BestOffers} from "./../../components"
 
 export default function Home() {
   const metadata = {
@@ -16,6 +16,8 @@ export default function Home() {
       <Banner />
       {/* we find you the best deals */}
       <BestDeals/>
+      {/* we search and compare the best insurance offers */}
+      <BestOffers/>
     </>
   );
 }
