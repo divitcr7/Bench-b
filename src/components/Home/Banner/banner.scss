@@ -1,9 +1,9 @@
 .banner {
-  @apply h-[18rem] pt-[3rem]  md:pt-[5rem] md:pb-[5rem] flex flex-col items-center z-20 relative;
-    background-color: var(--light-bg);
+  @apply h-auto pt-eightySmall pb-eightySmall md:pt-eightyBig md:pb-eightyBig flex flex-col items-center z-20 relative -mt-16;
+  background-color: var(--light-bg);
 
   &-heading {
-    @apply flex items-center gap-2 px-4 text-center md:text-[1.7rem] mb-[1.5rem] md:mb-[3.5rem] font-bold relative;
+    @apply flex items-center gap-2 px-4 text-center md:text-h4Big mb-fiftySixSmall md:mb-fiftySixBig font-bold relative;
 
     &::before,
     &::after {
@@ -31,7 +31,7 @@
 
   /* images on large screen */
   .banner-images {
-    @apply flex w-[80vw] h-[50%] m-auto justify-between ;
+    @apply flex w-[80vw] h-[50%] m-auto justify-between;
 
     img {
       @apply object-contain w-[8rem];
@@ -68,8 +68,7 @@
 
   @media (max-width: 768px) {
     .banner-heading {
-      @apply flex-col;
-      font-size: 1.5rem;
+      @apply flex-col text-h4Small;
 
       &::before,
       &::after {
@@ -90,7 +89,7 @@
     }
 
     .banner-slider {
-      @apply flex ;
+      @apply flex;
 
       .swiper-slide img {
         @apply w-[8rem] h-[1.5rem];
@@ -98,5 +97,3 @@
     }
   }
 }
-
-

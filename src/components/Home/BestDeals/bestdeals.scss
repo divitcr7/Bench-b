@@ -1,13 +1,13 @@
 .bestDeals {
-  @apply h-auto w-[100vw];
+  @apply h-auto w-[100vw] pt-eightySmall pb-eightySmall md:pt-eightyBig md:pb-eightyBig;
 
   h4 {
-    @apply text-center text-[1rem] font-semibold mb-1;
+    @apply text-center text-overlineSmall md:text-overlineBig font-semibold mb-sixteen ;
     color: var(--indigo);
   }
 
   h2 {
-    @apply text-[2.2rem] md:text-[3.8rem] text-center font-bold;
+    @apply text-h2Small md:text-h2Big text-center font-bold mb-fortyBig;
   }
 
   .highlight {
@@ -22,11 +22,11 @@
   }
 
   &_cards {
-    @apply w-[90%] md:w-[70%] m-auto grid md:grid-cols-3;
+    @apply w-[90%] md:w-[70%] m-auto grid md:grid-cols-3 ;
   }
 
   &-container {
-    @apply pt-[5rem] pb-[5rem] md:pt-[7rem] md:pb-[7rem];
+    @apply pt-eightySmall pb-eightySmall md:pt-eightyBig md:pb-eightyBig ;
   }
 
   &_button {
@@ -40,5 +40,12 @@
 
   &-title {
     @apply w-[70%] md:w-[50%] m-auto mb-[5rem];
+  }
+}
+
+//768px
+@media (max-width:1440px){
+  .bestDeals{
+    @apply pt-eightySmall pb-eightySmall;
   }
 }

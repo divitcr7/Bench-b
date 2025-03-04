@@ -1,11 +1,15 @@
+.hero{
+  @apply relative top-[-4rem] ;
+  height:calc(102vh);
+}
 
 .front-page {
-  @apply md:w-full h-[101vh] relative top-[-9.5vh] left-0 z-10 flex overflow-hidden ; 
+  @apply md:w-full h-full  left-0 z-10 flex ; 
   background: {
     image: url("./assets/images/main_bnr.png");
     size: contain; 
     repeat: no-repeat;
-    position: right; 
+    position: bottom right; 
   }
 }
 

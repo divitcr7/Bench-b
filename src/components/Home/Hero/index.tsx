@@ -2,7 +2,7 @@ import './hero.scss'
 
 export default function Hero(){
     return (
-      <main className='h-[91vh] '>
+      <main className='hero'>
         <section className="front-page">
           {/* left navigation */}
           <nav className="side-nav">
