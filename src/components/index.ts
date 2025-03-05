@@ -5,6 +5,7 @@ import HowToCards from "./Common/HowToCards";
 import Hero from "./Home/Hero";
 import Banner from "./Home/Banner";
 import BestDeals from "./Home/BestDeals";
-import BestOffers from "./Home/BestOffers"
+import BestOffers from "./Home/BestOffers";
+import Specialities from "./Home/Specialities"
 
-export { Header, Meta, HowToCards, Hero, Banner, BestDeals,BestOffers };
+export { Header, Meta, HowToCards, Hero, Banner, BestDeals,BestOffers,Specialities };

@@ -9,6 +9,11 @@
          pl-containerSideSmall pr-containerSideSmall
          md:pl-containerSideBig md:pr-containerSideBig;
 
+  &_container {
+    @apply h-auto w-full relative;
+    background-color: var(--dark-blue);
+  }
+  
   // Typography Styles
   h2 {
     @apply text-center md:text-left m-auto 
@@ -82,7 +87,7 @@
     }
 
     &_price {
-      @apply text-h3Small md:text-h3Big text-white relative;
+      @apply text-h2Small md:text-h2Big text-white relative;
     }
 
     &_sign {
@@ -97,13 +102,8 @@
            grid grid-rows-[90%_10%] relative mt-2;
   }
 
-  &_container {
-    @apply h-auto w-full relative;
-    background-color: var(--dark-blue);
-  }
-
   &_button {
-    @apply w-full m-auto text-center;
+    @apply w-full m-auto text-center ;
   }
 }
 
@@ -209,6 +209,5 @@
     &_cards-container {
       @apply mt-1;
     }
-
   }
 }
