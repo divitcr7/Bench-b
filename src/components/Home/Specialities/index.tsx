@@ -1,5 +1,5 @@
 import "./specialities.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
 interface SpecialityCardType {
@@ -26,6 +26,7 @@ function SpecialityCard({ item }: { item: SpecialityCardType }) {
 
 export default function Specialities() {
   const [selectedCategory, setSelectedCategory] = useState("Products");
+  const [visibleData, setVisibleData] = useState<SpecialityCardType[]>([]);
 
   const data = [
     {
@@ -92,6 +93,21 @@ export default function Specialities() {
         "We guarantee full coverage for all properties at an excellent rate.",
     },
   ];
+  //to show a certain number of data on different screen sizes
+  useEffect(() => {
+    const updateVisibleData = () => {
+      if (window.innerWidth < 768) {
+        setVisibleData(data.slice(0, 5)); 
+      } else {
+        setVisibleData(data); 
+      }
+    };
+
+    updateVisibleData(); 
+    window.addEventListener("resize", updateVisibleData); 
+
+    return () => window.removeEventListener("resize", updateVisibleData); 
+  }, []);
 
   return (
     <section className="speciality-container">
@@ -110,12 +126,14 @@ export default function Specialities() {
           ))}
         </div>
         <div className="speciality-cards-container">
-          {data.map((item) => {
+          {visibleData.map((item) => {
             return <SpecialityCard key={item.id} item={item} />;
           })}
         </div>
         <div className="speciality-button">
-          SHOW MORE <ChevronDown />
+          <span>
+            SHOW MORE <ChevronDown />
+          </span>
         </div>
       </div>
     </section>
