@@ -26,7 +26,7 @@ const config: Config = {
         h6Big: "",
         h6Small: "",
         body1Big: ".9rem",
-        body1Small: ".5rem",
+        body1Small: ".7rem",
         body1BoltBig: "",
         body1BoltSmall: "",
         body2Big: "",
@@ -41,6 +41,8 @@ const config: Config = {
         captionSmall: "",
         menuBig: "",
         menuSmall: "",
+        btnBig:".8rem",
+        btnSmall:".8rem",
       },
       spacing: {
         // containerTopBig: "7rem",

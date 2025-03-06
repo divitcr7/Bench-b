@@ -1,4 +1,4 @@
-import {Meta,Hero,Banner,BestDeals,BestOffers,Specialities} from "./../../components"
+import {Meta,Hero,Banner,BestDeals,BestOffers,Specialities, Testimonials} from "./../../components"
 
 export default function Home() {
   const metadata = {
@@ -20,6 +20,8 @@ export default function Home() {
       <BestOffers/>
       {/* our specialities */}
       <Specialities/>
+      {/* testimonials */}
+      <Testimonials/>
     </>
   );
 }

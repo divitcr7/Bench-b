@@ -1,31 +1,34 @@
 .speciality {
-  @apply bg-red-200 h-full w-full grid grid-rows-[10%_5%_5%_75%_5%] gap-0;
+  @apply h-full w-full gap-0;
   // Padding
-  @apply pt-eightyBig pb-eightyBig 
+  @apply pt-eightySmall pb-eightySmall md:pt-eightyBig md:pb-eightyBig 
          pl-containerSideSmall pr-containerSideSmall
          md:pl-containerSideBig md:pr-containerSideBig;
 
   &-container {
-    @apply h-auto w-full;
+    @apply w-full h-auto;
   }
 
   h2 {
-    @apply text-h2Small md:text-h2Big font-bold h-[10vh] w-full text-center mb-fortySmall md:mb-fortyBig;
+    @apply text-h2Small md:text-h2Big font-bold h-[10vh] w-full text-center  md:mb-fortyBig;
   }
   h5 {
-    @apply text-h5Small md:text-h5Big font-bold h-[5vh] w-full text-center  mb-thirtyTwoSmall md:mb-thirtyTwoBig;
+    @apply text-h5Small md:text-h5Big font-bold h-[5vh] w-full text-center  md:mb-thirtyTwoBig;
   }
   &-nav {
-    @apply flex ml-auto mr-auto mb-fiftySixSmall md:mb-fiftySixBig h-[8vh] w-[40vw];
-    span {
-      @apply w-full;
-      border: 1px solid var(--divider);
-    }
+    @apply flex ml-auto mr-auto md:mb-fiftySixBig h-[6vh] md:h-[8vh] w-full md:w-[40vw] text-h5Small md:text-h5Big;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     span {
-      @apply text-center m-auto h-full w-full font-bold;
+      @apply text-center font-bold;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--divider);
       cursor: pointer;
       transition: all 0.3s ease;
     }
@@ -37,10 +40,10 @@
   }
 
   &-cards {
-    @apply grid grid-rows-4 h-[40vh] w-[100%] ml-auto mr-auto;
+    @apply grid grid-rows-4 h-[35vh] md:h-[40vh] w-[100%] ml-auto mr-auto mb-1;
 
     &-content {
-      @apply h-full w-full flex flex-col items-center justify-around;
+      @apply h-full w-full flex flex-col items-center justify-between;
     }
 
     img {
@@ -52,7 +55,8 @@
     }
 
     p {
-      @apply text-center text-body1Small md:text-body1Big font-gilroy pl-5 pr-5 mt-sixteen;
+      @apply text-center text-body1Small md:text-body1Big font-gilroy pl-5 pr-5 mt-sixteen font-bold;
+      color: var(--secondary-text);
     }
 
     .speciality-arrow {
@@ -90,16 +94,24 @@
     }
   }
 
-  &-button{
-    @apply bg-yellow-400 m-auto mt-fiftySixBig font-bold;
-    cursor: pointer;
-    border-bottom: 2px solid var(--green);
+  &-button {
+    @apply w-full mt-fiftySixSmall md:mt-fiftySixBig font-bold text-center text-btnSmall md:text-btnBig;
 
-    svg{
+    cursor: pointer;
+    span {
+      border-bottom: 2px solid var(--green);
+    }
+
+    svg {
+      @apply w-4 h-4;
       display: inline;
     }
   }
   &-cards-container {
-    @apply h-auto grid grid-rows-3 grid-cols-3 w-[95%] m-auto mt-fiftySixSmall md:mt-fiftySixBig;
+    @apply grid grid-rows-3 grid-cols-1 md:grid-cols-3 w-[95%] m-auto mt-fiftySixSmall md:mt-fiftySixBig;
   }
+}
+
+@media (max-width:768px){
+
 }

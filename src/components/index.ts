@@ -7,5 +7,16 @@ import Banner from "./Home/Banner";
 import BestDeals from "./Home/BestDeals";
 import BestOffers from "./Home/BestOffers";
 import Specialities from "./Home/Specialities"
+import Testimonials from "./Home/Testimonials"
 
-export { Header, Meta, HowToCards, Hero, Banner, BestDeals,BestOffers,Specialities };
+export {
+  Header,
+  Meta,
+  HowToCards,
+  Hero,
+  Banner,
+  BestDeals,
+  BestOffers,
+  Specialities,
+  Testimonials,
+};

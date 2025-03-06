@@ -1,0 +1,40 @@
+.testimonial {
+  //padding
+  @apply h-full w-full pt-eightyBig pb-eightyBig 
+         pl-containerSideSmall pr-containerSideSmall
+         md:pl-containerSideBig md:pr-containerSideBig;;
+
+  //grid system
+  @apply grid grid-cols-1 grid-rows-3 md:grid-cols-3 md:grid-rows-[85%_15%];
+  grid-template-areas:
+    "testimonial reviews reviews"
+    "buttons reviews reviews";
+  &-container {
+    @apply h-auto w-full;
+    background-color: var(--light-bg);
+  }
+
+  &-header {
+    @apply bg-red-400;
+    grid-area: testimonial;
+  }
+  &-navigation {
+    @apply bg-green-400;
+    grid-area: buttons;
+  }
+  &-reviews {
+    @apply bg-yellow-500;
+    &-container {
+      @apply bg-pink-900;
+      grid-area: reviews;
+    }
+  }
+}
+@media (max-width: 465px) {
+  .testimonial {
+    grid-template-areas:
+      "testimonial "
+      "reviews"
+      "buttons ";
+  }
+}
