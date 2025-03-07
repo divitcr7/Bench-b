@@ -1,6 +1,6 @@
 import "./bestdeals.scss";
 
-import HowToCards from "../../Common/HowToCards";
+import { HowToCards } from "../../Common";
 
 export default function BestDeals() {
   const instructions = [
