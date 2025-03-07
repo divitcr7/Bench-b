@@ -6,6 +6,8 @@ import Hero from "./Home/Hero";
 import Banner from "./Home/Banner";
 import BestDeals from "./Home/BestDeals";
 import BestOffers from "./Home/BestOffers";
+import ContactUs from "./Home/ContactUs";
+import Footer from "./Home/Footer";
 import Specialities from "./Home/Specialities"
 import Testimonials from "./Home/Testimonials"
 
@@ -16,6 +18,8 @@ export {
   Hero,
   Banner,
   BestDeals,
+  ContactUs,
+  Footer,
   BestOffers,
   Specialities,
   Testimonials,
