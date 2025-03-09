@@ -40,7 +40,7 @@
   }
 
   &-cards {
-    @apply grid grid-rows-4 h-[35vh] md:h-[40vh] w-[100%] ml-auto mr-auto mb-1;
+    @apply grid grid-rows-4 h-[13rem] md:h-[18rem] w-[100%] ml-auto mr-auto mb-1 ;
 
     &-content {
       @apply h-full w-full flex flex-col items-center justify-between;
@@ -108,7 +108,7 @@
     }
   }
   &-cards-container {
-    @apply grid grid-rows-3 grid-cols-1 md:grid-cols-3 w-[95%] m-auto mt-fiftySixSmall md:mt-fiftySixBig;
+    @apply grid grid-rows-3 grid-cols-1 md:grid-cols-3 w-[95%] m-auto mt-fiftySixSmall md:mt-fiftySixBig ;
   }
 }
 

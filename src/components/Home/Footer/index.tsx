@@ -1,24 +1,50 @@
 import { useState, useEffect } from "react";
 import "./Footer.scss";
 
+const data = {
+  commercial: [
+    "Real Estate",
+    "Construction",
+    "Healthcare",
+    "Environmental",
+    "Auto Service",
+    "Food & Beverage",
+    "Transportation",
+    "Wholesale",
+    "Non-Profit",
+    "Financial Services",
+    "Retail",
+    "Manufacturing",
+  ],
+  personal: [
+    "Homeowners",
+    "Auto",
+    "Rental Property",
+    "Condo",
+    "Classic Auto",
+    "Builder's Risk",
+    "Flood",
+    "Motorcycle & Watercraft",
+    "Life Insurance",
+  ],
+  company: ["About Us", "Customer Service"],
+};
+
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [openDropdown, setOpenDropdown] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
-      if (window.innerWidth > 768) setOpenDropdown(null); 
+      if (window.innerWidth > 768) setOpenDropdown(null);
     };
-
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const toggleDropdown = (section: string) => {
-    if (isMobile) {
-      setOpenDropdown(openDropdown === section ? null : section);
-    }
+  const toggleDropdown = (section) => {
+    if (isMobile) setOpenDropdown(openDropdown === section ? null : section);
   };
 
   return (
@@ -39,80 +65,24 @@ const Footer = () => {
             <span>Terms of Service</span>
           </div>
         </div>
-
         <div className="footer-right">
-          {/* Commercial Section */}
-          <div className="footer-section">
-            <h3 onClick={() => toggleDropdown("commercial")}>
-              Commercial
-              {isMobile && (
-                <span className="arrow">
-                  {openDropdown === "commercial" ? "▲" : "▼"}
-                </span>
-              )}
-            </h3>
-            <ul
-              className={
-                !isMobile || openDropdown === "commercial" ? "open" : ""
-              }
-            >
-              <li>Real Estate</li>
-              <li>Construction</li>
-              <li>Healthcare</li>
-              <li>Environmental</li>
-              <li>Auto Service</li>
-              <li>Food & Beverage</li>
-              <li>Transportation</li>
-              <li>Wholesale</li>
-              <li>Non-Profit</li>
-              <li>Financial Services</li>
-              <li>Retail</li>
-              <li>Manufacturing</li>
-            </ul>
-          </div>
-
-          {/* Personal Section */}
-          <div className="footer-section">
-            <h3 onClick={() => toggleDropdown("personal")}>
-              Personal
-              {isMobile && (
-                <span className="arrow">
-                  {openDropdown === "personal" ? "▲" : "▼"}
-                </span>
-              )}
-            </h3>
-            <ul
-              className={!isMobile || openDropdown === "personal" ? "open" : ""}
-            >
-              <li>Homeowners</li>
-              <li>Auto</li>
-              <li>Rental Property</li>
-              <li>Condo</li>
-              <li>Classic Auto</li>
-              <li>Builder's Risk</li>
-              <li>Flood</li>
-              <li>Motorcycle & Watercraft</li>
-              <li>Life Insurance</li>
-            </ul>
-          </div>
-
-          {/* Company Section */}
-          <div className="footer-section">
-            <h3 onClick={() => toggleDropdown("company")}>
-              Company
-              {isMobile && (
-                <span className="arrow">
-                  {openDropdown === "company" ? "▲" : "▼"}
-                </span>
-              )}
-            </h3>
-            <ul
-              className={!isMobile || openDropdown === "company" ? "open" : ""}
-            >
-              <li>About Us</li>
-              <li>Customer Service</li>
-            </ul>
-          </div>
+          {Object.entries(data).map(([key, items]) => (
+            <div className="footer-section" key={key}>
+              <h3 onClick={() => toggleDropdown(key)}>
+                {key.charAt(0).toUpperCase() + key.slice(1)}
+                {isMobile && (
+                  <span className="arrow">
+                    {openDropdown === key ? "▲" : "▼"}
+                  </span>
+                )}
+              </h3>
+              <ul className={!isMobile || openDropdown === key ? "open" : ""}>
+                {items.map((item) => (
+                  <li key={item}>˃ {item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </footer>

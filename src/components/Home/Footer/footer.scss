@@ -3,14 +3,11 @@
   @apply pt-eightyBig pb-eightyBig 
          pl-containerSideSmall pr-containerSideSmall
          md:pl-containerSideBig md:pr-containerSideBig;
+  @apply md:grid md:grid-cols-[30%_70%];
   color: white;
-  display: flex;
-  justify-content: space-between;
-//   padding-top: 30vh;
-  flex-wrap: wrap;
 
   &-container {
-    @apply h-auto w-full -z-10 relative;
+    @apply h-auto w-full relative;
     background: var(--primary-text);
     // transform: translateY(-30vh);
   }
@@ -21,33 +18,37 @@
       margin-bottom: 1rem;
     }
     p {
-      font-size: 0.9rem;
-      line-height: 1.5;
+      @apply mt-twentyFourSmall md:mt-twentyFourBig  mb-fiftySixSmall md:mb-fiftySixBig text-body1Small md:text-body1Big;
     }
     .footer-links {
+      @apply text-smallBodySmall md:text-smallBodyBig;
       display: flex;
       gap: 1rem;
-      margin-top: 1rem;
       span {
         cursor: pointer;
-        text-decoration: underline;
+        padding: 0.7rem;
+
         &:hover {
-          color: #00bcd4;
+          color: var(--green);
+          background-color: var(--light-blue);
+          transform: scale(1.1);
+          transition: all 0.3s ease-in-out;
+
         }
       }
     }
   }
 
   &-right {
-    display: flex;
-    gap: 3rem;
+    @apply md:flex justify-around;
     flex-wrap: wrap;
   }
 
   .footer-section {
+    transition: all 1s ease;
     h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      @apply text-h3Small md:text-h3Big;
+      @apply mb-twentyFourSmall md:mb-twentyFourBig;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -59,17 +60,17 @@
     }
     ul {
       list-style: none;
-      padding: 0;
-      margin: 0;
       display: block;
     }
     li {
-      font-size: 0.9rem;
-      margin-bottom: 0.5rem;
+      @apply text-body1Small md:text-body1Big;
+      @apply mb-sixteen;
       cursor: pointer;
       transition: color 0.3s ease;
       &:hover {
-        color: #00bcd4;
+        color: var(--green);
+        transform: scale(1.01);
+        transition: all .3s ease-in-out;
       }
     }
   }

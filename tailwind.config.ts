@@ -13,8 +13,8 @@ const config: Config = {
         headerSmall:"3.5rem"
       },
       fontSize: {
-        h1Big: "3.5rem",
-        h1Small: "2rem",
+        h1Big: "4rem",
+        h1Small: "2.5rem",
         h2Big: "3.8rem",
         h2Small: "2.2rem",
         h3Big: "1.75rem",

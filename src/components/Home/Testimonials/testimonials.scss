@@ -17,7 +17,7 @@
   }
 
   &-header {
-    @apply grid grid-cols-[20%_35%_55%] grid-rows-[30%_30%_10%_30%];
+    @apply grid md:grid-cols-[20%_35%_55%] grid-rows-[30%_30%_10%_30%];
     grid-area: testimonial;
 
     h2 {
@@ -36,7 +36,7 @@
       }
     }
     .allReviewLink {
-      @apply text-btnSmall md:text-btnBig font-bold row-span-1 row-start-4 col-span-3 col-start-1 mt-fiftySixSmall md:mt-fiftySixBig text-right md:text-left;
+      @apply text-btnSmall md:text-btnBig font-bold row-span-1 row-start-4 col-span-3 col-start-1 mt-fiftySixSmall md:mt-fiftySixBig md:text-left;
       div {
         @apply inline-block;
         border-bottom: 2px solid var(--green);
