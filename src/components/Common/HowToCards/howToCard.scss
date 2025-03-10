@@ -25,12 +25,12 @@
   }
 
   .title {
-    @apply text-[1.4rem] font-semibold mt-2 text-left;
+    @apply text-h4Small lg:text-h4Big leading-h4Small lg:leading-h4Big font-semibold mt-2 text-left;
     color: var(--primary-text);
   }
 
   .info {
-    @apply mt-1 text-left font-medium;
+    @apply mt-1 text-left font-medium text-body2Small lg:text-body2Big leading-body2Small lg:leading-body2Big;
     color: var(--primary-text);
   }
 

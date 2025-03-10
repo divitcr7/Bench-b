@@ -1,9 +1,6 @@
 .footer {
-  // Padding
-  @apply pt-eightyBig pb-eightyBig 
-         pl-containerSideSmall pr-containerSideSmall
-         md:pl-containerSideBig md:pr-containerSideBig;
-  @apply md:grid md:grid-cols-[30%_70%];
+  
+  @apply lg:grid lg:grid-cols-[30%_70%];
   color: white;
 
   &-container {
@@ -18,10 +15,12 @@
       margin-bottom: 1rem;
     }
     p {
-      @apply mt-twentyFourSmall md:mt-twentyFourBig  mb-fiftySixSmall md:mb-fiftySixBig text-body1Small md:text-body1Big;
+      @apply mt-twentyFourSmall lg:mt-twentyFourBig  mb-fiftySixSmall lg:mb-fiftySixBig ;
+      @apply text-body1Small lg:text-body1Big;
+      @apply leading-body1Small lg:leading-body1Big;
     }
     .footer-links {
-      @apply text-smallBodySmall md:text-smallBodyBig;
+      @apply text-smallBodySmall lg:text-smallBodyBig;
       display: flex;
       gap: 1rem;
       span {
@@ -40,15 +39,15 @@
   }
 
   &-right {
-    @apply md:flex justify-around;
+    @apply lg:flex justify-around;
     flex-wrap: wrap;
   }
 
   .footer-section {
     transition: all 1s ease;
     h3 {
-      @apply text-h3Small md:text-h3Big;
-      @apply mb-twentyFourSmall md:mb-twentyFourBig;
+      @apply text-h3Small lg:text-h3Big;
+      @apply mb-twentyFourSmall lg:mb-twentyFourBig;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -63,7 +62,7 @@
       display: block;
     }
     li {
-      @apply text-body1Small md:text-body1Big;
+      @apply text-body1Small lg:text-body1Big;
       @apply mb-sixteen;
       cursor: pointer;
       transition: color 0.3s ease;

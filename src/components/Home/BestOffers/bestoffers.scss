@@ -1,24 +1,17 @@
 .bestOffers {
   // Container Layout
-  @apply h-auto w-full grid 
-         grid-rows-2 md:grid-rows-[30%_70%]
-         md:grid-cols-[45%_55%];
-
-  // Padding
-  @apply pt-eightyBig pb-eightyBig 
-         pl-containerSideSmall pr-containerSideSmall
-         md:pl-containerSideBig md:pr-containerSideBig;
+  @apply h-full w-full grid grid-rows-[auto_1fr] lg:grid-cols-[45%_55%];
 
   &_container {
     @apply h-auto w-full relative;
     background-color: var(--dark-blue);
   }
-  
+
   // Typography Styles
   h2 {
-    @apply text-center md:text-left m-auto 
-           md:w-[150%] text-h2Small md:text-h2Big 
-           text-white relative z-20;
+    @apply text-center lg:text-left m-auto text-h2Small lg:text-h2Big text-white leading-h2Small lg:leading-h2Big;
+    @apply lg:w-[180%]  relative z-20;
+    @apply mb-fortySmall lg:mb-fortyBig;
 
     span {
       color: var(--gold);
@@ -26,30 +19,33 @@
   }
 
   h5 {
-    @apply text-center md:text-left md:w-[150%] 
-           text-h5Small md:text-h5Big text-white;
+    @apply text-center lg:text-left lg:w-[180%] leading-h5Small lg:leading-h5Big;
+    @apply text-h5Small lg:text-h5Big text-white;
+    @apply mb-fiftySixSmall lg:mb-fiftySixBig;
   }
 
   // Left Side Image
   &_img {
-    @apply col-span-1 col-start-1 row-start-2 hidden md:flex;
+    @apply col-span-1 col-start-1 row-start-2 hidden lg:flex ;
 
     img {
       @apply object-contain w-full h-full;
+      transform: scale(1.3);
     }
   }
 
   // Cards Section
   &_cards {
-    @apply grid grid-cols-[75%_25%] h-auto w-[90%] 
-           m-auto mb-4 md:mb-sixteen z-20 relative;
+    @apply grid grid-cols-[65%_35%] h-auto w-[90%] ;
+    @apply m-auto mb-4 lg:mb-sixteen z-20 relative;
     color: var(--blue-border);
     background-color: var(--light-blue);
+    transition: all 0.3s ease-in-out;
 
     // Card Left Section
     div:nth-child(1) {
-      @apply grid grid-cols-[30%_70%] 
-             text-smallBodySmall md:text-smallBodyBig font-gilroy;
+      @apply grid grid-cols-[30%_70%];
+      @apply text-smallBodySmall lg:text-smallBodyBig font-gilroy;
 
       img {
         @apply w-[50%] m-auto;
@@ -82,38 +78,38 @@
       color: white;
 
       svg {
-        @apply w-3 h-3 md:w-7 md:h-7;
+        @apply w-3 h-3 lg:w-7 lg:h-7;
       }
     }
 
     &_price {
-      @apply text-h2Small md:text-h2Big text-white relative;
+      @apply text-h2Small lg:text-h2Big text-white relative;
     }
 
     &_sign {
-      @apply text-h4Small md:text-h4Big top-0 left-[-15px] absolute;
+      @apply text-h4Small lg:text-h4Big top-0 left-[-15px] absolute;
       color: var(--blue-border);
     }
   }
 
   // Container Layouts
   &_cards-container {
-    @apply col-span-1 md:col-start-2 row-start-2 
-           grid grid-rows-[90%_10%] relative mt-2;
+    @apply col-span-1 lg:col-start-2 row-start-2 ;
+    @apply grid grid-rows-[auto_1fr] relative;
   }
 
   &_button {
-    @apply w-full m-auto text-center ;
+    @apply w-full m-auto text-center mt-fiftySixSmall lg:mt-fiftySixBig;
   }
 }
 
 // Decorative Elements
 .borderImage {
-  @apply absolute right-0 top-0 md:h-[50vh];
+  @apply absolute right-0 top-0 lg:h-[50vh];
 }
 
 .bmVector {
-  @apply absolute top-0 right-0 z-10 h-[10vh] md:h-[20vh];
+  @apply absolute -top-10 lg:-top-20 right-0 z-10 h-[10vh] lg:h-[20vh];
 
   img {
     @apply h-full;
@@ -157,7 +153,7 @@
     }
 
     &_cards-container {
-      @apply col-span-1 row-start-2 grid grid-rows-[90%_10%] mt-20;
+      @apply col-span-1 row-start-2 grid grid-rows-[auto_1fr] mt-20;
     }
 
     &_cards {

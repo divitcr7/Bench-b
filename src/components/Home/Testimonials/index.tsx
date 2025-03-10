@@ -51,7 +51,7 @@ function ReviewCard({ item }: ReviewCardProps) {
 // Testimonials Component
 export default function Testimonials() {
   const [reviewsDisplayed, setReviewsDisplayed] = useState<number>(
-    window.innerWidth <= 425 ? 1 : 2
+    window.innerWidth <= 768 ? 1 : 2
   );
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -121,7 +121,7 @@ export default function Testimonials() {
 
   return (
     <section className="testimonial-container ">
-      <div className="testimonial">
+      <div className="testimonial padding-container">
         {/* TESTIMONIALS SECTION */}
         <div className="testimonial-header ">
           <h2>Testimonials</h2>

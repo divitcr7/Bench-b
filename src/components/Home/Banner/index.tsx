@@ -15,7 +15,7 @@ export default function Banner() {
   ];
 
   return (
-    <section className="banner">
+    <section className="banner padding-container">
       <div className="banner-heading">
         <img
           src="/assets/icons/trusted.png"

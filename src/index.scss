@@ -49,4 +49,11 @@ body {
 
 html {
   font-size: 100%;
+  overflow-x: hidden;
+}
+
+//common classes
+.padding-container {
+  @apply pt-eightySmall pb-eightySmall lg:pt-eightyBig lg:pb-eightyBig  ;
+  @apply pl-containerSideSmall pr-containerSideSmall lg:pl-containerSideBig lg:pr-containerSideBig;
 }

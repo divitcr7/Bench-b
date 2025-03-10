@@ -6,7 +6,7 @@ export default function ContactUs() {
   const [active, setActive] = useState<string>("customer");
   return (
     <section className="contact-container">
-      <div className="contact">
+      <div className="contact padding-container">
         <h2>Contact Us</h2>
         <h5>Please, send a message, we will answer ASAP.</h5>
         <div className="contact-content">

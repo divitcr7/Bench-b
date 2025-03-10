@@ -111,7 +111,7 @@ export default function Specialities() {
 
   return (
     <section className="speciality-container">
-      <div className="speciality">
+      <div className="speciality padding-container">
         <h2>Our Specialities</h2>
         <h5>Please select a product or service</h5>
         <div className="speciality-nav">

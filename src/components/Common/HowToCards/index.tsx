@@ -15,7 +15,7 @@ export default function HowToCards({ title, info, img1, img2 }: CardProps) {
         <img src={img1} alt="Step icon" className="icon" />
       </div>
       <div className="textContainer">
-        <h3 className="title">{title}</h3>
+        <h4 className="title">{title}</h4>
         <div className="goldDash"></div>
         <p className="info">{info}</p>
       </div>

@@ -26,7 +26,7 @@ export default function BestDeals() {
 
   return (
     <section className="bestDeals">
-      <div className="bestDeals-container">
+      <div className="bestDeals-container padding-container">
         {/* how it works */}
         <div>
           <h4>HOW IT WORKS</h4>

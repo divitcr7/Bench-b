@@ -49,7 +49,7 @@ const Footer = () => {
 
   return (
     <footer className="footer-container">
-      <div className="footer">
+      <div className="footer padding-container">
         <div className="footer-left">
           <img
             src="/assets/icons/benchmark.svg"

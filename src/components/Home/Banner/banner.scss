@@ -1,5 +1,5 @@
 .banner {
-  @apply h-auto pt-eightySmall pb-eightySmall md:pt-eightyBig md:pb-eightyBig flex flex-col items-center z-20 relative -mt-16;
+  @apply h-auto flex flex-col items-center z-20 relative -mt-16;
   background-color: var(--light-bg);
 
   &-heading {

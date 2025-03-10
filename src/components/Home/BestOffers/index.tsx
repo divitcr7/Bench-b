@@ -56,7 +56,7 @@ export default function BestOffers() {
   ];
   return (
     <section className="bestOffers_container">
-      <div className="bestOffers">
+      <div className="bestOffers padding-container">
         {/* headings */}
         <div>
           <h2>

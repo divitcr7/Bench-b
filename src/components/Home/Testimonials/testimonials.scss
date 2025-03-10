@@ -1,13 +1,9 @@
 .testimonial {
   @apply h-full w-full;
 
-  //padding
-  @apply pt-eightyBig pb-eightyBig 
-         pl-containerSideSmall pr-containerSideSmall
-         md:pl-containerSideBig md:pr-containerSideBig;
 
   //grid system
-  @apply grid grid-cols-1 md:grid-cols-3 md:grid-rows-[85%_15%];
+  @apply grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-[85%_15%];
   grid-template-areas:
     "testimonial reviews reviews"
     "buttons reviews reviews";
@@ -17,26 +13,28 @@
   }
 
   &-header {
-    @apply grid md:grid-cols-[20%_35%_55%] grid-rows-[30%_30%_10%_30%];
+    @apply grid lg:grid-cols-[20%_35%_55%] grid-rows-[30%_30%_10%_30%];
     grid-area: testimonial;
 
     h2 {
-      @apply text-h2Small md:text-h2Big col-span-3 col-start-1 row-span-1 row-start-1 font-bold;
+      @apply text-h2Small lg:text-h2Big col-span-3 col-start-1 row-span-1 row-start-1 font-bold;
+      @apply leading-h2Small lg:leading-h2Big;
     }
     .googleLogo {
       @apply h-[50%] col-span-1 col-start-1 row-start-2 row-span-1;
     }
     p {
-      @apply font-bold text-smallBodyBig md:text-overlineBig col-start-2 col-span-1 row-start-2 row-span-1;
+      @apply font-bold text-smallBodyBig lg:text-overlineBig col-start-2 col-span-1 row-start-2 row-span-1;
+      @apply leading-smallBodySmall lg:leading-smallBodyBig;
     }
     span {
-      @apply text-overlineSmall md:text-overlineBig col-span-1 col-start-2 row-span-1 row-start-3;
+      @apply text-overlineSmall lg:text-overlineBig col-span-1 col-start-2 row-span-1 row-start-3;
       img {
         @apply h-[2vh] inline-block;
       }
     }
     .allReviewLink {
-      @apply text-btnSmall md:text-btnBig font-bold row-span-1 row-start-4 col-span-3 col-start-1 mt-fiftySixSmall md:mt-fiftySixBig md:text-left;
+      @apply text-btnSmall lg:text-btnBig font-bold row-span-1 row-start-4 col-span-3 col-start-1 mt-fiftySixSmall lg:mt-fiftySixBig lg:text-left;
       div {
         @apply inline-block;
         border-bottom: 2px solid var(--green);
@@ -55,9 +53,9 @@
     }
   }
   &-reviews {
-    @apply w-[100%] md:w-[90%] ml-auto mr-auto;
+    @apply w-[100%] lg:w-[90%] ml-auto mr-auto;
     &-container {
-      @apply grid  grid-cols-1 md:grid-cols-2;
+      @apply grid  grid-cols-1 lg:grid-cols-2;
       grid-area: reviews;
     }
     .apostrophe {
@@ -72,13 +70,14 @@
       }
     }
     .rating {
-      @apply h-[5vh] mt-thirtyTwoSmall md:mt-thirtyTwoBig;
+      @apply h-[5vh] mt-thirtyTwoSmall lg:mt-thirtyTwoBig;
       img {
         @apply h-[2vh] inline-block;
       }
     }
     .tags {
-      @apply h-[5vh] font-bold text-overlineSmall md:text-overlineBig;
+      @apply h-[5vh] font-bold text-overlineSmall lg:text-overlineBig;
+      @apply mb-twentyFourSmall lg:mb-twentyFourBig;
       color: var(--divider);
 
       span {
@@ -86,30 +85,38 @@
       }
     }
     .review-text {
-      @apply h-[10vh] md:h-[20vh] overflow-auto text-body1Small md:text-body1Big;
+      @apply h-[20vh] overflow-auto text-body1Small lg:text-body1Big;
+      @apply leading-body1Small lg:leading-body1Big;
     }
     .reviewer {
-      @apply grid grid-cols-[20%_80%] mt-fiftySixSmall md:mt-fiftySixBig;
+      @apply grid grid-cols-[20%_80%] mt-fiftySixSmall lg:mt-fiftySixBig;
 
       img {
-        @apply col-start-1 p-3 text-overlineSmall md:text-overlineBig;
+        @apply col-start-1 p-3 text-overlineSmall lg:text-overlineBig;
       }
       div {
         @apply col-start-2;
 
         display: block;
         .name {
-          @apply block font-bold text-overlineSmall md:text-overlineBig;
+          @apply block font-bold text-overlineSmall lg:text-overlineBig;
         }
         .date {
-          @apply text-smallBodySmall md:text-smallBodyBig;
+          @apply text-smallBodySmall lg:text-smallBodyBig;
           color: var(--secondary-text);
         }
       }
     }
   }
 }
-@media (max-width: 465px) {
+// @media (max-width: 1024px) {
+//   .testimonial {
+//     h2{
+//       @apply text-[3.8rem];
+//     }
+//   }
+// }
+@media (max-width: 768px) {
   .testimonial {
     grid-template-areas:
       "testimonial "
