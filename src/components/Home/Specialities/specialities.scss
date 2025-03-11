@@ -10,11 +10,11 @@
     @apply leading-h2Small lg:leading-h2Big;
   }
   h5 {
-    @apply text-h5Small lg:text-h5Big font-bold h-[5vh] w-full text-center  lg:mb-thirtyTwoBig;
+    @apply text-h5Small lg:text-h5Big font-bold h-[5vh] w-full text-center  lg:mb-thirtyTwoBig  font-gilroy;
     @apply leading-h5Small lg:leading-h5Big;
   }
   &-nav {
-    @apply flex ml-auto mr-auto lg:mb-fiftySixBig h-[6vh] lg:h-[8vh] w-full lg:w-[40vw] text-h5Small lg:text-h5Big;
+    @apply flex ml-auto mr-auto lg:mb-fiftySixBig h-[6vh] lg:h-[8vh] w-full lg:w-[40vw] text-h5Small lg:text-h5Big  font-gilroy;
     display: flex;
     justify-content: center;
     align-items: center;

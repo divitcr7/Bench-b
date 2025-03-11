@@ -1,0 +1,18 @@
+/* Left-side navigation */
+.side-nav {
+  @apply w-[4rem] h-full flex flex-col p-5 ;
+  border-right: 1px solid var(--border-color);
+
+  div {
+    margin-top: auto;
+
+    img {
+      @apply mt-2 mb-2;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .side-nav {
+    @apply hidden;
+  }
+}

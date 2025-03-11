@@ -85,7 +85,7 @@
       }
     }
     .review-text {
-      @apply h-[20vh] overflow-auto text-body1Small lg:text-body1Big;
+      @apply h-[20vh] overflow-auto text-body1Small lg:text-body1Big font-gilroy;
       @apply leading-body1Small lg:leading-body1Big;
     }
     .reviewer {

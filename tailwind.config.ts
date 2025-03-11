@@ -12,6 +12,8 @@ const config: Config = {
         headerBig: "4rem",
         headerSmall: "3.5rem",
       },
+      // Gilroy - h1, h5, h6, body1, body1bolt, body2 , body2bolt, smallBody, caption
+
       fontSize: {
         h1Big: "5.75rem", // 92px
         h1Small: "2.625rem", // 42px

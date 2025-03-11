@@ -12,7 +12,7 @@
 }
 
 .form-group label {
-  @apply text-h6Small md:text-h6Big;
+  @apply text-h6Small md:text-h6Big  font-gilroy;
   display: block;
   font-weight: bold;
   margin-bottom: 6px;
@@ -21,7 +21,7 @@
 
 .form-group input,
 .form-group textarea {
-  @apply text-h5Small md:text-h5Big;
+  @apply text-h5Small md:text-h5Big  font-gilroy;
   width: 100%;
   padding: 10px;
   border: 1px solid var(--divider);
@@ -45,6 +45,6 @@
   background: #0056b3;
 }
 
-.contact-button{
+.contact-button {
   @apply flex justify-end mt-fiftySixSmall md:m-fiftySixBig;
 }
