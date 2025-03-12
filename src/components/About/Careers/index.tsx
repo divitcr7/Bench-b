@@ -1,5 +1,6 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronRight } from "lucide-react";
 import "./career.scss";
+import { Link } from "react-router-dom";
 
 export default function Careers() {
   const data = [
@@ -35,6 +36,9 @@ export default function Careers() {
               </div>
             </div>
           ))}
+        </div>
+        <div className="career-allJobs">
+          <Link to="#">SEE ALL JOBS <ChevronRight/></Link>
         </div>
       </div>
     </section>

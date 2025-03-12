@@ -1,6 +1,7 @@
 .career {
+  @apply flex flex-col;
   &-container {
-    @apply h-auto bg-red-500;
+    @apply h-auto ;
     transform: translateY(-4rem);
   }
 
@@ -13,6 +14,16 @@
   }
   h4 {
     @apply text-h4Small lg:text-h4Big leading-h4Small lg:leading-h4Big;
+  }
+
+  &-allJobs {
+    @apply text-btnSmall lg:text-btnBig;
+    @apply m-auto mt-fortySmall lg:mt-fortyBig;
+    border-bottom: 2px solid var(--green);
+
+    svg{
+      @apply inline w-4 h-4;
+    }
   }
 }
 

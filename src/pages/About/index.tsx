@@ -1,4 +1,10 @@
-import { Meta, AboutUsHero, Careers } from "./../../components";
+import {
+  Meta,
+  AboutUsHero,
+  Careers,
+  OurMission,
+  WhyBenchmark,
+} from "./../../components";
 
 export default function Home() {
   const metadata = {
@@ -14,6 +20,10 @@ export default function Home() {
       <AboutUsHero />
       {/* careers */}
       <Careers />
+      {/* our mission */}
+      <OurMission />
+      {/* why benchmark */}
+      <WhyBenchmark />
     </>
   );
 }

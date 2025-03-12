@@ -16,6 +16,8 @@ import Testimonials from "./Home/Testimonials";
 //about us imports
 import AboutUsHero from "./About/AboutUsHero";
 import Careers from "./About/Careers";
+import OurMission from "./About/OurMission";
+import WhyBenchmark from "./About/WhyBenchmark";
 
 export {
   Header,
@@ -30,7 +32,8 @@ export {
   BestOffers,
   Specialities,
   Testimonials,
-
   AboutUsHero,
-  Careers
+  Careers,
+  OurMission,
+  WhyBenchmark,
 };
