@@ -1,0 +1,61 @@
+.whatWeDo {
+  @apply grid grid-cols-[40%_60%] h-[100%];
+  &-container {
+    @apply h-[100vh];
+    background-color: var(--light-bg);
+  }
+  //   what we do and image
+  > :nth-child(1) {
+    h2 {
+      @apply text-h2Small lg:text-h2Big;
+      @apply leading-h2Small lg:leading-h2Big;
+    }
+    span {
+      @apply h-[90%];
+
+      img {
+        @apply w-full pr-20;
+      }
+    }
+  }
+  &-card {
+    @apply h-auto;
+    border-bottom: 10px solid red;
+    &-container {
+      @apply pl-10 h-[100%] overflow-auto scrollbar-hide;
+      border-left: 1px solid var(--divider);
+    }
+    // icon, title, and number
+    div {
+      @apply grid grid-cols-[10%_90%] bg-green-500 h-[30%] mb-10;
+      // title, number
+      div {
+        @apply flex justify-between bg-red-400 items-center;
+
+        h3 {
+          @apply text-h3Small lg:text-h3Big;
+          @apply leading-h3Small lg:leading-h3Big;
+        }
+        h2 {
+          @apply text-h2Small lg:text-h2Big;
+          @apply leading-h2Small lg:leading-h2Big;
+          color: var(--vlight-grey);
+        }
+      }
+    }
+    ul {
+      @apply grid grid-rows-3 grid-flow-col;
+
+      li {
+        img {
+          @apply inline-block h-3 w-3 mr-4;
+        }
+        h5 {
+          @apply inline-block;
+          @apply text-h5Small lg:text-h5Big font-bold;
+          @apply leading-h5Small lg:leading-h5Big;
+        }
+      }
+    }
+  }
+}

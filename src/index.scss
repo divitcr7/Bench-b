@@ -20,6 +20,7 @@
   --primary-text: #07092d;
   --secondary-text: #616381;
   --light-grey: #a7a9d1;
+  --vlight-grey: #eeeef5;
   --green: #19c19e;
   --indigo: #2901e8;
   --gold: #e0c18d;
@@ -54,6 +55,6 @@ html {
 
 //common classes
 .padding-container {
-  @apply pt-eightySmall pb-eightySmall lg:pt-eightyBig lg:pb-eightyBig  ;
+  @apply pt-eightySmall pb-eightySmall lg:pt-eightyBig lg:pb-eightyBig;
   @apply pl-containerSideSmall pr-containerSideSmall lg:pl-containerSideBig lg:pr-containerSideBig;
 }

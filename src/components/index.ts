@@ -17,6 +17,7 @@ import Testimonials from "./Home/Testimonials";
 import AboutUsHero from "./About/AboutUsHero";
 import Careers from "./About/Careers";
 import OurMission from "./About/OurMission";
+import WhatWeDo from "./About/WhatWeDo";
 import WhyBenchmark from "./About/WhyBenchmark";
 
 export {
@@ -35,5 +36,6 @@ export {
   AboutUsHero,
   Careers,
   OurMission,
+  WhatWeDo,
   WhyBenchmark,
 };

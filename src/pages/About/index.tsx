@@ -4,6 +4,7 @@ import {
   Careers,
   OurMission,
   WhyBenchmark,
+  WhatWeDo,
 } from "./../../components";
 
 export default function Home() {
@@ -24,6 +25,8 @@ export default function Home() {
       <OurMission />
       {/* why benchmark */}
       <WhyBenchmark />
+      {/* what we do  */}
+      <WhatWeDo />
     </>
   );
 }

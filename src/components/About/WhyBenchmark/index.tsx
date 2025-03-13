@@ -53,10 +53,12 @@ const WhyBenchmark = () => {
           {data.map((item) => (
             <div key={item.id} className={`whyUs-card whyUs-card-${item.id}`}>
               <div>
-                <img src={item.imgUrl} />
-                <span className="card-number">{`0${item.id}`}</span>
+                <span>
+                  <img src={item.imgUrl} />
+                </span>
+                <h3 className="card-number">{`0${item.id}`}</h3>
               </div>
-              <h3>{item.title}</h3>
+              <h3 className="whyUs-heading">{item.title}</h3>
               <p>{item.description}</p>
             </div>
           ))}
