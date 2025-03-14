@@ -1,0 +1,110 @@
+.our-team {
+  &-container {
+    background-color: var(--dark-blue);
+  }
+
+  text-align: center;
+  color: white;
+
+  h2 {
+    @apply text-h2Small lg:text-h2Big;
+    @apply leading-h2Small lg:leading-h2Big;
+  }
+
+  h5 {
+    @apply text-h5Small lg:text-h5Big font-gilroy;
+    @apply leading-h5Small lg:leading-h5Big;
+  }
+
+  .team-carousel {
+    @apply h-auto m-auto bg-red-600;
+  }
+
+  .nav-arrow {
+    @apply ml-5 mr-5;
+    color: white;
+    cursor: pointer;
+    border-radius: 50% 50%;
+    border: 1px white solid;
+    transition: 0.3s;
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
+
+  .team-grid {
+    @apply w-full h-full flex justify-between flex-col lg:flex-row;
+  }
+
+  .team-member {
+    @apply lg:w-[30%] h-full;
+    color: black;
+    text-align: center;
+    position: relative;
+    transition: transform 0.5s ease;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    h3 {
+      @apply text-h3Small lg:text-h3Big;
+      @apply leading-h3Small lg:leading-h3Big;
+      color: white;
+    }
+    p {
+      @apply text-body1Small lg:text-body1Big;
+      @apply leading-body1Small lg:leading-body1Big;
+      color: white;
+    }
+
+    a {
+      @apply m-3 p-4;
+      border-radius: 50% 50%;
+      border: 1px solid white;
+    }
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: auto;
+      background-color: #e4e4e4;
+
+      img {
+        @apply object-contain;
+        width: 100%;
+        transition: filter 0.3s ease;
+      }
+
+      .hover-info {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background: var(--dark-blue);
+        color: white;
+        transition: bottom 0.3s ease, opacity 0.3s ease;
+
+        .icons {
+          display: flex;
+          justify-content: center;
+
+          a {
+            color: white;
+            transition: color 0.2s;
+
+            &:hover {
+              color: var(--green);
+            }
+          }
+        }
+      }
+
+      &:hover .hover-info {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+  }
+}

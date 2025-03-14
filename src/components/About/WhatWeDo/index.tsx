@@ -21,7 +21,7 @@ export default function WhatWeDo() {
       type: [
         "Safety and Loss Control",
         "Certification Validation",
-        "COntract Review",
+        "Contract Review",
         "Claim Catastrophe Support",
         "Risk Technology",
       ],
@@ -68,7 +68,7 @@ export default function WhatWeDo() {
                   <img src={item.imgUrl} />
                 </span>
                 <div>
-                  <h3>Industry Specialist</h3>
+                  <h3>{item.title}</h3>
                   <h2>0{item.id}</h2>
                 </div>
               </div>

@@ -19,6 +19,7 @@ import Careers from "./About/Careers";
 import OurMission from "./About/OurMission";
 import WhatWeDo from "./About/WhatWeDo";
 import WhyBenchmark from "./About/WhyBenchmark";
+import OurTeam from "./About/OurTeam";
 
 export {
   Header,
@@ -38,4 +39,5 @@ export {
   OurMission,
   WhatWeDo,
   WhyBenchmark,
+  OurTeam
 };

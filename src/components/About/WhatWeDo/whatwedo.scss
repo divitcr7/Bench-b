@@ -1,7 +1,7 @@
 .whatWeDo {
-  @apply grid grid-cols-[40%_60%] h-[100%];
+  @apply grid lg:grid-cols-[40%_60%] h-[100%];
   &-container {
-    @apply h-[100vh];
+    @apply h-auto;
     background-color: var(--light-bg);
   }
   //   what we do and image
@@ -9,52 +9,85 @@
     h2 {
       @apply text-h2Small lg:text-h2Big;
       @apply leading-h2Small lg:leading-h2Big;
+      @apply mb-sixteen lg:mb-0;
     }
     span {
       @apply h-[90%];
 
       img {
-        @apply w-full pr-20;
+        @apply w-full pr-20 hidden lg:flex;
       }
     }
   }
   &-card {
-    @apply h-auto;
-    border-bottom: 10px solid red;
+    @apply h-auto lg:pb-10 lg:mb-10 pb-5 mb-5 ;
+    border-bottom: 1px solid var(--divider);
     &-container {
-      @apply pl-10 h-[100%] overflow-auto scrollbar-hide;
+      @apply lg:pl-20 lg:pr-10 lg:overflow-auto lg:scrollbar-hide;
       border-left: 1px solid var(--divider);
     }
     // icon, title, and number
     div {
-      @apply grid grid-cols-[10%_90%] bg-green-500 h-[30%] mb-10;
+      @apply grid lg:grid-cols-[10%_90%] mb-2;
+      span {
+        @apply h-[3rem] lg:h-[100%] flex;
+        img {
+          @apply h-[80%] lg:m-auto;
+        }
+      }
       // title, number
       div {
-        @apply flex justify-between bg-red-400 items-center;
+        @apply flex justify-between items-center;
 
         h3 {
           @apply text-h3Small lg:text-h3Big;
           @apply leading-h3Small lg:leading-h3Big;
         }
         h2 {
-          @apply text-h2Small lg:text-h2Big;
-          @apply leading-h2Small lg:leading-h2Big;
+          @apply text-h3Small lg:text-h3Big;
+          @apply leading-h3Small lg:leading-h3Big;
           color: var(--vlight-grey);
         }
       }
     }
     ul {
-      @apply grid grid-rows-3 grid-flow-col;
+      @apply lg:grid lg:grid-rows-3 lg:grid-flow-col;
 
       li {
         img {
-          @apply inline-block h-3 w-3 mr-4;
+          @apply inline-block h-1 w-1 lg:h-3 lg:w-3 mr-4;
         }
         h5 {
           @apply inline-block;
-          @apply text-h5Small lg:text-h5Big font-bold;
+          @apply text-h5Small lg:text-h5Big font-bold font-gilroy;
           @apply leading-h5Small lg:leading-h5Big;
+          @apply mb-1;
         }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .whatWeDo {
+    &-card {
+      &-container {
+        @apply pl-5 pr-0;
+      }
+
+      h5 {
+        @apply text-[1.1rem] !important;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .whatWeDo {
+    &-card {
+      &-container {
+        @apply p-0;
+        border-left: none;
       }
     }
   }
