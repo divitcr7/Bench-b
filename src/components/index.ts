@@ -4,10 +4,10 @@ import HowToCards from "./Common/HowToCards";
 import Footer from "./Common/Footer";
 import ContactUs from "./Common/ContactUs";
 import SocialMediaNav from "./Common/SocialMediaNav";
+import Banner from "./Common/Banner";
 
 // home imports
 import Hero from "./Home/Hero";
-import Banner from "./Home/Banner";
 import BestDeals from "./Home/BestDeals";
 import BestOffers from "./Home/BestOffers";
 import Specialities from "./Home/Specialities";
@@ -20,6 +20,11 @@ import OurMission from "./About/OurMission";
 import WhatWeDo from "./About/WhatWeDo";
 import WhyBenchmark from "./About/WhyBenchmark";
 import OurTeam from "./About/OurTeam";
+import Memberships from "./About/Memberships";
+
+//industry imports
+import IndustryHero from "./Industry/IndustryHero";
+import Details from "./Industry/Details";
 
 export {
   Header,
@@ -39,5 +44,8 @@ export {
   OurMission,
   WhatWeDo,
   WhyBenchmark,
-  OurTeam
+  OurTeam,
+  Memberships,
+  IndustryHero,
+  Details
 };

@@ -9,19 +9,22 @@
   h2 {
     @apply text-h2Small lg:text-h2Big;
     @apply leading-h2Small lg:leading-h2Big;
+    @apply mb-fortySmall lg:mb-fortyBig;
   }
 
   h5 {
     @apply text-h5Small lg:text-h5Big font-gilroy;
     @apply leading-h5Small lg:leading-h5Big;
+    @apply m-auto mb-fortySmall lg:mb-fortyBig;
+    @apply w-full lg:w-[70%] ;
   }
 
   .team-carousel {
-    @apply h-auto m-auto bg-red-600;
+    @apply h-auto m-auto;
   }
 
   .nav-arrow {
-    @apply ml-5 mr-5;
+    @apply ml-5 mr-5 p-1 hidden lg:inline-block lg:mb-[4rem];
     color: white;
     cursor: pointer;
     border-radius: 50% 50%;
@@ -32,79 +35,143 @@
       opacity: 0.3;
       cursor: not-allowed;
     }
+    &:hover {
+      color: var(--green);
+      border: 1px solid var(--green);
+    }
+    svg {
+      @apply p-1;
+    }
   }
 
   .team-grid {
     @apply w-full h-full flex justify-between flex-col lg:flex-row;
+    @apply mb-fiftySixSmall lg:mb-fiftySixBig;
+    @apply hidden lg:flex;
+  }
+
+  .team-grid-small {
+    @apply w-full h-full flex justify-between flex-col lg:flex-row;
+    @apply mb-fiftySixSmall lg:mb-fiftySixBig;
+    @apply block lg:hidden;
+
+    .icons {
+      @apply flex flex-col;
+      justify-content: center;
+      margin-top: 10px;
+
+      span {
+        @apply flex mb-2;
+
+        a {
+          @apply mr-5 p-3;
+          border-radius: 50% 50%;
+          border: 1px solid var(--divider);
+          &:hover {
+            color: var(--green);
+            border: 1px solid var(--green);
+          }
+        }
+      }
+      a {
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        &:hover {
+          color: var(--green);
+        }
+      }
+    }
+
+    .team-member{
+      @apply mb-10;
+    }
+    h3{
+      @apply mt-sixteen;
+    }
   }
 
   .team-member {
-    @apply lg:w-[30%] h-full;
-    color: black;
-    text-align: center;
+    @apply lg:w-[30%];
     position: relative;
-    transition: transform 0.5s ease;
-
-    &:hover {
-      cursor: pointer;
-    }
+    overflow: hidden;
+    text-align: left;
 
     h3 {
       @apply text-h3Small lg:text-h3Big;
       @apply leading-h3Small lg:leading-h3Big;
-      color: white;
     }
     p {
-      @apply text-body1Small lg:text-body1Big;
+      @apply text-body1Small lg:text-body1Big font-gilroy;
       @apply leading-body1Small lg:leading-body1Big;
+      color: var(--divider);
+    }
+
+    .hover-info {
+      position: absolute;
+      cursor: pointer;
+      bottom: -100%;
+      left: 0;
+      background: var(--dark-blue);
       color: white;
-    }
+      transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      opacity: 0;
 
-    a {
-      @apply m-3 p-4;
-      border-radius: 50% 50%;
-      border: 1px solid white;
-    }
-    .image-container {
-      position: relative;
-      width: 100%;
-      height: auto;
-      background-color: #e4e4e4;
+      .icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
 
-      img {
-        @apply object-contain;
-        width: 100%;
-        transition: filter 0.3s ease;
-      }
-
-      .hover-info {
-        position: absolute;
-        bottom: -100%;
-        left: 0;
-        width: 100%;
-        background: var(--dark-blue);
-        color: white;
-        transition: bottom 0.3s ease, opacity 0.3s ease;
-
-        .icons {
-          display: flex;
-          justify-content: center;
+        span {
+          @apply flex p-2;
 
           a {
-            color: white;
-            transition: color 0.2s;
-
+            @apply mr-5 p-3;
+            border-radius: 50% 50%;
+            border: 1px solid var(--divider);
             &:hover {
               color: var(--green);
+              border: 1px solid var(--green);
             }
           }
         }
-      }
+        a {
+          color: white;
+          display: flex;
+          align-items: center;
+          gap: 5px;
 
-      &:hover .hover-info {
-        bottom: 0;
-        opacity: 1;
+          &:hover {
+            color: var(--green);
+          }
+        }
       }
     }
+
+    &:hover .hover-info {
+      bottom: 0;
+      opacity: 1;
+    }
   }
+}
+
+.description-small {
+  @apply block lg:hidden bg-green-500;
+
+  a {
+    @apply bg-yellow-500 flex w-[20%];
+  }
+}
+
+
+.load-buttons{
+  @apply inline-block lg:hidden mb-[4rem];
+  @apply text-btnSmall lg:text-btnBig;
+  border-bottom: 1px solid var(--green);
+   svg{
+    @apply inline-block w-4 h-4;
+   }
 }

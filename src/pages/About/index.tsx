@@ -6,6 +6,10 @@ import {
   WhyBenchmark,
   WhatWeDo,
   OurTeam,
+  Banner,
+  Memberships,
+  ContactUs,
+  Footer
 } from "./../../components";
 
 export default function Home() {
@@ -30,6 +34,14 @@ export default function Home() {
       <WhatWeDo />
       {/* our team */}
       <OurTeam />
+      {/* banner */}
+      <Banner/>
+      {/* our memberships */}
+      <Memberships/>
+      {/* contact us */}
+      <ContactUs/>
+      {/* footer */}
+      <Footer/>
     </>
   );
 }

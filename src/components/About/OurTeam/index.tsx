@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import {
   ChevronLeft,
   ChevronRight,
+  ChevronDown,
+  ChevronUp,
   Linkedin,
   Mail,
   Calendar,
@@ -63,7 +65,7 @@ const teamMembers = [
 
 const OurTeam = () => {
   const [startIndex, setStartIndex] = useState(0);
-  const [hovered, setHovered] = useState(null);
+  const [hovered, setHovered] = useState<number | null>(null);
 
   const nextSlide = () => {
     if (startIndex + 3 < teamMembers.length) setStartIndex(startIndex + 1);
@@ -71,6 +73,16 @@ const OurTeam = () => {
 
   const prevSlide = () => {
     if (startIndex > 0) setStartIndex(startIndex - 1);
+  };
+
+  const loadMore = () => {
+    if (startIndex + 3 < teamMembers.length) {
+      setStartIndex(startIndex + 3);
+    }
+  };
+
+  const loadLess = () => {
+    setStartIndex(0); // Resets to the initial 3 members
   };
 
   return (
@@ -83,45 +95,86 @@ const OurTeam = () => {
         </h5>
 
         <div className="team-carousel">
+          {/* on bigger screens */}
           <div className="team-grid">
             {teamMembers.slice(startIndex, startIndex + 3).map((member) => (
-              <div key={member.id} className="team-member">
-                <div
-                  className="image-container"
-                  onMouseEnter={() => setHovered(member.id)}
-                  onMouseLeave={() => setHovered(null)}
-                >
+              <div
+                key={member.id}
+                className="team-member"
+                onMouseEnter={() => setHovered(member.id)}
+                onMouseLeave={() => setHovered(null)}
+              >
+                <div className="image-container">
                   <img src={member.image} alt={member.name} />
-
-                  {hovered === member.id && (
-                    <div className="hover-info">
-                      <p>{member.description}</p>
-                      <div className="icons">
-                        <a
-                          href={member.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Linkedin size={20} />
-                        </a>
-                        <a href={`mailto:${member.email}`}>
-                          <Mail size={20} />
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer">
-                          <Calendar size={20} />
-                        </a>
-                      </div>
-                    </div>
-                  )}
                 </div>
                 <h3>{member.name}</h3>
                 <p>{member.position}</p>
+
+                <div
+                  className={`hover-info ${
+                    hovered === member.id ? "show" : ""
+                  }`}
+                >
+                  <h3>{member.name}</h3>
+                  <p>{member.position}</p>
+                  <p>{member.description}</p>
+                  <div className="icons">
+                    <span>
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Linkedin size={20} />
+                      </a>
+                      <a href={`mailto:${member.email}`}>
+                        <Mail size={20} />
+                      </a>
+                    </span>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      <Calendar size={20} />
+                      <span>Schedule a Meeting</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* on smaller screens */}
+          <div className="team-grid-small">
+            {teamMembers.slice(0, startIndex + 3).map((member) => (
+              <div key={member.id} className="team-member">
+                <div className="image-container">
+                  <img src={member.image} alt={member.name} />
+                </div>
+                <h3>{member.name}</h3>
+                <p>{member.position}</p>
+                <p className="mt-sixteen mb-sixteen">{member.description}</p>
+                <div className="icons">
+                  <span>
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Linkedin size={20} />
+                    </a>
+                    <a href={`mailto:${member.email}`}>
+                      <Mail size={20} />
+                    </a>
+                  </span>
+                  <a href="#" target="_blank" rel="noopener noreferrer">
+                    <Calendar size={20} />
+                    <span>Schedule a Meeting</span>
+                  </a>
+                </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Navigation Arrows */}
+        {/* Navigation Arrows On Bigger Screens */}
         <div>
           <button
             className="nav-arrow left"
@@ -138,9 +191,24 @@ const OurTeam = () => {
             <ChevronRight size={32} />
           </button>
         </div>
+
+        {/* Load More / Load Less Buttons for Smaller Screens */}
+        <div className="load-buttons">
+          {startIndex + 3 < teamMembers.length && (
+            <div className="load-more" onClick={loadMore}>
+              Load More <ChevronDown />
+            </div>
+          )}
+          {startIndex > 0 && (
+            <div className="load-less" onClick={loadLess}>
+              Load Less <ChevronUp />
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
 };
 
 export default OurTeam;
+

@@ -1,0 +1,26 @@
+.membership {
+  &-container {
+    @apply w-full h-auto ;
+  }
+
+  h2 {
+    @apply text-h2Small lg:text-h2Big;
+    @apply leading-h2Small lg:leading-h2Big;
+    @apply w-full text-center;
+    @apply mb-fortySmall lg:mb-fortyBig;
+  }
+  h5 {
+    @apply text-h5Small lg:text-h5Big;
+    @apply leading-h5Small lg:leading-h5Big;
+    @apply lg:w-[60%] m-auto text-center;
+    @apply mb-sixteen lg:mb-sixteen;
+  }
+  //   images
+  > :nth-child(3) {
+    @apply flex flex-wrap justify-center;
+
+    div {
+      @apply w-[40%] lg:w-[15%] m-2 inline-block;
+    }
+  }
+}
