@@ -159,10 +159,10 @@
 }
 
 .description-small {
-  @apply block lg:hidden bg-green-500;
+  @apply block lg:hidden ;
 
   a {
-    @apply bg-yellow-500 flex w-[20%];
+    @apply flex w-[20%];
   }
 }
 

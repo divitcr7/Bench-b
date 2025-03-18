@@ -26,6 +26,11 @@ import Memberships from "./About/Memberships";
 import IndustryHero from "./Industry/IndustryHero";
 import Details from "./Industry/Details";
 
+
+//onboarding imports
+import OnboardingMain from "./Onboarding/OnboardingMain";
+
+
 export {
   Header,
   Meta,
@@ -47,5 +52,6 @@ export {
   OurTeam,
   Memberships,
   IndustryHero,
-  Details
+  Details,
+  OnboardingMain,
 };
