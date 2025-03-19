@@ -1,7 +1,9 @@
 import {
   Meta,
   IndustryHero,
-  Details
+  Details,
+  ProductAndServices,
+  Tools
 } from "./../../components";
 
 export default function Home() {
@@ -15,9 +17,13 @@ export default function Home() {
       <Meta meta={metadata} />
 
       {/* Construction Insurance made simple */}
-      <IndustryHero/>
+      <IndustryHero />
       {/* details */}
-      <Details/>
+      <Details />
+      {/* products and services */}
+      <ProductAndServices />
+      {/* tools */}
+      <Tools/>
     </>
   );
 }

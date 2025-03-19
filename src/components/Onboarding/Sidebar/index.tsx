@@ -18,19 +18,19 @@ const application = [
   },
   {
     name: "BUSINESS INFO",
-    value: 5,
+    value: 35,
   },
   {
     name: "LOCATIONS",
-    value: 5,
+    value: 45,
   },
   {
     name: "PROPERTY INFO",
-    value: 5,
+    value: 75,
   },
   {
     name: "QUOTE",
-    value: 5,
+    value: 100,
   },
 ];
 export default function Sidebar() {
@@ -86,7 +86,7 @@ export default function Sidebar() {
           <div>
             {application.map((item, index) => {
               return (
-                <div>
+                <div key={index}>
                   <span>
                     {percentage >= item.value ? (
                       <img src="./assets/icons/arrow-green.png" />

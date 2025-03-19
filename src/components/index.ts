@@ -25,6 +25,8 @@ import Memberships from "./About/Memberships";
 //industry imports
 import IndustryHero from "./Industry/IndustryHero";
 import Details from "./Industry/Details";
+import ProductAndServices from "./Industry/ProductAndServices";
+import Tools from "./Industry/Tools";
 
 
 //onboarding imports
@@ -53,5 +55,7 @@ export {
   Memberships,
   IndustryHero,
   Details,
+  ProductAndServices,
+  Tools,
   OnboardingMain,
 };

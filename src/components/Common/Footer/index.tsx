@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./Footer.scss";
+import "./footer.scss";
 
 const data = {
   commercial: [

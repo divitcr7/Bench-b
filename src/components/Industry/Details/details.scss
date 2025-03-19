@@ -31,6 +31,10 @@ p {
   @apply pl-fortyEightSmall pr-fortyEightSmall lg:pl-fortyEightBig lg:pr-fortyEightBig;
 
   background-color: var(--primary-text);
+  background-image: url("./assets/images/border.png");
+  background-size: 40% 60%;
+  background-repeat: no-repeat;
+  background-position: top right;
   color: #ffffff;
   //   text-align: center;
 
@@ -71,5 +75,23 @@ p {
         }
       }
     }
+  }
+}
+
+@media (max-width:2560px){
+  .who-we-serve{
+    background-size: 30% 60%;
+  }
+}
+
+@media (max-width:1025px){
+  .who-we-serve{
+    background-size: 50% 50%;
+  }
+}
+
+@media (max-width:768px){
+  .who-we-serve{
+    background-image: none;
   }
 }
