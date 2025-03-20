@@ -27,11 +27,11 @@ import IndustryHero from "./Industry/IndustryHero";
 import Details from "./Industry/Details";
 import ProductAndServices from "./Industry/ProductAndServices";
 import Tools from "./Industry/Tools";
-
+import Associations from "./Industry/Associations";
+import AppDownload from "./Industry/AppDownload";
 
 //onboarding imports
 import OnboardingMain from "./Onboarding/OnboardingMain";
-
 
 export {
   Header,
@@ -57,5 +57,7 @@ export {
   Details,
   ProductAndServices,
   Tools,
+  Associations,
+  AppDownload,
   OnboardingMain,
 };

@@ -1,0 +1,22 @@
+.association{
+    &-container{
+        @apply h-auto w-[100vw];
+        background-color: var(--light-bg);
+    }
+    h2{
+        @apply text-h2Small lg:text-h2Big font-bold;
+        @apply leading-h2Small lg:leading-h2Big;
+        @apply text-center mb-fortyEightSmall lg:mb-fortyEightBig;
+    }
+    h5{
+        @apply text-h5Small lg:text-h5Big;
+        @apply leading-h5Small lg:leading-h5Big;
+        @apply text-center mb-fortyEightSmall lg:mb-fortyEightBig;
+    }
+    div{
+        @apply grid gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-6;
+        span{
+            @apply w-[70%] md:w-[50%] lg:w-[80%] m-auto;
+        }
+    }
+}

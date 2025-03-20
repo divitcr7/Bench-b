@@ -3,7 +3,9 @@ import {
   IndustryHero,
   Details,
   ProductAndServices,
-  Tools
+  Tools,
+  Associations,
+  AppDownload,
 } from "./../../components";
 
 export default function Home() {
@@ -24,6 +26,10 @@ export default function Home() {
       <ProductAndServices />
       {/* tools */}
       <Tools/>
+      {/* our customers and associations */}
+      <Associations/>
+      {/* application download  */}
+      <AppDownload/>
     </>
   );
 }

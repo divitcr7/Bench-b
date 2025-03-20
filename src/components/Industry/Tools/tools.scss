@@ -18,7 +18,7 @@
     @apply p-5 h-full w-[90%] m-auto relative;
     border: 1px solid var(--divider);
     &-container {
-      @apply w-[100%] grid grid-cols-3;
+      @apply w-[100%] grid gap-5 lg:gap-0 lg:grid-cols-3;
     }
     img {
       @apply h-14 mt-sixteen mb-sixteen;
