@@ -6,16 +6,9 @@
   text-align: center;
   color: white;
 
-  h2 {
-    @apply text-h2Small lg:text-h2Big;
-    @apply leading-h2Small lg:leading-h2Big;
-    @apply mb-fortySmall lg:mb-fortyBig;
-  }
 
   h5 {
-    @apply text-h5Small lg:text-h5Big font-gilroy;
-    @apply leading-h5Small lg:leading-h5Big;
-    @apply m-auto mb-fortySmall lg:mb-fortyBig;
+    @apply m-auto ;
     @apply w-full lg:w-[70%] ;
   }
 
@@ -88,9 +81,7 @@
     .team-member{
       @apply mb-10;
     }
-    h3{
-      @apply mt-sixteen;
-    }
+    
   }
 
   .team-member {
@@ -99,10 +90,6 @@
     overflow: hidden;
     text-align: left;
 
-    h3 {
-      @apply text-h3Small lg:text-h3Big;
-      @apply leading-h3Small lg:leading-h3Big;
-    }
     p {
       @apply text-body1Small lg:text-body1Big font-gilroy;
       @apply leading-body1Small lg:leading-body1Big;

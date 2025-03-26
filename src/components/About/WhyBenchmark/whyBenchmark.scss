@@ -38,8 +38,6 @@
       }
       // for numbers 01,02,03 etc
       h3 {
-        @apply text-h3Small lg:text-h3Big;
-        @apply leading-h3Small lg:leading-h3Big;
         color: var(--gold);
       }
     }
@@ -53,11 +51,7 @@
       overflow-y: auto;
     }
   }
-  h2 {
-    @apply text-h2Small lg:text-h2Big;
-    @apply leading-h2Small lg:leading-h2Big;
-    @apply mb-fortyEightSmall lg:mb-fortyEightBig;
-  }
+  
   // for heading in blue
   &-heading {
     @apply h-auto pb-2;

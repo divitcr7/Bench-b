@@ -109,13 +109,7 @@
     }
   }
 }
-// @media (max-width: 1024px) {
-//   .testimonial {
-//     h2{
-//       @apply text-[3.8rem];
-//     }
-//   }
-// }
+
 @media (max-width: 768px) {
   .testimonial {
     grid-template-areas:

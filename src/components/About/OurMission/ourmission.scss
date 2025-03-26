@@ -7,8 +7,6 @@
   // our mission
   h2 {
     @apply col-span-1 col-start-1 lg:col-start-2 row-span-1 row-start-1;
-    @apply text-h2Small lg:text-h2Big;
-    @apply leading-h2Small lg:leading-h2Big;
     @apply lg:pl-fiftySixBig pb-sixteen lg:pb-0;
     span {
       @apply z-20 relative;

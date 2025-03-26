@@ -8,8 +8,7 @@
   }
 
   h2 {
-    @apply text-h2Small md:text-h2Big leading-h2Small md:leading-h2Big text-center font-bold ;
-    @apply mb-fortyBig;
+    @apply text-center;
   }
 
   .highlight {

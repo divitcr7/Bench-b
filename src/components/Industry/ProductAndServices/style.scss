@@ -6,12 +6,10 @@
   }
 
   h2 {
-    @apply text-h2Small lg:text-h2Big font-bold h-[10vh] w-full text-center  lg:mb-fortyBig;
-    @apply leading-h2Small lg:leading-h2Big;
+    @apply h-[10vh] w-full text-center;
   }
   h5 {
-    @apply text-h5Small lg:text-h5Big font-bold h-[5vh] w-full text-center  lg:mb-thirtyTwoBig  font-gilroy;
-    @apply leading-h5Small lg:leading-h5Big;
+    @apply h-[5vh] w-full text-center;
   }
   &-nav {
     @apply flex ml-auto mr-auto lg:mb-fiftySixBig h-[6vh] lg:h-[8vh] w-full lg:w-[40vw] text-h5Small lg:text-h5Big  font-gilroy;
@@ -49,9 +47,8 @@
     }
 
     h3 {
-      @apply m-auto text-h3Small lg:text-h3Big font-bold text-center row-start-2 row-span-1;
-      @apply leading-h3Small lg:leading-h3Big;
-      @apply w-[70%] mt-5 ;
+      @apply m-auto font-bold text-center row-start-2 row-span-1;
+      @apply w-[70%] mt-5;
     }
 
     .pns-arrow {

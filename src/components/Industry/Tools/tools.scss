@@ -4,14 +4,10 @@
     @apply h-auto w-[100vw] flex;
   }
   h2 {
-    @apply text-h2Small lg:text-h2Big font-bold;
-    @apply leading-h2Small lg:leading-h2Big;
-    @apply text-center;
+    @apply text-center ;
   }
   h5 {
-    @apply text-h5Small lg:text-h5Big font-gilroy;
-    @apply leading-h5Small lg:leading-h5Big;
-    @apply text-center mt-twentyFourSmall mb-twentyFourSmall lg:mt-twentyFourBig lg:mb-twentyFourBig;
+    @apply text-center;
   }
 
   &-cards {
@@ -24,9 +20,8 @@
       @apply h-14 mt-sixteen mb-sixteen;
     }
     h4 {
-      @apply text-h4Small lg:text-h4Big font-bold;
-      @apply leading-h4Small lg:leading-h4Big;
-      @apply w-full mt-sixteen mb-sixteen;
+      
+      @apply w-full ;
     }
     p {
       @apply text-body2Small lg:text-body2Big font-gilroy;
@@ -45,7 +40,7 @@
 
     &:hover {
       cursor: pointer;
-      border:1px solid var(--green);
+      border: 1px solid var(--green);
       span {
         svg {
           color: var(--green);

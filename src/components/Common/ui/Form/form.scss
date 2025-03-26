@@ -1,0 +1,73 @@
+@import "../../../../styles/variables";
+
+.form {
+  @apply w-full;
+
+  &-field {
+    @apply mb-4;
+
+    &__label {
+      @apply block text-sm font-medium mb-1;
+      color: var(--text-secondary);
+    }
+
+    &__required {
+      @apply text-error ml-1;
+    }
+
+    &__input {
+      @apply w-full px-3 py-2;
+      @apply border rounded-md;
+      @apply bg-white;
+      @apply text-base;
+      @apply transition-all duration-200;
+      @apply focus:outline-none focus:ring-2 focus:ring-primary/50;
+      @apply disabled:bg-gray-100 disabled:cursor-not-allowed;
+
+      border-color: var(--border-medium);
+      color: var(--text-primary);
+
+      &::placeholder {
+        color: var(--text-disabled);
+      }
+
+      &--error {
+        border-color: var(--error);
+        @apply focus:ring-error/50;
+      }
+    }
+
+    &__error {
+      @apply block mt-1 text-sm;
+      color: var(--error);
+    }
+  }
+}
+
+// Textarea specific styles
+textarea.form-field__input {
+  @apply min-h-[100px] resize-y;
+}
+
+// Input types specific styles
+input[type="number"].form-field__input {
+  @apply appearance-none;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    @apply appearance-none m-0;
+  }
+}
+
+// Dark mode adjustments
+@media (prefers-color-scheme: dark) {
+  .form-field {
+    &__input {
+      @apply bg-gray-800;
+
+      &:disabled {
+        @apply bg-gray-700;
+      }
+    }
+  }
+}

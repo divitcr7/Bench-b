@@ -9,9 +9,8 @@
 
   // Typography Styles
   h2 {
-    @apply text-center lg:text-left m-auto text-h2Small lg:text-h2Big text-white leading-h2Small lg:leading-h2Big;
+    @apply text-center lg:text-left m-auto text-white ;
     @apply lg:w-[180%]  relative z-20;
-    @apply mb-fortySmall lg:mb-fortyBig;
 
     span {
       color: var(--gold);
@@ -19,9 +18,8 @@
   }
 
   h5 {
-    @apply text-center lg:text-left lg:w-[180%] leading-h5Small lg:leading-h5Big;
-    @apply text-h5Small lg:text-h5Big text-white  font-gilroy;
-    @apply mb-fiftySixSmall lg:mb-fiftySixBig;
+    @apply text-center lg:text-left lg:w-[180%] ;
+    @apply  text-white  font-gilroy;
   }
 
   // Left Side Image

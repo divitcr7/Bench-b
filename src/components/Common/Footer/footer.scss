@@ -44,8 +44,6 @@
   .footer-section {
     transition: all 1s ease;
     h3 {
-      @apply text-h3Small lg:text-h3Big;
-      @apply mb-twentyFourSmall lg:mb-twentyFourBig;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -60,7 +58,7 @@
       display: block;
     }
     li {
-      @apply text-body1Small lg:text-body1Big  font-gilroy;
+      @apply text-body1Small lg:text-body1Big font-gilroy;
       @apply mb-sixteen;
       cursor: pointer;
       transition: color 0.3s ease;

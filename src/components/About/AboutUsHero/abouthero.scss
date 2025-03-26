@@ -15,16 +15,12 @@
   &-heading {
     @apply mt-auto mb-auto ml-20;
     h3 {
-      @apply text-h3Small lg:text-h3Big ;
-      @apply leading-h3Small lg:leading-h3Big;
       color: var(--gold);
     }
     img {
-      @apply h-[8vh] mt-sixteen mb-sixteen ;
+      @apply h-[8vh] mt-sixteen mb-sixteen;
     }
     h4 {
-      @apply text-h4Small lg:text-h4Big font-bold font-gilroy ;
-      @apply leading-h4Small lg:leading-h4Big;
       color: var(--light-grey);
     }
   }
@@ -36,11 +32,11 @@
       background-image: url("./assets/images/about-small.png");
       background-size: 100% 100%;
     }
-    &-heading{
-        @apply mt-auto mb-auto ml-5 mr-5 text-center w-full;
-        img{
-            @apply h-[6vh] ml-auto mr-auto;
-        }
+    &-heading {
+      @apply mt-auto mb-auto ml-5 mr-5 text-center w-full;
+      img {
+        @apply h-[6vh] ml-auto mr-auto;
+      }
     }
   }
 }

@@ -15,7 +15,7 @@
   /* background colors */
   --bg-color: white;
   --light-bg: #f7f7fa;
-  --bg-blue:20, 22, 56;
+  --bg-blue: 20, 22, 56;
 
   /* text colors */
   --primary-text: #07092d;
@@ -58,4 +58,27 @@ html {
 .padding-container {
   @apply pt-eightySmall pb-eightySmall lg:pt-eightyBig lg:pb-eightyBig;
   @apply pl-containerSideSmall pr-containerSideSmall lg:pl-containerSideBig lg:pr-containerSideBig;
+}
+h1 {
+  @apply text-h1Small lg:text-h1Big leading-h1Small lg:leading-h1Big font-gilroy;
+}
+h2 {
+  @apply text-h2Small lg:text-h2Big font-bold;
+  @apply leading-h2Small lg:leading-h2Big;
+  @apply mb-fortyEightSmall lg:mb-fortyEightBig;
+}
+h3 {
+  @apply text-h3Small lg:text-h3Big;
+  @apply leading-h3Small lg:leading-h3Big;
+  @apply mt-sixteen;
+}
+h4 {
+  @apply text-h4Small lg:text-h4Big font-semibold;
+}
+h5 {
+  //font
+  @apply font-gilroy font-bold ;
+  @apply text-h5Small lg:text-h5Big;
+  @apply leading-h5Small lg:leading-h5Big;
+  @apply mb-fortyEightSmall lg:mb-fortyEightBig;
 }

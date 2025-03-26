@@ -7,8 +7,6 @@
   //   what we do and image
   > :nth-child(1) {
     h2 {
-      @apply text-h2Small lg:text-h2Big;
-      @apply leading-h2Small lg:leading-h2Big;
       @apply mb-sixteen lg:mb-0;
     }
     span {
@@ -39,13 +37,7 @@
       div {
         @apply flex justify-between items-center;
 
-        h3 {
-          @apply text-h3Small lg:text-h3Big;
-          @apply leading-h3Small lg:leading-h3Big;
-        }
         h2 {
-          @apply text-h3Small lg:text-h3Big;
-          @apply leading-h3Small lg:leading-h3Big;
           color: var(--vlight-grey);
         }
       }
@@ -59,8 +51,6 @@
         }
         h5 {
           @apply inline-block;
-          @apply text-h5Small lg:text-h5Big font-bold font-gilroy;
-          @apply leading-h5Small lg:leading-h5Big;
           @apply mb-1;
         }
       }

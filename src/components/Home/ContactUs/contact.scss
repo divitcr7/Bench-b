@@ -3,30 +3,26 @@
 
   &-container {
     @apply h-auto w-auto;
-    background: linear-gradient(to bottom, white 80%, var(--primary-text) 80%, var(--primary-text) 100%);
+    background: linear-gradient(
+      to bottom,
+      white 80%,
+      var(--primary-text) 80%,
+      var(--primary-text) 100%
+    );
   }
 
-  h2 {
-    @apply text-h2Small lg:text-h2Big font-bold mb-fortySmall lg:mb-fortyBig;
-    @apply leading-h2Small lg:leading-h2Big;
-  }
-  h5 {
-    @apply text-h5Small lg:text-h5Big font-bold mb-thirtyTwoSmall lg:mb-thirtyTwoBig;
-    @apply leading-h5Small lg:leading-h5Big;
-  }
   &-content {
-    @apply h-auto w-full lg:grid lg:grid-cols-[70%_30%] lg:grid-rows-[10%_90%] ;
+    @apply h-auto w-full lg:grid lg:grid-cols-[70%_30%] lg:grid-rows-[10%_90%];
     grid-template-areas:
       "buttons info"
       "form info";
   }
   &-buttons {
-    @apply w-full flex justify-around ;
+    @apply w-full flex justify-around;
     grid-area: buttons;
 
     h5 {
       @apply bg-white text-black inline-block w-[50%] text-center p-6 mb-0;
-      @apply leading-h5Small lg:leading-h5Big;
       border: 1px solid var(--divider);
       cursor: pointer;
     }
@@ -37,7 +33,6 @@
     }
   }
   &-form-container {
-    
     grid-area: form;
     border: 1px solid var(--divider);
   }
@@ -46,31 +41,30 @@
     @apply relative z-10;
     background-color: var(--light-blue);
 
-    &-content{
-        @apply relative lg:mt-20 mb-10 pb-10 ml-10 mr-10 ;
+    &-content {
+      @apply relative lg:mt-20 mb-10 pb-10 ml-10 mr-10;
 
-        img{
-            @apply h-[4vh];
+      img {
+        @apply h-[4vh];
+      }
+      div {
+        @apply mt-fiftySixSmall lg:mb-fiftySixBig;
+        img {
+          @apply h-[3vh] inline-block;
         }
-        div{
-            @apply mt-fiftySixSmall lg:mb-fiftySixBig;
-            img{
-                @apply h-[3vh] inline-block;
-            }
-            span{
-                @apply text-overlineSmall lg:text-overlineBig ml-2 font-bold;
-                @apply leading-overlineSmall lg:leading-overlineBig;
-                color: var(--light-grey)
-            }
-            h4{
-                @apply text-h4Small lg:text-h4Big mt-sixteen text-white font-bold;
-                @apply leading-h4Small lg:leading-h4Big;
-            }
+        span {
+          @apply text-overlineSmall lg:text-overlineBig ml-2 font-bold;
+          @apply leading-overlineSmall lg:leading-overlineBig;
+          color: var(--light-grey);
         }
+        h4 {
+          @apply text-white;
+        }
+      }
     }
   }
-  
-  &-border-image{
+
+  &-border-image {
     @apply absolute top-0 right-0 z-20 h-[30vh];
   }
 }

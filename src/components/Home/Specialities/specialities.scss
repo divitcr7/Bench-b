@@ -6,12 +6,10 @@
   }
 
   h2 {
-    @apply text-h2Small lg:text-h2Big font-bold h-[10vh] w-full text-center  lg:mb-fortyBig;
-    @apply leading-h2Small lg:leading-h2Big;
+    @apply font-bold h-[10vh] w-full text-center lg:mb-fortyBig;
   }
   h5 {
-    @apply text-h5Small lg:text-h5Big font-bold h-[5vh] w-full text-center  lg:mb-thirtyTwoBig  font-gilroy;
-    @apply leading-h5Small lg:leading-h5Big;
+    @apply h-[5vh] w-full text-center;
   }
   &-nav {
     @apply flex ml-auto mr-auto lg:mb-fiftySixBig h-[6vh] lg:h-[8vh] w-full lg:w-[40vw] text-h5Small lg:text-h5Big  font-gilroy;
@@ -38,7 +36,7 @@
   }
 
   &-cards {
-    @apply grid grid-rows-4 h-[18rem] w-[100%] ml-auto mr-auto mb-1 ;
+    @apply grid grid-rows-4 h-[18rem] w-[100%] ml-auto mr-auto mb-1;
 
     &-content {
       @apply h-full w-full flex flex-col items-center justify-between;
@@ -49,8 +47,7 @@
     }
 
     h3 {
-      @apply m-auto text-h3Small lg:text-h3Big font-bold;
-      @apply leading-h3Small lg:leading-h3Big;
+      @apply m-auto;
     }
 
     p {
@@ -108,10 +105,9 @@
     }
   }
   &-cards-container {
-    @apply grid grid-rows-3 grid-cols-1 lg:grid-cols-3 w-[95%] m-auto mt-fiftySixSmall lg:mt-fiftySixBig ;
+    @apply grid grid-rows-3 grid-cols-1 lg:grid-cols-3 w-[95%] m-auto mt-fiftySixSmall lg:mt-fiftySixBig;
   }
 }
 
-@media (max-width:768px){
-
+@media (max-width: 768px) {
 }

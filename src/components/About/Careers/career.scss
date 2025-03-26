@@ -1,19 +1,8 @@
 .career {
   @apply flex flex-col;
   &-container {
-    @apply h-auto ;
+    @apply h-auto;
     transform: translateY(-4rem);
-  }
-
-  h2 {
-    @apply text-h2Small lg:text-h2Big leading-h2Small lg:leading-h2Big;
-    @apply mb-fortyEightSmall lg:mb-fortyEightBig;
-  }
-  h5 {
-    @apply text-h5Small lg:text-h5Big leading-h5Small lg:leading-h5Big font-bold font-gilroy;
-  }
-  h4 {
-    @apply text-h4Small lg:text-h4Big leading-h4Small lg:leading-h4Big;
   }
 
   &-allJobs {
@@ -21,7 +10,7 @@
     @apply m-auto mt-fortySmall lg:mt-fortyBig;
     border-bottom: 2px solid var(--green);
 
-    svg{
+    svg {
       @apply inline w-4 h-4;
     }
   }
