@@ -6,6 +6,7 @@ import {
   Tools,
   Associations,
   AppDownload,
+  Questions,
 } from "./../../components";
 
 export default function Home() {
@@ -30,6 +31,8 @@ export default function Home() {
       <Associations/>
       {/* application download  */}
       <AppDownload/>
+      {/* frequently asked questions */}
+      <Questions/>
     </>
   );
 }
