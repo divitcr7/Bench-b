@@ -74,6 +74,7 @@ h3 {
 }
 h4 {
   @apply text-h4Small lg:text-h4Big font-semibold;
+  @apply mb-fortySmall lg:mb-fortyBig;
 }
 h5 {
   //font
