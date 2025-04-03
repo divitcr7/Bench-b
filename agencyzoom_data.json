@@ -1,0 +1,24 @@
+{
+    "clients": [
+        {
+            "id": 1001,
+            "name": "Johnson Insurance",
+            "status": "active",
+            "policies": 12
+        },
+        {
+            "id": 1002,
+            "name": "Smith Family Trust",
+            "status": "active",
+            "policies": 3
+        },
+        {
+            "id": 1003,
+            "name": "Riverdale Properties",
+            "status": "pending",
+            "policies": 7
+        }
+    ],
+    "success": true,
+    "count": 3
+}

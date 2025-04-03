@@ -1,13 +1,19 @@
 .industry-hero {
-  @apply relative top-[-4rem];
+  position: relative;
+  top: -4rem;
   height: calc(102vh);
 }
 
 .industry-front-page {
-  @apply lg:w-full h-full left-0 z-10 flex;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 10;
+  display: flex;
 
   &-right {
-    @apply mt-[4rem] flex;
+    margin-top: 4rem;
+    display: flex;
     background: {
       image: url("./assets/images/industry.png");
       size: contain;

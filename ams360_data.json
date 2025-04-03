@@ -1,0 +1,24 @@
+{
+    "policies": [
+        {
+            "policy_id": "POL-8721",
+            "client_id": 1001,
+            "type": "Auto",
+            "premium": 1450.0
+        },
+        {
+            "policy_id": "POL-9432",
+            "client_id": 1002,
+            "type": "Home",
+            "premium": 2100.0
+        },
+        {
+            "policy_id": "POL-7665",
+            "client_id": 1003,
+            "type": "Commercial",
+            "premium": 5200.0
+        }
+    ],
+    "status": "success",
+    "count": 3
+}

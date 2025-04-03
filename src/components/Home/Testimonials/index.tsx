@@ -58,21 +58,21 @@ export default function Testimonials() {
   const testimonials: Review[] = [
     {
       id: 1,
-      name: "Nina Jabrakova",
-      date: "2023-07-11",
+      name: "Theresa Valsin",
+      date: "2025-03-01",
       rating: 5,
       review:
-        "The staff at Benchmark Ins is very professional and always responsive to my complicated ins policy's. When you compare apples to apples they always win the bid.",
-      tags: ["PROFESSIONALISM", "QUALITY", "RESPONSIVENESS", "VALUE"],
+          "Benchmark did a remarkable job in helping me get the insurance needed to complete a project with the City of Houston Permit Department. Thank you so much for your help!",
+        tags: ["PROFESSIONALISM", "QUALITY", "RESPONSIVENESS", "VALUE"],
       image: "./assets/icons/avatar1.png",
     },
     {
       id: 2,
-      name: "John Doe",
+      name: "Douglas Hoffman",
       date: "2023-07-10",
       rating: 4,
       review:
-        "Great service, very helpful staff. They walked me through the process and answered all my questions. The staff at Benchmark Ins is very professional and always responsive to my complicated ins policy's. When you compare apples to apples they always win the bid.The staff at Benchmark Ins is very professional and always responsive to my complicated ins policy's. When you compare apples to apples they always win the bid.",
+        "Benchmark did an exceptional job for me on a commerical property where I couldn't find a carrier that would insure the property, they were quick and efficent and I would reccomend them to anyone needing insurance services.",
       tags: ["EXCELLENT SERVICE", "HELPFUL STAFF"],
       image: "./assets/icons/avatar2.png",
     },
