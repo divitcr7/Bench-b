@@ -24,6 +24,12 @@ export default function Hero() {
         {/* <div className="bnr-image">
             <img src="./assets/images/main_bnr.png" alt="banner image"/>
         </div> */}
+        <div className="hero-button hero-button-commercial">
+          <button>Commercial Insurance</button>
+        </div>
+        <div className="hero-button hero-button-personal">
+          <button>Personal Insurance</button>
+        </div>
       </section>
     </main>
   );

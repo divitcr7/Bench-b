@@ -20,8 +20,8 @@ const config: Config = {
   			headerSmall: '3.5rem'
   		},
   		fontSize: {
-  			h1Big: '5.75rem',
-  			h1Small: '2.625rem',
+  			h1Big: '5rem',
+  			h1Small: '2.2rem',
   			h2Big: '4.875rem',
   			h2Small: '2rem',
   			h3Big: '2.25rem',

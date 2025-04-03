@@ -1,12 +1,33 @@
 .hero {
-  @apply relative top-[-4rem];
+  @apply relative top-[-4rem] bg-transparent;
   height: calc(102vh);
+
+  &-button {
+    @apply w-[15vw] h-[10vh] hidden lg:flex;
+    border-radius: 20px 0px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    button {
+      @apply m-auto w-[90%] h-[70%] bg-white text-btnBig font-bold;
+      border-radius:  20px 0px;
+    }
+
+    &-commercial {
+      @apply absolute top-[65vh] left-[45vw];
+      background: rgba(25, 193, 158, 0.2);
+    }
+    &-personal {
+      @apply absolute bottom-[20vh] right-[5vw];
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
 }
 
 .front-page {
   @apply lg:w-full h-full left-0 z-10 flex;
   background: {
-    image: url("./assets/images/main_bnr.png");
+    image: url("./assets/images/home.png");
     size: contain;
     repeat: no-repeat;
     position: bottom right;
@@ -15,11 +36,11 @@
 
 /* Heading section */
 .front-page_heading {
-  @apply w-[50%] lg:mt-auto lg:mr-0 lg:mb-auto lg:ml-[6rem] font-gilroy;
+  @apply w-[50%] lg:mt-auto lg:mr-0 lg:mb-auto lg:ml-[2rem] font-gilroy;
 
   h1 {
     // font
-    @apply font-bold ;
+    @apply font-bold;
     span {
       background: linear-gradient(90deg, var(--primary-text) 70%, var(--green));
       background-clip: text;
@@ -30,7 +51,8 @@
 
   h4 {
     // margin
-    @apply mt-fortySmall lg:mt-fortyEightBig mb-eightySmall lg:mb-eightyBig;
+    @apply mt-fortySmall lg:mt-fortyEightBig mb-eightySmall lg:mb-eightyBig font-medium;
+    @apply w-[90%];
     color: var(--secondary-text);
   }
 }
@@ -49,7 +71,6 @@
 
   .front-page_heading {
     @apply w-[60vw];
-    
   }
 }
 

@@ -7,6 +7,9 @@ import {
   Associations,
   AppDownload,
   Questions,
+  OurBlog,
+  ContactUs,
+  Footer
 } from "./../../components";
 
 export default function Home() {
@@ -26,13 +29,19 @@ export default function Home() {
       {/* products and services */}
       <ProductAndServices />
       {/* tools */}
-      <Tools/>
+      <Tools />
       {/* our customers and associations */}
-      <Associations/>
+      <Associations />
       {/* application download  */}
-      <AppDownload/>
+      <AppDownload />
       {/* frequently asked questions */}
-      <Questions/>
+      <Questions />
+      {/* our blog */}
+      <OurBlog />
+      {/* contact us */}
+      <ContactUs />
+      {/* footer */}
+      <Footer />
     </>
   );
 }

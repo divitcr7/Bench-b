@@ -30,6 +30,7 @@ import Tools from "./Industry/Tools";
 import Associations from "./Industry/Associations";
 import AppDownload from "./Industry/AppDownload";
 import Questions from "./Industry/Questions";
+import OurBlog from "./Industry/OurBlog";
 
 //onboarding imports
 import OnboardingMain from "./Onboarding/OnboardingMain";
@@ -61,5 +62,6 @@ export {
   Associations,
   AppDownload,
   Questions,
+  OurBlog,
   OnboardingMain,
 };
