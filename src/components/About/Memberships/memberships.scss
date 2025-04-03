@@ -1,0 +1,20 @@
+.membership {
+  &-container {
+    @apply w-full h-auto ;
+  }
+
+  h2 {
+    @apply w-full text-center;
+  }
+  h5 {
+    @apply lg:w-[60%] ml-auto mr-auto text-center;
+  }
+  //   images
+  > :nth-child(3) {
+    @apply flex flex-wrap justify-center;
+
+    div {
+      @apply w-[40%] lg:w-[15%] m-2 inline-block;
+    }
+  }
+}

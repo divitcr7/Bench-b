@@ -1,0 +1,87 @@
+.career {
+  @apply flex flex-col;
+  &-container {
+    @apply h-auto;
+    transform: translateY(-4rem);
+  }
+
+  &-allJobs {
+    @apply text-btnSmall lg:text-btnBig;
+    @apply m-auto mt-fortySmall lg:mt-fortyBig;
+    border-bottom: 2px solid var(--green);
+
+    svg {
+      @apply inline w-4 h-4;
+    }
+  }
+}
+
+.job-container {
+  @apply mt-thirtyTwoSmall lg:mt-thirtyTwoBig;
+  .job-dept {
+    grid-area: dept;
+  }
+  .job-type {
+    grid-area: type;
+  }
+  .job-position {
+    grid-area: position;
+  }
+  .arrow-cell {
+    @apply w-[70%] flex;
+    grid-area: arrow;
+    color: var(--indigo);
+  }
+  .arrow-icon {
+    @apply m-auto;
+  }
+}
+
+.job-item {
+  @apply grid grid-cols-[40%_15%_40%_5%] pt-sixteen pb-sixteen;
+  border-top: 0.5px solid var(--divider);
+  border-bottom: 0.5px solid var(--divider);
+  transition: all 0.2s ease-in-out;
+  grid-template-areas: "dept type position arrow";
+
+  &:hover {
+    cursor: pointer;
+    color: var(--green);
+
+    .arrow-cell {
+      color: var(--green);
+      border-radius: 50% 50%;
+      border: 1px solid var(--green);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .arrow-cell {
+    @apply w-[100%] !important;
+  }
+}
+@media (max-width: 768px) {
+  .job-item {
+    @apply grid grid-cols-[80%_20%] grid-rows-3 h-[30vh] mb-sixteen p-2;
+    border: 0.5px solid var(--divider);
+    grid-template-areas:
+      "dept dept"
+      "position position"
+      "type arrow";
+  }
+  .arrow-cell {
+    @apply w-[50%] ml-auto flex !important;
+  }
+}
+
+@media (max-width: 426px) {
+  .arrow-cell {
+    @apply w-[80%] !important;
+  }
+}
+@media (max-width: 378px) {
+  .arrow-cell {
+    @apply w-[80%] h-[80%] !important;
+  }
+}

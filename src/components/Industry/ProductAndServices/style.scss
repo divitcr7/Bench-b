@@ -1,0 +1,108 @@
+.pns {
+  @apply h-full w-full gap-0;
+
+  &-container {
+    @apply w-full h-auto;
+  }
+
+  h2 {
+    @apply h-[10vh] w-full text-center;
+  }
+  h5 {
+    @apply h-[5vh] w-full text-center;
+  }
+  &-nav {
+    @apply flex ml-auto mr-auto lg:mb-fiftySixBig h-[6vh] lg:h-[8vh] w-full lg:w-[40vw] text-h5Small lg:text-h5Big  font-gilroy;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    span {
+      @apply text-center font-bold;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid var(--divider);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .active {
+      background-color: var(--indigo);
+      color: white;
+    }
+  }
+
+  &-cards {
+    @apply grid grid-rows-4 h-[18rem] w-[100%] ml-auto mr-auto mb-1;
+
+    &-content {
+      @apply h-[18rem] w-full grid grid-cols-1 grid-rows-[20%_60%_20%] pb-7 pt-7;
+    }
+
+    img {
+      @apply h-[7vh] m-auto row-start-1 row-span-1;
+    }
+
+    h3 {
+      @apply m-auto font-bold text-center row-start-2 row-span-1;
+      @apply w-[70%] mt-5;
+    }
+
+    .pns-arrow {
+      @apply m-auto flex items-center justify-center mt-twentyFourSmall lg:mt-twentyFourBig;
+      @apply row-start-3 row-span-1;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
+    }
+
+    svg {
+      @apply w-5 h-5;
+      color: var(--indigo);
+      transition: color 0.3s ease-in-out;
+    }
+
+    &:hover {
+      transition: 0.3s all ease-in;
+      transform: scale(1.01);
+      cursor: pointer;
+      box-shadow: 0 1px 10px var(--divider);
+
+      h3 {
+        color: var(--indigo);
+      }
+
+      .pns-arrow {
+        border: 1px solid var(--green);
+      }
+
+      svg {
+        color: var(--green);
+      }
+    }
+  }
+
+  &-button {
+    @apply w-full mt-fiftySixSmall lg:mt-fiftySixBig font-bold text-center text-btnSmall lg:text-btnBig;
+
+    cursor: pointer;
+    span {
+      border-bottom: 2px solid var(--green);
+    }
+
+    svg {
+      @apply w-4 h-4;
+      display: inline;
+    }
+  }
+  &-cards-container {
+    @apply grid grid-rows-3 grid-cols-1 lg:grid-cols-3 w-[95%] m-auto mt-fiftySixSmall lg:mt-fiftySixBig;
+  }
+}
+
+@media (max-width: 768px) {
+}

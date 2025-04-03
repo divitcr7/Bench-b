@@ -1,0 +1,42 @@
+.aboutus {
+  @apply h-full flex;
+  // border-bottom: 10px solid red;
+  &-container {
+    @apply relative -top-[4rem];
+    height: calc(101vh);
+  }
+  &-content {
+    @apply mt-[4rem] w-full flex;
+    background-image: url("./assets/images/aboutUs.png");
+    background-size: cover;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
+  &-heading {
+    @apply mt-auto mb-auto ml-20;
+    h3 {
+      color: var(--gold);
+    }
+    img {
+      @apply h-[8vh] mt-sixteen mb-sixteen;
+    }
+    h4 {
+      color: var(--light-grey);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutus {
+    &-content {
+      background-image: url("./assets/images/about-small.png");
+      background-size: 100% 100%;
+    }
+    &-heading {
+      @apply mt-auto mb-auto ml-5 mr-5 text-center w-full;
+      img {
+        @apply h-[6vh] ml-auto mr-auto;
+      }
+    }
+  }
+}

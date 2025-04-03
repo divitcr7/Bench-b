@@ -1,6 +1,6 @@
 import "./bestdeals.scss";
 
-import HowToCards from "../../Common/HowToCards";
+import { HowToCards } from "../../Common";
 
 export default function BestDeals() {
   const instructions = [
@@ -26,7 +26,7 @@ export default function BestDeals() {
 
   return (
     <section className="bestDeals">
-      <div className="bestDeals-container">
+      <div className="bestDeals-container padding-container">
         {/* how it works */}
         <div>
           <h4>HOW IT WORKS</h4>

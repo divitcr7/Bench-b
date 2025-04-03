@@ -1,0 +1,120 @@
+.onboarding-sidebar {
+  @apply w-[25vw] h-[100vh] relative;
+  background-color: var(--primary-text);
+
+  // bg images
+  &-images {
+    @apply h-full w-full relative z-10;
+
+    > :nth-child(1) {
+      @apply w-[60%] m-auto absolute top-0 left-0;
+    }
+    > :nth-child(2) {
+      @apply w-[70%] m-auto absolute bottom-0 left-0 rotate-180;
+    }
+  }
+
+  // logo
+  &-info {
+    @apply absolute top-5 w-[100%] z-20;
+
+    // logo
+    > :nth-child(1) {
+      @apply w-[65%] m-auto;
+    }
+  }
+
+  // user info
+  &-user {
+    @apply w-[85%] m-auto flex flex-col pt-2 pb-2 pl-5 pr-5 mt-3 mb-2;
+    background-color: rgba(var(--bg-blue), 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    // user image
+    > :nth-child(1) {
+      @apply w-[50%] h-auto p-2 m-auto flex mt-2 mb-2;
+      border-radius: 50% 50%;
+      background-color: var(--light-blue);
+
+      img {
+        @apply w-[90%] m-auto;
+      }
+    }
+    h5 {
+      @apply text-white m-auto;
+    }
+
+    p {
+      @apply text-body2Small lg:text-body2Big;
+      @apply leading-body2Small lg:leading-body2Big;
+      @apply m-auto mt-2 mb-2;
+      color: var(--light-grey);
+    }
+
+    div {
+      @apply flex m-auto w-full;
+      div {
+        @apply flex flex-col w-[30%];
+        p {
+          @apply text-smallBodySmall lg:text-smallBodyBig;
+          @apply leading-smallBodySmall lg:leading-smallBodyBig;
+          @apply text-white;
+        }
+        span {
+          @apply w-[50%] m-auto p-2;
+          background-color: var(--light-blue);
+          border-radius: 50% 50%;
+        }
+      }
+    }
+  }
+
+  // application status
+  &-status {
+    @apply w-[85%] m-auto z-20 flex flex-col p-4 ;
+    background-color: rgba(var(--bg-blue), 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    h5 {
+      @apply m-auto pb-4 mb-4;
+      color: white;
+      border-bottom: 1px solid var(--light-blue);
+
+      span {
+        color: var(--green);
+      }
+    }
+
+    // dot, name and chevron svg
+    > :nth-child(2) {
+      @apply m-auto w-[95%] relative;
+      div {
+        @apply grid grid-cols-[2%_88%_10%] relative pt-1 pb-1 ;
+        span {
+          //this part
+          @apply h-[2vh] w-[2vh] m-auto;
+          background-color: var(--light-blue);
+          @apply left-0 flex;
+          border-radius: 50% 50%;
+
+          img {
+            @apply inline-block w-[40%] h-[40%];
+            margin: auto;
+          }
+        }
+      }
+      p {
+        @apply text-overlineSmall lg:text-overlineBig;
+        @apply leading-overlineSmall lg:leading-overlineBig;
+        @apply inline-block ml-5 m-auto;
+        color: var(--light-grey);
+      }
+      svg {
+        @apply inline-block w-4 h-4 m-auto;
+        color: var(--light-grey);
+      }
+    }
+  }
+}

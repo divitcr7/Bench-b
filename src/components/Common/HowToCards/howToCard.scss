@@ -1,6 +1,6 @@
 .howToCard {
   @apply w-[95%] bg-white
-         p-6 flex flex-col items-center text-center relative ml-auto mr-auto mb-eightyBig md:mb-fiftySixBig ;
+         p-6 flex flex-col items-center text-center relative ml-auto mr-auto mb-eightyBig md:mb-fiftySixBig;
   border: 1px solid var(--divider);
 
   .bgImage {
@@ -25,12 +25,12 @@
   }
 
   .title {
-    @apply text-[1.4rem] font-semibold mt-2 text-left;
+    @apply text-h4Small lg:text-h4Big leading-h4Small lg:leading-h4Big font-semibold mt-2 text-left;
     color: var(--primary-text);
   }
 
   .info {
-    @apply mt-1 text-left font-medium;
+    @apply mt-1 text-left font-medium text-body2Small lg:text-body2Big leading-body2Small lg:leading-body2Big  font-gilroy;
     color: var(--primary-text);
   }
 
@@ -40,18 +40,18 @@
   }
 }
 
-@media (max-width:1024px){
+@media (max-width: 1024px) {
   .bgImage {
     transform: translateY(-100%);
   }
 }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
   .bgImage {
     transform: translateY(-320%);
   }
 }
-@media (max-width:426px){
+@media (max-width: 426px) {
   .bgImage {
     transform: translateY(0%);
   }

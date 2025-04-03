@@ -1,13 +1,14 @@
 .bestDeals {
-  @apply h-auto w-[100vw] pt-eightySmall pb-eightySmall md:pt-eightyBig md:pb-eightyBig;
+  @apply h-auto w-[100vw] ;
 
   h4 {
-    @apply text-center text-overlineSmall md:text-overlineBig font-semibold mb-sixteen ;
+    @apply text-center text-overlineSmall md:text-overlineBig leading-h4Small lg:leading-h4Big font-semibold ;
+    @apply mb-sixteen ;
     color: var(--indigo);
   }
 
   h2 {
-    @apply text-h2Small md:text-h2Big text-center font-bold mb-fortyBig;
+    @apply text-center;
   }
 
   .highlight {
@@ -22,11 +23,7 @@
   }
 
   &_cards {
-    @apply w-[90%] md:w-[70%] m-auto grid md:grid-cols-3 ;
-  }
-
-  &-container {
-    @apply pt-eightySmall pb-eightySmall md:pt-eightyBig md:pb-eightyBig ;
+    @apply w-[90%] md:w-[80%] m-auto grid md:grid-cols-3 ;
   }
 
   &_button {
@@ -39,7 +36,7 @@
   }
 
   &-title {
-    @apply w-[70%] md:w-[50%] m-auto mb-[5rem];
+    @apply w-[70%] m-auto mb-[5rem];
   }
 }
 

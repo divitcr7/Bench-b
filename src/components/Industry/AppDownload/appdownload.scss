@@ -1,0 +1,115 @@
+.app {
+  @apply grid md:grid-cols-[60%_40%] md:grid-rows-[1fr_1.1fr_2fr_2fr];
+  &-container {
+    @apply h-auto w-[100vw];
+    background-color: var(--primary-text);
+  }
+  h2 {
+    @apply col-span-1 row-span-1 row-start-1 col-start-1;
+    @apply text-white text-center lg:text-left ;
+  }
+  h5 {
+    @apply col-span-1 row-span-1 row-start-2 col-start-1;
+    @apply text-white lg:w-[90%] text-center lg:text-left mb-sixteen lg:mb-0;
+  }
+  &-image {
+    @apply col-span-1 row-span-3 row-start-1 col-start-2 z-10;
+    @apply hidden md:flex;
+    background-image: url("./assets/images/download.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &-table {
+    @apply col-span-1 row-span-2 row-start-3 col-start-1 bg-white z-20 relative;
+    @apply md:w-[120%] h-[90%];
+
+    &-buttons {
+      @apply text-right flex lg:absolute bottom-5 right-10 ;
+      @apply pt-5 md:pt-10;
+      span {
+        @apply m-auto lg:ml-5 lg:mr-5;
+      }
+    }
+  }
+  &-download {
+    > :nth-child(1) {
+      @apply text-body1BoltSmall lg:text-body1BoltBig;
+      @apply leading-body1BoltSmall lg:leading-body1BoltBig;
+      @apply font-bold;
+    }
+    > :nth-child(2) {
+      @apply text-body1Small lg:text-body1Big;
+      @apply leading-body1Small lg:leading-body1Big;
+      color: var(--light-grey);
+    }
+    > :nth-child(3) {
+      @apply text-btnSmall lg:text-btnBig;
+      @apply leading-btnSmall lg:leading-btnBig;
+      @apply font-bold;
+
+      img {
+        @apply w-3 h-3 m-auto ml-3 inline-block;
+      }
+    }
+  }
+
+  &-content {
+    @apply grid grid-cols-[4fr_1fr] lg:grid-cols-[60%_25%_15%] p-5 ml-5 mr-5;
+    border-bottom: 1px solid var(--divider);
+
+    span {
+      @apply font-bold inline-block;
+      color: var(--secondary-text);
+    }
+  }
+  &-table-content {
+    @apply hidden lg:grid;
+  }
+}
+
+@media (max-width: 1024px) {
+  .app {
+    @apply grid-rows-[1fr_.8fr_1fr_1.5fr];
+    &-table{
+      @apply w-[130%] ;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .app {
+    &-content {
+      @apply m-0 w-[100%];
+      > :nth-child(1) {
+        @apply col-span-2 col-start-1 row-span-1 row-start-1;
+      }
+      > :nth-child(2) {
+        @apply col-span-1 col-start-1 row-span-1 row-start-2;
+      }
+      > :nth-child(3) {
+        @apply col-span-1 col-start-2 row-span-1 row-start-2;
+        span {
+          @apply hidden;
+        }
+      }
+    }
+     &-table{
+      &-buttons{
+        @apply bg-white pb-5;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .app {
+    @apply grid-rows-[.5fr_1fr_1fr_1fr];
+    &-container{
+      @apply h-auto  !important;
+    }
+    &-table{
+      @apply w-[100%];
+      &-buttons{
+        @apply bg-white pb-5;
+      }
+    }
+  }
+}

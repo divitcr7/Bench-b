@@ -1,0 +1,18 @@
+.association {
+  &-container {
+    @apply h-auto w-[100vw];
+    background-color: var(--light-bg);
+  }
+  h2 {
+    @apply text-center;
+  }
+  h5 {
+    @apply text-center;
+  }
+  div {
+    @apply grid gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-6;
+    span {
+      @apply w-[70%] md:w-[50%] lg:w-[80%] m-auto;
+    }
+  }
+}

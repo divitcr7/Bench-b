@@ -1,0 +1,70 @@
+.our-mission {
+  @apply grid lg:grid-cols-[40%_60%] lg:pl-0 lg:pr-0;
+  &-container {
+    @apply -mt-[4rem] h-auto;
+  }
+
+  // our mission
+  h2 {
+    @apply col-span-1 col-start-1 lg:col-start-2 row-span-1 row-start-1;
+    @apply lg:pl-fiftySixBig pb-sixteen lg:pb-0;
+    span {
+      @apply z-20 relative;
+    }
+  }
+  // image
+  > :nth-child(2) {
+    @apply col-span-1 row-start-4 lg:row-start-2 relative z-20;
+    background-image: url("./assets/images/our-mission.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  // paragraph
+  > :nth-child(3) {
+    @apply col-span-1 lg:col-start-2 row-start-2 relative z-10 lg:h-[110%];
+    @apply lg:pl-fiftySixBig lg:pr-fiftySixBig lg:pb-fortyBig;
+    @apply text-body1Small lg:text-body1Big font-gilroy;
+    @apply leading-body1Small lg:leading-body1Big;
+    box-shadow: -10px 15px 15px 0 var(--divider);
+    background-image: url("./assets/images/light-border.png");
+    background-size: 50%;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    p {
+      @apply pb-sixteen;
+    }
+  }
+
+  button {
+    @apply flex lg:hidden text-center m-auto;
+    @apply col-span-1 col-start-1 row-start-3 row-span-1;
+  }
+  .goldDash {
+    @apply w-[35%] h-[10px] inline-block z-10;
+    background-color: var(--gold);
+    transform: translateX(-10rem);
+  }
+}
+
+@media (max-width: 769px) {
+  .our-mission {
+    @apply grid-rows-[1fr_auto_1fr_5fr];
+    > :nth-child(2) {
+      background-size: contain;
+      background-position: center;
+    }
+    > :nth-child(3) {
+      box-shadow: 0 0 0 0;
+      background-image: none;
+    }
+  }
+  .goldDash {
+    @apply w-[20%] !important;
+    transform: translateX(-5rem) !important;
+  }
+}
+@media (max-width: 465px) {
+  .goldDash {
+    @apply w-[30%] !important;
+  }
+}

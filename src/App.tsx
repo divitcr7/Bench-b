@@ -1,13 +1,17 @@
 import "./App.css";
 
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 
 import { Header } from "./components";
 
 function App() {
+  const location=useLocation();
+  //routes where header not visible
+  const hideHeaderRoutes=["/onboarding"]
+
   return (
     <>
-      <Header />
+      {!hideHeaderRoutes.includes(location.pathname) && <Header />}
       {/* to dynamically render current route */}
       <Outlet />
     </>

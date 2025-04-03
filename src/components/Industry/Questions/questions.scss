@@ -1,0 +1,35 @@
+.questions {
+  &-container {
+    @apply h-auto w-full;
+  }
+  h2 {
+    @apply text-center;
+  }
+  h4 {
+    @apply text-center;
+  }
+  &-table {
+    @apply m-auto md:w-[60%] p-5;
+    border-bottom: 0.5px solid var(--divider);
+    border-top: 0.5px solid var(--divider);
+    button {
+      @apply w-full flex justify-between font-bold;
+    }
+    div {
+      @apply text-body1Small lg:text-body1Big;
+      @apply leading-body1Small lg:leading-body1Big;
+      @apply pt-5;
+    }
+  }
+  &-load-more {
+    @apply mt-14 text-center font-bold w-full cursor-pointer;
+    @apply text-btnSmall lg:text-btnBig;
+    @apply inline-block;
+    span {
+      border-bottom: 2px solid var(--green);
+    }
+    svg {
+      @apply w-4 h-4 inline-block;
+    }
+  }
+}

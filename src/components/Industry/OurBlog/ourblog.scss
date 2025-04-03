@@ -1,0 +1,70 @@
+.industry-blog {
+  &-section {
+    @apply md:grid md:grid-cols-[40%_60%];
+    background-color: var(--light-bg);
+  }
+
+  &-content {
+    flex: 1;
+
+    a {
+      @apply text-btnSmall lg:text-btnBig font-bold;
+      border-bottom: 2px solid var(--green);
+    }
+  }
+  &-navigation {
+    @apply mt-fortySmall lg:mt-fortyBig mb-fortySmall lg:mb-fortyBig flex;
+
+    .industry-blog-nav-btn {
+      @apply p-2;
+      background: none;
+      border: 1px solid #000;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+  &-posts {
+    display: flex;
+
+    gap: 20px;
+
+    .industry-blog-post {
+      @apply relative;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+      div {
+        @apply relative;
+        img {
+          @apply z-10;
+          width: 100%;
+          height: auto;
+        }
+
+        .industry-blog-badge {
+          @apply z-20 pt-1 pb-1 pl-3 pr-3;
+          @apply text-overlineSmall lg:text-overlineBig;
+          display: inline-block;
+          color: white;
+          border: 1px solid white;
+          border-radius: 20px;
+          position: absolute;
+          bottom: 5%;
+          left: 10px;
+        }
+      }
+
+      h4 {
+        @apply p-5;
+      }
+    }
+  }
+}
