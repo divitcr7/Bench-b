@@ -1,4 +1,4 @@
-import { Meta, OnboardingMain } from "./../../components";
+import { Meta, OnboardingMain } from "@/components";
 
 export default function Onboarding() {
   const metadata = {

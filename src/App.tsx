@@ -2,12 +2,12 @@ import "./App.css";
 
 import { Outlet, useLocation } from "react-router-dom";
 
-import { Header } from "./components";
+import { Header } from "@/components";
 
 function App() {
-  const location=useLocation();
+  const location = useLocation();
   //routes where header not visible
-  const hideHeaderRoutes=["/onboarding"]
+  const hideHeaderRoutes = ["/onboarding"];
 
   return (
     <>

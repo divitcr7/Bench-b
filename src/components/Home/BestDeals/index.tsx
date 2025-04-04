@@ -1,6 +1,5 @@
 import "./bestdeals.scss";
-
-import { HowToCards } from "../../Common";
+import HowToCards from "@/components/Common/HowToCards";
 
 export default function BestDeals() {
   const instructions = [
@@ -42,17 +41,7 @@ export default function BestDeals() {
 
         {/* cards */}
         <div className="bestDeals_cards">
-          {instructions.map((item, index) => {
-            return (
-              <HowToCards
-                key={index}
-                title={item.title}
-                info={item.info}
-                img1={item.img1}
-                img2={item.img2}
-              />
-            );
-          })}
+          <HowToCards instructions={instructions} />
         </div>
 
         {/* button */}

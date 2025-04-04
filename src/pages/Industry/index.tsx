@@ -10,7 +10,7 @@ import {
   OurBlog,
   ContactUs,
   Footer
-} from "./../../components";
+} from "@/components";
 
 export default function Home() {
   const metadata = {

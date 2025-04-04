@@ -1,5 +1,5 @@
 import "./industryHero.scss";
-import SocialMediaNav from "@components/Common/SocialMediaNav";
+import SocialMediaNav from "@/components/Common/SocialMediaNav";
 
 export default function IndustryHero() {
   return (

@@ -9,10 +9,10 @@ import {
   Banner,
   Memberships,
   ContactUs,
-  Footer
-} from "./../../components";
+  Footer,
+} from "@/components";
 
-export default function Home() {
+export default function About() {
   const metadata = {
     title: "About Us || Benchmark - Insurance",
     description: "Benchmark - Insurance",
@@ -35,13 +35,13 @@ export default function Home() {
       {/* our team */}
       <OurTeam />
       {/* banner */}
-      <Banner/>
+      <Banner />
       {/* our memberships */}
-      <Memberships/>
+      <Memberships />
       {/* contact us */}
-      <ContactUs/>
+      <ContactUs />
       {/* footer */}
-      <Footer/>
+      <Footer />
     </>
   );
 }

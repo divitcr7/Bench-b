@@ -1,4 +1,14 @@
-import {Meta,Hero,Banner,BestDeals,BestOffers,ContactUs,Footer,Specialities, Testimonials} from "./../../components"
+import {
+  Meta,
+  Hero,
+  Banner,
+  BestDeals,
+  BestOffers,
+  ContactUs,
+  Footer,
+  Specialities,
+  Testimonials,
+} from "@/components";
 
 export default function Home() {
   const metadata = {
@@ -15,17 +25,17 @@ export default function Home() {
       {/* trusted by hundreds */}
       <Banner />
       {/* we find you the best deals */}
-      <BestDeals/>
+      <BestDeals />
       {/* we search and compare the best insurance offers */}
-      <BestOffers/>
+      <BestOffers />
       {/* our specialities */}
-      <Specialities/>
+      <Specialities />
       {/* testimonials */}
-      <Testimonials/>
+      <Testimonials />
       {/* contact form  */}
-      <ContactUs/>
+      <ContactUs />
       {/* footer */}
-      <Footer/>
+      <Footer />
     </>
   );
 }

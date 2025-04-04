@@ -22,6 +22,10 @@ import WhyBenchmark from "./About/WhyBenchmark";
 import OurTeam from "./About/OurTeam";
 import Memberships from "./About/Memberships";
 
+//blogs imports
+import BlogHero from "./Blogs/BlogHero";
+import BlogGrid from "./Blogs/BlogGrid";
+
 //industry imports
 import IndustryHero from "./Industry/IndustryHero";
 import Details from "./Industry/Details";
@@ -64,4 +68,6 @@ export {
   Questions,
   OurBlog,
   OnboardingMain,
+  BlogHero,
+  BlogGrid
 };

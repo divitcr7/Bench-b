@@ -67,9 +67,24 @@ The application includes the following routes:
   - Insurance types
 
 - `/onboarding` - Onboarding flow
+
   - User registration
   - Profile setup
   - Insurance preferences
+
+- `/blog` - Blog page
+
+  - Blog post listings
+  - Featured articles
+  - Category filtering
+  - Search functionality
+
+- `/blog/:id` - Individual blog post
+
+  - Full article content
+  - Author information
+  - Related posts
+  - Comments section
 
 ## 🎨 Component Library
 
@@ -103,6 +118,7 @@ src/
 │   ├── Home/            # Home page components
 │   ├── About/           # About page components
 │   ├── Industry/        # Industry page components
+│   ├── Blogs/           # Blog page components
 │   └── Onboarding/      # Onboarding components
 ├── pages/               # Page components
 ├── styles/              # Global styles and variables
@@ -167,5 +183,3 @@ The project uses a design system with:
 ## 📝 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-

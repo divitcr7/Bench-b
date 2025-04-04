@@ -1,5 +1,5 @@
 import "./hero.scss";
-import SocialMediaNav from "@components/Common/SocialMediaNav";
+import SocialMediaNav from "@/components/Common/SocialMediaNav";
 
 export default function Hero() {
   return (
