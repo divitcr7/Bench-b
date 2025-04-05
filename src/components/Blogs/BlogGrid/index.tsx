@@ -1,5 +1,5 @@
-import React from "react";
-import BlogCard from "@/components/Common/BlogCard";
+import React,{useState} from "react";
+import {BlogCard, SubscribeCard} from "@/components/Common";
 import "./BlogGrid.scss";
 
 const blogData = [
@@ -58,24 +58,100 @@ const blogData = [
     title: "Insurance Claims Process Explained",
     imageUrl: "/assets/images/blog5.png",
   },
+  {
+    id: 12,
+    title: "Understanding Insurance Basics",
+    imageUrl: "/assets/images/blog1.png",
+  },
+  {
+    id: 13,
+    title: "Choosing the Right Insurance Plan",
+    imageUrl: "/assets/images/blog2.png",
+  },
+  {
+    id: 14,
+    title: "Insurance Claims Process Explained",
+    imageUrl: "/assets/images/blog3.png",
+  },
+  {
+    id: 15,
+    title: "Insurance Claims Process Explained",
+    imageUrl: "/assets/images/blog4.png",
+  },
+  {
+    id: 16,
+    title: "Insurance Claims Process Explained",
+    imageUrl: "/assets/images/blog5.png",
+  },
+  {
+    id: 17,
+    title: "Insurance Claims Process Explained",
+    imageUrl: "/assets/images/blog6.png",
+  },
 ];
 
-const BlogGrid: React.FC = () => {
-  return (
-    <div className="blog-grid">
-      {blogData.map((post) => (
-        <BlogCard key={post.id} imageUrl={post.imageUrl} title={post.title} />
-      ))}
+const postsPerPage = 12;
 
-      {/* Newsletter Section */}
-      <div className="blog-newsletter">
-        <h3>Subscribe to our newsletter</h3>
-        <input
-          type="email"
-          placeholder="Enter email"
-          className="blog-newsletter-input"
-        />
-        <button className="blog-newsletter-button">Subscribe</button>
+const BlogGrid: React.FC = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(blogData.length / postsPerPage);
+
+  const startIndex = (currentPage - 1) * postsPerPage;
+  const endIndex = startIndex + postsPerPage;
+  const currentPosts = blogData.slice(startIndex, endIndex);
+
+  const handlePageChange = (page: number) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
+
+  return (
+    <div className="blog-grid-container">
+      <div className="blog-grid padding-container">
+        {currentPosts.slice(0, 8).map((post) => (
+          <BlogCard key={post.id} imageUrl={post.imageUrl} title={post.title} />
+        ))}
+
+        <div className="blog-newsletter">
+          <SubscribeCard />
+        </div>
+
+        {currentPosts.slice(8).map((post) => (
+          <BlogCard key={post.id} imageUrl={post.imageUrl} title={post.title} />
+        ))}
+      </div>
+
+      <div className="pagination-container">
+        <button
+          className="pagination-arrow"
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          &lt;
+        </button>
+        {[...Array(totalPages)].map((_, index) => {
+          const page = index + 1;
+          return (
+            <button
+              key={page}
+              onClick={() => handlePageChange(page)}
+              className={`pagination-page ${
+                currentPage === page ? "active" : ""
+              }`}
+            >
+              {page}
+            </button>
+          );
+        })}
+        <button
+          className="pagination-arrow"
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+        >
+          &gt;
+        </button>
       </div>
     </div>
   );

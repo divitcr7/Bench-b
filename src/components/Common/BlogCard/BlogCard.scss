@@ -1,34 +1,41 @@
 $border-radius: 8px;
 $box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-.blog-card {
-      @apply relative;
-      background: #fff;
-      overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.blog-post {
+  @apply relative border-2;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
-      div {
-        @apply relative;
-        img {
-          @apply z-10;
-          width: 100%;
-          height: auto;
-        }
-
-        .industry-blog-badge {
-          @apply z-20 pt-1 pb-1 pl-3 pr-3;
-          @apply text-overlineSmall lg:text-overlineBig;
-          display: inline-block;
-          color: white;
-          border: 1px solid white;
-          border-radius: 20px;
-          position: absolute;
-          bottom: 5%;
-          left: 10px;
-        }
-      }
-
-      h4 {
-        @apply p-5;
-      }
+  div {
+    @apply relative;
+    img {
+      @apply z-10;
+      width: 100%;
+      height: auto;
     }
+
+    .blog-badge {
+      @apply z-20 pt-1 pb-1 pl-3 pr-3;
+      @apply text-overlineSmall lg:text-overlineBig;
+      display: inline-block;
+      color: white;
+      border: 1px solid white;
+      border-radius: 20px;
+      position: absolute;
+      bottom: 5%;
+      left: 10px;
+    }
+  }
+
+  h4 {
+    @apply p-5;
+  }
+
+  &:hover {
+    cursor: pointer;
+    h4 {
+      color: var(--indigo);
+    }
+  }
+}

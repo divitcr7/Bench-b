@@ -41,7 +41,15 @@ export default function BestDeals() {
 
         {/* cards */}
         <div className="bestDeals_cards">
-          <HowToCards instructions={instructions} />
+          {instructions.map((card, index) => (
+            <HowToCards
+              key={index}
+              title={card.title}
+              info={card.info}
+              img1={card.img1}
+              img2={card.img2}
+            />
+          ))}
         </div>
 
         {/* button */}

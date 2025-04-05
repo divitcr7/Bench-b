@@ -1,0 +1,70 @@
+.subscribe-card {
+  background-color: var(--primary-text);
+  background-image: url("./assets/images/border-left.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding: 2rem;
+  width: 100%;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+
+  &__header {
+    @apply mb-5;
+    display: flex;
+    justify-content: space-between;
+
+    h3{
+        text-align: left
+    }
+  }
+  &__icon {
+    img {
+      @apply w-20 h-auto ;
+    }
+  }
+
+  &__input-wrapper {
+    @apply mb-5;
+    input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: none;
+      background-color: #1c1b29;
+      color: white;
+    }
+  }
+
+  &__checkbox {
+    @apply mb-5;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+
+    input[type="checkbox"] {
+      margin-top: 0.2rem;
+    }
+     label{
+        @apply ml-3;
+     }
+    a {
+      color: var(--green);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__button {
+    button {
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+}

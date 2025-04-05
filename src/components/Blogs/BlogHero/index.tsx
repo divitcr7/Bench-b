@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./BlogHero.scss";
 import SocialMediaNav from "@/components/Common/SocialMediaNav";
 import SearchBar from "@/components/Common/SearchBar";
+import {ArrowRight} from "lucide-react"
 
 const categories = [
   "All posts",
@@ -44,7 +45,9 @@ const BlogHero: React.FC = () => {
         {/* Categories Section */}
         <div className="blog-categories">
           {smallScreen ? (
-            <h6 className="blog-category-button">Category</h6>
+            <h6 className="blog-category-button active blog-category-button-small">
+              Category
+            </h6>
           ) : (
             categories.map((category) => (
               <button
@@ -68,6 +71,7 @@ const BlogHero: React.FC = () => {
             className="blog-featured-image"
           />
           <div className="blog-featured-content">
+            <span>CUSTOMER EXPERIENCE</span>
             <h3>
               If Your Property Experiences Flood Damage, Are You Protected?
             </h3>
@@ -75,6 +79,9 @@ const BlogHero: React.FC = () => {
               Many homeowners and businesses are unaware of the risks involved
               with flood damage. Learn how to safeguard your property.
             </p>
+            <div>
+              <ArrowRight />
+            </div>
           </div>
         </div>
       </div>
