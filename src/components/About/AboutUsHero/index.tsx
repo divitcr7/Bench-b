@@ -1,4 +1,4 @@
-import './abouthero.scss'
+import "./abouthero.scss";
 import SocialMediaNav from "@/components/Common/SocialMediaNav";
 
 export default function AboutUsHero() {
@@ -8,13 +8,13 @@ export default function AboutUsHero() {
         {/* left navigation */}
         <SocialMediaNav />
 
-        <div className='aboutus-content'>
-            <div className='aboutus-heading'>
-                <h3>ABOUT</h3>
-                {/* <h1>BENCHMARK</h1> */}
-                <img src='./assets/images/about-logo.png' /> 
-                <h4>INSURANCE GROUP</h4>
-            </div>
+        <div className="aboutus-content">
+          <div className="aboutus-heading">
+            <h3>ABOUT</h3>
+            {/* <h1>BENCHMARK</h1> */}
+            <img src="/assets/images/about-logo.png" />
+            <h4>INSURANCE GROUP</h4>
+          </div>
         </div>
       </div>
     </section>

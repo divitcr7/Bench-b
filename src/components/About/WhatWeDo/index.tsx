@@ -4,7 +4,7 @@ export default function WhatWeDo() {
   const data = [
     {
       id: 1,
-      imgUrl: "./assets/icons/industry.png",
+      imgUrl: "/assets/icons/industry.png",
       title: "Industry Specialist",
       type: [
         "Real Estate",
@@ -16,7 +16,7 @@ export default function WhatWeDo() {
     },
     {
       id: 2,
-      imgUrl: "./assets/icons/risk-analysis.png",
+      imgUrl: "/assets/icons/risk-analysis.png",
       title: "Risk Analysis",
       type: [
         "Safety and Loss Control",
@@ -28,13 +28,13 @@ export default function WhatWeDo() {
     },
     {
       id: 3,
-      imgUrl: "./assets/icons/rate.png",
+      imgUrl: "/assets/icons/rate.png",
       title: "Rate Negotiation",
       type: ["We Tell Your Story", "Industry Low Rates"],
     },
     {
       id: 4,
-      imgUrl: "./assets/icons/tech.png",
+      imgUrl: "/assets/icons/tech.png",
       title: "Technology/Automation",
       type: [
         "Certificate",
@@ -46,7 +46,7 @@ export default function WhatWeDo() {
     },
     {
       id: 5,
-      imgUrl: "./assets/icons/claim.png",
+      imgUrl: "/assets/icons/claim.png",
       title: "Claim Support/Loss Miitigation",
       type: [],
     },
@@ -57,7 +57,7 @@ export default function WhatWeDo() {
         <div>
           <h2>What We Do</h2>
           <span>
-            <img src="./assets/images/what-we-do.png" />
+            <img src="/assets/images/what-we-do.png" />
           </span>
         </div>
         <div className="whatWeDo-card-container">
@@ -75,7 +75,7 @@ export default function WhatWeDo() {
               <ul className="">
                 {item.type.map((type, index) => (
                   <li key={index}>
-                    <img src="./assets/icons/gold-diamond.png" />
+                    <img src="/assets/icons/gold-diamond.png" />
                     <h5>{type}</h5>
                   </li>
                 ))}

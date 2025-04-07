@@ -15,7 +15,7 @@
   // image
   > :nth-child(2) {
     @apply col-span-1 row-start-4 lg:row-start-2 relative z-20;
-    background-image: url("./assets/images/our-mission.png");
+    background-image: url("/assets/images/our-mission.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -26,7 +26,7 @@
     @apply text-body1Small lg:text-body1Big font-gilroy;
     @apply leading-body1Small lg:leading-body1Big;
     box-shadow: -10px 15px 15px 0 var(--divider);
-    background-image: url("./assets/images/light-border.png");
+    background-image: url("/assets/images/light-border.png");
     background-size: 50%;
     background-position: bottom right;
     background-repeat: no-repeat;

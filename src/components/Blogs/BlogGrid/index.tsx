@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useEffect, useState} from "react";
 import {BlogCard, SubscribeCard} from "@/components/Common";
 import "./BlogGrid.scss";
 
@@ -90,10 +90,12 @@ const blogData = [
   },
 ];
 
-const postsPerPage = 12;
+
+
 
 const BlogGrid: React.FC = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(11);
 
   const totalPages = Math.ceil(blogData.length / postsPerPage);
 
@@ -101,6 +103,29 @@ const BlogGrid: React.FC = () => {
   const endIndex = startIndex + postsPerPage;
   const currentPosts = blogData.slice(startIndex, endIndex);
 
+  //to display a certain number of posts pn page
+  useEffect(() => {
+    const handlePageCount = () => {
+      const width=window.innerWidth;
+      switch (true) {
+        case width < 768:
+          setPostsPerPage(2);
+          break;
+        case width == 768:
+          setPostsPerPage(8);
+          break;
+        case width > 768:
+          setPostsPerPage(11);
+          break;
+      }
+    };
+    handlePageCount();
+    window.addEventListener("resize",handlePageCount)
+
+    return () => {
+      window.removeEventListener("resize",handlePageCount)
+    }
+  });
   const handlePageChange = (page: number) => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
@@ -123,7 +148,7 @@ const BlogGrid: React.FC = () => {
         ))}
       </div>
 
-      <div className="pagination-container">
+      <div className="pagination-container ">
         <button
           className="pagination-arrow"
           onClick={() => handlePageChange(currentPage - 1)}

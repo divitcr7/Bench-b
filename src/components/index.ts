@@ -25,6 +25,8 @@ import Memberships from "./About/Memberships";
 //blogs imports
 import BlogHero from "./Blogs/BlogHero";
 import BlogGrid from "./Blogs/BlogGrid";
+import BlogSearch from "./Blogs/BlogSearch";
+import BlogSearchGrid from "./Blogs/BlogSearchGrid";
 
 //industry imports
 import IndustryHero from "./Industry/IndustryHero";
@@ -69,5 +71,7 @@ export {
   OurBlog,
   OnboardingMain,
   BlogHero,
-  BlogGrid
+  BlogGrid,
+  BlogSearch,
+  BlogSearchGrid,
 };

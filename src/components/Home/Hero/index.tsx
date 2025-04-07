@@ -22,7 +22,7 @@ export default function Hero() {
 
         {/* banner image */}
         {/* <div className="bnr-image">
-            <img src="./assets/images/main_bnr.png" alt="banner image"/>
+            <img src="/assets/images/main_bnr.png" alt="banner image"/>
         </div> */}
         <div className="hero-button hero-button-commercial">
           <button>Commercial Insurance</button>

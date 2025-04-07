@@ -7,7 +7,7 @@
   }
   &-content {
     @apply mt-[4rem] w-full flex;
-    background-image: url("./assets/images/aboutUs.png");
+    background-image: url("/assets/images/aboutUs.png");
     background-size: cover;
     background-position: bottom right;
     background-repeat: no-repeat;
@@ -29,7 +29,7 @@
 @media (max-width: 768px) {
   .aboutus {
     &-content {
-      background-image: url("./assets/images/about-small.png");
+      background-image: url("/assets/images/about-small.png");
       background-size: 100% 100%;
     }
     &-heading {

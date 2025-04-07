@@ -2,27 +2,27 @@ import "./association.scss";
 const data = [
   {
     id: 1,
-    imgSrc: "./assets/images/WSA.png",
+    imgSrc: "/assets/images/WSA.png",
   },
   {
     id: 2,
-    imgSrc: "./assets/images/WSA.png",
+    imgSrc: "/assets/images/WSA.png",
   },
   {
     id: 3,
-    imgSrc: "./assets/images/WSA.png",
+    imgSrc: "/assets/images/WSA.png",
   },
   {
     id: 4,
-    imgSrc: "./assets/images/WSA.png",
+    imgSrc: "/assets/images/WSA.png",
   },
   {
     id: 5,
-    imgSrc: "./assets/images/WSA.png",
+    imgSrc: "/assets/images/WSA.png",
   },
   {
     id: 6,
-    imgSrc: "./assets/images/WSA.png",
+    imgSrc: "/assets/images/WSA.png",
   },
 ];
 export default function Associations() {

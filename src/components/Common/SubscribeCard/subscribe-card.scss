@@ -1,6 +1,6 @@
 .subscribe-card {
   background-color: var(--primary-text);
-  background-image: url("./assets/images/border-left.png");
+  background-image: url("/assets/images/border-left.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -18,13 +18,13 @@
     display: flex;
     justify-content: space-between;
 
-    h3{
-        text-align: left
+    h3 {
+      text-align: left;
     }
   }
   &__icon {
     img {
-      @apply w-20 h-auto ;
+      @apply w-20 h-auto;
     }
   }
 
@@ -48,9 +48,9 @@
     input[type="checkbox"] {
       margin-top: 0.2rem;
     }
-     label{
-        @apply ml-3;
-     }
+    label {
+      @apply ml-3;
+    }
     a {
       color: var(--green);
       text-decoration: none;

@@ -28,7 +28,7 @@ p {
   @apply pl-fortyEightSmall pr-fortyEightSmall lg:pl-fortyEightBig lg:pr-fortyEightBig;
 
   background-color: var(--primary-text);
-  background-image: url("./assets/images/border.png");
+  background-image: url("/assets/images/border.png");
   background-size: 40% 60%;
   background-repeat: no-repeat;
   background-position: top right;
@@ -56,7 +56,7 @@ p {
       }
 
       h5 {
-        @apply h-full flex ;
+        @apply h-full flex;
         img {
           @apply w-2 h-2 inline-block mt-auto mb-auto;
         }

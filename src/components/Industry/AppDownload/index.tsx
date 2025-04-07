@@ -77,8 +77,7 @@ export default function AppDownload() {
                 </div>
                 <div>{item.type}</div>
                 <div>
-                  <span>DOWNLOAD</span>{" "}
-                  <img src="./assets/icons/download.png" />
+                  <span>DOWNLOAD</span> <img src="/assets/icons/download.png" />
                 </div>
               </div>
             ))}

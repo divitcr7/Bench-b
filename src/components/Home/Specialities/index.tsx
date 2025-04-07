@@ -32,63 +32,63 @@ export default function Specialities() {
     {
       id: 1,
       name: "Homeowners",
-      imgSrc: "./assets/icons/home.png",
+      imgSrc: "/assets/icons/home.png",
       title:
         "We guarantee full coverage for all properties at an excellent rate.",
     },
     {
       id: 2,
       name: "Auto",
-      imgSrc: "./assets/icons/auto.png",
+      imgSrc: "/assets/icons/auto.png",
       title:
         "We guarantee full coverage for all properties at an excellent rate.",
     },
     {
       id: 3,
       name: "Rental Property",
-      imgSrc: "./assets/icons/rental.png",
+      imgSrc: "/assets/icons/rental.png",
       title:
         "We guarantee full coverage for all properties at an excellent rate.",
     },
     {
       id: 4,
       name: "Condo",
-      imgSrc: "./assets/icons/condo.png",
+      imgSrc: "/assets/icons/condo.png",
       title:
         "We guarantee full coverage for all properties at an excellent rate.",
     },
     {
       id: 5,
       name: "High Value Home",
-      imgSrc: "./assets/icons/high-value-home.png",
+      imgSrc: "/assets/icons/high-value-home.png",
       title:
         "We guarantee full coverage for all properties at an excellent rate.",
     },
     {
       id: 6,
       name: "Classic Auto",
-      imgSrc: "./assets/icons/classic-auto.png",
+      imgSrc: "/assets/icons/classic-auto.png",
       title:
         "We guarantee full coverage for all properties at an excellent rate.",
     },
     {
       id: 7,
       name: "Builder's Risk",
-      imgSrc: "./assets/icons/risk.png",
+      imgSrc: "/assets/icons/risk.png",
       title:
         "We guarantee full coverage for all properties at an excellent rate.",
     },
     {
       id: 8,
       name: "Flood",
-      imgSrc: "./assets/icons/flood.png",
+      imgSrc: "/assets/icons/flood.png",
       title:
         "We guarantee full coverage for all properties at an excellent rate.",
     },
     {
       id: 9,
       name: "Motorcycle & Watercraft",
-      imgSrc: "./assets/icons/m&w.png",
+      imgSrc: "/assets/icons/m&w.png",
       title:
         "We guarantee full coverage for all properties at an excellent rate.",
     },
@@ -97,16 +97,16 @@ export default function Specialities() {
   useEffect(() => {
     const updateVisibleData = () => {
       if (window.innerWidth < 768) {
-        setVisibleData(data.slice(0, 5)); 
+        setVisibleData(data.slice(0, 5));
       } else {
-        setVisibleData(data); 
+        setVisibleData(data);
       }
     };
 
-    updateVisibleData(); 
-    window.addEventListener("resize", updateVisibleData); 
+    updateVisibleData();
+    window.addEventListener("resize", updateVisibleData);
 
-    return () => window.removeEventListener("resize", updateVisibleData); 
+    return () => window.removeEventListener("resize", updateVisibleData);
   }, []);
 
   return (

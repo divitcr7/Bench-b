@@ -84,7 +84,10 @@ The application includes the following routes:
   - Full article content
   - Author information
   - Related posts
-  - Comments section
+
+- `/blog/search` - Blog Search Results
+
+  - Blog Search Results
 
 ## 🎨 Component Library
 

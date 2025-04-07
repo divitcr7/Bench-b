@@ -30,47 +30,47 @@ export default function ProductAndServices() {
     {
       id: 1,
       name: "Real Estate Portfolio Package",
-      imgSrc: "./assets/icons/home.png",
+      imgSrc: "/assets/icons/home.png",
     },
     {
       id: 2,
       name: "Condo/HOA Program",
-      imgSrc: "./assets/icons/home.png",
+      imgSrc: "/assets/icons/home.png",
     },
     {
       id: 3,
       name: "Workmans Compensation",
-      imgSrc: "./assets/icons/home.png",
+      imgSrc: "/assets/icons/home.png",
     },
     {
       id: 4,
       name: "Commercial Property",
-      imgSrc: "./assets/icons/home.png",
+      imgSrc: "/assets/icons/home.png",
     },
     {
       id: 5,
       name: "Professional Liability",
-      imgSrc: "./assets/icons/home.png",
+      imgSrc: "/assets/icons/home.png",
     },
     {
       id: 6,
       name: "Flood",
-      imgSrc: "./assets/icons/home.png",
+      imgSrc: "/assets/icons/home.png",
     },
     {
       id: 7,
       name: "Multi Family/ HOA/ CONDO PACKAGE",
-      imgSrc: "./assets/icons/home.png",
+      imgSrc: "/assets/icons/home.png",
     },
     {
       id: 8,
       name: "Hotel/Motel",
-      imgSrc: "./assets/icons/home.png",
+      imgSrc: "/assets/icons/home.png",
     },
     {
       id: 9,
       name: "Builders Risk",
-      imgSrc: "./assets/icons/home.png",
+      imgSrc: "/assets/icons/home.png",
     },
   ];
   //to show a certain number of data on different screen sizes

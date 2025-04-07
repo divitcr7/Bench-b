@@ -15,7 +15,7 @@ const teamMembers = [
     id: 1,
     name: "Krista",
     position: "Owner / CEO",
-    image: "./assets/images/krista.png",
+    image: "/assets/images/krista.png",
     linkedin: "",
     email: "",
     description:
@@ -25,7 +25,7 @@ const teamMembers = [
     id: 2,
     name: "Johan",
     position: "Senior Agent Manager",
-    image: "./assets/images/johan.png",
+    image: "/assets/images/johan.png",
     linkedin: "",
     email: "",
     description:
@@ -35,7 +35,7 @@ const teamMembers = [
     id: 3,
     name: "David Agyei",
     position: "Manager",
-    image: "./assets/images/david.png",
+    image: "/assets/images/david.png",
     linkedin: "",
     email: "",
     description:
@@ -45,7 +45,7 @@ const teamMembers = [
     id: 4,
     name: "Sophia Lee",
     position: "Agent",
-    image: "./assets/images/david.png",
+    image: "/assets/images/david.png",
     linkedin: "",
     email: "",
     description:
@@ -55,7 +55,7 @@ const teamMembers = [
     id: 5,
     name: "Michael Scott",
     position: "Senior Consultant",
-    image: "./assets/images/david.png",
+    image: "/assets/images/david.png",
     linkedin: "",
     email: "",
     description:
@@ -211,4 +211,3 @@ const OurTeam = () => {
 };
 
 export default OurTeam;
-

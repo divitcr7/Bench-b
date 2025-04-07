@@ -6,20 +6,20 @@ export default function BestDeals() {
     {
       title: "Fill in Your Basic Details",
       info: "Our platform makes it easy to provide the data we need to provide you a quote!",
-      img1: "./assets/icons/fillDetails.png",
-      img2: "./assets/icons/01.png",
+      img1: "/assets/icons/fillDetails.png",
+      img2: "/assets/icons/01.png",
     },
     {
       title: "Compare Prices And Customize Coverage",
       info: "We shop many carriers to help you find the right price as well as coverages!",
-      img1: "./assets/icons/compare.png",
-      img2: "./assets/icons/02.png",
+      img1: "/assets/icons/compare.png",
+      img2: "/assets/icons/02.png",
     },
     {
       title: "Get Insured Today",
       info: "Our agents will find the best rates and coverages for you, and assist you in starting your policy immediately!",
-      img1: "./assets/icons/insure.png",
-      img2: "./assets/icons/03.png",
+      img1: "/assets/icons/insure.png",
+      img2: "/assets/icons/03.png",
     },
   ];
 

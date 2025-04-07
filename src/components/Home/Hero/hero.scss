@@ -10,7 +10,7 @@
 
     button {
       @apply m-auto w-[90%] h-[70%] bg-white text-btnBig font-bold;
-      border-radius:  20px 0px;
+      border-radius: 20px 0px;
     }
 
     &-commercial {
@@ -27,7 +27,7 @@
 .front-page {
   @apply lg:w-full h-full left-0 z-10 flex;
   background: {
-    image: url("./assets/images/home.png");
+    image: url("/assets/images/home.png");
     size: contain;
     repeat: no-repeat;
     position: bottom right;
@@ -76,7 +76,7 @@
 
 @media (max-width: 768px) {
   .front-page {
-    background-image: url("./assets/images/bnr_mobile.png");
+    background-image: url("/assets/images/bnr_mobile.png");
     background-size: cover;
     background-position: center;
     @apply flex flex-col items-center justify-center p-4;

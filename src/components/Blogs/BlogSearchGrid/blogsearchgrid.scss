@@ -1,30 +1,10 @@
-.blog-grid {
+.blog-search-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   background-color: var(--light-bg);
 }
 
-.blog-newsletter {
-  background: #0d1b2a;
-  color: white;
-  text-align: center;
-
-  .blog-newsletter-input {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-  }
-
-  .blog-newsletter-button {
-    background: #ffcc00;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-}
 
 .pagination-container {
   @apply w-[50%] ml-auto mr-auto;

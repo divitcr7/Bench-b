@@ -7,8 +7,10 @@ export default function Header() {
       <nav>
         {/* circle and menu */}
         <div className="header-items ">
-          <span className="navigation">
-            <img src="./assets/icons/hamburger.png" alt="person logo" />
+          <span className="navigation ">
+            <span>
+              <img src="/assets/icons/hamburger.png" alt="hamburger logo" />
+            </span>
           </span>
           <Link to="" className="hiddenClass">
             <span className="m-auto">MENU</span>
@@ -18,16 +20,16 @@ export default function Header() {
 
         {/* logo */}
         <div className="logo">
-          <img src="./assets/icons/logo.png" alt="Benchmark logo" />
+          <img src="/assets/icons/logo.png" alt="Benchmark logo" />
         </div>
 
         {/* contact us */}
         <div className="header-items hiddenClass">
           <Link to="">
-            <img src="./assets/icons/person.png" alt="person logo" />
+            <img src="/assets/icons/person.png" alt="person logo" />
           </Link>
           <Link to="">
-            <img src="./assets/icons/phone.png" alt="call logo" />
+            <img src="/assets/icons/phone.png" alt="call logo" />
           </Link>
 
           <Link to="">
@@ -38,7 +40,7 @@ export default function Header() {
         {/* dark phone icon on smaller screen */}
         <div className="header-items smallScreen">
           <Link to="">
-            <img src="./assets/icons/phone-dark.svg" alt="call logo" />
+            <img src="/assets/icons/phone-dark.svg" alt="call logo" />
           </Link>
         </div>
       </nav>

@@ -5,7 +5,7 @@ import "./sidebar.scss";
 const userInfo = {
   name: "Martin",
   designation: "Real Estate Specialist",
-  imgSrc: "./assets/icons/martin.png",
+  imgSrc: "/assets/icons/martin.png",
 };
 const application = [
   {
@@ -40,14 +40,14 @@ export default function Sidebar() {
     <aside className="onboarding-sidebar">
       {/* images section */}
       <div className="onboarding-sidebar-images">
-        <img src="./assets/icons/blue-ellipse.png" />
-        <img src="./assets/images/border.png" />
+        <img src="/assets/icons/blue-ellipse.png" />
+        <img src="/assets/images/border.png" />
       </div>
 
       {/* logo and other info */}
       <div className="onboarding-sidebar-info">
         {/* logo  */}
-        <img src="./assets/icons/benchmark.svg" />
+        <img src="/assets/icons/benchmark.svg" />
 
         {/* user info */}
         <div className="onboarding-sidebar-user">
@@ -59,19 +59,19 @@ export default function Sidebar() {
           <div>
             <div>
               <span>
-                <img src="./assets/icons/call-white.png" />
+                <img src="/assets/icons/call-white.png" />
               </span>
               <p>Phone</p>
             </div>
             <div>
               <span>
-                <img src="./assets/icons/chat-white.png" />
+                <img src="/assets/icons/chat-white.png" />
               </span>
               <p>Chat</p>
             </div>
             <div>
               <span>
-                <img src="./assets/icons/mail-white.png" />
+                <img src="/assets/icons/mail-white.png" />
               </span>
               <p>Email</p>
             </div>
@@ -89,9 +89,9 @@ export default function Sidebar() {
                 <div key={index}>
                   <span>
                     {percentage >= item.value ? (
-                      <img src="./assets/icons/arrow-green.png" />
+                      <img src="/assets/icons/arrow-green.png" />
                     ) : (
-                      <img src="./assets/icons/white-dot.png" />
+                      <img src="/assets/icons/white-dot.png" />
                     )}
                   </span>
                   <p>{item.name}</p>

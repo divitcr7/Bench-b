@@ -22,12 +22,12 @@ function ReviewCard({ item }: ReviewCardProps) {
   return (
     <div className="testimonial-reviews">
       <div className="apostrophe">
-        <img src="./assets/icons/apostrophe.png" alt="apostrophe" />
+        <img src="/assets/icons/apostrophe.png" alt="apostrophe" />
         <span></span>
       </div>
       <div className="rating">
         {Array.from({ length: item.rating }).map((_, index) => (
-          <img key={index} src="./assets/icons/Star.png" alt="star" />
+          <img key={index} src="/assets/icons/Star.png" alt="star" />
         ))}
       </div>
       <div className="tags">
@@ -62,9 +62,9 @@ export default function Testimonials() {
       date: "2025-03-01",
       rating: 5,
       review:
-          "Benchmark did a remarkable job in helping me get the insurance needed to complete a project with the City of Houston Permit Department. Thank you so much for your help!",
-        tags: ["PROFESSIONALISM", "QUALITY", "RESPONSIVENESS", "VALUE"],
-      image: "./assets/icons/avatar1.png",
+        "Benchmark did a remarkable job in helping me get the insurance needed to complete a project with the City of Houston Permit Department. Thank you so much for your help!",
+      tags: ["PROFESSIONALISM", "QUALITY", "RESPONSIVENESS", "VALUE"],
+      image: "/assets/icons/avatar1.png",
     },
     {
       id: 2,
@@ -74,7 +74,7 @@ export default function Testimonials() {
       review:
         "Benchmark did an exceptional job for me on a commerical property where I couldn't find a carrier that would insure the property, they were quick and efficent and I would reccomend them to anyone needing insurance services.",
       tags: ["EXCELLENT SERVICE", "HELPFUL STAFF"],
-      image: "./assets/icons/avatar2.png",
+      image: "/assets/icons/avatar2.png",
     },
     {
       id: 3,
@@ -84,7 +84,7 @@ export default function Testimonials() {
       review:
         "Quick response time and professional approach. The entire process was seamless and efficient.",
       tags: ["FAST SERVICE", "PROFESSIONAL"],
-      image: "./assets/icons/avatar3.png",
+      image: "/assets/icons/avatar3.png",
     },
     {
       id: 4,
@@ -94,7 +94,7 @@ export default function Testimonials() {
       review:
         "Decent service, but communication could be improved. Overall, a satisfactory experience.",
       tags: ["GOOD EXPERIENCE", "COMMUNICATION"],
-      image: "./assets/icons/avatar4.png",
+      image: "/assets/icons/avatar4.png",
     },
   ];
 
@@ -127,19 +127,21 @@ export default function Testimonials() {
           <h2>Testimonials</h2>
           <img
             className="googleLogo"
-            src="./assets/icons/google.png"
+            src="/assets/icons/google.png"
             alt="Google logo"
           />
           <p>112 VERIFIED GOOGLE REVIEWS</p>
           <span className="overall-rating">
             4.6
             {Array.from({ length: 5 }).map((_, index) => (
-              <img key={index} src="./assets/icons/Star.png" alt="star" />
+              <img key={index} src="/assets/icons/Star.png" alt="star" />
             ))}
           </span>
           <Link className="allReviewLink" to="">
             {" "}
-            <div>ALL REVIEWS <ArrowRight/></div>
+            <div>
+              ALL REVIEWS <ArrowRight />
+            </div>
           </Link>
         </div>
 

@@ -11,7 +11,9 @@ function App() {
 
   return (
     <>
-      {!hideHeaderRoutes.includes(location.pathname) && <Header />}
+      {!hideHeaderRoutes.includes(location.pathname) && (
+        <Header />
+      )}
       {/* to dynamically render current route */}
       <Outlet />
     </>

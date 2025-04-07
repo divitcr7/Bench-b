@@ -15,7 +15,7 @@
     margin-top: 4rem;
     display: flex;
     background: {
-      image: url("./assets/images/industry.png");
+      image: url("/assets/images/industry.png");
       size: contain;
       repeat: no-repeat;
       position: bottom right;
@@ -68,7 +68,7 @@
 
 @media (max-width: 768px) {
   .industry-front-page-right {
-    background-image: url("./assets/images/industry_mobile.png");
+    background-image: url("/assets/images/industry_mobile.png");
     background-size: contain;
     background-position: bottom;
     @apply flex flex-col items-center justify-center p-4;

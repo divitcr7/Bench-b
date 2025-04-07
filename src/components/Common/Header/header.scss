@@ -37,13 +37,15 @@
 }
 
 .navigation {
-  @apply h-full md:w-[3.5rem];
-  border-radius: 50% 50%;
+  @apply h-full w-[3.5rem] flex;
+  span {
+    @apply m-auto w-[70%] h-[60%] flex;
+    @apply rounded-full;
+    border: 1px solid #abafb6;
+  }
 
   img {
-    @apply p-1 md:p-2 h-[40%] w-[50%];
-    border: 1px solid #abafb6;
-    border-radius: 50% 50%;
+    @apply w-[50%] h-[auto];
   }
 }
 

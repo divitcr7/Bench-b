@@ -45,7 +45,7 @@ export default function Details() {
               <ul key={index} className="column">
                 {column.map((item, idx) => (
                   <h5>
-                    <img src="./assets/icons/gold-diamond.png" />
+                    <img src="/assets/icons/gold-diamond.png" />
                     <li key={idx}>{item}</li>
                   </h5>
                 ))}

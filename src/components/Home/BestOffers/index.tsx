@@ -84,13 +84,17 @@ export default function BestOffers() {
             <button className="btn btn-filled">COMPARE OFFERS</button>
           </div>
           <div className="bmVector">
-            <img src="./assets/images/bm-vector.png"/>
+            <img src="/assets/images/bm-vector.png" />
           </div>
         </div>
       </div>
 
       {/* side border */}
-      <img className="borderImage" src="./assets/images/border.png" alt="border-image"/>
+      <img
+        className="borderImage"
+        src="/assets/images/border.png"
+        alt="border-image"
+      />
     </section>
   );
 }

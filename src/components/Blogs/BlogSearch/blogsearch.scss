@@ -1,0 +1,17 @@
+.blog-search{
+    @apply flex flex-col;
+    p{
+        @apply text-overlineSmall lg:text-overlineBig font-bold;
+        @apply inline-block ml-auto mr-auto;
+        color:var(--indigo);
+    }
+    h2{
+        @apply ml-auto mr-auto;
+    }
+    span{
+        @apply font-bold ;
+    }
+    &-count{
+        @apply  mt-10 mb-5;
+    }
+}

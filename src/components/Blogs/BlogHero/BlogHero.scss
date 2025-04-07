@@ -5,10 +5,11 @@
   }
 
   &-hero-content {
-    @apply grid grid-cols-[3fr_1fr] lg:grid-rows-[1fr_1fr_6fr];
+    @apply grid grid-cols-[3fr_1fr] lg:grid-rows-[1fr_1fr_3fr] ;
     @apply pt-[5rem] pl-[1rem] lg:pl-[3rem] pr-[1rem] lg:pr-[4rem] lg:pb-[0rem];
-    width: 96rem;
-    gap: 3rem;
+    @apply gap-[1rem];
+    @apply ml-auto;
+    width: 80rem;
     grid-template-areas:
       "news search"
       "category category"
