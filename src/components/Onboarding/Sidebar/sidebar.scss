@@ -1,3 +1,5 @@
+@use "@/styles/variables.scss";
+
 .onboarding-sidebar {
   @apply w-[25vw] h-[100vh] relative;
   background-color: var(--primary-text);

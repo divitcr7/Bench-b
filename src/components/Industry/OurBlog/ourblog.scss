@@ -1,3 +1,5 @@
+@use "@/styles/variables.scss";
+
 .industry-blog {
   &-section {
     @apply md:grid md:grid-cols-[40%_60%];

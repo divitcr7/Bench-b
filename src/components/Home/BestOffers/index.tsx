@@ -1,12 +1,9 @@
 import { ArrowRight } from "lucide-react";
 import "./bestoffers.scss";
 
-interface ItemProps {
-  id: number;
-  imgSrc: string;
-  name: string;
-  price: string;
-}
+import {ItemProps} from "@/interfaces";
+
+
 function Card({ item }: { item: ItemProps }) {
   return (
     <div className="bestOffers_cards">

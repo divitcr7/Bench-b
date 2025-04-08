@@ -2,11 +2,7 @@ import "./style.scss";
 import { useEffect, useState } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
-interface PnSCardType {
-  id: number;
-  name: string;
-  imgSrc: string;
-}
+import {PnSCardType} from "@/interfaces";
 
 function PnSCard({ item }: { item: PnSCardType }) {
   return (

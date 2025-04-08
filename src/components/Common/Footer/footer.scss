@@ -1,3 +1,5 @@
+@use "@/styles/variables.scss";
+
 .footer {
   @apply lg:grid lg:grid-cols-[30%_70%];
   color: white;

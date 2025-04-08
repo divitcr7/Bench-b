@@ -1,11 +1,6 @@
-import "./howToCard.scss"
+import "./howToCard.scss";
 
-interface CardProps {
-  title: string;
-  info: string;
-  img1: string;
-  img2: string;
-}
+import { CardProps } from "@/interfaces";
 
 export default function HowToCards({ title, info, img1, img2 }: CardProps) {
   return (
@@ -22,5 +17,3 @@ export default function HowToCards({ title, info, img1, img2 }: CardProps) {
     </div>
   );
 }
-
-

@@ -1,3 +1,5 @@
+@use "@/styles/variables.scss";
+
 .whatWeDo {
   @apply grid lg:grid-cols-[40%_60%] h-[100%];
   &-container {

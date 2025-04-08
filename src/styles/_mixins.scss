@@ -1,0 +1,53 @@
+// _mixins.scss
+@use "@/styles/variables.scss";
+
+@mixin box-shadow(
+  $direction: "all",
+  $size: "medium",
+  $color: rgba(var(--box-shadow), 0.25)
+) {
+  $x: 20px;
+  $y: 20px;
+  $blur: 29px;
+  $spread: 0px;
+
+  @if $size == "small" {
+    $x: 10px;
+    $y: 10px;
+    $blur:29px;
+  }
+
+  $shadows: ();
+
+  @if $direction == "top" {
+    $shadows: 0 (-$y) $blur $spread $color;
+  } @else if $direction == "bottom" {
+    $shadows: 0 $y $blur $spread $color;
+  } @else if $direction == "left" {
+    $shadows: (-$x) 0 $blur $spread $color;
+  } @else if $direction == "right" {
+    $shadows: $x 0 $blur $spread $color;
+  } @else if $direction == "top-bottom" {
+    $shadows: 0 (-$y) $blur $spread $color, 0 $y $blur $spread $color;
+  } @else if $direction == "left-right" {
+    $shadows: (-$x) 0 $blur $spread $color, $x 0 $blur $spread $color;
+  } @else if $direction == "top-left" {
+    $shadows: (-$x) (-$y) $blur $spread $color;
+  } @else if $direction == "top-right" {
+    $shadows: $x (-$y) $blur $spread $color;
+  } @else if $direction == "bottom-left" {
+    $shadows: (-$x) $y $blur $spread $color;
+  } @else if $direction == "bottom-right" {
+    $shadows: $x $y $blur $spread $color;
+  } @else if $direction == "all" {
+    $shadows: 
+      0 (-$y) $blur $spread $color,
+      0 $y $blur $spread $color,
+      (-$x) 0 $blur $spread $color,
+      $x 0 $blur $spread $color;
+  } @else {
+    $shadows: 0 $y $blur $spread $color;
+  }
+
+  box-shadow: #{$shadows};
+}

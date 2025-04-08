@@ -2,12 +2,7 @@ import "./specialities.scss";
 import { useEffect, useState } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
-interface SpecialityCardType {
-  id: number;
-  name: string;
-  imgSrc: string;
-  title: string;
-}
+import {SpecialityCardType} from "@/interfaces"
 
 function SpecialityCard({ item }: { item: SpecialityCardType }) {
   return (

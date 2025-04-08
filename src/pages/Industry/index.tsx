@@ -9,7 +9,6 @@ import {
   Questions,
   OurBlog,
   ContactUs,
-  Footer
 } from "@/components";
 
 export default function Home() {
@@ -40,8 +39,8 @@ export default function Home() {
       <OurBlog />
       {/* contact us */}
       <ContactUs />
-      {/* footer */}
-      <Footer />
+      {/* footer
+      <Footer /> */}
     </>
   );
 }

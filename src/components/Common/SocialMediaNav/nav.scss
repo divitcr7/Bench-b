@@ -1,4 +1,6 @@
 /* Left-side navigation */
+@use "@/styles/variables.scss";
+
 .side-nav {
   @apply w-[4rem] h-full flex flex-col p-5 ;
   border-right: 1px solid var(--border-color);

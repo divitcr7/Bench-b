@@ -1,3 +1,5 @@
+@use "@/styles/variables.scss";
+
 .hero {
   @apply relative top-[-4rem] bg-transparent;
   height: calc(102vh);

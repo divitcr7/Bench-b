@@ -1,3 +1,4 @@
+@use "@/styles/variables.scss";
 .header {
   @apply z-50 relative h-headerSmall md:h-headerBig w-full;
 }
@@ -37,9 +38,9 @@
 }
 
 .navigation {
-  @apply h-full w-[3.5rem] flex;
+  @apply h-full w-[4rem] flex ml-0;
   span {
-    @apply m-auto w-[70%] h-[60%] flex;
+    @apply m-auto w-[2vw] h-[2vw] flex;
     @apply rounded-full;
     border: 1px solid #abafb6;
   }
@@ -64,5 +65,17 @@
 
   .smallScreen {
     display: flex;
+  }
+  .navigation{
+    span{
+      @apply w-[4vw] h-[4vw] ;
+    }
+  }
+}
+@media (max-width:426px){
+  .navigation{
+    span{
+      @apply w-[5vw] h-[5vw] ;
+    }
   }
 }

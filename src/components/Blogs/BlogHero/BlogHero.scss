@@ -1,3 +1,5 @@
+@use "@/styles/variables.scss";
+
 .blog {
   &-hero {
     @apply relative -top-[4rem] flex w-full;

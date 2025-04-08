@@ -1,3 +1,5 @@
+@use "@/styles/variables.scss";
+
 .questions {
   &-container {
     @apply h-auto w-full;

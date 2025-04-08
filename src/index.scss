@@ -1,43 +1,10 @@
-@use "./styles/fonts.scss";
-@use "./styles/common.scss";
+@use "@/styles/variables.scss";
+@use "@/styles/fonts.scss";
+@use "@/styles/common.scss";
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* for dark themes */
-/* [data-theme="dark"]{
-  --bg-color:black;
-  --primary-text:white;
-}  */
-
-:root {
-  /* background colors */
-  --bg-color: white;
-  --light-bg: #f7f7fa;
-  --input-bg:#fcfcff;
-  --bg-blue: 20, 22, 56;
-
-  /* text colors */
-  --primary-text: #07092d;
-  --secondary-text: #616381;
-  --light-grey: #a7a9d1;
-  --vlight-grey: #eeeef5;
-  --green: #19c19e;
-  --indigo: #2901e8;
-  --gold: #e0c18d;
-  --dark-blue: #07092d;
-  --light-blue: #1e204a;
-  --blue-border: #6c6ea6;
-
-  /* border colors */
-  --border-color: rgba(139, 149, 216, 0.3);
-  --divider: #e2e2e9;
-
-  // font sizes
-  --h2-big: 3.8rem;
-  --h2-small: 2.2rem;
-}
 
 body {
   background-color: var(--bg-color);
@@ -79,7 +46,7 @@ h4 {
 }
 h5 {
   //font
-  @apply font-gilroy font-bold ;
+  @apply font-gilroy font-bold;
   @apply text-h5Small lg:text-h5Big;
   @apply leading-h5Small lg:leading-h5Big;
   @apply mb-fortyEightSmall lg:mb-fortyEightBig;

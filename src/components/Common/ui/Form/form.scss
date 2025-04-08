@@ -1,4 +1,6 @@
-@import "../../../../styles/variables";
+
+@use "@/styles/variables.scss";
+
 
 .form {
   @apply w-full;

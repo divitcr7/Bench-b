@@ -3,16 +3,7 @@ import {BlogCard} from "@/components/Common";
 import "./blogsearchgrid.scss";
 
 
-interface BlogPost {
-  id: number;
-  title: string;
-  imageUrl: string;
-}
-
-interface BlogSearchGridProps {
-  blogData: BlogPost[];
-  searchCount:number;
-}
+import {BlogSearchGridProps} from "@/interfaces"
 
 
 const BlogSearchGrid: React.FC<BlogSearchGridProps> = ({blogData,searchCount}) => {

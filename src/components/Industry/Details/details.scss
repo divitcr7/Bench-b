@@ -1,3 +1,5 @@
+@use "@/styles/variables.scss";
+
 .details {
   @apply w-full h-full -mt-[4rem];
   @apply grid lg:grid-cols-[40%_60%] lg:grid-rows-[1fr_2fr];

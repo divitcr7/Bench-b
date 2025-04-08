@@ -1,12 +1,7 @@
 import "./tools.scss";
 import { ArrowRight } from "lucide-react";
 
-interface ToolCardType {
-  id: number;
-  imgSrc: string;
-  title: string;
-  info: string;
-}
+import {ToolCardType} from "@/interfaces";
 
 const data = [
   {

@@ -1,7 +1,6 @@
 import {
   Meta,
   ContactUs,
-  Footer,
   BlogHero,
   BlogGrid,
 } from "@/components";
@@ -21,8 +20,8 @@ export default function Blogs() {
       <BlogGrid />
       {/* contact us */}
       <ContactUs />
-      {/* footer */}
-      <Footer />
+      {/* footer
+      <Footer /> */}
     </>
   );
 }

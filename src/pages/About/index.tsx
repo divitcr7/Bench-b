@@ -9,7 +9,6 @@ import {
   Banner,
   Memberships,
   ContactUs,
-  Footer,
 } from "@/components";
 
 export default function About() {
@@ -40,8 +39,8 @@ export default function About() {
       <Memberships />
       {/* contact us */}
       <ContactUs />
-      {/* footer */}
-      <Footer />
+      {/* footer
+      <Footer /> */}
     </>
   );
 }

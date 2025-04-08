@@ -1,3 +1,5 @@
+@use "@/styles/variables.scss";
+
 .banner {
   @apply h-auto flex flex-col items-center z-20 relative -mt-16;
   background-color: var(--light-bg);

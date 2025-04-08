@@ -1,3 +1,5 @@
+@use "@/styles/variables.scss";
+
 .blog-search{
     @apply flex flex-col;
     p{

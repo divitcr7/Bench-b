@@ -1,10 +1,7 @@
 import React from "react";
 import "./BlogCard.scss";
 
-interface BlogCardProps {
-  imageUrl: string;
-  title: string;
-}
+import {BlogCardProps} from "@/interfaces";
 
 const BlogCard: React.FC<BlogCardProps> = ({ imageUrl, title }) => {
   return (

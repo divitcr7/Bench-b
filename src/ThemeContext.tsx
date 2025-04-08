@@ -6,11 +6,7 @@ import {
   ReactNode,
 } from "react";
 
-// ThemeContext Type
-interface ThemeContextType {
-  theme: "light" | "dark";
-  toggleTheme: () => void;
-}
+import { ThemeContextType } from "@/interfaces";
 
 // create context with a default value
 const ThemeContext = createContext<ThemeContextType | null>(null);

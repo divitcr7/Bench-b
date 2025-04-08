@@ -3,19 +3,9 @@ import { ArrowRightCircle, ArrowLeftCircle, ArrowRight } from "lucide-react";
 import "./testimonials.scss";
 import { useEffect, useState } from "react";
 
-interface Review {
-  id: number;
-  name: string;
-  date: string;
-  rating: number;
-  review: string;
-  tags: string[];
-  image: string;
-}
 
-interface ReviewCardProps {
-  item: Review;
-}
+
+import {Review, ReviewCardProps} from "@/interfaces"
 
 // ReviewCard Component
 function ReviewCard({ item }: ReviewCardProps) {

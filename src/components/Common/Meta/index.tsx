@@ -1,9 +1,6 @@
 import { useEffect } from "react";
 
-interface MetaType {
-  title: string;
-  description: string;
-}
+import {MetaType} from "@/interfaces"
 
 export default function MetaComponent({ meta }: { meta: MetaType }) {
   useEffect(() => {

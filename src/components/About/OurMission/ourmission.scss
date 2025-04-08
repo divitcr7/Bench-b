@@ -1,3 +1,6 @@
+@use "@/styles/variables.scss";
+@use '@/styles/mixins' as *;
+
 .our-mission {
   @apply grid lg:grid-cols-[40%_60%] lg:pl-0 lg:pr-0;
   &-container {
@@ -21,11 +24,11 @@
   }
   // paragraph
   > :nth-child(3) {
-    @apply col-span-1 lg:col-start-2 row-start-2 relative z-10 lg:h-[110%];
+    @apply col-span-1 lg:col-start-2 row-start-2 relative z-10 lg:h-[110%] ;
     @apply lg:pl-fiftySixBig lg:pr-fiftySixBig lg:pb-fortyBig;
     @apply text-body1Small lg:text-body1Big font-gilroy;
     @apply leading-body1Small lg:leading-body1Big;
-    box-shadow: -10px 15px 15px 0 var(--divider);
+    @include box-shadow(bottom-left);
     background-image: url("/assets/images/light-border.png");
     background-size: 50%;
     background-position: bottom right;

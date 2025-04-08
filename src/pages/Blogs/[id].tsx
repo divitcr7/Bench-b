@@ -1,20 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-interface BlogPost {
-  id: string;
-  title: string;
-  content: string;
-  date: string;
-  author: string;
-  imageUrl?: string;
-}
+import {BlogPost2} from "@/interfaces";
 
 const BlogPost: React.FC = () => {
   const { id } = useParams<{ id: string }>();
 
-  // This would typically come from an API or CMS
-  const blogPost: BlogPost = {
+  const blogPost: BlogPost2 = {
     id: id || "1",
     title: "Understanding Insurance Basics",
     content: `

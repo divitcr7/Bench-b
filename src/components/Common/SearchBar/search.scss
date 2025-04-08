@@ -1,3 +1,5 @@
+@use "@/styles/variables.scss";
+
 .search-bar {
   @apply h-[3rem] w-[17rem] m-auto;
   display: flex;

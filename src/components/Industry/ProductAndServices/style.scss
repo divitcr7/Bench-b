@@ -1,3 +1,6 @@
+@use "@/styles/variables.scss";
+@use '@/styles/mixins' as *;
+
 .pns {
   @apply h-full w-full gap-0;
 
@@ -67,10 +70,11 @@
     }
 
     &:hover {
+      @include box-shadow(all,small);
       transition: 0.3s all ease-in;
       transform: scale(1.01);
       cursor: pointer;
-      box-shadow: 0 1px 10px var(--divider);
+      box-sh
 
       h3 {
         color: var(--indigo);

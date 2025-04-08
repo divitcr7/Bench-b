@@ -1,3 +1,6 @@
+@use "@/styles/variables.scss";
+@use '@/styles/mixins' as *;
+
 .howToCard {
   @apply w-[95%] bg-white
          p-6 flex flex-col items-center text-center relative ml-auto mr-auto mb-eightyBig md:mb-fiftySixBig;
@@ -11,9 +14,10 @@
   }
 
   .iconContainer {
-    @apply w-[120px] h-[120px] bg-white flex items-center justify-center -mt-20 mb-4;
+    @apply w-[120px] h-[120px] bg-white flex items-center justify-center -mt-20 mb-4 ;
+    @include box-shadow(all, small);
     border-radius: 0% 20%;
-    box-shadow: 0 1px 10px var(--divider);
+    
   }
 
   .icon {

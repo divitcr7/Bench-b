@@ -1,3 +1,5 @@
+@use "@/styles/variables.scss";
+
 .app {
   @apply grid md:grid-cols-[60%_40%] md:grid-rows-[1fr_1.1fr_2fr_2fr];
   &-container {

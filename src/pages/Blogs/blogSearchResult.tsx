@@ -1,7 +1,6 @@
 import React from "react";
 import { 
   Meta, 
-  Footer, 
   BlogSearch
 } from "@/components";
 
@@ -17,8 +16,8 @@ const BlogSearchResult: React.FC = () => {
 
       {/* search results */}
       <BlogSearch/>
-      {/* footer */}
-      <Footer />
+      {/* footer
+      <Footer /> */}
     </>
   );
 };

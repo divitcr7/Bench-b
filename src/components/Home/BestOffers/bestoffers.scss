@@ -1,3 +1,5 @@
+@use "@/styles/variables.scss";
+
 .bestOffers {
   // Container Layout
   @apply h-full w-full grid grid-rows-[auto_1fr] lg:grid-cols-[45%_55%];
