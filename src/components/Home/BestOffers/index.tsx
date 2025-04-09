@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { Arrow } from "@/components/Common";
 import "./bestoffers.scss";
 
 import {ItemProps} from "@/interfaces";
@@ -17,7 +17,7 @@ function Card({ item }: { item: ItemProps }) {
           <span>{item.price}</span>
         </span>
         <span className="bestOffers_cards_icon">
-          <ArrowRight />
+          <Arrow direction="right" color="white" hoverColor="var(--green)"/>
         </span>
       </div>
     </div>

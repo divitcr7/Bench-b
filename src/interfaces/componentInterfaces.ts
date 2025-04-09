@@ -6,10 +6,16 @@ export interface ThemeContextType {
   toggleTheme: () => void;
 }
 
+export interface ArrowProps {
+  direction: "left" | "right" | "up" | "down";
+  color: string;
+  border?: string;
+  hoverColor?: string;
+}
 
 export interface BlogSearchGridProps {
   blogData: BlogPost[];
-  searchCount:number;
+  searchCount: number;
 }
 
 export interface CardProps {
@@ -19,9 +25,11 @@ export interface CardProps {
   img2: string;
 }
 
-export interface MetaType {
-  title: string;
-  description: string;
+export interface ChevronProps {
+  direction: "left" | "right" | "up" | "down";
+  color: string;
+  border?: string;
+  hoverColor?: string;
 }
 
 export interface ItemProps {
@@ -31,21 +39,26 @@ export interface ItemProps {
   price: string;
 }
 
-export interface SpecialityCardType {
-  id: number;
-  name: string;
-  imgSrc: string;
+export interface MetaType {
   title: string;
-}
-
-export interface ReviewCardProps {
-  item: Review;
+  description: string;
 }
 
 export interface PnSCardType {
   id: number;
   name: string;
   imgSrc: string;
+}
+
+export interface ReviewCardProps {
+  item: Review;
+}
+
+export interface SpecialityCardType {
+  id: number;
+  name: string;
+  imgSrc: string;
+  title: string;
 }
 
 export interface ToolCardType {

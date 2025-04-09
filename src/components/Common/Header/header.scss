@@ -1,6 +1,6 @@
 @use "@/styles/variables.scss";
 .header {
-  @apply z-50 relative h-headerSmall md:h-headerBig w-full;
+  @apply z-50 relative h-headerSmall md:h-headerBig w-full ;
 }
 
 @media (max-width: 768px) {

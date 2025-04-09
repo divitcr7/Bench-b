@@ -1,12 +1,21 @@
+export interface BlogCardProps {
+  imageUrl: string;
+  title: string;
+}
+
 export interface BlogPost {
   id: number;
   title: string;
   imageUrl: string;
 }
 
-export interface BlogCardProps {
-  imageUrl: string;
+export interface BlogPost2 {
+  id: string;
   title: string;
+  content: string;
+  date: string;
+  author: string;
+  imageUrl?: string;
 }
 
 export interface Review {
@@ -17,13 +26,4 @@ export interface Review {
   review: string;
   tags: string[];
   image: string;
-}
-
-export interface BlogPost2 {
-  id: string;
-  title: string;
-  content: string;
-  date: string;
-  author: string;
-  imageUrl?: string;
 }

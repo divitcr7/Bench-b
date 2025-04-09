@@ -1,34 +1,38 @@
 import {
-  ThemeContextType,
+  ArrowProps,
   BlogSearchGridProps,
   CardProps,
-  MetaType,
+  ChevronProps,
   ItemProps,
-  SpecialityCardType,
-  ReviewCardProps,
+  MetaType,
   PnSCardType,
+  ReviewCardProps,
+  SpecialityCardType,
+  ThemeContextType,
   ToolCardType,
 } from "./componentInterfaces";
 
 import { 
-    BlogPost ,
-    BlogCardProps,
-    Review,
-    BlogPost2
-} from "./dataModels";
+  BlogCardProps, 
+  BlogPost, 
+  BlogPost2, 
+  Review } 
+from "./dataModels";
 
 export type {
-  ThemeContextType,
+  ArrowProps,
+  BlogCardProps,
+  BlogPost,
+  BlogPost2,
   BlogSearchGridProps,
   CardProps,
-  MetaType,
-  BlogPost,
-  BlogCardProps,
+  ChevronProps,
   ItemProps,
-  SpecialityCardType,
+  MetaType,
+  PnSCardType,
   Review,
   ReviewCardProps,
-  PnSCardType,
+  SpecialityCardType,
+  ThemeContextType,
   ToolCardType,
-  BlogPost2,
 };

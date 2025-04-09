@@ -1,0 +1,10 @@
+.chevron-icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  color: var(--icon-color);
+  border: var(--icon-border);
+
+  &:hover{
+    color:var(--icon-hover-color);
+  }
+}
