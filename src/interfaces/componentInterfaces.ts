@@ -8,7 +8,7 @@ export interface ThemeContextType {
 
 export interface ArrowProps {
   direction: "left" | "right" | "up" | "down";
-  color: string;
+  color?: string;
   border?: string;
   hoverColor?: string;
 }
@@ -27,7 +27,7 @@ export interface CardProps {
 
 export interface ChevronProps {
   direction: "left" | "right" | "up" | "down";
-  color: string;
+  color?: string;
   border?: string;
   hoverColor?: string;
 }

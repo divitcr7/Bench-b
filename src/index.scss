@@ -28,7 +28,7 @@ html {
   @apply pl-containerSideSmall pr-containerSideSmall lg:pl-containerSideBig lg:pr-containerSideBig;
 }
 h1 {
-  @apply text-h1Small lg:text-h1Big leading-h1Small lg:leading-h1Big font-gilroy;
+  @apply text-h1Small md:text-h1Big leading-h1Small md:leading-h1Big font-gilroy;
 }
 h2 {
   @apply text-h2Small lg:text-h2Big font-bold;
@@ -51,3 +51,5 @@ h5 {
   @apply leading-h5Small lg:leading-h5Big;
   @apply mb-fortyEightSmall lg:mb-fortyEightBig;
 }
+
+

@@ -1,18 +1,18 @@
 import "./specialities.scss";
 import { useEffect, useState } from "react";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { Arrow,Chevron } from "@/components/Common";
 
 import {SpecialityCardType} from "@/interfaces"
 
 function SpecialityCard({ item }: { item: SpecialityCardType }) {
   return (
-    <div className="speciality-cards">
+    <div className="speciality-cards hover-arrow-parent">
       <div className="speciality-cards-content">
         <img src={item.imgSrc} alt={item.name} />
         <h3>{item.name}</h3>
         <p>{item.title}</p>
         <span className="speciality-arrow">
-          <ArrowRight />
+          <Arrow direction="right" color="var(--indigo)" hoverColor="var(--green)" />
         </span>
       </div>
     </div>
@@ -127,7 +127,7 @@ export default function Specialities() {
         </div>
         <div className="speciality-button">
           <span>
-            SHOW MORE <ChevronDown />
+            SHOW MORE <Chevron direction="down" />
           </span>
         </div>
       </div>

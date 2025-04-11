@@ -5,7 +5,7 @@
   height: calc(102vh);
 
   &-button {
-    @apply w-[15vw] h-[10vh] hidden lg:flex;
+    @apply w-[15vw] h-[10vh] flex;
     border-radius: 20px 0px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -27,7 +27,7 @@
 }
 
 .front-page {
-  @apply lg:w-full h-full left-0 z-10 flex;
+  @apply w-full h-full left-0 z-10 flex;
   background: {
     image: url("/assets/images/home.png");
     size: contain;
@@ -38,7 +38,7 @@
 
 /* Heading section */
 .front-page_heading {
-  @apply w-[50%] lg:mt-auto lg:mr-0 lg:mb-auto lg:ml-[2rem] font-gilroy;
+  @apply w-[50%] lg:mt-auto lg:mr-0 lg:mb-auto lg:ml-[2rem];
 
   h1 {
     // font
@@ -62,30 +62,33 @@
 /* Media queries */
 @media (max-width: 1200px) {
   .front-page_heading {
-    @apply lg:w-[40vw];
+    width: 60vw !important;
   }
 }
 
 @media (max-width: 1024px) {
-  .front-page {
-    background-size: 90% 100%;
-  }
-
   .front-page_heading {
-    @apply w-[60vw];
+    @apply w-[60vw] mt-20 ml-5;
+  }
+}
+
+@media (max-width: 769px) {
+  .hero-button {
+    @apply hidden;
   }
 }
 
 @media (max-width: 768px) {
   .front-page {
     background-image: url("/assets/images/bnr_mobile.png");
-    background-size: cover;
+    background-size: cover !important;
     background-position: center;
-    @apply flex flex-col items-center justify-center p-4;
+    @apply flex flex-col;
   }
 
   .front-page_heading {
-    @apply m-auto mb-auto mt-[10rem] mr-10 w-[90vw];
+    width: 90vw !important;
+    margin: 10rem 5rem 5rem 5rem;
 
     h1 {
       color: white;
@@ -107,11 +110,22 @@
 
 @media (max-width: 426px) {
   .front-page_heading {
-    @apply w-[90vw] m-auto mt-40;
+    width: 90vw !important;
+    margin: 5rem auto auto 2rem;
+
+    h1 {
+      @apply w-[70%];
+    }
   }
 }
-@media (min-width: 769px) and (max-width: 1023px) {
+
+@media (max-width: 320px) {
   .front-page_heading {
-    @apply mt-auto mb-auto ml-[3rem] mr-[3rem] w-[80vw];
+    width: 110vw !important;
+    margin: 5rem auto auto 1rem;
+
+    h4 {
+      @apply w-[80%];
+    }
   }
 }

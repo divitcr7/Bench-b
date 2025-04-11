@@ -1,17 +1,12 @@
-import {
-  ChevronLeft,
-  ChevronRight,
-  ChevronUp,
-  ChevronDown,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, ChevronUp, ChevronDown } from "lucide-react";
 import "./chevron.scss";
 import { ChevronProps } from "@/interfaces";
 
 export default function Chevron({
   direction,
-  color,
-  border = "transparent",
-  hoverColor
+  color="black",
+  border,
+  hoverColor,
 }: ChevronProps) {
   return (
     <>
@@ -20,10 +15,9 @@ export default function Chevron({
           className="chevron-icon"
           style={
             {
-             
               "--icon-color": color,
               "--icon-border": border ? `1px solid ${border}` : "none",
-              "--icon-hover-color": hoverColor ? hoverColor : color,
+              "--icon-hover-color": hoverColor,
             } as React.CSSProperties
           }
         />
@@ -33,10 +27,9 @@ export default function Chevron({
           className="chevron-icon"
           style={
             {
-             
               "--icon-color": color,
               "--icon-border": border ? "1px solid" : "none",
-              "--icon-hover-color": hoverColor ? hoverColor : color,
+              "--icon-hover-color": hoverColor,
             } as React.CSSProperties
           }
         />
@@ -46,10 +39,9 @@ export default function Chevron({
           className="chevron-icon"
           style={
             {
-             
               "--icon-color": color,
               "--icon-border": border ? "1px solid" : "none",
-              "--icon-hover-color": hoverColor ? hoverColor : color,
+              "--icon-hover-color": hoverColor,
             } as React.CSSProperties
           }
         />
@@ -59,10 +51,9 @@ export default function Chevron({
           className="chevron-icon"
           style={
             {
-             
               "--icon-color": color,
               "--icon-border": border ? "1px solid" : "none",
-              "--icon-hover-color": hoverColor ? hoverColor : color,
+              "--icon-hover-color": hoverColor,
             } as React.CSSProperties
           }
         />

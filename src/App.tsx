@@ -11,7 +11,7 @@ function App() {
   const hideFooterRoutes = ["/onboarding"];
 
   return (
-    <>
+    <div className="thin-scroll">
       {!hideHeaderRoutes.includes(location.pathname) && (
         <Header />
       )}
@@ -20,7 +20,7 @@ function App() {
       {!hideFooterRoutes.includes(location.pathname) && (
         <Footer />
       )}
-    </>
+    </div>
   );
 }
 

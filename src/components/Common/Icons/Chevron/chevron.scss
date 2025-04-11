@@ -1,10 +1,28 @@
+@use "@/styles/variables.scss";
+
 .chevron-icon {
-  width: var(--icon-size);
-  height: var(--icon-size);
+  @apply p-2;
+  box-sizing: content-box;
+  width: 20px;
+  height: 20px;
   color: var(--icon-color);
   border: var(--icon-border);
+  border-radius: 9999px;
+  transition: color .5s ease, border .5s ease;
 
-  &:hover{
-    color:var(--icon-hover-color);
+  
+}
+
+.hover-chevron-parent:hover .chevron-icon {
+  // @apply rounded-full h-full w-full ;
+  color: var(--icon-hover-color);
+  // border: 1px solid var(--icon-hover-color);
+}
+
+@media (max-width: 768px) {
+  .chevron-icon {
+    width: 12px;
+    height: 12px;
   }
 }
+

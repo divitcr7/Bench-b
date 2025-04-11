@@ -6,7 +6,7 @@ import {ItemProps} from "@/interfaces";
 
 function Card({ item }: { item: ItemProps }) {
   return (
-    <div className="bestOffers_cards">
+    <div className="bestOffers_cards hover-arrow-parent">
       <div>
         <img src={item.imgSrc} />
         <span>{item.name}</span>

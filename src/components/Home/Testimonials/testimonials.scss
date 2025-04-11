@@ -47,12 +47,13 @@
     }
   }
   &-navigation {
-    @apply mt-sixteen ;
+    @apply mt-sixteen flex ;
     cursor: pointer;
     grid-area: buttons;
-    svg {
-      @apply w-10 h-10 inline-block mr-10;
+    span{
+      @apply mr-5 ;
     }
+    
   }
   &-reviews {
     @apply w-[100%] lg:w-[90%] ml-auto mr-auto;

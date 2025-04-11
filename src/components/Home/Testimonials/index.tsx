@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import { ArrowRightCircle, ArrowLeftCircle, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { Chevron } from "@/components/Common";
 import "./testimonials.scss";
 import { useEffect, useState } from "react";
 
-
-
-import {Review, ReviewCardProps} from "@/interfaces"
+import { Review, ReviewCardProps } from "@/interfaces";
 
 // ReviewCard Component
 function ReviewCard({ item }: ReviewCardProps) {
@@ -137,18 +136,22 @@ export default function Testimonials() {
 
         {/* Navigation Buttons */}
         <div className="testimonial-navigation ">
-          <ArrowLeftCircle
+          <span
             onClick={prevReview}
             className={`nav-arrow ${currentIndex === 0 ? "disabled" : ""}`}
-          />
-          <ArrowRightCircle
+          >
+            <Chevron direction="left" border="black" />
+          </span>
+          <span
             onClick={nextReview}
             className={`nav-arrow ${
               currentIndex + reviewsDisplayed >= testimonials.length
                 ? "disabled"
                 : ""
             }`}
-          />
+          >
+            <Chevron direction="right" border="black" />
+          </span>
         </div>
 
         {/* Reviews Display */}
