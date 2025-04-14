@@ -82,7 +82,7 @@ export default function Specialities() {
     },
     {
       id: 9,
-      name: "Motorcycle & Watercraft",
+      name: "Motorcycle ",
       imgSrc: "/assets/icons/m&w.png",
       title:
         "We guarantee full coverage for all properties at an excellent rate.",

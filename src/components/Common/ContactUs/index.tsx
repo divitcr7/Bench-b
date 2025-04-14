@@ -30,12 +30,9 @@ export default function ContactUs() {
             <ContactForm />
           </div>
           {/* contact */}
-          <div className="contact-info">
+          <div className="contact-info ">
             {/* border design */}
-            <img
-              className="contact-border-image"
-              src="/assets/images/border2.png"
-            />
+            
             <div className="contact-info-content">
               {/* blue triangle image */}
               <img

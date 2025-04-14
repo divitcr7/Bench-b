@@ -24,20 +24,20 @@ const data = {
     "Classic Auto",
     "Builder's Risk",
     "Flood",
-    "Motorcycle & Watercraft",
+    "Motorcycle",
     "Life Insurance",
   ],
   company: ["About Us", "Customer Service"],
 };
 
 const Footer = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
   const [openDropdown, setOpenDropdown] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-      if (window.innerWidth > 768) setOpenDropdown(null);
+      setIsMobile(window.innerWidth <= 1024);
+      if (window.innerWidth > 1024) setOpenDropdown(null);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
         <div className="footer-right">
           {Object.entries(data).map(([key, items]) => (
-            <div className="footer-section" key={key}>
+            <div className="footer-section " key={key}>
               <h3 onClick={() => toggleDropdown(key)}>
                 {key.charAt(0).toUpperCase() + key.slice(1)}
                 {isMobile && (

@@ -3,7 +3,6 @@
 .testimonial {
   @apply h-full w-full;
 
-
   //grid system
   @apply grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-[85%_15%];
   grid-template-areas:
@@ -19,18 +18,19 @@
     grid-area: testimonial;
 
     h2 {
-      @apply text-h2Small lg:text-h2Big col-span-3 col-start-1 row-span-1 row-start-1 font-bold;
-      @apply leading-h2Small lg:leading-h2Big;
+      @apply col-span-3 col-start-1 row-span-1 row-start-1 font-bold;
     }
     .googleLogo {
       @apply h-[50%] col-span-1 col-start-1 row-start-2 row-span-1;
     }
     p {
-      @apply font-bold text-smallBodyBig lg:text-overlineBig col-start-2 col-span-1 row-start-2 row-span-1;
+      @apply font-bold text-smallBodyBig lg:text-overlineBig;
       @apply leading-smallBodySmall lg:leading-smallBodyBig;
+      @apply col-start-2 col-span-1 row-start-2 row-span-1;
     }
     span {
-      @apply text-overlineSmall lg:text-overlineBig col-span-1 col-start-2 row-span-1 row-start-3;
+      @apply text-overlineSmall lg:text-overlineBig;
+      @apply col-span-1 col-start-2 row-span-1 row-start-3;
       img {
         @apply h-[2vh] inline-block;
       }
@@ -47,13 +47,12 @@
     }
   }
   &-navigation {
-    @apply mt-sixteen flex ;
+    @apply mt-sixteen flex;
     cursor: pointer;
     grid-area: buttons;
-    span{
-      @apply mr-5 ;
+    span {
+      @apply mr-5;
     }
-    
   }
   &-reviews {
     @apply w-[100%] lg:w-[90%] ml-auto mr-auto;
@@ -80,7 +79,7 @@
     }
     .tags {
       @apply h-[5vh] font-bold text-overlineSmall lg:text-overlineBig;
-      @apply mb-twentyFourSmall lg:mb-twentyFourBig;
+      @apply mb-twentyFourSmall lg:mb-twentyFourBig flex flex-wrap;
       color: var(--divider);
 
       span {
@@ -113,11 +112,50 @@
   }
 }
 
+@media (max-width: 1250px) {
+  .testimonial {
+    @apply grid-cols-[1.2fr_1fr_1fr];
+  }
+}
+
+@media (max-width: 1024px) {
+  .testimonial {
+    &-header {
+      @apply h-[50%];
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .testimonial {
+    @apply grid-cols-2 grid-rows-[25vh_1fr];
     grid-template-areas:
-      "testimonial "
-      "reviews"
-      "buttons ";
+      "testimonial testimonial"
+      "reviews reviews"
+      "buttons .";
+
+    &-header {
+      @apply h-[90%];
+    }
+    &-reviews-container {
+      @apply grid-cols-2;
+    }
+    &-reviews{
+      @apply w-[95%];
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .testimonial {
+    &-header {
+      @apply h-[90%];
+    }
+    &-reviews-container {
+      @apply grid-cols-1;
+    }
+    &-reviews{
+      @apply w-[95%];
+    }
   }
 }

@@ -42,6 +42,10 @@
     grid-area: info;
     @apply relative z-10;
     background-color: var(--light-blue);
+    background-image: url("/assets/images/border2.png");
+    background-position: top right;
+    background-size: 50% auto;
+    background-repeat: no-repeat;
 
     &-content {
       @apply relative lg:mt-20 mb-10 pb-10 ml-10 mr-10;
@@ -66,10 +70,30 @@
     }
   }
 
-  &-border-image {
-    @apply absolute top-0 right-0 z-20 h-[30vh];
+}
+@media (max-width:1310px){
+  .contact{
+    &-info{
+      &-content{
+        h4{
+          @apply text-[1.5rem];
+        }
+      }
+    }
   }
 }
+@media (max-width:1170px){
+  .contact{
+    &-info{
+      &-content{
+        h4{
+          @apply text-[1.2rem];
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .contact-content {
     @apply grid-cols-1;

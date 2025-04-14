@@ -9,10 +9,10 @@
   }
 
   h2 {
-    @apply font-bold h-[10vh] w-full text-center lg:mb-fortyBig;
+    @apply font-bold w-full text-center;
   }
   h5 {
-    @apply h-[5vh] w-full text-center;
+    @apply w-full text-center;
   }
   &-nav {
     @apply flex ml-auto mr-auto lg:mb-fiftySixBig h-[6vh] lg:h-[8vh] w-full lg:w-[40vw] text-h5Small lg:text-h5Big  font-gilroy;
@@ -39,7 +39,7 @@
   }
 
   &-cards {
-    @apply grid grid-rows-4 h-[18rem] w-[100%] ml-auto mr-auto mb-1 relative;
+    @apply grid grid-rows-4 h-[16rem] lg:h-[18rem] w-[100%] ml-auto mr-auto mb-1 relative;
 
     &-content {
       @apply h-full w-full flex flex-col items-center justify-between;
@@ -50,11 +50,11 @@
     }
 
     h3 {
-      @apply m-auto;
+      @apply m-auto font-bold;
     }
 
     p {
-      @apply text-center text-body1Small lg:text-body1Big font-gilroy pl-5 pr-5 mt-sixteen ;
+      @apply text-center text-body1Small lg:text-body1Big font-gilroy pl-5 pr-5 mt-sixteen;
       @apply leading-body1Small lg:leading-body1Big;
       color: var(--secondary-text);
     }
@@ -62,7 +62,6 @@
     .speciality-arrow {
       @apply absolute bottom-[1.8rem] lg:bottom-[2.4rem];
       @apply rounded-full;
-
     }
 
     &:hover {
@@ -74,7 +73,7 @@
       h3 {
         color: var(--green);
       }
-      .speciality-arrow{
+      .speciality-arrow {
         border: 1px solid var(--green);
       }
     }
@@ -88,14 +87,33 @@
       border-bottom: 2px solid var(--green);
     }
 
-    svg{
+    svg {
       display: inline-block;
     }
   }
   &-cards-container {
-    @apply grid grid-rows-3 grid-cols-1 lg:grid-cols-3 w-[95%] m-auto mt-fiftySixSmall lg:mt-fiftySixBig;
+    @apply grid grid-rows-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[95%] m-auto mt-fiftySixSmall lg:mt-fiftySixBig;
+  }
+}
+@media (max-width: 1440px) {
+  .speciality {
+    &-arrow {
+      bottom: 1rem !important;
+    }
   }
 }
 
+@media (max-width: 1200px) {
+  .speciality {
+    &-arrow {
+      bottom: 0.5rem !important;
+    }
+  }
+}
 @media (max-width: 768px) {
+  .speciality {
+    &-arrow {
+      bottom: 1rem !important;
+    }
+  }
 }

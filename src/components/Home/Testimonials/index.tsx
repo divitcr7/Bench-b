@@ -20,7 +20,7 @@ function ReviewCard({ item }: ReviewCardProps) {
         ))}
       </div>
       <div className="tags">
-        POSITIVE{" "}
+        POSITIVE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         {item.tags.map((tag, index) => (
           <span key={index}>{tag},</span>
         ))}

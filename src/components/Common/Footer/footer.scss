@@ -46,6 +46,7 @@
   .footer-section {
     transition: all 1s ease;
     h3 {
+      @apply mb-twentyFourSmall lg:mb-twentyFourBig font-bold;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -58,6 +59,7 @@
     ul {
       list-style: none;
       display: block;
+      color: var(--light-grey);
     }
     li {
       @apply text-body1Small lg:text-body1Big font-gilroy;
@@ -72,11 +74,14 @@
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1025px) {
     .footer-right {
       flex-direction: column;
     }
 
+    .footer-section {
+      border-bottom: 2px solid var(--light-grey);
+    }
     .footer-section ul {
       display: none;
     }
