@@ -9,11 +9,20 @@ export default function Header() {
         <div className="header-items ">
           <span className="navigation ">
             <span>
-              <img src="/assets/icons/hamburger.png" alt="hamburger logo" />
+              <img
+                className="hiddenClass"
+                src="/assets/icons/hamburger.png"
+                alt="hamburger logo"
+              />
+              <img
+                className="smallScreen"
+                src="/assets/icons/hamburger-small.png"
+                alt="hamburger logo"
+              />
             </span>
           </span>
           <Link to="" className="hiddenClass">
-            <span className="m-auto">MENU</span>
+            <span className="m-auto ">MENU</span>
           </Link>
           <span className="font-bold opacity-0 hiddenClass">Menu</span>
         </div>

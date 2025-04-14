@@ -4,13 +4,15 @@
   @apply p-2;
   display: flex;
   box-sizing: content-box;
-  width: 20px;
-  height: 20px;
+
   color: var(--icon-color);
   border: var(--icon-border);
   border-radius: 9999px;
-  transition: color .5s ease, border .5s ease;
-
+  transition: color 0.5s ease, border 0.5s ease;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .hover-arrow-parent:hover .arrow-icon {
@@ -19,10 +21,12 @@
   // border: 1px solid var(--icon-hover-color);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .arrow-icon {
-    width: 12px;
-    height: 12px;
+    @apply p-0 ;
+    svg {
+      width: 12px !important;
+      height: 12px !important;
+    }
   }
 }
-

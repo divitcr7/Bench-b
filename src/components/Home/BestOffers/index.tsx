@@ -21,7 +21,7 @@ function Card({ item }: { item: ItemProps }) {
         </span>
       </div>
     </div>
-  );
+  )
 }
 
 export default function BestOffers() {
@@ -86,12 +86,6 @@ export default function BestOffers() {
         </div>
       </div>
 
-      {/* side border */}
-      <img
-        className="borderImage"
-        src="/assets/images/border.png"
-        alt="border-image"
-      />
     </section>
   );
 }

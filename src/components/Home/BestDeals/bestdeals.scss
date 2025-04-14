@@ -1,12 +1,16 @@
 @use "@/styles/variables.scss";
 
 .bestDeals {
-  @apply h-auto w-[100vw] ;
+  @apply h-auto w-[100vw];
 
-  h4 {
-    @apply text-center text-overlineSmall md:text-overlineBig leading-h4Small lg:leading-h4Big font-semibold ;
-    @apply mb-sixteen ;
-    color: var(--indigo);
+  &-container {
+    > :first-child {
+      > p {
+        @apply text-center text-overlineSmall md:text-overlineBig leading-h4Small lg:leading-h4Big font-semibold;
+        @apply mb-sixteen;
+        color: var(--indigo);
+      }
+    }
   }
 
   h2 {
@@ -18,14 +22,14 @@
   }
 
   .highlight::after {
-    @apply absolute left-1/2 w-[100%] h-[10px] -z-10 bottom-[10px] md:bottom-[20px];
+    @apply absolute left-1/2 w-[100%] h-[5px] lg:h-[10px] -z-10 bottom-[10px] lg:bottom-[20px];
     background-color: var(--gold);
-    content: ""; 
-    transform: translateX(-50%); 
+    content: "";
+    transform: translateX(-50%);
   }
 
   &_cards {
-    @apply w-[90%] md:w-[80%] m-auto grid md:grid-cols-3 ;
+    @apply w-[90%] md:w-[80%] m-auto grid md:grid-cols-3;
   }
 
   &_button {
@@ -43,8 +47,8 @@
 }
 
 //768px
-@media (max-width:1440px){
-  .bestDeals{
+@media (max-width: 1440px) {
+  .bestDeals {
     @apply pt-eightySmall pb-eightySmall;
   }
 }

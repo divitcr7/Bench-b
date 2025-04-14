@@ -2,6 +2,11 @@
 @use "@/styles/variables.scss";
 
 
+.padding-container {
+  @apply pt-eightySmall pb-eightySmall lg:pt-eightyBig lg:pb-eightyBig;
+  @apply pl-containerSideSmall pr-containerSideSmall lg:pl-containerSideBig lg:pr-containerSideBig;
+}
+
 .btn {
   @apply font-abel;
 

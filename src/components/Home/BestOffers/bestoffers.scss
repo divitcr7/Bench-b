@@ -2,7 +2,11 @@
 
 .bestOffers {
   // Container Layout
-  @apply h-full w-full grid grid-rows-[auto_1fr] lg:grid-cols-[45%_55%];
+  @apply h-full w-full lg:grid lg:grid-cols-[45%_55%];
+  background-image: url("/assets/images/border.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
 
   &_container {
     @apply h-auto w-full relative;
@@ -20,8 +24,8 @@
   }
 
   h5 {
-    @apply text-center lg:text-left lg:w-[180%];
-    @apply text-white  font-gilroy;
+    @apply text-center lg:text-left lg:w-[180%] z-20 relative;
+    @apply text-white;
   }
 
   // Left Side Image
@@ -40,7 +44,7 @@
     @apply m-auto mb-4 lg:mb-sixteen z-20 relative;
     color: var(--blue-border);
     background-color: var(--light-blue);
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
     // Card Left Section
     div:nth-child(1) {
@@ -57,7 +61,7 @@
 
     // Card Right Section
     div:nth-child(2) {
-      @apply grid grid-cols-[60%_40%];
+      @apply grid lg:grid-cols-[60%_40%];
     }
 
     // Card Hover States
@@ -65,15 +69,14 @@
       border: 1px solid var(--blue-border);
       cursor: pointer;
 
-      .bestOffers_cards_icon{
-        border:1px solid var(--green);
+      .bestOffers_cards_icon {
+        border: 1px solid var(--green);
       }
-    
     }
 
     // Card Components
     &_icon {
-      @apply m-auto rounded-full ;
+      @apply m-auto rounded-full;
 
       display: flex;
       align-items: center;
@@ -85,7 +88,7 @@
     }
 
     &_sign {
-      @apply text-h4Small lg:text-h4Big top-0 left-[-15px] absolute;
+      @apply text-h4Small lg:text-h4Big top-0 left-[-10px] lg:left-[-15px] absolute;
       color: var(--blue-border);
     }
   }
@@ -137,6 +140,17 @@
   }
 }
 
+@media (min-width: 769px) and (max-width: 1023px) {
+  .bestOffers {
+    &_cards {
+      @apply grid-cols-[80%_20%];
+
+      > :nth-child(2) {
+        @apply flex grid-cols-[50%_50%];
+      }
+    }
+  }
+}
 //768 px
 @media (max-width: 768px) {
   .bestOffers {
@@ -155,7 +169,7 @@
     }
 
     &_cards {
-      @apply w-[95%] max-w-[95vw] m-auto mb-4 p-0;
+      @apply w-[95%] max-w-[95vw] m-auto mb-4 p-0 grid-cols-[80%_20%];
 
       div:nth-child(1) {
         @apply grid grid-cols-[30%_70%] text-smallBodySmall font-gilroy;
@@ -182,12 +196,8 @@
 
 @media (max-width: 426px) {
   .bestOffers {
-    &_cards-container {
-      @apply -mt-2;
-    }
-
     &_cards {
-      @apply w-[95%] m-auto mb-4;
+      @apply w-[95%] m-auto mb-4 grid-cols-[75%_25%];
 
       div:nth-child(1) {
         span {
@@ -200,6 +210,9 @@
 
 @media (max-width: 320px) {
   .bestOffers {
+    &_cards {
+      @apply w-[95%] m-auto mb-4 grid-cols-[70%_30%];
+    }
     &_cards-container {
       @apply mt-1;
     }

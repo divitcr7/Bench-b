@@ -28,7 +28,7 @@ export default function BestDeals() {
       <div className="bestDeals-container padding-container">
         {/* how it works */}
         <div>
-          <h4>HOW IT WORKS</h4>
+          <p>HOW IT WORKS</p>
         </div>
 
         {/* we find you the best deal */}
@@ -40,7 +40,7 @@ export default function BestDeals() {
         </div>
 
         {/* cards */}
-        <div className="bestDeals_cards">
+        <div className="bestDeals_cards ">
           {instructions.map((card, index) => (
             <HowToCards
               key={index}

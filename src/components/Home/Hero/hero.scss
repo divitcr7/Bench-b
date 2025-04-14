@@ -72,13 +72,18 @@
   }
 }
 
-@media (max-width: 769px) {
-  .hero-button {
-    @apply hidden;
+@media (min-width: 769px) and (max-width: 1024px) {
+  .front-page_heading {
+    h4 {
+      @apply w-[35vw] !important;
+    }
   }
 }
 
 @media (max-width: 768px) {
+  .hero-button{
+    display: none;
+  }
   .front-page {
     background-image: url("/assets/images/bnr_mobile.png");
     background-size: cover !important;
