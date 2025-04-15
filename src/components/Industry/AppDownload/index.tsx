@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ChevronRight, ChevronLeft } from "lucide-react";
+import { Chevron } from "@/components/Common";
 import "./appdownload.scss";
 
 const data = [
@@ -94,7 +94,7 @@ export default function AppDownload() {
                 cursor: initial === 0 ? "not-allowed" : "pointer",
               }}
             >
-              <ChevronLeft />
+              <Chevron direction="left"  />
             </span>
             <span
               onClick={getNextItems}
@@ -109,7 +109,7 @@ export default function AppDownload() {
                     : "pointer",
               }}
             >
-              <ChevronRight />
+              <Chevron direction="right" />
             </span>
           </div>
         </div>

@@ -1,7 +1,32 @@
 import "./ourblog.scss";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Chevron, BlogCard } from "@/components/Common";
+import { useEffect, useState } from "react";
+
+const blogData = [
+  {
+    imageUrl: "/assets/images/outdoor.png",
+    title:
+      "Are You Looking For The Best General Liability Insurance For Contractors?",
+  },
+  {
+    imageUrl: "/assets/images/kitchen.png",
+    title:
+      "Are You Looking For The Best General Liability Insurance For Contractors?",
+  },
+];
 
 export default function OurBlog() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkWidth = () => setIsMobile(window.innerWidth < 425);
+    checkWidth(); // Initial check
+    window.addEventListener("resize", checkWidth);
+    return () => window.removeEventListener("resize", checkWidth);
+  }, []);
+
+  const visibleBlogs = isMobile ? blogData.slice(0, 1) : blogData;
+
   return (
     <section className="industry-blog-section padding-container">
       <div className="industry-blog-content">
@@ -15,35 +40,20 @@ export default function OurBlog() {
         </a>
         <div className="industry-blog-navigation">
           <button className="industry-blog-nav-btn prev">
-            <ChevronLeft />
+            <Chevron direction="left" />
           </button>
           <button className="industry-blog-nav-btn next">
-            <ChevronRight />
+            <Chevron direction="right" />
           </button>
         </div>
       </div>
 
-      <div className="industry-blog-posts">
-        <div className="industry-blog-post">
-          <div>
-            <img src="/assets/images/outdoor.png" alt="House" />
-            <span className="industry-blog-badge">CUSTOMER EXPERIENCE</span>
+      <div className="industry-blog-posts ">
+        {visibleBlogs.map((item, index) => (
+          <div key={index}>
+            <BlogCard imageUrl={item.imageUrl} title={item.title} />
           </div>
-          <h4>
-            Are You Looking For The Best General Liability Insurance For
-            Contractors?
-          </h4>
-        </div>
-        <div className="industry-blog-post hidden md:block ">
-          <div>
-            <img src="/assets/images/kitchen.png" alt="Kitchen" />
-            <span className="industry-blog-badge">CUSTOMER EXPERIENCE</span>
-          </div>
-          <h4>
-            Are You Looking For The Best General Liability Insurance For
-            Contractors?
-          </h4>
-        </div>
+        ))}
       </div>
     </section>
   );

@@ -1,7 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
-  ChevronLeft,
-  ChevronRight,
   ChevronDown,
   ChevronUp,
   Linkedin,
@@ -9,6 +7,7 @@ import {
   Calendar,
 } from "lucide-react";
 import "./ourteam.scss";
+import { Chevron } from "@/components/Common";
 
 const teamMembers = [
   {
@@ -82,7 +81,7 @@ const OurTeam = () => {
   };
 
   const loadLess = () => {
-    setStartIndex(0); // Resets to the initial 3 members
+    setStartIndex(0); // resets to the initial 3 members
   };
 
   return (
@@ -181,14 +180,14 @@ const OurTeam = () => {
             onClick={prevSlide}
             disabled={startIndex === 0}
           >
-            <ChevronLeft size={32} />
+            <Chevron direction="left" color="white" />
           </button>
           <button
             className="nav-arrow right"
             onClick={nextSlide}
             disabled={startIndex + 3 >= teamMembers.length}
           >
-            <ChevronRight size={32} />
+            <Chevron direction="right" color="white" />
           </button>
         </div>
 
@@ -196,12 +195,13 @@ const OurTeam = () => {
         <div className="load-buttons">
           {startIndex + 3 < teamMembers.length && (
             <div className="load-more" onClick={loadMore}>
-              Load More <ChevronDown />
+              Load More
+              <Chevron direction="down" color="white" />
             </div>
           )}
           {startIndex > 0 && (
             <div className="load-less" onClick={loadLess}>
-              Load Less <ChevronUp />
+              Load Less <Chevron direction="up" color="white" />
             </div>
           )}
         </div>

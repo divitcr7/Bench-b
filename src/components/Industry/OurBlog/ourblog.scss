@@ -13,6 +13,9 @@
       @apply text-btnSmall lg:text-btnBig font-bold;
       border-bottom: 2px solid var(--green);
     }
+    h5 {
+      @apply w-[95%];
+    }
   }
   &-navigation {
     @apply mt-fortySmall lg:mt-fortyBig mb-fortySmall lg:mb-fortyBig flex;
@@ -33,10 +36,17 @@
     }
   }
   &-posts {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-4;
     display: flex;
-
     gap: 20px;
-
-    
+  }
+}
+@media (max-width: 767px) {
+  .industry-blog {
+    &-content {
+      h5 {
+        @apply w-[100%];
+      }
+    }
   }
 }

@@ -11,7 +11,7 @@
 }
 
 .header nav {
-  @apply flex h-full w-screen justify-between items-center;
+  @apply flex h-full w-screen justify-between items-center lg:pr-4;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -69,7 +69,13 @@
     }
   }
 }
-
+@media (min-width:769px) and (max-width: 1024px) {
+  
+  .header nav {
+    @apply pr-4;
+  }
+  
+}
 @media (max-width: 768px) {
   .hiddenClass {
     display: none;
@@ -82,6 +88,7 @@
     width: 3rem;
     span {
       @apply w-[4vw] h-[4vw];
+      
     }
   }
 }

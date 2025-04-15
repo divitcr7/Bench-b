@@ -1,38 +1,46 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./footer.scss";
 
 const data = {
   commercial: [
-    "Real Estate",
-    "Construction",
-    "Healthcare",
-    "Environmental",
-    "Auto Service",
-    "Food & Beverage",
-    "Transportation",
-    "Wholesale",
-    "Non-Profit",
-    "Financial Services",
-    "Retail",
-    "Manufacturing",
+    { label: "Real Estate", path: "" },
+    { label: "Construction", path: "" },
+    { label: "Healthcare", path: "" },
+    { label: "Environmental", path: "" },
+    { label: "Auto Service", path: "" },
+    { label: "Food & Beverage", path: "" },
+    { label: "Transportation", path: "" },
+    { label: "Wholesale", path: "" },
+    { label: "Non-Profit", path: "" },
+    { label: "Financial Services", path: "" },
+    { label: "Retail", path: "" },
+    { label: "Manufacturing", path: "" },
   ],
   personal: [
-    "Homeowners",
-    "Auto",
-    "Rental Property",
-    "Condo",
-    "Classic Auto",
-    "Builder's Risk",
-    "Flood",
-    "Motorcycle",
-    "Life Insurance",
+    { label: "Homeowners", path: "" },
+    { label: "Auto", path: "" },
+    { label: "Rental Property", path: "" },
+    { label: "Condo", path: "" },
+    { label: "Classic Auto", path: "" },
+    { label: "Builder's Risk", path: "" },
+    { label: "Flood", path: "" },
+    { label: "Motorcycle", path: "" },
+    { label: "Life Insurance", path: "" },
   ],
-  company: ["About Us", "Customer Service"],
+  company: [
+    { label: "About Us", path: "/about" },
+    { label: "Customer Service", path: "" },
+  ],
 };
+
 
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openDropdown, setOpenDropdown] = useState<keyof typeof data | null>(
+    null
+  );
+
 
   useEffect(() => {
     const handleResize = () => {
@@ -43,9 +51,12 @@ const Footer = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const toggleDropdown = (section) => {
-    if (isMobile) setOpenDropdown(openDropdown === section ? null : section);
+  const toggleDropdown = (section: keyof typeof data) => {
+    if (isMobile) {
+      setOpenDropdown(openDropdown === section ? null : section);
+    }
   };
+
 
   return (
     <footer className="footer-container">
@@ -67,7 +78,7 @@ const Footer = () => {
         </div>
         <div className="footer-right">
           {Object.entries(data).map(([key, items]) => (
-            <div className="footer-section " key={key}>
+            <div className="footer-section" key={key}>
               <h3 onClick={() => toggleDropdown(key)}>
                 {key.charAt(0).toUpperCase() + key.slice(1)}
                 {isMobile && (
@@ -77,8 +88,10 @@ const Footer = () => {
                 )}
               </h3>
               <ul className={!isMobile || openDropdown === key ? "open" : ""}>
-                {items.map((item) => (
-                  <li key={item}>˃ {item}</li>
+                {items.map(({ label, path }) => (
+                  <li key={label}>
+                    <Link to={path}>˃ {label}</Link>
+                  </li>
                 ))}
               </ul>
             </div>

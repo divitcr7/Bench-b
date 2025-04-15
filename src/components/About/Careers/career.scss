@@ -19,20 +19,22 @@
 }
 
 .job-container {
-  @apply mt-thirtyTwoSmall lg:mt-thirtyTwoBig;
   .job-dept {
+    @apply mt-auto mb-auto;
     grid-area: dept;
   }
   .job-type {
+    @apply mt-auto mb-auto;
     grid-area: type;
   }
   .job-position {
+    @apply mt-auto mb-auto;
+
     grid-area: position;
   }
   .arrow-cell {
     @apply w-[70%] flex;
     grid-area: arrow;
-    color: var(--indigo);
   }
   .arrow-icon {
     @apply m-auto;
@@ -40,7 +42,7 @@
 }
 
 .job-item {
-  @apply grid grid-cols-[40%_15%_40%_5%] pt-sixteen pb-sixteen;
+  @apply grid grid-cols-[40%_15%_40%_5%] pt-sixteen pb-sixteen relative;
   border-top: 0.5px solid var(--divider);
   border-bottom: 0.5px solid var(--divider);
   transition: all 0.2s ease-in-out;
@@ -53,7 +55,6 @@
     .arrow-cell {
       color: var(--green);
       border-radius: 50% 50%;
-      border: 1px solid var(--green);
     }
   }
 }

@@ -1,5 +1,5 @@
 @use "@/styles/variables.scss";
-@use '@/styles/mixins' as *;
+@use "@/styles/mixins" as *;
 
 .pns {
   @apply h-full w-full gap-0;
@@ -9,13 +9,15 @@
   }
 
   h2 {
-    @apply h-[10vh] w-full text-center;
+    @apply w-full text-center;
   }
   h5 {
-    @apply h-[5vh] w-full text-center;
+    @apply w-full text-center;
   }
   &-nav {
-    @apply flex ml-auto mr-auto lg:mb-fiftySixBig h-[6vh] lg:h-[8vh] w-full lg:w-[40vw] text-h5Small lg:text-h5Big  font-gilroy;
+    @apply flex ml-auto mr-auto lg:mb-fiftySixBig;
+    @apply h-[6vh] lg:h-[8vh] w-full lg:w-[40vw];
+    @apply text-h5Small lg:text-h5Big font-gilroy;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,10 +41,11 @@
   }
 
   &-cards {
-    @apply grid grid-rows-4 h-[18rem] w-[100%] ml-auto mr-auto mb-1;
+    @apply grid grid-rows-4 h-[15rem] lg:h-[18rem] w-[100%] ml-auto mr-auto mb-1;
 
     &-content {
-      @apply h-[18rem] w-full grid grid-cols-1 grid-rows-[20%_60%_20%] pb-7 pt-7;
+      @apply h-[15rem] lg:h-[18rem] w-full grid grid-cols-1 grid-rows-[20%_60%_20%];
+      @apply pb-10 pt-7;
     }
 
     img {
@@ -57,35 +60,25 @@
     .pns-arrow {
       @apply m-auto flex items-center justify-center mt-twentyFourSmall lg:mt-twentyFourBig;
       @apply row-start-3 row-span-1;
-      width: 2rem;
-      height: 2rem;
       border-radius: 50%;
       transition: all 0.3s ease-in-out;
     }
 
     svg {
-      @apply w-5 h-5;
-      color: var(--indigo);
       transition: color 0.3s ease-in-out;
     }
 
     &:hover {
-      @include box-shadow(all,small);
+      @include box-shadow(all, small);
       transition: 0.3s all ease-in;
       transform: scale(1.01);
       cursor: pointer;
-      box-sh
-
-      h3 {
+      box-sh h3 {
         color: var(--indigo);
       }
 
       .pns-arrow {
         border: 1px solid var(--green);
-      }
-
-      svg {
-        color: var(--green);
       }
     }
   }
@@ -104,9 +97,22 @@
     }
   }
   &-cards-container {
-    @apply grid grid-rows-3 grid-cols-1 lg:grid-cols-3 w-[95%] m-auto mt-fiftySixSmall lg:mt-fiftySixBig;
+    @apply grid grid-rows-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[95%];
+    @apply m-auto mt-fiftySixSmall lg:mt-fiftySixBig;
   }
 }
 
 @media (max-width: 768px) {
+  .pns {
+    &-cards-container {
+      @apply grid-cols-2;
+    }
+  }
+}
+@media (max-width: 426px) {
+  .pns {
+    &-cards-container {
+      @apply grid-cols-1;
+    }
+  }
 }

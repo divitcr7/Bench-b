@@ -1,17 +1,20 @@
 import "./style.scss";
 import { useEffect, useState } from "react";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { Arrow,Chevron } from "@/components/Common";
 
 import {PnSCardType} from "@/interfaces";
 
 function PnSCard({ item }: { item: PnSCardType }) {
   return (
-    <div className="pns-cards">
+    <div className="pns-cards hover-arrow-parent">
       <div className="pns-cards-content">
+        {/* icon */}
         <img src={item.imgSrc} alt={item.name} />
+        {/* title */}
         <h3>{item.name}</h3>
+        {/* right arrow */}
         <span className="pns-arrow">
-          <ArrowRight />
+          <Arrow direction="right" color="var(--indigo)" hoverColor="var(--green)" />
         </span>
       </div>
     </div>
@@ -108,7 +111,7 @@ export default function ProductAndServices() {
         </div>
         <div className="pns-button">
           <span>
-            SHOW MORE <ChevronDown />
+            SHOW MORE <Chevron direction="down" color="black" />
           </span>
         </div>
       </div>

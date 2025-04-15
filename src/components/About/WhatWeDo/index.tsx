@@ -56,26 +56,33 @@ export default function WhatWeDo() {
       <div className="whatWeDo padding-container">
         <div>
           <h2>What We Do</h2>
+          {/* circular image */}
           <span>
             <img src="/assets/images/what-we-do.png" />
           </span>
         </div>
+        {/* cards section */}
         <div className="whatWeDo-card-container">
           {data.map((item) => (
             <div key={item.id} className="whatWeDo-card">
-              <div>
+              <div >
+                {/* icon image */}
                 <span>
                   <img src={item.imgUrl} />
                 </span>
                 <div>
+                  {/* title */}
                   <h3>{item.title}</h3>
+                  {/* numbering */}
                   <h2>0{item.id}</h2>
                 </div>
               </div>
               <ul className="">
                 {item.type.map((type, index) => (
                   <li key={index}>
+                    {/* bullet points */}
                     <img src="/assets/icons/gold-diamond.png" />
+                    {/* type of service */}
                     <h5>{type}</h5>
                   </li>
                 ))}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./questions.scss";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { Chevron } from "@/components/Common";
 
 const questions = [
   {
@@ -99,7 +99,13 @@ export default function Questions() {
           <div key={q.id} className="questions-table">
             <button onClick={() => toggleAccordion(q.id)}>
               <h6>{q.question}</h6>
-              <span>{openId === q.id ? <ChevronUp /> : <ChevronDown />}</span>
+              <span>
+                {openId === q.id ? (
+                  <Chevron direction="up" />
+                ) : (
+                  <Chevron direction="down" />
+                )}
+              </span>
             </button>
             {openId === q.id && <div>{q.answer}</div>}
           </div>
@@ -107,7 +113,7 @@ export default function Questions() {
         {visibleCount < questions.length && (
           <div className="questions-load-more" onClick={loadMore}>
             <span>
-              Load More <ChevronDown />
+              Load More <Chevron direction="down" />
             </span>
           </div>
         )}

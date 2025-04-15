@@ -20,26 +20,31 @@
     }
   }
   &-card {
-    @apply h-auto lg:pb-10 lg:mb-10 pb-5 mb-5 ;
+    @apply h-auto lg:mb-10 pb-5 mb-5;
     border-bottom: 1px solid var(--divider);
     &-container {
-      @apply lg:pl-20 lg:pr-10 lg:overflow-auto lg:scrollbar-hide;
+      @apply lg:pl-20 lg:pr-10 lg:overflow-auto lg:scrollbar-hide pt-3;
       border-left: 1px solid var(--divider);
     }
     // icon, title, and number
-    div {
-      @apply grid lg:grid-cols-[10%_90%] mb-2;
+    > div {
+      @apply h-[3rem] lg:h-[5rem] flex flex-col lg:grid lg:grid-cols-[10%_90%];
+      @apply mb-14 lg:mb-0;
       span {
-        @apply h-[3rem] lg:h-[100%] flex;
+        @apply h-[100%] flex;
         img {
-          @apply h-[80%] lg:m-auto;
+          @apply h-[100%] lg:h-[60%] lg:m-auto;
         }
       }
       // title, number
       div {
-        @apply flex justify-between items-center;
+        @apply flex justify-between items-center w-full;
 
+        h3 {
+          @apply lg:ml-3 mt-auto mb-auto;
+        }
         h2 {
+          @apply mt-auto mb-auto;
           color: var(--vlight-grey);
         }
       }
@@ -53,14 +58,19 @@
         }
         h5 {
           @apply inline-block;
-          @apply mb-1;
+          @apply mb-5;
         }
       }
     }
   }
 }
-
-
+@media (min-width:1025px){
+  .whatWeDo{
+    &-card-container{
+      @apply p-0 pl-10 ;
+    }
+  }
+}
 @media (max-width: 1024px) {
   .whatWeDo {
     &-card {

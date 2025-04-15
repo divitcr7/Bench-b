@@ -6,7 +6,7 @@
     @apply h-auto w-[100vw] flex;
   }
   h2 {
-    @apply text-center ;
+    @apply text-center;
   }
   h5 {
     @apply text-center;
@@ -16,14 +16,13 @@
     @apply p-5 h-full w-[90%] m-auto relative;
     border: 1px solid var(--divider);
     &-container {
-      @apply w-[100%] grid gap-5 lg:gap-0 lg:grid-cols-3;
+      @apply w-[100%] grid gap-5 lg:gap-0 md:grid-cols-3;
     }
     img {
       @apply h-14 mt-sixteen mb-sixteen;
     }
     h4 {
-      
-      @apply w-full ;
+      @apply w-full;
     }
     p {
       @apply text-body2Small lg:text-body2Big font-gilroy;
@@ -33,11 +32,6 @@
     span {
       @apply inline-block p-2;
       border-radius: 50% 50%;
-
-      svg {
-        @apply w-5 h-5;
-        color: var(--indigo);
-      }
     }
 
     &:hover {
@@ -47,6 +41,26 @@
         svg {
           color: var(--green);
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .tools {
+    &-cards {
+      &-container{
+        @apply grid-cols-2;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .tools {
+    &-cards {
+      &-container{
+        @apply grid-cols-1;
       }
     }
   }

@@ -1,6 +1,6 @@
-import { ArrowRight, ChevronRight } from "lucide-react";
 import "./career.scss";
 import { Link } from "react-router-dom";
+import { Arrow,Chevron } from "@/components/Common";
 
 export default function Careers() {
   const data = [
@@ -27,18 +27,24 @@ export default function Careers() {
         <h5>Open Positions</h5>
         <div className="job-container">
           {data.map((job, index) => (
-            <div key={index} className="job-item">
+            <div key={index} className="job-item hover-arrow-parent">
               <h4 className="job-dept">{job.department}</h4>
               <h5 className="job-type">{job.type}</h5>
               <h5 className="job-position">{job.position}</h5>
               <div className="arrow-cell">
-                <ArrowRight className="arrow-icon" />
+                <Arrow
+                  direction="right"
+                  color="var(--indigo)"
+                  hoverColor="var(--green)"
+                />
               </div>
             </div>
           ))}
         </div>
         <div className="career-allJobs">
-          <Link to="#">SEE ALL JOBS <ChevronRight/></Link>
+          <Link to="#">
+            SEE ALL JOBS <Chevron direction="right" />
+          </Link>
         </div>
       </div>
     </section>

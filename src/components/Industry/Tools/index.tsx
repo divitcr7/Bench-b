@@ -1,5 +1,5 @@
 import "./tools.scss";
-import { ArrowRight } from "lucide-react";
+import { Arrow } from "@/components/Common";
 
 import {ToolCardType} from "@/interfaces";
 
@@ -31,7 +31,7 @@ const ToolCard = ({ item }: { item: ToolCardType }) => {
       <h4>{item.title}</h4>
       <p>{item.info}</p>
       <span>
-        <ArrowRight />
+        <Arrow direction="right" color="var(--indigo)" hoverColor="var(--green)" />
       </span>
     </div>
   );
