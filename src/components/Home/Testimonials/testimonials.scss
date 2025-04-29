@@ -55,7 +55,7 @@
     }
   }
   &-reviews {
-    @apply w-[100%] lg:w-[90%] ml-auto mr-auto;
+    @apply w-[100%] lg:w-[90%] ml-auto mr-auto ;
     &-container {
       @apply grid  grid-cols-1 lg:grid-cols-2;
       grid-area: reviews;
@@ -126,7 +126,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .testimonial {
     @apply grid-cols-2 grid-rows-[25vh_1fr];
     grid-template-areas:
@@ -141,7 +141,8 @@
       @apply grid-cols-2;
     }
     &-reviews{
-      @apply w-[95%];
+      @apply w-[95%] ;
+      
     }
   }
 }

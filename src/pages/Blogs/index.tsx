@@ -14,7 +14,7 @@ export default function Blogs() {
   return (
     <>
       <Meta meta={metadata} />
-
+      
       <BlogHero />
 
       <BlogGrid />

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./BlogHero.scss";
 import SocialMediaNav from "@/components/Common/SocialMediaNav";
 import SearchBar from "@/components/Common/SearchBar";
-import {ArrowRight} from "lucide-react"
+import { Arrow } from "@/components/Common";
 
 const categories = [
   "All posts",
@@ -18,16 +18,16 @@ const BlogHero: React.FC = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setSmallScreen(window.innerWidth < 768);
+      setSmallScreen(window.innerWidth < 769);
     };
 
-    handleResize(); // Set initial state
+    handleResize(); 
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  })
+  });
 
   return (
     <div className="blog-hero">
@@ -37,9 +37,7 @@ const BlogHero: React.FC = () => {
       {/* Blog Hero Content */}
       <div className="blog-hero-content ">
         {/* Header Section */}
-        <div className="blog-header">
-          <h1>News</h1>
-        </div>
+        <h1 className="blog-header">News</h1>
         <SearchBar />
 
         {/* Categories Section */}
@@ -80,7 +78,7 @@ const BlogHero: React.FC = () => {
               with flood damage. Learn how to safeguard your property.
             </p>
             <div>
-              <ArrowRight />
+              <Arrow direction="right" />
             </div>
           </div>
         </div>

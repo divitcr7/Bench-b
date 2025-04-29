@@ -40,7 +40,7 @@ function ReviewCard({ item }: ReviewCardProps) {
 // Testimonials Component
 export default function Testimonials() {
   const [reviewsDisplayed, setReviewsDisplayed] = useState<number>(
-    window.innerWidth <= 768 ? 1 : 2
+    window.innerWidth <= 425 ? 1 : 2
   );
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 

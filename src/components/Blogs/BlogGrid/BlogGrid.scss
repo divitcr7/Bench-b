@@ -1,7 +1,8 @@
 @use "@/styles/variables.scss";
 
 .blog-grid {
-  display: grid;
+  @apply -mt-[4rem];
+  display: grid ;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   background-color: var(--light-bg);
