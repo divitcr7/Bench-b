@@ -1,6 +1,22 @@
-import {Meta,Hero,Banner,BestDeals,BestOffers,ContactUs,Footer,Specialities, Testimonials} from "./../../components"
+import {
+  Meta,
+  Hero,
+  Banner,
+  BestDeals,
+  BestOffers,
+  ContactUs,
+  Footer,
+  Specialities,
+  Testimonials,
+} from "./../../components";
+import { useOutletContext } from "react-router-dom";
+
+interface HomeProps {
+  contactRef: React.RefObject<HTMLElement>;
+}
 
 export default function Home() {
+  const { contactRef } = useOutletContext<HomeProps>();
   const metadata = {
     title: "Home || Benchmark - Insurance",
     description: "Benchmark - Insurance",
@@ -15,17 +31,19 @@ export default function Home() {
       {/* trusted by hundreds */}
       <Banner />
       {/* we find you the best deals */}
-      <BestDeals/>
+      <BestDeals />
       {/* we search and compare the best insurance offers */}
-      <BestOffers/>
+      <BestOffers />
       {/* our specialities */}
-      <Specialities/>
+      <Specialities />
       {/* testimonials */}
-      <Testimonials/>
+      <Testimonials />
       {/* contact form  */}
-      <ContactUs/>
+      <section ref={contactRef}>
+        <ContactUs />
+      </section>
       {/* footer */}
-      <Footer/>
+      <Footer />
     </>
   );
 }

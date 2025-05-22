@@ -68,6 +68,23 @@
     @apply absolute top-0 right-0 z-20 h-[30vh];
   }
 }
+
+.MuiDialog-paper {
+  padding: 20px;
+  min-width: 300px;
+  text-align: center;
+}
+
+.MuiDialogTitle-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MuiDialogContent-root {
+  padding: 16px 24px !important;
+}
+
 @media (max-width: 767px) {
   .contact-content {
     @apply grid-cols-1;
