@@ -4,7 +4,6 @@ import { ContactForm } from "..";
 import {
   Dialog,
   DialogContent,
-  DialogTitle,
   IconButton,
   Typography,
   Box,
@@ -12,7 +11,6 @@ import {
 import CloseIcon from "@mui/icons-material/Close";
 import MailIcon from "@mui/icons-material/Mail";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import ErrorIcon from "@mui/icons-material/Error";
 
 export default function ContactUs() {
   const [active, setActive] = useState<string>("customer");

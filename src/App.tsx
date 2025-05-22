@@ -3,7 +3,7 @@ import "./App.css";
 import { Outlet, useLocation } from "react-router-dom";
 
 import { Header } from "./components";
-import ScrollToTop from "@components/ScrollToTop ";
+import ScrollToTop from "./components/ScrollToTop ";
 import { useRef } from "react";
 
 function App() {

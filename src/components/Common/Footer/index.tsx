@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import "./footer.scss";
 import { useNavigate } from "react-router-dom";
 
@@ -35,6 +34,13 @@ const data = {
   ],
 };
 
+interface FooterData {
+  commercial: Array<{ label: string; path: string }>;
+  personal: Array<{ label: string; path: string }>;
+  company: Array<{ label: string; path: string }>;
+}
+
+type SectionKey = keyof FooterData;
 
 const Footer = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -50,18 +56,9 @@ const Footer = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  interface FooterData {
-    commercial: string[];
-    personal: string[];
-    company: string[];
-  }
-
-  type SectionKey = keyof FooterData;
-
   const toggleDropdown = (section: SectionKey) => {
     if (isMobile) setOpenDropdown(openDropdown === section ? null : section);
   };
-
 
   return (
     <footer className="footer-container">
@@ -94,21 +91,21 @@ const Footer = () => {
               </h3>
               <ul className={!isMobile || openDropdown === key ? "open" : ""}>
                 {items.map((item) => (
-                  <li key={item}>
+                  <li key={item.label}>
                     ˃
                     <span
                       onClick={() => {
-                        if (item === "About Us") {
-                          navigate("/about");
+                        if (item.path) {
+                          navigate(item.path);
                         }
                       }}
                       style={
-                        item === "About Us"
-                          ? { cursor: "pointer"}
+                        item.path
+                          ? { cursor: "pointer" }
                           : {}
                       }
                     >
-                      {item}
+                      {item.label}
                     </span>
                   </li>
                 ))}
