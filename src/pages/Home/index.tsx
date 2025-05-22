@@ -5,11 +5,18 @@ import {
   BestDeals,
   BestOffers,
   ContactUs,
+  Footer,
   Specialities,
   Testimonials,
-} from "@/components";
+} from "./../../components";
+import { useOutletContext } from "react-router-dom";
+
+interface HomeProps {
+  contactRef: React.RefObject<HTMLElement>;
+}
 
 export default function Home() {
+  const { contactRef } = useOutletContext<HomeProps>();
   const metadata = {
     title: "Home || Benchmark - Insurance",
     description: "Benchmark - Insurance",
@@ -32,9 +39,11 @@ export default function Home() {
       {/* testimonials */}
       <Testimonials />
       {/* contact form  */}
-      <ContactUs />
-      {/* footer
-      <Footer /> */}
+      <section ref={contactRef}>
+        <ContactUs />
+      </section>
+      {/* footer */}
+      <Footer />
     </>
   );
 }

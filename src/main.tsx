@@ -12,9 +12,7 @@ if (rootElement) {
   createRoot(rootElement).render(
     <StrictMode>
       <ThemeProvider>
-        <RouterProvider router={router}>
-          <App /> 
-        </RouterProvider>
+        <RouterProvider router={router} />
       </ThemeProvider>
     </StrictMode>
   );

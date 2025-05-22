@@ -1,25 +1,28 @@
+import { forwardRef } from "react";
 import { Link } from "react-router-dom";
 import "./header.scss";
 
-export default function Header() {
+interface HeaderProps {
+  contactRef?: React.RefObject<HTMLElement>;
+}
+
+const Header = forwardRef<HTMLElement, HeaderProps>(({ contactRef }, ref) => {
+  const scrollToContact = () => {
+    if (contactRef?.current) {
+      contactRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
-    <header className="header">
+    <header className="header" ref={ref}>
       <nav>
         {/* circle and menu */}
-        <div className="header-items ">
-          <span className="navigation ">
-            <span>
-              <img
-                className="hiddenClass"
-                src="/assets/icons/hamburger.png"
-                alt="hamburger logo"
-              />
-              <img
-                className="smallScreen"
-                src="/assets/icons/hamburger-small.png"
-                alt="hamburger logo"
-              />
-            </span>
+        <div className="header-items">
+          <span className="navigation">
+            <img src="./assets/icons/hamburger.png" alt="menu icon" />
           </span>
           <Link to="" className="hiddenClass">
             <span className="m-auto ">MENU</span>
@@ -35,24 +38,25 @@ export default function Header() {
         {/* contact us */}
         <div className="header-items hiddenClass">
           <Link to="">
-            <img src="/assets/icons/person.png" alt="person logo" />
+            <img src="./assets/icons/person.png" alt="person icon" />
           </Link>
           <Link to="">
-            <img src="/assets/icons/phone.png" alt="call logo" />
+            <img src="./assets/icons/phone.png" alt="phone icon" />
           </Link>
-
-          <Link to="">
-            <button className="btn btn-empty">Contact Us</button>
-          </Link>
+          <button className="btn btn-empty" onClick={scrollToContact}>
+            Contact Us
+          </button>
         </div>
 
         {/* dark phone icon on smaller screen */}
         <div className="header-items smallScreen">
           <Link to="">
-            <img src="/assets/icons/phone-dark.svg" alt="call logo" />
+            <img src="./assets/icons/phone-dark.svg" alt="phone icon dark" />
           </Link>
         </div>
       </nav>
     </header>
   );
-}
+});
+
+export default Header;

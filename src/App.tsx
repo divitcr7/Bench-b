@@ -2,25 +2,27 @@ import "./App.css";
 
 import { Outlet, useLocation } from "react-router-dom";
 
-import { Header,Footer } from "@/components";
+import { Header } from "./components";
+import ScrollToTop from "@components/ScrollToTop ";
+import { useRef } from "react";
 
 function App() {
   const location = useLocation();
   //routes where header not visible
   const hideHeaderRoutes = ["/onboarding"];
-  const hideFooterRoutes = ["/onboarding"];
+
+  const contactRef = useRef<HTMLElement>(null) as React.RefObject<HTMLElement>;
 
   return (
-    <div className="thin-scroll">
-      {!hideHeaderRoutes.includes(location.pathname) && (
-        <Header />
-      )}
+    <>
+      <ScrollToTop />
+      {/* to scroll to top on route change */}
+      {/* Header component */}
+      {/* Header is not visible on onboarding page */}
+      {!hideHeaderRoutes.includes(location.pathname) && <Header contactRef={contactRef} />}
       {/* to dynamically render current route */}
-      <Outlet />
-      {!hideFooterRoutes.includes(location.pathname) && (
-        <Footer />
-      )}
-    </div>
+      <Outlet context={{ contactRef }} />
+    </>
   );
 }
 
