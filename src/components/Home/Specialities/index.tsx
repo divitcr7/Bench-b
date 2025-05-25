@@ -20,72 +20,63 @@ function SpecialityCard({ item }: { item: SpecialityCardType }) {
 }
 
 export default function Specialities() {
-  const [selectedCategory, setSelectedCategory] = useState("Products");
+  const [selectedCategory, setSelectedCategory] = useState("Industries");
   const [visibleData, setVisibleData] = useState<SpecialityCardType[]>([]);
 
   const data = [
     {
       id: 1,
-      name: "Homeowners",
-      imgSrc: "/assets/icons/home.png",
-      title:
-        "We guarantee full coverage for all properties at an excellent rate.",
+      name: "Real Estate",
+      imgSrc: "/assets/icons/real-estate.png",
+      title: "Comprehensive insurance solutions for real estate investors, developers, and property managers.",
     },
     {
       id: 2,
-      name: "Auto",
-      imgSrc: "/assets/icons/auto.png",
-      title:
-        "We guarantee full coverage for all properties at an excellent rate.",
+      name: "Construction",
+      imgSrc: "/assets/icons/construction.png",
+      title: "Specialized coverage for general contractors, specialty contractors, and construction projects.",
     },
     {
       id: 3,
-      name: "Rental Property",
-      imgSrc: "/assets/icons/rental.png",
-      title:
-        "We guarantee full coverage for all properties at an excellent rate.",
+      name: "Hospitality",
+      imgSrc: "/assets/icons/hospitality.png",
+      title: "Tailored insurance programs for hotels, restaurants, and entertainment venues.",
     },
     {
       id: 4,
-      name: "Condo",
-      imgSrc: "/assets/icons/condo.png",
-      title:
-        "We guarantee full coverage for all properties at an excellent rate.",
+      name: "High-Net-Worth",
+      imgSrc: "/assets/icons/private.png",
+      title: "Premium protection for high-net-worth individuals and their valuable assets.",
     },
     {
       id: 5,
-      name: "High Value Home",
-      imgSrc: "/assets/icons/high-value-home.png",
-      title:
-        "We guarantee full coverage for all properties at an excellent rate.",
+      name: "Risk Assessment",
+      imgSrc: "/assets/icons/risk.png",
+      title: "Intelligent risk analysis and policy structuring for optimal protection.",
     },
     {
       id: 6,
-      name: "Classic Auto",
-      imgSrc: "/assets/icons/classic-auto.png",
-      title:
-        "We guarantee full coverage for all properties at an excellent rate.",
+      name: "Claims Advocacy",
+      imgSrc: "/assets/icons/claims.png",
+      title: "Digital claims management and 24/7 support for seamless resolution.",
     },
     {
       id: 7,
-      name: "Builder's Risk",
-      imgSrc: "/assets/icons/risk.png",
-      title:
-        "We guarantee full coverage for all properties at an excellent rate.",
+      name: "Risk Planning",
+      imgSrc: "/assets/icons/planning.png",
+      title: "Long-term risk mitigation strategies aligned with your growth goals.",
     },
     {
       id: 8,
-      name: "Flood",
-      imgSrc: "/assets/icons/flood.png",
-      title:
-        "We guarantee full coverage for all properties at an excellent rate.",
+      name: "Analytics",
+      imgSrc: "/assets/icons/analytics.png",
+      title: "Real-time risk analytics and insurance tech integration.",
     },
     {
       id: 9,
-      name: "Motorcycle ",
-      imgSrc: "/assets/icons/m&w.png",
-      title:
-        "We guarantee full coverage for all properties at an excellent rate.",
+      name: "Portfolio Management",
+      imgSrc: "/assets/icons/portfolio.png",
+      title: "Smart portfolio management tools for comprehensive asset protection.",
     },
   ];
   //to show a certain number of data on different screen sizes
@@ -107,8 +98,8 @@ export default function Specialities() {
   return (
     <section className="speciality-container">
       <div className="speciality padding-container">
-        <h2>Our Specialities</h2>
-        <h5>Please select a product or service</h5>
+        <h2>Your Insurance Partner</h2>
+        <h5>Specialized Solutions for Real Estate, Construction, and Hospitality</h5>
         <div className="speciality-nav">
           {["Industries", "Products", "Services"].map((category) => (
             <span

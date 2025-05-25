@@ -22,7 +22,12 @@ export default function Home() {
       <Meta meta={metadata} />
 
       {/* Construction Insurance made simple */}
-      <IndustryHero />
+      <IndustryHero
+        title="Construction Insurance made simple"
+        subtitle="Protect your construction business with comprehensive insurance solutions."
+        description="Benchmark offers tailored insurance products and services for the construction industry, ensuring your projects and people are covered from start to finish."
+        image="/assets/images/industry.png"
+      />
       {/* details */}
       <Details />
       {/* products and services */}

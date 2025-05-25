@@ -1,0 +1,83 @@
+.industry-services {
+  @apply w-full py-16 bg-white;
+
+  &-container {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .services-header {
+    @apply text-center mb-12;
+
+    h2 {
+      @apply text-3xl font-bold mb-4 text-gray-900;
+    }
+
+    p {
+      @apply text-lg text-gray-600 max-w-3xl mx-auto;
+    }
+  }
+
+  .services-grid {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+
+  .service-card {
+    @apply flex flex-col p-6 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition-shadow duration-300;
+
+    .service-icon {
+      @apply w-16 h-16 mb-4;
+
+      img {
+        @apply w-full h-full object-contain;
+      }
+    }
+
+    .service-content {
+      @apply flex-1;
+
+      h3 {
+        @apply text-xl font-semibold mb-2 text-gray-900;
+      }
+
+      p {
+        @apply text-gray-600;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .industry-services {
+    @apply py-12;
+
+    .services-header {
+      @apply mb-8;
+
+      h2 {
+        @apply text-2xl;
+      }
+
+      p {
+        @apply text-base;
+      }
+    }
+
+    .services-grid {
+      @apply gap-6;
+    }
+
+    .service-card {
+      @apply p-4;
+
+      .service-icon {
+        @apply w-12 h-12 mb-3;
+      }
+
+      .service-content {
+        h3 {
+          @apply text-lg;
+        }
+      }
+    }
+  }
+} 

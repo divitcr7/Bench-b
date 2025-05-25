@@ -1,20 +1,86 @@
 @use "@/styles/variables.scss";
 
-.association {
-  &-container {
-    @apply h-auto w-[100vw];
-    background-color: var(--light-bg);
+.association-container {
+  @apply w-full py-16 bg-white;
+
+  .association {
+    @apply max-w-7xl mx-auto text-center;
+
+    h2 {
+      @apply text-3xl lg:text-4xl font-bold mb-4;
+      color: var(--primary-text);
+    }
+
+    h5 {
+      @apply text-base lg:text-lg mb-12;
+      color: var(--secondary-text);
+    }
+
+    > div {
+      @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center;
+
+      span {
+        @apply flex items-center justify-center w-full h-24 p-4 rounded-lg;
+        transition: all 0.3s ease;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+        &:hover {
+          transform: translateY(-5px);
+          background-color: var(--green);
+          box-shadow: 0 8px 16px rgba(25, 193, 158, 0.2);
+
+          img {
+            filter: brightness(0) invert(1);
+          }
+        }
+
+        img {
+          @apply max-w-full max-h-full object-contain;
+          filter: grayscale(100%);
+          transition: all 0.3s ease;
+        }
+      }
+    }
   }
-  h2 {
-    @apply text-center;
+}
+
+@media (max-width: 768px) {
+  .association-container {
+    @apply py-12;
+
+    .association {
+      h2 {
+        @apply text-2xl mb-3;
+      }
+
+      h5 {
+        @apply text-sm mb-8;
+      }
+
+      > div {
+        @apply gap-6;
+
+        span {
+          @apply h-20;
+        }
+      }
+    }
   }
-  h5 {
-    @apply text-center;
-  }
-  div {
-    @apply grid gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-6;
-    span {
-      @apply w-[70%] md:w-[50%] lg:w-[80%] m-auto;
+}
+
+@media (max-width: 426px) {
+  .association-container {
+    @apply py-8;
+
+    .association {
+      > div {
+        @apply gap-4;
+
+        span {
+          @apply h-16;
+        }
+      }
     }
   }
 }

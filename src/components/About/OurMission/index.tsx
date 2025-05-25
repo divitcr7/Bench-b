@@ -2,36 +2,39 @@ import "./ourmission.scss";
 export default function OurMission() {
   return (
     <section className="our-mission-container">
-      <div className="padding-container our-mission ">
+      <div className="padding-container our-mission">
         <h2>
-          <span>Our Mission</span>
+          <span>Our Mission & Vision</span>
           <div className="goldDash"></div>
         </h2>
         <div>{/* for image */}</div>
         <div>
-          <p>
-            <b>Benchmark Insurance Group of Texas</b> is the leading risk
-            management insurance brokerage for businesses of all sizes, with
-            capabilities to provide the industries lowest premiums from top
-            rated insurance companies, first class service and in house claims
-            consulting to provide representation when claims do occur.
-          </p>
-          <p>
-            Our Vision is to provide our clients and partners knowledge by
-            providing tailor made solutions that are designed address everyday
-            business crippling risks.
-          </p>
-          <p>
-            We are more than an insurance broker – we are your risk management
-            partner With a team of 15+ staff in the Houston, Clear Lake, and
-            Austin areas focused solely on refining strategies to provide our
-            clients with affordable insurance rates within 24 hours or less as
-            well as establishing several options that pinpoints the unique
-            insurance challenges that business owners and professionals face.
-          </p>
-          <p>
-            Our program is designed to provide business owners with
-            “ease-of-use”, appropriate coverages, and fair, stable rates.
+          <div className="mission-section">
+            <h3>Our Mission</h3>
+            <p>
+              "To constantly challenge the status quo by simplifying how risk is identified and quantified—so our partners can navigate uncertainty with confidence."
+            </p>
+          </div>
+          
+          <div className="vision-section">
+            <h3>Our Vision</h3>
+            <p>
+              "To revolutionize how organizations perceive, manage, and mitigate risks. We leverage technology and expertise to deliver transparency, intelligence, and protection at scale."
+            </p>
+          </div>
+
+          <div className="values-section">
+            <h3>Core Values</h3>
+            <ul>
+              <li><strong>Accountability</strong> – We measure success through client satisfaction.</li>
+              <li><strong>Integrity</strong> – We operate transparently and prioritize client interests.</li>
+              <li><strong>Professionalism</strong> – We serve with the excellence we expect of ourselves.</li>
+              <li><strong>Solutions-Oriented Mindset</strong> – We see every challenge as a chance to build trust.</li>
+            </ul>
+          </div>
+
+          <p className="who-we-are">
+            Based in Texas and licensed nationwide, we specialize in delivering intelligent insurance solutions built on integrity, technology, and industry depth. Founded on the belief that better data and smarter service drive better outcomes, we blend the rigor of underwriting with the agility of modern tech to protect what matters most—your assets, your business, your future.
           </p>
         </div>
         <button className="btn btn-filled">Contact Us</button>

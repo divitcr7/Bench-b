@@ -28,3 +28,25 @@
   --border-color: rgba(139, 149, 216, 0.3);
   --divider: #e2e2e9;
 }
+
+// Breakpoint variables
+$breakpoints: (
+  'xs': 320px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1200px,
+  'xxl': 1400px
+);
+
+// Mixins for media queries
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "No value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}

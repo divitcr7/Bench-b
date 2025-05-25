@@ -11,11 +11,10 @@ export default function Hero() {
         {/* heading */}
         <div className="front-page_heading">
           <h1>
-            We Specialize In the <span>Unexpected</span>
+            Modern Insurance. <span>Simplified. Specialized. Strategic.</span>
           </h1>
           <h4>
-            Technology meets insurance automating the risk management to meet
-            your needs
+            Insurance Reimagined — Fast, Informed, and Tailored. We combine proprietary technology with deep industry expertise to make insurance faster, more accurate, and more personalized than ever before.
           </h4>
           <button className="btn btn-filled">GET A QUOTE</button>
         </div>

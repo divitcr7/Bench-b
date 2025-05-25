@@ -11,6 +11,10 @@
     h2 {
       @apply mb-sixteen lg:mb-0;
     }
+    .services-intro {
+      @apply text-body1Small lg:text-body1Big mb-8;
+      color: var(--secondary-text);
+    }
     span {
       @apply h-[90%];
 
@@ -63,6 +67,26 @@
       }
     }
   }
+
+  .services-section {
+    @apply mt-8 lg:mt-12;
+    h3 {
+      @apply text-h3Small lg:text-h3Big font-bold mb-6;
+      color: var(--indigo);
+    }
+    ul {
+      @apply grid lg:grid-cols-2 gap-4;
+      li {
+        @apply flex items-center;
+        img {
+          @apply h-3 w-3 mr-4;
+        }
+        h5 {
+          @apply text-body1Small lg:text-body1Big;
+        }
+      }
+    }
+  }
 }
 @media (min-width:1025px){
   .whatWeDo{
@@ -90,6 +114,11 @@
       &-container {
         @apply p-0;
         border-left: none;
+      }
+    }
+    .services-section {
+      ul {
+        @apply grid-cols-1;
       }
     }
   }

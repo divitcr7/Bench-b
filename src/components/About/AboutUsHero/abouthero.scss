@@ -15,15 +15,32 @@
     background-repeat: no-repeat;
   }
   &-heading {
-    @apply mt-auto mb-auto ml-[2rem] ;
+    @apply mt-auto mb-auto ml-[2rem];
     h3 {
       color: var(--gold);
+      @apply text-h3Small lg:text-h3Big font-bold;
     }
     img {
       @apply h-[8vh] mt-sixteen mb-sixteen;
     }
     h4 {
       color: var(--light-grey);
+      @apply text-h4Small lg:text-h4Big font-bold;
+    }
+    .aboutus-tagline {
+      @apply mt-8 max-w-2xl;
+      h2 {
+        @apply text-h2Small lg:text-h2Big font-bold mb-4;
+        background: linear-gradient(90deg, var(--primary-text) 70%, var(--green));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      p {
+        @apply text-h4Small lg:text-h4Big;
+        color: var(--secondary-text);
+        @apply leading-relaxed;
+      }
     }
   }
 }
@@ -38,6 +55,15 @@
       @apply mt-auto mb-auto ml-5 mr-5 text-center w-full;
       img {
         @apply h-[6vh] ml-auto mr-auto;
+      }
+      .aboutus-tagline {
+        @apply mt-4;
+        h2 {
+          @apply text-h3Small lg:text-h3Big;
+        }
+        p {
+          @apply text-h5Small lg:text-h5Big;
+        }
       }
     }
   }

@@ -4,91 +4,102 @@ export default function WhatWeDo() {
   const data = [
     {
       id: 1,
-      imgUrl: "/assets/icons/industry.png",
-      title: "Industry Specialist",
+      title: "Real Estate Portfolios",
+      imgUrl: "/assets/icons/real-estate.png",
       type: [
-        "Real Estate",
-        "Transportation",
-        "Construction",
-        "Wholesale Distribution",
-        "Food & Beverage",
-      ],
+        "Multifamily Properties",
+        "Commercial Real Estate",
+        "Single-Family Rentals",
+        "Property Management"
+      ]
     },
     {
       id: 2,
-      imgUrl: "/assets/icons/risk-analysis.png",
-      title: "Risk Analysis",
+      title: "Construction Projects",
+      imgUrl: "/assets/icons/construction.png",
       type: [
-        "Safety and Loss Control",
-        "Certification Validation",
-        "Contract Review",
-        "Claim Catastrophe Support",
-        "Risk Technology",
-      ],
+        "General Contractors",
+        "Specialty Contractors",
+        "Construction Projects",
+        "Builder's Risk"
+      ]
     },
     {
       id: 3,
-      imgUrl: "/assets/icons/rate.png",
-      title: "Rate Negotiation",
-      type: ["We Tell Your Story", "Industry Low Rates"],
+      title: "Hospitality & Food Service",
+      imgUrl: "/assets/icons/hospitality.png",
+      type: [
+        "Hotels & Resorts",
+        "Restaurants & Bars",
+        "Food & Beverage Groups",
+        "Entertainment Venues"
+      ]
     },
     {
       id: 4,
-      imgUrl: "/assets/icons/tech.png",
-      title: "Technology/Automation",
+      title: "High-Net-Worth Clients",
+      imgUrl: "/assets/icons/private.png",
       type: [
-        "Certificate",
-        "Safety Program Management",
-        "Streamlined Audits",
-        "Osha Complaince",
-        "Self Service Portal",
-      ],
-    },
-    {
-      id: 5,
-      imgUrl: "/assets/icons/claim.png",
-      title: "Claim Support/Loss Miitigation",
-      type: [],
-    },
+        "Private Client Services",
+        "Wealth Protection",
+        "Lifestyle Assets",
+        "Personal Liability"
+      ]
+    }
   ];
+
+  const services = [
+    "Risk Assessment & Policy Structuring",
+    "Digital Claims Advocacy & Management",
+    "Long-Term Risk Mitigation Planning",
+    "Real-Time Analytics & Insurance Tech Integration"
+  ];
+
   return (
     <section className="whatWeDo-container">
       <div className="whatWeDo padding-container">
         <div>
           <h2>What We Do</h2>
-          {/* circular image */}
+          <p className="services-intro">
+            We provide custom-built insurance programs and advisory services tailored to your specific needs. Our services span the full lifecycle of insurance, ensuring comprehensive protection and support.
+          </p>
           <span>
-            <img src="/assets/images/what-we-do.png" />
+            <img src="/assets/images/what-we-do.png" alt="What We Do" />
           </span>
         </div>
-        {/* cards section */}
         <div className="whatWeDo-card-container">
           {data.map((item) => (
             <div key={item.id} className="whatWeDo-card">
-              <div >
-                {/* icon image */}
+              <div>
                 <span>
-                  <img src={item.imgUrl} />
+                  <img src={item.imgUrl} alt={item.title} />
                 </span>
                 <div>
-                  {/* title */}
                   <h3>{item.title}</h3>
-                  {/* numbering */}
                   <h2>0{item.id}</h2>
                 </div>
               </div>
-              <ul className="">
+              <ul>
                 {item.type.map((type, index) => (
                   <li key={index}>
-                    {/* bullet points */}
-                    <img src="/assets/icons/gold-diamond.png" />
-                    {/* type of service */}
+                    <img src="/assets/icons/gold-diamond.png" alt="bullet" />
                     <h5>{type}</h5>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
+        </div>
+        <div className="services-section">
+          <h3>Our Services</h3>
+          <ul>
+            {services.map((service, index) => (
+              <li key={index}>
+                <img src="/assets/icons/gold-diamond.png" alt="bullet" />
+                <h5>{service}</h5>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

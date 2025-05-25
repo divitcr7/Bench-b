@@ -33,8 +33,38 @@
     background-size: 50%;
     background-position: bottom right;
     background-repeat: no-repeat;
-    p {
-      @apply pb-sixteen;
+
+    .mission-section,
+    .vision-section,
+    .values-section {
+      @apply mb-8;
+      
+      h3 {
+        @apply text-h3Small lg:text-h3Big font-bold mb-4;
+        color: var(--indigo);
+      }
+
+      p {
+        @apply italic;
+      }
+    }
+
+    .values-section {
+      ul {
+        @apply list-none pl-0;
+        
+        li {
+          @apply mb-4;
+          
+          strong {
+            color: var(--indigo);
+          }
+        }
+      }
+    }
+
+    .who-we-are {
+      @apply mt-8;
     }
   }
 
