@@ -37,6 +37,52 @@ const MENU = [
     path: "/portals",
     subItems: ["Payment", "Client", "Agent"],
   },
+  {
+    label: "Services",
+    path: "/services",
+    subItems: [
+      {
+        label: "Commercial Property",
+        path: "/services/commercial-property",
+        subItems: [
+          "Claims Advocacy",
+          "Alternative Risk Financing",
+          "Loss Control"
+        ]
+      },
+      {
+        label: "Private Client",
+        path: "/services/private-client"
+      },
+      {
+        label: "Risk Management",
+        path: "/services/risk-management"
+      },
+      {
+        label: "Benchmark Network",
+        path: "/services/benchmark-network"
+      }
+    ]
+  },
+  {
+    label: "Tools",
+    path: "/tools",
+    subItems: [
+      "Certificate Generator",
+      "Risk Calculator",
+      "Claims Portal",
+      "Premium Forecast",
+      "Policy Checker",
+      "Risk Library",
+      "Quote Submission",
+      "Vendor Marketplace",
+      "Booking Scheduler"
+    ]
+  },
+  {
+    label: "Dashboard",
+    path: "/dashboard"
+  }
 ];
 
 interface SidebarProps {
@@ -50,6 +96,50 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
 
   const handleExpand = (idx: number) => {
     setOpenIndex(openIndex === idx ? null : idx);
+  };
+
+  const renderSubItems = (item: any, parentPath: string) => {
+    if (!item.subItems) return null;
+
+    return (
+      <div className="sidebar-submenu-container">
+        <h3 className="sidebar-submenu-title">{item.label}</h3>
+        <ul className="sidebar-submenu">
+          {item.subItems.map((sub: any, subIdx: number) => (
+            <li key={subIdx}>
+              {typeof sub === 'string' ? (
+                <Link 
+                  to={`${parentPath}/${sub.toLowerCase().replace(/\s+/g, "-")}`} 
+                  onClick={onClose}
+                >
+                  {sub}
+                </Link>
+              ) : (
+                <div className="nested-submenu">
+                  <Link to={sub.path} onClick={onClose}>
+                    {sub.label}
+                  </Link>
+                  {sub.subItems && (
+                    <ul className="nested-submenu-items">
+                      {sub.subItems.map((nestedSub: string, nestedIdx: number) => (
+                        <li key={nestedIdx}>
+                          <Link 
+                            to={`${sub.path}/${nestedSub.toLowerCase().replace(/\s+/g, "-")}`} 
+                            onClick={onClose}
+                          >
+                            {nestedSub}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
   };
 
   return (
@@ -77,20 +167,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
                       <span className="sidebar-menu-label">{item.label}</span>
                       <Chevron direction={openIndex === idx ? "down" : "right"} color="#3A3A3A" />
                     </div>
-                    {openIndex === idx && (
-                      <div className="sidebar-submenu-container">
-                        <h3 className="sidebar-submenu-title">{item.label}</h3>
-                        <ul className="sidebar-submenu">
-                          {item.subItems.map((sub, subIdx) => (
-                            <li key={subIdx}>
-                              <Link to={`${item.path}/${sub.toLowerCase().replace(/\s+/g, "-")}`} onClick={onClose}>
-                                {sub}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                    {openIndex === idx && renderSubItems(item, item.path)}
                   </>
                 ) : (
                   <Link to={item.path} onClick={onClose} className="sidebar-menu-item">
