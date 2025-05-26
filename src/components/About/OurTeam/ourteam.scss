@@ -1,13 +1,12 @@
 @use "@/styles/variables.scss";
 
 .our-team {
-  &-container {
-    background-color: var(--dark-blue);
-  }
-
   text-align: center;
   color: white;
 
+  &-container {
+    background-color: var(--dark-blue);
+  }
 
   h5 {
     @apply m-auto ;

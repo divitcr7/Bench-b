@@ -1,6 +1,43 @@
 // src/components/Sidebar.tsx
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import Button from "../ui/Button";
+import Chevron from "../Icons/Chevron";
+import SocialMediaNav from "../SocialMediaNav";
 import "./sidebar.scss";
+
+const MENU = [
+  {
+    label: "Commercial",
+    path: "/commercial",
+    subItems: [
+      "Energy",
+      "Construction",
+      "Transportation",
+      "Non-profit",
+      "Retail",
+      "Wholesale",
+      "Manufacturing",
+      "Financial Services",
+      "Hospitality",
+      "Auto Service",
+      "Healthcare",
+    ],
+  },
+  {
+    label: "Personal Lines",
+    path: "/personal-lines",
+    subItems: [], // Add subitems if needed
+  },
+  { label: "About Us/Careers", path: "/about" },
+  { label: "Document Library", path: "/documents" },
+  { label: "Blog (News)", path: "/blog" },
+  {
+    label: "Portals",
+    path: "/portals",
+    subItems: ["Payment", "Client", "Agent"],
+  },
+];
 
 interface SidebarProps {
   isOpen: boolean;
@@ -8,42 +45,72 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const location = useLocation();
+
+  const handleExpand = (idx: number) => {
+    setOpenIndex(openIndex === idx ? null : idx);
+  };
+
   return (
     <div className={`sidebar ${isOpen ? "open" : ""}`}>
       <div className="sidebar-overlay" onClick={onClose} />
       <div className="sidebar-content">
-        <button className="sidebar-close" onClick={onClose}>
-          ×
-        </button>
+        {/* Logo and Close */}
+        <div className="sidebar-header">
+          <img src="/assets/icons/logo.png" alt="Benchmark logo" className="sidebar-logo" />
+          <button className="sidebar-close" onClick={onClose}>
+            ×
+          </button>
+        </div>
+        {/* Navigation */}
         <nav className="sidebar-nav">
           <ul>
-            <li>
-              <Link to="/" onClick={onClose}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" onClick={onClose}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/industry" onClick={onClose}>
-                Industry
-              </Link>
-            </li>
-            <li>
-              <Link to="/onboarding" onClick={onClose}>
-                Onboarding
-              </Link>
-            </li>
-            <li>
-              <Link to="/blog" onClick={onClose}>
-                Blog
-              </Link>
-            </li>
+            {MENU.map((item, idx) => (
+              <li key={item.label} className={location.pathname.startsWith(item.path) ? "active" : ""}>
+                {item.subItems && item.subItems.length > 0 ? (
+                  <div className="sidebar-menu-container">
+                    <div
+                      className={`sidebar-menu-item${openIndex === idx ? " expanded" : ""}`}
+                      onClick={() => handleExpand(idx)}
+                    >
+                      <span className="sidebar-menu-label">{item.label}</span>
+                      <Chevron direction={openIndex === idx ? "down" : "right"} color="#3A3A3A" />
+                    </div>
+                    {openIndex === idx && (
+                      <div className="sidebar-submenu-container">
+                        <ul className="sidebar-submenu">
+                          {item.subItems.map((sub, subIdx) => (
+                            <li key={subIdx}>
+                              <Link to={`${item.path}/${sub.toLowerCase().replace(/\s+/g, "-")}`} onClick={onClose}>
+                                {sub}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link to={item.path} onClick={onClose} className="sidebar-menu-item">
+                    <span className="sidebar-menu-label">{item.label}</span>
+                  </Link>
+                )}
+              </li>
+            ))}
           </ul>
         </nav>
+        {/* Rest of the component remains the same */}
+        {/* Contact Us Button */}
+        <div className="sidebar-contact">
+          <Button variant="outlined" color="primary" fullWidth>
+            Contact Us
+          </Button>
+        </div>
+        {/* Social Media */}
+        <div className="sidebar-social">
+          <SocialMediaNav />
+        </div>
       </div>
     </div>
   );
