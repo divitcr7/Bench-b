@@ -10,6 +10,7 @@ import {
   Memberships,
   ContactUs,
   ProcessSteps,
+  OurPartners,
 } from "@/components";
 
 export default function About() {
@@ -36,6 +37,8 @@ export default function About() {
       <ProcessSteps />
       {/* our team */}
       <OurTeam />
+      {/* our partners */}
+      <OurPartners />
       {/* banner */}
       <Banner />
       {/* our memberships */}

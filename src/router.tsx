@@ -21,7 +21,14 @@ import {
   BookingScheduler,
   ClientDashboard,
   Careers,
+  CommercialPropertyPage,
+  PrivateClientPage,
+  RiskManagement,
+  BenchmarkNetwork,
 } from "@/pages";
+import ClaimsAdvocacy from "./pages/CommercialProperty/ClaimsAdvocacy";
+import AlternativeRiskFinancing from "./pages/CommercialProperty/AlternativeRiskFinancing";
+import LossControl from "./pages/CommercialProperty/LossControl";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +54,44 @@ const router = createBrowserRouter([
       {
         path: "careers",
         element: <Careers />,
+      },
+      {
+        path: "services",
+        children: [
+          {
+            path: "commercial-property",
+            children: [
+              {
+                index: true,
+                element: <CommercialPropertyPage />,
+              },
+              {
+                path: "claims-advocacy",
+                element: <ClaimsAdvocacy />,
+              },
+              {
+                path: "alternative-risk-financing",
+                element: <AlternativeRiskFinancing />,
+              },
+              {
+                path: "loss-control",
+                element: <LossControl />,
+              },
+            ],
+          },
+          {
+            path: "private-client",
+            element: <PrivateClientPage />,
+          },
+          {
+            path: "risk-management",
+            element: <RiskManagement />,
+          },
+          {
+            path: "benchmark-network",
+            element: <BenchmarkNetwork />,
+          },
+        ],
       },
       {
         path: "tools",

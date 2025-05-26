@@ -1,0 +1,122 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.risk-management {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+
+  @include respond-to('sm') {
+    padding: 3rem 1.5rem;
+  }
+
+  @include respond-to('lg') {
+    padding: 3rem 2rem;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    &-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary-text);
+      margin-bottom: 1rem;
+
+      @include respond-to('md') {
+        font-size: 3rem;
+      }
+    }
+
+    &-subtitle {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--secondary-text);
+      margin-bottom: 0.5rem;
+    }
+
+    &-tagline {
+      font-size: 1.25rem;
+      color: var(--secondary-text);
+    }
+  }
+
+  &__content {
+    .section {
+      margin-bottom: 3rem;
+
+      &__title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--primary-text);
+        margin-bottom: 1rem;
+      }
+
+      &__text {
+        color: var(--secondary-text);
+        line-height: 1.6;
+      }
+    }
+
+    .feature-list {
+      &__item {
+        margin-bottom: 1.5rem;
+
+        &-title {
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: var(--primary-text);
+          margin-bottom: 0.5rem;
+        }
+
+        &-description {
+          color: var(--secondary-text);
+          line-height: 1.6;
+        }
+      }
+    }
+
+    .benefits-list {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      
+      li {
+        color: var(--secondary-text);
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+      }
+    }
+
+    .why-choose {
+      &__item {
+        margin-bottom: 1rem;
+
+        strong {
+          color: var(--primary-text);
+          font-weight: 600;
+        }
+      }
+    }
+
+    .cta {
+      &__text {
+        margin-bottom: 1rem;
+        color: var(--secondary-text);
+      }
+
+      &__button {
+        background-color: var(--green);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: darken(#19c19e, 10%);
+        }
+      }
+    }
+  }
+} 

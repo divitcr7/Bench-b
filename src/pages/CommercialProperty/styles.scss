@@ -1,0 +1,264 @@
+@import '@/styles/variables';
+@import '@/styles/mixins';
+
+.alternative-risk-financing {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+
+  @include respond-to('sm') {
+    padding: 3rem 1.5rem;
+  }
+
+  @include respond-to('lg') {
+    padding: 3rem 2rem;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    &-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary-text);
+      margin-bottom: 1rem;
+
+      @include respond-to('md') {
+        font-size: 3rem;
+      }
+    }
+
+    &-subtitle {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--secondary-text);
+      margin-bottom: 0.5rem;
+    }
+
+    &-tagline {
+      font-size: 1.25rem;
+      color: var(--secondary-text);
+      font-style: italic;
+    }
+  }
+
+  &__content {
+    .section {
+      margin-bottom: 3rem;
+
+      &__title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--primary-text);
+        margin-bottom: 1rem;
+      }
+
+      &__text {
+        color: var(--secondary-text);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .feature-list {
+      &__item {
+        margin-bottom: 1.5rem;
+        padding: 1.5rem;
+        background-color: var(--background-light);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+        &-title {
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: var(--primary-text);
+          margin-bottom: 0.5rem;
+        }
+
+        &-description {
+          color: var(--secondary-text);
+          line-height: 1.6;
+        }
+      }
+    }
+
+    .benefits-list {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      
+      li {
+        color: var(--secondary-text);
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+      }
+    }
+
+    .why-choose {
+      &__item {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background-color: var(--background-light);
+        border-radius: 8px;
+
+        strong {
+          color: var(--primary-text);
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+.loss-control {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+
+  @include respond-to('sm') {
+    padding: 3rem 1.5rem;
+  }
+
+  @include respond-to('lg') {
+    padding: 3rem 2rem;
+  }
+
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    &-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary-text);
+      margin-bottom: 1rem;
+
+      @include respond-to('md') {
+        font-size: 3rem;
+      }
+    }
+
+    &-subtitle {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--secondary-text);
+      margin-bottom: 0.5rem;
+    }
+
+    &-tagline {
+      font-size: 1.25rem;
+      color: var(--secondary-text);
+    }
+  }
+
+  &__content {
+    .section {
+      margin-bottom: 3rem;
+
+      &__title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--primary-text);
+        margin-bottom: 1rem;
+      }
+
+      &__text {
+        color: var(--secondary-text);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .feature-list {
+      &__item {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background-color: var(--background-light);
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        &-title {
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: var(--primary-text);
+          margin-bottom: 1rem;
+        }
+
+        &-description {
+          color: var(--secondary-text);
+          line-height: 1.6;
+          margin-bottom: 1rem;
+        }
+
+        &-list {
+          list-style-type: disc;
+          padding-left: 1.5rem;
+          margin-bottom: 1rem;
+
+          li {
+            color: var(--secondary-text);
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+
+    .benefits-list {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      
+      li {
+        color: var(--secondary-text);
+        margin-bottom: 0.5rem;
+        line-height: 1.6;
+        font-size: 1.1rem;
+      }
+    }
+
+    .why-choose {
+      &__item {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background-color: var(--background-light);
+        border-radius: 8px;
+
+        strong {
+          color: var(--primary-text);
+          font-weight: 600;
+        }
+      }
+    }
+
+    .cta {
+      text-align: center;
+      padding: 2rem;
+      background-color: var(--background-light);
+      border-radius: 8px;
+      margin-top: 2rem;
+
+      &__text {
+        margin-bottom: 1rem;
+        color: var(--secondary-text);
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+
+      &__button {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 4px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: var(--primary-color-dark);
+        }
+      }
+    }
+  }
+} 
