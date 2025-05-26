@@ -1,4 +1,4 @@
-import "./industryhero.scss";
+import "./industryHero.scss";
 import SocialMediaNav from "@/components/Common/SocialMediaNav";
 
 interface IndustryHeroProps {
