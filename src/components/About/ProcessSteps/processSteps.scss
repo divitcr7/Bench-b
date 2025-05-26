@@ -1,0 +1,106 @@
+@use "@/styles/variables.scss";
+
+.process-steps {
+  &-container {
+    @apply bg-white;
+  }
+
+  .process-section {
+    @apply mb-16;
+
+    h2 {
+      @apply text-h2Small lg:text-h2Big font-bold mb-6;
+      color: var(--indigo);
+    }
+
+    .section-intro {
+      @apply text-body1Small lg:text-body1Big mb-12;
+      color: var(--secondary-text);
+    }
+  }
+
+  .steps-grid {
+    @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+
+  .step-card {
+    @apply p-8 rounded-lg;
+    border: 1px solid var(--divider);
+    background-color: var(--light-bg);
+
+    .step-header {
+      @apply mb-6;
+
+      .step-number {
+        @apply text-h3Small lg:text-h3Big font-bold;
+        color: var(--gold);
+      }
+
+      h3 {
+        @apply text-h3Small lg:text-h3Big font-bold mt-2 mb-2;
+        color: var(--indigo);
+      }
+
+      .tagline {
+        @apply text-body1Small lg:text-body1Big italic;
+        color: var(--secondary-text);
+      }
+    }
+
+    .step-details {
+      @apply space-y-4;
+
+      li {
+        @apply flex items-start;
+
+        img {
+          @apply h-3 w-3 mr-4 mt-1;
+        }
+
+        span {
+          @apply text-body1Small lg:text-body1Big;
+          color: var(--secondary-text);
+        }
+      }
+    }
+  }
+
+  .metrics-section,
+  .value-section {
+    @apply mb-16;
+
+    h3 {
+      @apply text-h3Small lg:text-h3Big font-bold mb-6;
+      color: var(--indigo);
+    }
+
+    ul {
+      @apply space-y-4;
+
+      li {
+        @apply flex items-start;
+
+        img {
+          @apply h-3 w-3 mr-4 mt-1;
+        }
+
+        span {
+          @apply text-body1Small lg:text-body1Big;
+          color: var(--secondary-text);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .process-steps {
+    .steps-grid {
+      @apply grid-cols-1;
+    }
+
+    .step-card {
+      @apply p-6;
+    }
+  }
+} 

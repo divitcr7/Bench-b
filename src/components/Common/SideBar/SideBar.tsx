@@ -69,7 +69,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
             {MENU.map((item, idx) => (
               <li key={item.label} className={location.pathname.startsWith(item.path) ? "active" : ""}>
                 {item.subItems && item.subItems.length > 0 ? (
-                  <div className="sidebar-menu-container">
+                  <>
                     <div
                       className={`sidebar-menu-item${openIndex === idx ? " expanded" : ""}`}
                       onClick={() => handleExpand(idx)}
@@ -79,6 +79,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
                     </div>
                     {openIndex === idx && (
                       <div className="sidebar-submenu-container">
+                        <h3 className="sidebar-submenu-title">{item.label}</h3>
                         <ul className="sidebar-submenu">
                           {item.subItems.map((sub, subIdx) => (
                             <li key={subIdx}>
@@ -90,7 +91,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
                         </ul>
                       </div>
                     )}
-                  </div>
+                  </>
                 ) : (
                   <Link to={item.path} onClick={onClose} className="sidebar-menu-item">
                     <span className="sidebar-menu-label">{item.label}</span>
@@ -100,7 +101,6 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
             ))}
           </ul>
         </nav>
-        {/* Rest of the component remains the same */}
         {/* Contact Us Button */}
         <div className="sidebar-contact">
           <Button variant="outlined" color="primary" fullWidth>

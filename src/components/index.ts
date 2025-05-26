@@ -21,6 +21,7 @@ import WhatWeDo from "./About/WhatWeDo";
 import WhyBenchmark from "./About/WhyBenchmark";
 import OurTeam from "./About/OurTeam";
 import Memberships from "./About/Memberships";
+import ProcessSteps from "./About/ProcessSteps";
 
 //blogs imports
 import BlogHero from "./Blogs/BlogHero";
@@ -61,6 +62,7 @@ export {
   WhyBenchmark,
   OurTeam,
   Memberships,
+  ProcessSteps,
   IndustryHero,
   Details,
   ProductAndServices,

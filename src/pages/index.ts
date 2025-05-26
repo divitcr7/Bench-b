@@ -27,3 +27,4 @@ export { default as QuoteSubmission } from './tools/QuoteSubmission';
 export { default as VendorMarketplace } from './tools/VendorMarketplace';
 export { default as BookingScheduler } from './tools/BookingScheduler';
 export { default as ClientDashboard } from './tools/ClientDashboard';
+export { default as Careers } from "./Careers";

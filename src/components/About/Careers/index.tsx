@@ -42,7 +42,7 @@ export default function Careers() {
           ))}
         </div>
         <div className="career-allJobs">
-          <Link to="#">
+          <Link to="/careers">
             SEE ALL JOBS <Chevron direction="right" />
           </Link>
         </div>

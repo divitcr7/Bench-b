@@ -9,6 +9,7 @@ import {
   Banner,
   Memberships,
   ContactUs,
+  ProcessSteps,
 } from "@/components";
 
 export default function About() {
@@ -31,6 +32,8 @@ export default function About() {
       <WhyBenchmark />
       {/* what we do  */}
       <WhatWeDo />
+      {/* our process steps */}
+      <ProcessSteps />
       {/* our team */}
       <OurTeam />
       {/* banner */}

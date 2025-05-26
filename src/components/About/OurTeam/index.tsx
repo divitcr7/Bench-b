@@ -60,6 +60,26 @@ const teamMembers = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
   },
+  {
+    id: 6,
+    name: "Jivar Foty",
+    position: "Founder & President",
+    image: "/assets/images/david.png", // Update with actual image path
+    linkedin: "",
+    email: "",
+    description:
+      "Jivar Foty is the visionary Founder and President of Benchmark Insurance Group, one of Texas's fastest-growing wholesale and retail insurance brokerages specializing in real estate, construction, and hospitality. With a deep entrepreneurial background and a sharp understanding of property risk, Jivar launched Benchmark with a mission to bring innovation, transparency, and data-driven strategy to the insurance industry.",
+  },
+  {
+    id: 7,
+    name: "Haitham Foty",
+    position: "Corporate Controller",
+    image: "/assets/images/david.png", // Update with actual image path
+    linkedin: "",
+    email: "",
+    description:
+      "Haitham Foty serves as the Corporate Controller at Benchmark Insurance Group, where he oversees financial operations, budget strategy, and internal controls. With a detail-oriented approach and strong financial acumen, Haitham ensures the fiscal health and operational scalability of Benchmark as it expands its reach across the nation.",
+  },
 ];
 
 const OurTeam = () => {

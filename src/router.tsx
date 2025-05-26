@@ -20,6 +20,7 @@ import {
   VendorMarketplace,
   BookingScheduler,
   ClientDashboard,
+  Careers,
 } from "@/pages";
 
 const router = createBrowserRouter([
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "onboarding",
         element: <Onboarding />,
+      },
+      {
+        path: "careers",
+        element: <Careers />,
       },
       {
         path: "tools",
