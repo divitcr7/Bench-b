@@ -206,25 +206,6 @@ const OurTeam = () => {
             ))}
           </div>
         </div>
-
-        {/* Navigation Arrows On Bigger Screens */}
-        <div>
-          <button
-            className="nav-arrow left"
-            onClick={prevSlide}
-            disabled={startIndex === 0}
-          >
-            <Chevron direction="left" color="white" />
-          </button>
-          <button
-            className="nav-arrow right"
-            onClick={nextSlide}
-            disabled={startIndex + 3 >= teamMembers.length}
-          >
-            <Chevron direction="right" color="white" />
-          </button>
-        </div>
-
         {/* Load More / Load Less Buttons for Smaller Screens */}
         <div className="load-buttons">
           {startIndex + 3 < teamMembers.length && (

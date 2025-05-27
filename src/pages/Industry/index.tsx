@@ -10,7 +10,7 @@ import {
   ContactUs,
 } from "@/components";
 
-export default function Home() {
+export default function Industry() {
   const metadata = {
     title: "Industry || Benchmark - Insurance",
     description: "Benchmark - Insurance",

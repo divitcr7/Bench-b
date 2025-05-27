@@ -1,229 +1,200 @@
-@use "@/styles/variables.scss";
+.bestOffers {
+  // Container Layout
+  @apply h-full w-full grid grid-rows-[auto_1fr] lg:grid-cols-[45%_55%];
 
-.bestOffers_container {
-  position: relative;
-  background: var(--white);
-  padding: 80px 0;
-  overflow: hidden;
+  &_container {
+    @apply h-auto w-full relative;
+    background-color: var(--dark-blue);
+  }
 
-  .bestOffers {
-    position: relative;
-    z-index: 1;
+  // Typography Styles
+  h2 {
+    @apply text-center lg:text-left m-auto text-white;
+    @apply lg:w-[180%] relative z-20;
 
-    .hero-section {
-      text-align: center;
-      max-width: 900px;
-      margin: 0 auto 60px;
-
-      h1 {
-        font-size: 3.5rem;
-        font-weight: 700;
-        color: var(--dark);
-        margin-bottom: 20px;
-      }
-
-      h2 {
-        font-size: 2.5rem;
-        font-weight: 600;
-        color: var(--dark);
-        margin-bottom: 20px;
-
-        span {
-          color: var(--green);
-        }
-      }
-
-      h5 {
-        font-size: 1.2rem;
-        color: var(--gray);
-        line-height: 1.6;
-      }
+    span {
+      color: var(--gold);
     }
+  }
 
-    .bestOffers_img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-      opacity: 0.1;
-      width: 100%;
-      max-width: 1200px;
+  h5 {
+    @apply text-center lg:text-left lg:w-[180%];
+    @apply text-white font-gilroy;
+  }
 
-      img {
-        width: 100%;
-        height: auto;
-      }
+  // Left Side Image
+  &_img {
+    @apply col-span-1 col-start-1 row-start-2 hidden lg:flex;
+
+    img {
+      @apply object-contain w-full h-full;
+      transform: scale(1.3);
     }
+  }
 
-    .bestOffers_cards-container {
-      position: relative;
-      margin: 60px 0;
+  // Cards Section
+  &_cards {
+    @apply h-auto w-[95%];
+    @apply m-auto mb-8 lg:mb-12 z-20 relative;
+    color: var(--blue-border);
+    background-color: var(--light-blue);
+    transition: all 0.3s ease-in-out;
+    padding: 2rem;
+    border-radius: 8px;
 
-      .features-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-        margin-bottom: 40px;
-      }
+    // Card Content Section
+    &_content {
+      @apply flex gap-6;
+      align-items: flex-start;
 
-      .bestOffers_cards {
-        background: var(--white);
-        border-radius: 12px;
-        padding: 30px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        transition: all 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-
-        &:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-        }
-
-        .card-icon {
-          margin-bottom: 20px;
-          
-          img {
-            width: 48px;
-            height: 48px;
-            object-fit: contain;
-          }
-        }
-
-        .card-content {
-          flex: 1;
-
-          h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 15px;
-          }
-
-          p {
-            font-size: 1rem;
-            color: var(--gray);
-            line-height: 1.6;
-          }
-        }
-
-        .card-footer {
-          margin-top: 20px;
-          display: flex;
-          justify-content: flex-end;
-        }
-      }
-    }
-
-    .benefits-section {
-      max-width: 800px;
-      margin: 60px auto;
-      text-align: center;
-
-      h3 {
+      .bestOffers_cards_icon {
+        @apply p-1;
+        color: white;
         font-size: 2rem;
-        font-weight: 600;
-        color: var(--dark);
-        margin-bottom: 30px;
+        line-height: 1;
       }
 
-      .benefits-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+      div {
+        h3 {
+          @apply text-white font-gilroy mb-3;
+          font-size: 1.25rem;
+          line-height: 1.4;
+        }
 
-        li {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin-bottom: 15px;
-          font-size: 1.1rem;
-          color: var(--gray);
+        p {
+          @apply text-smallBodySmall lg:text-smallBodyBig;
+          color: white;
+          margin: 0;
+          line-height: 1.5;
+          font-size: 0.95rem;
+        }
+      }
+    }
 
-          .check-icon {
-            color: var(--green);
-            margin-right: 10px;
-            font-weight: bold;
+    // Card Hover States
+    &:hover {
+      border: 2px solid var(--blue-border);
+      cursor: pointer;
+      transform: translateY(-2px);
+
+      .bestOffers_cards_icon {
+        color: var(--green);
+      }
+    }
+  }
+
+  // Container Layouts
+  &_cards-container {
+    @apply col-span-1 lg:col-start-2 row-start-2;
+    @apply grid grid-rows-[auto_1fr] relative;
+  }
+
+  &_button {
+    @apply w-full m-auto text-center mt-fiftySixSmall lg:mt-fiftySixBig;
+  }
+}
+
+// Decorative Elements
+.borderImage {
+  @apply absolute right-0 top-0 lg:h-[50vh];
+}
+
+.bmVector {
+  @apply absolute -top-10 lg:-top-20 right-0 z-10 h-[10vh] lg:h-[20vh];
+
+  img {
+    @apply h-full;
+  }
+}
+
+//1024 px
+@media (max-width: 1024px) {
+  .bestOffers {
+    &_cards-container {
+      @apply mt-20;
+    }
+
+    &_cards {
+      @apply w-[100%];
+
+      &_content {
+        .bestOffers_cards_icon {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    &_button {
+      @apply w-[90%] m-auto text-center;
+    }
+  }
+}
+
+//768 px
+@media (max-width: 768px) {
+  .bestOffers {
+    @apply grid-cols-1 w-full max-w-[100vw] overflow-hidden;
+
+    h2 {
+      @apply text-center w-full bg-transparent;
+    }
+
+    &_img {
+      @apply hidden;
+    }
+
+    &_cards-container {
+      @apply col-span-1 row-start-2 grid grid-rows-[auto_1fr] mt-20;
+    }
+
+    &_cards {
+      @apply w-[95%] max-w-[95vw] m-auto mb-8 p-4;
+
+      &_content {
+        @apply gap-4;
+
+        div {
+          h3 {
+            font-size: 1.1rem;
           }
         }
       }
     }
 
-    .cta-section {
-      text-align: center;
-      margin: 60px 0;
+    &_button {
+      @apply w-[90%] m-auto text-center;
+    }
+  }
+}
 
-      .cta-text {
-        font-size: 1.3rem;
-        color: var(--dark);
-        margin-bottom: 30px;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .bestOffers_button {
-        .btn {
-          padding: 15px 40px;
-          font-size: 1.1rem;
-          font-weight: 600;
-        }
-      }
+@media (max-width: 426px) {
+  .bestOffers {
+    &_cards-container {
+      @apply -mt-2;
     }
 
-    .bmVector {
-      position: absolute;
-      bottom: -50px;
-      right: -50px;
-      z-index: -1;
-      opacity: 0.1;
+    &_cards {
+      @apply w-[95%] m-auto mb-4;
 
-      img {
-        width: 300px;
-        height: auto;
+      &_content {
+        div {
+          h3 {
+            font-size: 1rem;
+          }
+        }
+
+        p {
+          font-size: 0.8rem;
+        }
       }
     }
   }
 }
 
-@media (max-width: 768px) {
-  .bestOffers_container {
-    padding: 40px 0;
-
-    .bestOffers {
-      .hero-section {
-        h1 {
-          font-size: 2.5rem;
-        }
-
-        h2 {
-          font-size: 2rem;
-        }
-      }
-
-      .bestOffers_cards-container {
-        .features-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      .benefits-section {
-        h3 {
-          font-size: 1.8rem;
-        }
-
-        .benefits-list li {
-          font-size: 1rem;
-        }
-      }
-
-      .cta-section {
-        .cta-text {
-          font-size: 1.1rem;
-        }
-      }
+@media (max-width: 320px) {
+  .bestOffers {
+    &_cards-container {
+      @apply mt-1;
     }
   }
 }

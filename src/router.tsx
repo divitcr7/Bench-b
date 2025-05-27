@@ -44,19 +44,11 @@ const router = createBrowserRouter([
       },
       {
         path: "industry",
-        element: <Industry />,
-      },
-      {
-        path: "onboarding",
-        element: <Onboarding />,
-      },
-      {
-        path: "careers",
-        element: <Careers />,
-      },
-      {
-        path: "commercial",
         children: [
+          {
+            index: true,
+            element: <Industry />,
+          },
           {
             path: "real-estate-insurance",
             element: <RealEstateInsurance />,
@@ -90,6 +82,14 @@ const router = createBrowserRouter([
             element: <TransportationInsurance />,
           }
         ]
+      },
+      {
+        path: "onboarding",
+        element: <Onboarding />,
+      },
+      {
+        path: "careers",
+        element: <Careers />,
       },
       {
         path: "services",

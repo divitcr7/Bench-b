@@ -7,14 +7,85 @@
     transform: translateY(-4rem);
   }
 
-  &-allJobs {
-    @apply text-btnSmall lg:text-btnBig;
-    @apply m-auto mt-fortySmall lg:mt-fortyBig;
-    border-bottom: 2px solid var(--green);
+  &-content {
+    @apply mt-8;
+  }
 
-    svg {
-      @apply inline w-4 h-4;
+  &-text {
+    @apply mb-12;
+
+    h3 {
+      @apply text-2xl font-semibold mb-4;
+      color: var(--indigo);
     }
+
+    > p {
+      @apply text-lg mb-8;
+      color: var(--text-secondary);
+      max-width: 800px;
+    }
+  }
+
+  &-benefits {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-8 mb-12;
+  }
+
+  &-link {
+    @apply mt-8;
+  }
+}
+
+.benefit-item {
+  @apply p-6 rounded-lg;
+  background-color: var(--bg-secondary);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  h4 {
+    @apply text-lg font-semibold mb-2;
+    color: var(--indigo);
+  }
+
+  p {
+    @apply text-sm;
+    color: var(--text-secondary);
+  }
+}
+
+.open-positions-link {
+  @apply flex items-center gap-4 text-btnBig font-medium;
+  color: var(--indigo);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: var(--green);
+    
+    svg {
+      color: var(--green);
+    }
+  }
+
+  svg {
+    @apply w-6 h-6;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@media (max-width: 768px) {
+  .career-benefits {
+    @apply grid-cols-1 gap-4;
+  }
+
+  .benefit-item {
+    @apply p-4;
+  }
+
+  .open-positions-link {
+    @apply text-btnSmall;
   }
 }
 

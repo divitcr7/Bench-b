@@ -9,7 +9,7 @@ import "./sidebar.scss";
 const MENU = [
   {
     label: "Commercial",
-    path: "/commercial",
+    path: "/industry",
     subItems: [
       "Real Estate Insurance",
       "Hospitality Insurance",
