@@ -23,7 +23,7 @@ function SpecialityCard({ item }: { item: SpecialityCardType }) {
         navigate("/services/private-client");
         break;
       case "Risk Assessment":
-        navigate("/tools/risk-calculator");
+        navigate("/services/risk-management");
         break;
       case "Claims Advocacy":
         navigate("/services/commercial-property/claims-advocacy");
@@ -32,10 +32,10 @@ function SpecialityCard({ item }: { item: SpecialityCardType }) {
         navigate("/services/risk-management");
         break;
       case "Analytics":
-        navigate("/tools/risk-library");
+        navigate("/services/risk-management");
         break;
       case "Portfolio Management":
-        navigate("/dashboard");
+        navigate("/services/commercial-property/portfolio-management");
         break;
       default:
         break;

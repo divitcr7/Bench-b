@@ -1,13 +1,24 @@
 import { ArrowLeft, ArrowRight, ArrowUp, ArrowDown } from "lucide-react";
 import "./arrow.scss";
 import { ArrowProps } from "@/interfaces";
+import { useEffect, useState } from "react";
 
-export default function arrow({
+export default function Arrow({
   direction,
-  color,
-  border ,
+  color = "black",
+  border,
   hoverColor,
 }: ArrowProps) {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
+  if (!isLoaded) {
+    return <div className="arrow-icon" style={{ width: "20px", height: "20px" }} />;
+  }
+
   return (
     <>
       {direction === "left" && (
@@ -28,7 +39,7 @@ export default function arrow({
           style={
             {
               "--icon-color": color,
-              "--icon-border": border ? "1px solid" : "none",
+              "--icon-border": border ? `1px solid ${border}` : "none",
               "--icon-hover-color": hoverColor,
             } as React.CSSProperties
           }
@@ -40,7 +51,7 @@ export default function arrow({
           style={
             {
               "--icon-color": color,
-              "--icon-border": border ? "1px solid" : "none",
+              "--icon-border": border ? `1px solid ${border}` : "none",
               "--icon-hover-color": hoverColor,
             } as React.CSSProperties
           }
@@ -52,7 +63,7 @@ export default function arrow({
           style={
             {
               "--icon-color": color,
-              "--icon-border": border ? "1px solid" : "none",
+              "--icon-border": border ? `1px solid ${border}` : "none",
               "--icon-hover-color": hoverColor,
             } as React.CSSProperties
           }

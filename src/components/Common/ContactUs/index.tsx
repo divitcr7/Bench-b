@@ -55,27 +55,27 @@ export default function ContactUs() {
           <div className="contact-info">
             <img
               className="contact-border-image"
-              src="./assets/images/border2.png"
+              src="/assets/images/border2.png"
               alt="border decoration"
             />
             <div className="contact-info-content">
               <img
                 className="opacity-0 md:opacity-100"
-                src="./assets/icons/rectangle.png"
+                src="/assets/icons/rectangle.png"
                 alt="blue triangle"
               />
               <div>
-                <img src="./assets/icons/ic_phone.png" alt="phone icon" />
+                <img src="/assets/icons/ic_phone.png" alt="phone icon" />
                 <span>PHONE</span>
                 <h4>281-569-4353</h4>
               </div>
               <div>
-                <img src="./assets/icons/ic_email.png" alt="email icon" />
+                <img src="/assets/icons/ic_email.png" alt="email icon" />
                 <span>EMAIL</span>
                 <h4>info@benchmarkbroker.com</h4>
               </div>
               <div>
-                <img src="./assets/icons/ic_pin.png" alt="location icon" />
+                <img src="/assets/icons/ic_pin.png" alt="location icon" />
                 <span>ADDRESS</span>
                 <h4>
                   827 N Loop W,
