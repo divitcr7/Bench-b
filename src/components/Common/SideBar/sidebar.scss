@@ -228,6 +228,26 @@ li.active > .sidebar-menu-item {
   padding-left: 0.5rem;
   border-left: 2px solid #e0e7ff;
   animation: fadeIn 0.2s;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #e0e7ff #ffffff;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #e0e7ff;
+    border-radius: 3px;
+  }
 }
 
 .sidebar-submenu li {

@@ -4,6 +4,14 @@ import { useNavigate } from "react-router-dom";
 
 const data = {
   commercial: [
+    { label: "Real Estate Insurance", path: "/commercial/real-estate-insurance" },
+    { label: "Hospitality Insurance", path: "/commercial/hospitality-insurance" },
+    { label: "Retail Service Insurance", path: "/commercial/retail-service-insurance" },
+    { label: "Construction Insurance", path: "/commercial/construction-insurance" },
+    { label: "Energy Insurance", path: "/commercial/energy-insurance" },
+    { label: "Healthcare Insurance", path: "/commercial/healthcare-insurance" },
+    { label: "Manufacturing Insurance", path: "/commercial/manufacturing-insurance" },
+    { label: "Transportation Insurance", path: "/commercial/transportation-insurance" },
     { label: "Real Estate", path: "" },
     { label: "Construction", path: "" },
     { label: "Healthcare", path: "" },
@@ -28,16 +36,45 @@ const data = {
     { label: "Motorcycle", path: "" },
     { label: "Life Insurance", path: "" },
   ],
+  services: [
+    { 
+      label: "Commercial Property",
+      path: "/services/commercial-property",
+      subItems: [
+        { label: "Claims Advocacy", path: "/services/commercial-property/claims-advocacy" },
+        { label: "Alternative Risk Financing", path: "/services/commercial-property/alternative-risk-financing" },
+        { label: "Loss Control", path: "/services/commercial-property/loss-control" },
+      ]
+    },
+    { label: "Private Client", path: "/services/private-client" },
+    { label: "Risk Management", path: "/services/risk-management" },
+    { label: "Benchmark Network", path: "/services/benchmark-network" },
+  ],
+  tools: [
+    { label: "Booking Scheduler", path: "/tools/booking-scheduler" },
+  ],
   company: [
     { label: "About Us", path: "/about" },
     { label: "Customer Service", path: "" },
+    { label: "Careers", path: "/careers" },
+    { label: "Blog", path: "/blog" },
+    { label: "Onboarding", path: "https://app.benchmarkbroker.com/", isExternal: true },
   ],
 };
 
+interface FooterItem {
+  label: string;
+  path: string;
+  subItems?: FooterItem[];
+  isExternal?: boolean;
+}
+
 interface FooterData {
-  commercial: Array<{ label: string; path: string }>;
-  personal: Array<{ label: string; path: string }>;
-  company: Array<{ label: string; path: string }>;
+  commercial: FooterItem[];
+  personal: FooterItem[];
+  services: FooterItem[];
+  tools: FooterItem[];
+  company: FooterItem[];
 }
 
 type SectionKey = keyof FooterData;
@@ -58,6 +95,41 @@ const Footer = () => {
 
   const toggleDropdown = (section: SectionKey) => {
     if (isMobile) setOpenDropdown(openDropdown === section ? null : section);
+  };
+
+  const handleNavigation = (item: FooterItem) => {
+    if (item.isExternal) {
+      window.open(item.path, '_blank', 'noopener,noreferrer');
+    } else if (item.path) {
+      navigate(item.path);
+    }
+  };
+
+  const renderSubItems = (items: FooterItem[]) => {
+    return items.map((item) => (
+      <li key={item.label}>
+        <span
+          onClick={() => handleNavigation(item)}
+          style={item.path ? { cursor: "pointer" } : {}}
+        >
+          {item.label}
+        </span>
+        {item.subItems && (
+          <ul className="footer-subitems">
+            {item.subItems.map((subItem) => (
+              <li key={subItem.label}>
+                <span
+                  onClick={() => handleNavigation(subItem)}
+                  style={subItem.path ? { cursor: "pointer" } : {}}
+                >
+                  {subItem.label}
+                </span>
+              </li>
+            ))}
+          </ul>
+        )}
+      </li>
+    ));
   };
 
   return (
@@ -90,25 +162,7 @@ const Footer = () => {
                 )}
               </h3>
               <ul className={!isMobile || openDropdown === key ? "open" : ""}>
-                {items.map((item) => (
-                  <li key={item.label}>
-                    ˃
-                    <span
-                      onClick={() => {
-                        if (item.path) {
-                          navigate(item.path);
-                        }
-                      }}
-                      style={
-                        item.path
-                          ? { cursor: "pointer" }
-                          : {}
-                      }
-                    >
-                      {item.label}
-                    </span>
-                  </li>
-                ))}
+                {renderSubItems(items)}
               </ul>
             </div>
           ))}
