@@ -11,7 +11,6 @@ import {
   BlogPost,
   BlogSearchResult,
   BookingScheduler,
-  ClientDashboard,
   Careers,
   CommercialPropertyPage,
   PrivateClientPage,
@@ -93,10 +92,6 @@ const router = createBrowserRouter([
             element: <BookingScheduler />,
           },
         ],
-      },
-      {
-        path: "dashboard",
-        element: <ClientDashboard />,
       },
       {
         path: "blog",
