@@ -18,7 +18,13 @@ const MENU = [
       "Energy Insurance",
       "Healthcare Insurance",
       "Manufacturing Insurance",
-      "Transportation Insurance"
+      "Transportation Insurance",
+      "Food Beverage Insurance",
+      "Auto Service Insurance",
+      "Environmental Insurance",
+      "Financial Services Insurance",
+      "Non-Profit Insurance",
+      "Wholesale Insurance"
       // "Energy",
       // "Construction",
       // "Transportation",
@@ -33,14 +39,14 @@ const MENU = [
 
     ],
   },
-  {
-    label: "Personal Lines",
-    path: "/personal-lines",
-    subItems: [], // Add subitems if needed
-  },
+  // {
+  //   label: "Personal Lines",
+  //   path: "/personal-lines",
+  //   subItems: [], // Add subitems if needed
+  // },
   { label: "About Us/Careers", path: "/about" },
-  { label: "Document Library", path: "/documents" },
-  { label: "Blog (News)", path: "/blog" },
+  // { label: "Document Library", path: "/documents" },
+  // { label: "Blog (News)", path: "/blog" },
   {
     label: "Portals",
     path: "/portals",

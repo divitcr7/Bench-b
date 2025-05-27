@@ -22,7 +22,7 @@ export default function IndustryHero({ title, subtitle, description, image, indu
             {title} <span>{subtitle}</span>
           </h1>
           <h4>{description}</h4>
-          <button className="btn btn-filled">GET A QUOTE</button>
+          <button className="btn btn-filled" onClick={() => window.open('http://app.benchmarkbroker.com', '_blank')}>GET A QUOTE</button>
         </div>
 
         {/* industries list */}

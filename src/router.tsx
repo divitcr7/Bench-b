@@ -28,6 +28,12 @@ import EnergyInsurance from "./pages/EnergyInsurance";
 import HealthcareInsurance from "./pages/HealthcareInsurance";
 import ManufacturingInsurance from "./pages/ManufacturingInsurance";
 import TransportationInsurance from "./pages/TransportationInsurance";
+import FoodAndBeverageInsurance from "./pages/FoodAndBeverageInsurance";
+import AutoServiceInsurance from "./pages/AutoServiceInsurance";
+import EnvironmentalInsurance from "./pages/EnvironmentalInsurance";
+import FinancialServicesInsurance from "./pages/FinancialServicesInsurance";
+import NonProfitInsurance from "./pages/NonProfitInsurance";
+import WholesaleInsurance from "./pages/WholesaleInsurance";
 
 const router = createBrowserRouter([
   {
@@ -80,7 +86,31 @@ const router = createBrowserRouter([
           {
             path: "transportation-insurance",
             element: <TransportationInsurance />,
-          }
+          },
+          {
+            path: "food-beverage-insurance",
+            element: <FoodAndBeverageInsurance />,
+          },
+          {
+            path: "auto-service-insurance",
+            element: <AutoServiceInsurance />,
+          },
+          {
+            path: "environmental-insurance",
+            element: <EnvironmentalInsurance />,
+          },
+          {
+            path: "financial-services-insurance",
+            element: <FinancialServicesInsurance />,
+          },
+          {
+            path: "non-profit-insurance",
+            element: <NonProfitInsurance />,
+          },
+          {
+            path: "wholesale-insurance",
+            element: <WholesaleInsurance />,
+          },
         ]
       },
       {

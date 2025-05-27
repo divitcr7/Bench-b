@@ -41,7 +41,9 @@
   &-image {
     @apply w-full lg:w-[50%] h-[40vh] lg:h-[calc(100vh-4rem)] relative;
     img {
-      @apply w-full h-full object-cover;
+      @apply w-full h-full object-contain;
+      max-width: 100%;
+      max-height: 100%;
     }
   }
 
@@ -58,7 +60,9 @@
       }
 
       img {
-        @apply w-12 h-12 mb-2;
+        @apply w-12 h-12 mb-2 object-contain;
+        max-width: 100%;
+        max-height: 100%;
       }
 
       span {
@@ -140,7 +144,9 @@
         @apply p-3;
 
         img {
-          @apply w-10 h-10;
+          @apply w-10 h-10 object-contain;
+          max-width: 100%;
+          max-height: 100%;
         }
 
         span {
