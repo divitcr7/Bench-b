@@ -27,7 +27,13 @@ export default function Careers() {
         <h5>Open Positions</h5>
         <div className="job-container">
           {data.map((job, index) => (
-            <div key={index} className="job-item hover-arrow-parent">
+            <Link 
+              key={index} 
+              to="https://riseconstructiontx.bamboohr.com/careers" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="job-item hover-arrow-parent"
+            >
               <h4 className="job-dept">{job.department}</h4>
               <h5 className="job-type">{job.type}</h5>
               <h5 className="job-position">{job.position}</h5>
@@ -38,7 +44,7 @@ export default function Careers() {
                   hoverColor="var(--green)"
                 />
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="career-allJobs">

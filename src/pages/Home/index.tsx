@@ -5,7 +5,6 @@ import {
   BestDeals,
   BestOffers,
   ContactUs,
-  Footer,
   Specialities,
   Testimonials,
 } from "./../../components";
@@ -43,7 +42,7 @@ export default function Home() {
         <ContactUs />
       </section>
       {/* footer */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -5,7 +5,7 @@ export default function WhatWeDo() {
     {
       id: 1,
       title: "Real Estate Portfolios",
-      imgUrl: "/assets/icons/real-estate.png",
+      imgUrl: "/assets/icons/home.png",
       type: [
         "Multifamily Properties",
         "Commercial Real Estate",
@@ -16,7 +16,7 @@ export default function WhatWeDo() {
     {
       id: 2,
       title: "Construction Projects",
-      imgUrl: "/assets/icons/construction.png",
+      imgUrl: "/assets/icons/high-value-home.png",
       type: [
         "General Contractors",
         "Specialty Contractors",
@@ -27,7 +27,7 @@ export default function WhatWeDo() {
     {
       id: 3,
       title: "Hospitality & Food Service",
-      imgUrl: "/assets/icons/hospitality.png",
+      imgUrl: "/assets/icons/insure.png",
       type: [
         "Hotels & Resorts",
         "Restaurants & Bars",
@@ -38,7 +38,7 @@ export default function WhatWeDo() {
     {
       id: 4,
       title: "High-Net-Worth Clients",
-      imgUrl: "/assets/icons/private.png",
+      imgUrl: "/assets/icons/industry.png",
       type: [
         "Private Client Services",
         "Wealth Protection",

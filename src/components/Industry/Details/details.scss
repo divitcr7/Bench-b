@@ -55,10 +55,12 @@ p {
       text-align: left;
       @media (min-width: 769px) {
         border-top: 2px solid var(--light-grey);
+        padding-top: 1rem;
       }
 
       h5 {
         @apply h-full flex;
+        margin-top: 0.5rem;
         img {
           @apply w-2 h-2 inline-block mt-auto mb-auto;
         }

@@ -1,7 +1,8 @@
 @use "@/styles/variables.scss";
 
 .association-container {
-  @apply w-full py-16 bg-white;
+  @apply w-full py-16 bg-white ;
+
 
   .association {
     @apply max-w-7xl mx-auto text-center;
@@ -17,7 +18,7 @@
     }
 
     > div {
-      @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center;
+      @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 items-center justify-items-center;
 
       span {
         @apply flex items-center justify-center w-full h-24 p-4 rounded-lg;

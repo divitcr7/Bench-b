@@ -39,7 +39,7 @@
   }
 
   &-cards {
-    @apply grid grid-rows-4 h-[16rem] lg:h-[18rem] w-[100%] ml-auto mr-auto mb-1 relative;
+    @apply grid grid-rows-4  h-[20rem] lg:h-[24rem] w-[100%] ml-auto mr-auto mb-1 relative;
 
     &-content {
       @apply h-full w-full flex flex-col items-center justify-between;

@@ -6,12 +6,10 @@ import "swiper/css/pagination";
 
 export default function Banner() {
   const images = [
-    { name: "WSA", url: "/assets/images/WSA.png" },
-    { name: "WSA", url: "/assets/images/WSA.png" },
-    { name: "WSA", url: "/assets/images/WSA.png" },
-    { name: "WSA", url: "/assets/images/WSA.png" },
-    { name: "WSA", url: "/assets/images/WSA.png" },
-    { name: "WSA", url: "/assets/images/WSA.png" },
+    { name: "WSA", url: "/assets/icons/aig.png" },
+    { name: "WSA", url: "/assets/icons/zurich.png" },
+    { name: "WSA", url: "/assets/icons/liberty.png" },
+    { name: "WSA", url: "/assets/icons/berkshire.png" },
   ];
 
   return (

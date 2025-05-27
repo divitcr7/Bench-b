@@ -52,9 +52,9 @@ export default function BestDeals() {
         </div>
 
         {/* button */}
-        <div className="bestDeals_button">
+        {/* <div className="bestDeals_button">
           <button className="btn btn-empty">GET STARTED</button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

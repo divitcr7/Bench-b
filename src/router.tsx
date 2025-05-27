@@ -10,14 +10,6 @@ import {
   BlogList,
   BlogPost,
   BlogSearchResult,
-  CertificateGenerator,
-  RiskCalculator,
-  ClaimsPortal,
-  PremiumForecast,
-  PolicyChecker,
-  RiskLibrary,
-  QuoteSubmission,
-  VendorMarketplace,
   BookingScheduler,
   ClientDashboard,
   Careers,
@@ -96,38 +88,6 @@ const router = createBrowserRouter([
       {
         path: "tools",
         children: [
-          {
-            path: "certificate-generator",
-            element: <CertificateGenerator />,
-          },
-          {
-            path: "risk-calculator",
-            element: <RiskCalculator />,
-          },
-          {
-            path: "claims-portal",
-            element: <ClaimsPortal />,
-          },
-          {
-            path: "premium-forecast",
-            element: <PremiumForecast />,
-          },
-          {
-            path: "policy-checker",
-            element: <PolicyChecker />,
-          },
-          {
-            path: "risk-library",
-            element: <RiskLibrary />,
-          },
-          {
-            path: "quote-submission",
-            element: <QuoteSubmission />,
-          },
-          {
-            path: "vendor-marketplace",
-            element: <VendorMarketplace />,
-          },
           {
             path: "booking-scheduler",
             element: <BookingScheduler />,

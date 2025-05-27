@@ -23,7 +23,11 @@
     }
 
     .icon {
-      @apply w-6 h-7;
+      @apply w-6 h-7 transition-colors duration-300;
+      
+      &:hover {
+        color: var(--green);
+      }
     }
 
     span {

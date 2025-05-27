@@ -45,8 +45,6 @@ export default function About() {
       <Memberships />
       {/* contact us */}
       <ContactUs />
-      {/* footer
-      <Footer /> */}
     </>
   );
 }

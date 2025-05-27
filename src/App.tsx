@@ -2,7 +2,7 @@ import "./App.css";
 
 import { Outlet, useLocation } from "react-router-dom";
 
-import { Header } from "./components";
+import { Header, Footer } from "./components";
 import ScrollToTop from "./components/ScrollToTop ";
 import { useRef } from "react";
 
@@ -22,6 +22,8 @@ function App() {
       {!hideHeaderRoutes.includes(location.pathname) && <Header contactRef={contactRef} />}
       {/* to dynamically render current route */}
       <Outlet context={{ contactRef }} />
+      {/* Footer component - visible on all pages */}
+      <Footer />
     </>
   );
 }

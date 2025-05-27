@@ -39,15 +39,17 @@
   }
 
   .team-grid {
-    @apply w-full h-full flex justify-between flex-col lg:flex-row;
+    @apply w-full h-full flex justify-center flex-col lg:flex-row;
     @apply mb-fiftySixSmall lg:mb-fiftySixBig;
     @apply hidden lg:flex;
+    gap: 2rem;
   }
 
   .team-grid-small {
-    @apply w-full h-full flex justify-between flex-col lg:flex-row;
+    @apply w-full h-full flex justify-center flex-col lg:flex-row;
     @apply mb-fiftySixSmall lg:mb-fiftySixBig;
     @apply block lg:hidden;
+    gap: 2rem;
 
     .icons {
       @apply flex flex-col;

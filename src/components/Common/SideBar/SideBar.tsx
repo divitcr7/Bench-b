@@ -68,16 +68,13 @@ const MENU = [
     label: "Tools",
     path: "/tools",
     subItems: [
-      "Certificate Generator",
-      "Risk Calculator",
-      "Claims Portal",
-      "Premium Forecast",
-      "Policy Checker",
-      "Risk Library",
-      "Quote Submission",
-      "Vendor Marketplace",
       "Booking Scheduler"
     ]
+  },
+  {
+    label: "Onboarding",
+    path: "https://app.benchmarkbroker.com/",
+    isExternal: true
   },
   {
     label: "Dashboard",
@@ -170,9 +167,21 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
                     {openIndex === idx && renderSubItems(item, item.path)}
                   </>
                 ) : (
-                  <Link to={item.path} onClick={onClose} className="sidebar-menu-item">
-                    <span className="sidebar-menu-label">{item.label}</span>
-                  </Link>
+                  item.isExternal ? (
+                    <a 
+                      href={item.path} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="sidebar-menu-item"
+                      onClick={onClose}
+                    >
+                      <span className="sidebar-menu-label">{item.label}</span>
+                    </a>
+                  ) : (
+                    <Link to={item.path} onClick={onClose} className="sidebar-menu-item">
+                      <span className="sidebar-menu-label">{item.label}</span>
+                    </Link>
+                  )
                 )}
               </li>
             ))}

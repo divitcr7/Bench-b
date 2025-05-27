@@ -58,11 +58,11 @@
 
       li {
         img {
-          @apply inline-block h-1 w-1 lg:h-3 lg:w-3 mr-4;
+          @apply inline-block h-1 w-1 lg:h-2 lg:w-2 mr-4 mb-4;
         }
         h5 {
           @apply inline-block;
-          @apply mb-5;
+          @apply mb-5 mt-4;
         }
       }
     }

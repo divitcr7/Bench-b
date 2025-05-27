@@ -36,3 +36,11 @@ export type {
   ThemeContextType,
   ToolCardType,
 };
+
+export interface ItemProps {
+  id: number;
+  imgSrc: string;
+  name: string;
+  description?: string;
+  price?: string;
+}

@@ -5,7 +5,6 @@ import {
   ProductAndServices,
   Tools,
   Associations,
-  AppDownload,
   Questions,
   OurBlog,
   ContactUs,
@@ -37,15 +36,13 @@ export default function Home() {
       {/* our customers and associations */}
       <Associations />
       {/* application download  */}
-      <AppDownload />
+      {/* <AppDownload /> */}
       {/* frequently asked questions */}
       <Questions />
       {/* our blog */}
       <OurBlog />
       {/* contact us */}
       <ContactUs />
-      {/* footer
-      <Footer /> */}
     </>
   );
 }
