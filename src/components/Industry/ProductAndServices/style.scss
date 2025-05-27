@@ -49,12 +49,12 @@
     }
 
     img {
-      @apply h-[7vh] m-auto row-start-1 row-span-1;
+      @apply h-[7vh] m-auto row-start-1 row-span-1 mb-4;
     }
 
     h3 {
       @apply m-auto font-bold text-center row-start-2 row-span-1;
-      @apply w-[70%] mt-5;
+      @apply w-[70%] mt-12;
     }
 
     .pns-arrow {
