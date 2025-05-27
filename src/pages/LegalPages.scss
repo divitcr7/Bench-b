@@ -1,0 +1,75 @@
+.legal-page-container {
+  max-width: 800px;
+  margin: 40px auto 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 40px 32px 32px 32px;
+}
+
+.legal-page-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 32px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.legal-content {
+  font-size: 1.1rem;
+  color: #222;
+  line-height: 1.8;
+}
+
+.legal-content ol {
+  padding-left: 1.2em;
+  margin-bottom: 0;
+}
+
+.legal-content > ol > li {
+  margin-bottom: 2.2em;
+}
+
+.legal-content > ol > li > strong {
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.3em;
+  color: #111a2c;
+}
+
+.legal-content p {
+  margin: 0.3em 0 0.7em 0;
+}
+
+.legal-content ul {
+  margin: 0.5em 0 0.5em 1.5em;
+  list-style: disc inside;
+}
+
+.legal-content ol[type="a"] {
+  margin: 0.5em 0 0.5em 1.5em;
+  list-style-type: lower-alpha;
+}
+
+.legal-content ol[type="a"] > li {
+  margin-bottom: 0.7em;
+}
+
+.legal-content a {
+  color: #2a5bd7;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+@media (max-width: 600px) {
+  .legal-page-container {
+    padding: 24px 8px 16px 8px;
+  }
+  .legal-page-container h1 {
+    font-size: 2rem;
+  }
+  .legal-content {
+    font-size: 1rem;
+  }
+} 

@@ -32,8 +32,8 @@ export default function Careers() {
           </div>
           <div className="career-link">
             <Link 
-              to="https://riseconstructiontx.bamboohr.com/careers" 
-              target="_blank" 
+              to="/careers" 
+              // target="_blank" 
               rel="noopener noreferrer"
               className="open-positions-link"
             >

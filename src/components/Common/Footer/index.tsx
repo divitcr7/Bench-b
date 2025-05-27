@@ -13,18 +13,13 @@ const data = {
     { label: "Healthcare ", path: "/industry/healthcare-insurance" },
     { label: "Manufacturing ", path: "/industry/manufacturing-insurance" },
     { label: "Transportation ", path: "/industry/transportation-insurance" },
-    // { label: "Real Estate", path: "" },
-    // { label: "Construction", path: "" },
-    // { label: "Healthcare", path: "" },
     { label: "Environmental", path: "/industry/environmental-insurance" },
     { label: "Auto Service", path: "/industry/auto-service-insurance" },
     { label: "Food & Beverage", path: "/industry/food-beverage-insurance" },
-    // { label: "Transportation", path: "" },
     { label: "Wholesale", path: "/industry/wholesale-insurance" },
     { label: "Non-Profit", path: "/industry/non-profit-insurance" },
     { label: "Financial Services", path: "/industry/financial-services-insurance" },
-    // { label: "Retail", path: "" },
-    // { label: "Manufacturing", path: "" },
+
   ],
   personal: [
     { label: "Homeowners", path: "" },
@@ -41,12 +36,10 @@ const data = {
     { 
       label: "Commercial Property",
       path: "/services/commercial-property",
-      subItems: [
-        { label: "Claims Advocacy", path: "/services/commercial-property/claims-advocacy" },
-        { label: "Alternative Risk Financing", path: "/services/commercial-property/alternative-risk-financing" },
-        { label: "Loss Control", path: "/services/commercial-property/loss-control" },
-      ]
     },
+    { label: "Claims Advocacy", path: "/services/commercial-property/claims-advocacy" },
+    { label: "Alternative Risk Financing", path: "/services/commercial-property/alternative-risk-financing" },
+    { label: "Loss Control", path: "/services/commercial-property/loss-control" },
     { label: "Private Client", path: "/services/private-client" },
     { label: "Risk Management", path: "/services/risk-management" },
     { label: "Benchmark Network", path: "/services/benchmark-network" },
@@ -147,8 +140,8 @@ const Footer = () => {
             insurance brokerage for businesses of all sizes.
           </p>
           <div className="footer-links">
-            <span>Privacy Notice</span>
-            <span>Terms of Service</span>
+            <span onClick={() => navigate('/privacy-notice')} style={{ cursor: 'pointer' }}>Privacy Notice</span>
+            <span onClick={() => navigate('/terms-of-service')} style={{ cursor: 'pointer' }}>Terms of Service</span>
           </div>
         </div>
         <div className="footer-right">

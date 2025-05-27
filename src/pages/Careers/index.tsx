@@ -22,7 +22,7 @@ const HeroSection = () => (
             Apply Now
           </a>
           <a
-            href="https://linkedin.com/company/benchmark-insurance"
+            href="https://www.linkedin.com/company/benchmark-insurance-group-of-texas/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-800 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-900 transition"
@@ -314,7 +314,7 @@ const CallToAction = () => (
           Apply Now
         </a>
         <a
-          href="https://linkedin.com/company/benchmark-insurance"
+          href="https://www.linkedin.com/company/benchmark-insurance-group-of-texas/"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-blue-800 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-900 transition"
