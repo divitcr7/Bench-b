@@ -34,6 +34,8 @@ import EnvironmentalInsurance from "./pages/EnvironmentalInsurance";
 import FinancialServicesInsurance from "./pages/FinancialServicesInsurance";
 import NonProfitInsurance from "./pages/NonProfitInsurance";
 import WholesaleInsurance from "./pages/WholesaleInsurance";
+import PrivacyNotice from "./pages/PrivacyNotice";
+import TermsOfService from "./pages/TermsOfService";
 
 const router = createBrowserRouter([
   {
@@ -184,6 +186,14 @@ const router = createBrowserRouter([
             element: <BlogSearchResult />,
           },
         ],
+      },
+      {
+        path: "privacy-notice",
+        element: <PrivacyNotice />,
+      },
+      {
+        path: "terms-of-service",
+        element: <TermsOfService />,
       },
     ],
   },
