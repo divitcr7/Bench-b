@@ -76,10 +76,6 @@ const MENU = [
     path: "https://app.benchmarkbroker.com/",
     isExternal: true
   },
-  {
-    label: "Dashboard",
-    path: "/dashboard"
-  }
 ];
 
 interface SidebarProps {

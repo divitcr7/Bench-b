@@ -34,7 +34,7 @@ const Header = forwardRef<HTMLElement, HeaderProps>(({ contactRef }, ref) => {
               <img src="./assets/icons/hamburger.png" alt="menu icon" />
             </span>
             <Link to="" className="hiddenClass">
-              <span className="m-auto ">MENU</span>
+              <span className="m-auto " onClick={toggleSidebar}>MENU</span>
             </Link>   
             <span className="font-bold opacity-0 hiddenClass">Menu</span>
           </div>
