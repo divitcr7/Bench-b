@@ -31,7 +31,7 @@ const Header = forwardRef<HTMLElement, HeaderProps>(({ contactRef }, ref) => {
           {/* circle and menu */}
           <div className="header-items">
             <span className="navigation" onClick={toggleSidebar}>
-              <img src="./assets/icons/hamburger.png" alt="menu icon" />
+              <img src="/assets/icons/hamburger.png" alt="menu icon" />
             </span>
             <Link to="" className="hiddenClass">
               <span className="m-auto " onClick={toggleSidebar}>MENU</span>
@@ -47,10 +47,10 @@ const Header = forwardRef<HTMLElement, HeaderProps>(({ contactRef }, ref) => {
           {/* contact us */}
           <div className="header-items hiddenClass">
             <Link to="">
-              <img src="./assets/icons/person.png" alt="person icon" />
+              <img src="/assets/icons/person.png" alt="person icon" />
             </Link>
             <Link to="">
-              <img src="./assets/icons/phone.png" alt="phone icon" />
+              <img src="/assets/icons/phone.png" alt="phone icon" />
             </Link>
             <button className="btn btn-empty" onClick={scrollToContact}>
               Contact Us
@@ -60,7 +60,7 @@ const Header = forwardRef<HTMLElement, HeaderProps>(({ contactRef }, ref) => {
           {/* dark phone icon on smaller screen */}
           <div className="header-items smallScreen">
             <Link to="">
-              <img src="./assets/icons/phone-dark.svg" alt="phone icon dark" />
+              <img src="/assets/icons/phone-dark.svg" alt="phone icon dark" />
             </Link>
           </div>
         </nav>

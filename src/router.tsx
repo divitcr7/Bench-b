@@ -20,6 +20,7 @@ import {
 import ClaimsAdvocacy from "./pages/CommercialProperty/ClaimsAdvocacy";
 import AlternativeRiskFinancing from "./pages/CommercialProperty/AlternativeRiskFinancing";
 import LossControl from "./pages/CommercialProperty/LossControl";
+import PortfolioManagement from "./pages/CommercialProperty/PortfolioManagement";
 import RealEstateInsurance from "./pages/RealEstateInsurance";
 import HospitalityInsurance from "./pages/HospitalityInsurance";
 import RetailServiceInsurance from "./pages/RetailServiceInsurance";
@@ -144,6 +145,10 @@ const router = createBrowserRouter([
               {
                 path: "loss-control",
                 element: <LossControl />,
+              },
+              {
+                path: "portfolio-management",
+                element: <PortfolioManagement />,
               }
             ],
           },
