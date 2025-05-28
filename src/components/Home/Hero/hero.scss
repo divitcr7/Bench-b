@@ -42,7 +42,7 @@
 
   h1 {
     // font
-    @apply font-bold;
+    @apply font-gilroy font-extrabold;
     span {
       background: linear-gradient(90deg, var(--primary-text) 70%, var(--green));
       background-clip: text;
@@ -53,7 +53,7 @@
 
   h4 {
     // margin
-    @apply mt-fortySmall lg:mt-fortyEightBig mb-eightySmall lg:mb-eightyBig font-medium;
+    @apply mt-fortySmall lg:mt-fortyEightBig mb-eightySmall lg:mb-eightyBig font-gilroy font-extrabold;
     @apply w-[90%];
     color: var(--secondary-text);
   }

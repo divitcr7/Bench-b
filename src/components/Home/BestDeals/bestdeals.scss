@@ -14,11 +14,11 @@
   }
 
   h2 {
-    @apply text-center;
+    @apply text-center font-gilroy font-extrabold;
   }
 
   .highlight {
-    @apply relative inline-block;
+    @apply relative inline-block font-gilroy font-extrabold;
   }
 
   .highlight::after {
@@ -42,7 +42,7 @@
   }
 
   &-title {
-    @apply w-[70%] m-auto mb-[5rem];
+    @apply w-[70%] m-auto mb-[5rem] font-gilroy font-extrabold;
   }
 }
 

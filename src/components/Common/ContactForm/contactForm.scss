@@ -2,16 +2,17 @@
 @use '@/styles/mixins' as *;
 
 .contact-form {
-  @apply w-full bg-white;
+  @apply w-full bg-white h-full;
 
   //padding
   @apply pt-fiftySixSmall md:pt-fiftySixBig  pb-fiftySixSmall md:pb-fiftySixBig;
   @apply pl-5 pr-5;
-  // border: 1px solid var(--divider);
+  border: 1px solid var(--divider);
 }
 
 .form-group {
   @apply mb-thirtyTwoSmall md:mb-thirtyTwoBig;
+  padding: 16px;
 }
 
 .form-group label {

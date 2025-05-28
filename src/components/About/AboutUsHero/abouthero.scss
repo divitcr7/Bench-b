@@ -18,19 +18,19 @@
     @apply mt-auto mb-auto ml-[2rem];
     h3 {
       color: var(--gold);
-      @apply text-h3Small lg:text-h3Big font-bold;
+      @apply text-h3Small lg:text-h3Big font-gilroy font-extrabold;
     }
     img {
       @apply h-[8vh] mt-sixteen mb-sixteen;
     }
     h4 {
       color: var(--light-grey);
-      @apply text-h4Small lg:text-h4Big font-bold;
+      @apply text-h4Small lg:text-h4Big font-gilroy font-extrabold;
     }
     .aboutus-tagline {
       @apply mt-8 max-w-2xl;
       h2 {
-        @apply text-h2Small lg:text-h2Big font-bold mb-4;
+        @apply text-h2Small lg:text-h2Big font-gilroy font-extrabold mb-4;
         background: linear-gradient(90deg, var(--primary-text) 70%, var(--green));
         background-clip: text;
         -webkit-background-clip: text;
