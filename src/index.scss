@@ -26,28 +26,30 @@ html {
 //common classes
 
 h1 {
-  @apply text-h1Small md:text-h1Big leading-h1Small md:leading-h1Big font-gilroy;
+  @apply text-h1Small md:text-h1Big leading-h1Small md:leading-h1Big font-gilroy font-extrabold;
 }
 h2 {
-  @apply text-h2Small lg:text-h2Big font-bold;
+  @apply text-h2Small lg:text-h2Big font-gilroy font-extrabold;
   @apply leading-h2Small lg:leading-h2Big;
   @apply mb-fortyEightSmall lg:mb-fortyEightBig;
 }
 h3 {
-  @apply text-h3Small lg:text-h3Big;
+  @apply text-h3Small lg:text-h3Big font-gilroy font-extrabold;
   @apply leading-h3Small lg:leading-h3Big;
   @apply mt-sixteen;
 }
 h4 {
-  @apply text-h4Small lg:text-h4Big font-semibold;
+  @apply text-h4Small lg:text-h4Big font-gilroy font-extrabold;
   @apply mb-fortySmall lg:mb-fortyBig;
 }
 h5 {
-  //font
-  @apply font-gilroy font-bold;
+  @apply font-gilroy font-extrabold;
   @apply text-h5Small lg:text-h5Big;
   @apply leading-h5Small lg:leading-h5Big;
   @apply mb-fortyEightSmall lg:mb-fortyEightBig;
+}
+h6 {
+  @apply font-gilroy font-extrabold;
 }
 
 

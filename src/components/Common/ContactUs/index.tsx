@@ -64,17 +64,17 @@ export default function ContactUs() {
                 src="/assets/icons/rectangle.png"
                 alt="blue triangle"
               />
-              <div>
+              <div className="contact-info-content-item">
                 <img src="/assets/icons/ic_phone.png" alt="phone icon" />
                 <span>PHONE</span>
                 <h4>281-569-4353</h4>
               </div>
-              <div>
+              <div className="contact-info-content-item">
                 <img src="/assets/icons/ic_email.png" alt="email icon" />
                 <span>EMAIL</span>
                 <h4>info@benchmarkbroker.com</h4>
               </div>
-              <div>
+              <div className="contact-info-content-item">
                 <img src="/assets/icons/ic_pin.png" alt="location icon" />
                 <span>ADDRESS</span>
                 <h4>

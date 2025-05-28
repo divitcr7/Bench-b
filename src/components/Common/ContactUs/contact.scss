@@ -1,10 +1,10 @@
 @use "@/styles/variables.scss";
 
 .contact {
-  @apply h-auto w-full;
+  @apply h-auto w-[90%] ml-auto mr-auto;
 
   &-container {
-    @apply h-auto w-auto;
+    @apply h-auto w-auto ;
     background: linear-gradient(
       to bottom,
       white 80%,
@@ -14,10 +14,12 @@
   }
 
   &-content {
-    @apply h-auto w-full lg:grid lg:grid-cols-[70%_30%] lg:grid-rows-[10%_90%];
+    @apply h-auto w-full lg:grid lg:grid-cols-[70%_30%];
     grid-template-areas:
       "buttons info"
       "form info";
+    grid-template-rows: auto 1fr;
+    min-height: 500px;
   }
   &-buttons {
     @apply w-full flex justify-around;
@@ -36,7 +38,10 @@
   }
   &-form-container {
     grid-area: form;
-    border: 1px solid var(--divider);
+    // border: 1px solid var(--divider);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   &-info {
     grid-area: info;
@@ -46,6 +51,9 @@
     background-position: top right;
     background-size: 50% auto;
     background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 
     &-content {
       @apply relative lg:mt-20 mb-10 pb-10 ml-10 mr-10;
@@ -114,8 +122,9 @@
   .contact-content {
     @apply grid-cols-1;
     grid-template-areas:
-      "buttons "
-      "form "
+      "buttons"
+      "form"
       "info";
+    grid-template-rows: auto auto auto;
   }
 }

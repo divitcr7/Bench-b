@@ -18,7 +18,7 @@
     @apply w-full lg:w-[50%] lg:mt-auto lg:mr-0 lg:mb-auto lg:ml-[2rem] px-4 lg:px-0;
 
     h1 {
-      @apply font-bold text-3xl lg:text-4xl xl:text-7xl;
+      @apply font-gilroy font-extrabold text-3xl lg:text-4xl xl:text-7xl;
       span {
         background: linear-gradient(90deg, var(--primary-text) 70%, var(--green));
         background-clip: text;
@@ -28,7 +28,7 @@
     }
 
     h4 {
-      @apply mt-4 lg:mt-6 mb-8 lg:mb-12 font-medium text-base lg:text-lg;
+      @apply mt-4 lg:mt-6 mb-8 lg:mb-12 font-gilroy font-extrabold text-base lg:text-lg;
       @apply w-[90%];
       color: var(--secondary-text);
     }
