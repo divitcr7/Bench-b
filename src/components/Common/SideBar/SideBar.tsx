@@ -59,11 +59,17 @@ const MENU = [
       {
         label: "Commercial Property",
         path: "/services/commercial-property",
-        subItems: [
-          "Claims Advocacy",
-          "Alternative Risk Financing",
-          "Loss Control"
-        ]
+      },{
+        label : "Claims Advocacy",
+        path : "/services/commercial-property/claims-advocacy"
+      },
+      {
+        label : "Alternative Risk Financing",
+        path : "/services/commercial-property/alternative-risk-financing"
+      },
+      {
+        label : "Loss Control",
+        path : "/services/commercial-property/loss-control"
       },
       {
         label: "Private Client",
