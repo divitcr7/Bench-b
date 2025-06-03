@@ -4,6 +4,7 @@ import {
   Banner,
   BestDeals,
   BestOffers,
+  WhatSetsUsApart,
   ContactUs,
   Specialities,
   Testimonials,
@@ -33,6 +34,8 @@ export default function Home() {
       <BestDeals />
       {/* we search and compare the best insurance offers */}
       <BestOffers />
+      {/* what sets us apart */}
+      <WhatSetsUsApart />
       {/* our specialities */}
       <Specialities />
       {/* testimonials */}

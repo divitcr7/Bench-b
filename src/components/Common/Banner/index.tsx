@@ -7,10 +7,11 @@ import PreloadImages from "../PreloadImages";
 
 export default function Banner() {
   const images = [
-    { name: "WSA", url: "/assets/icons/aig.png" },
-    { name: "WSA", url: "/assets/icons/zurich.png" },
-    { name: "WSA", url: "/assets/icons/liberty.png" },
-    { name: "WSA", url: "/assets/icons/berkshire.png" },
+    { name: "Group 22", url: "/assets/images/partners/Group 22.png" },
+    { name: "Partner 1", url: "/assets/images/partners/image 1.png" },
+    { name: "NAIOP", url: "/assets/images/partners/NAIOP LOGO 2.png" },
+    { name: "Northmarq Capital", url: "/assets/images/partners/Northmarq Capital 1.png" },
+    { name: "Unnamed Partner", url: "/assets/images/partners/unnamed 1.png" },
   ];
 
   const imageUrls = images.map(img => img.url);

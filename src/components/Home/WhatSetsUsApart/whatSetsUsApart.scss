@@ -1,0 +1,99 @@
+@use "@/styles/variables.scss";
+
+.whatSetsUsApart {
+  @apply w-full;
+
+  &_container {
+    @apply w-full py-16;
+    background-color: #f8f9fa;
+  }
+
+  &_header {
+    @apply text-center mb-12;
+    
+    h2 {
+      @apply text-4xl lg:text-5xl font-bold;
+      color: #1a365d;
+      @apply mb-4;
+    }
+  }
+
+  &_grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12;
+    @apply max-w-6xl mx-auto;
+  }
+
+  &_card {
+    @apply bg-white rounded-xl p-8 pl-12;
+    @apply shadow-lg hover:shadow-xl transition-all duration-300;
+    @apply border border-gray-100;
+    position: relative;
+
+    // Small thick green vertical accent line aligned with title
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 32px;
+      height: 40px;
+      width: 6px;
+      background-color: #00d4d4;
+      border-radius: 3px;
+    }
+
+    .feature_content {
+      h3 {
+        @apply text-xl font-bold mb-4;
+        color: #1a365d;
+      }
+
+      p {
+        @apply text-gray-600 leading-relaxed;
+        @apply text-sm lg:text-base;
+      }
+    }
+
+    &:hover {
+      @apply transform -translate-y-1;
+      
+      &::before {
+        background-color: #00c4c4;
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .whatSetsUsApart {
+    &_container {
+      @apply py-12 px-4;
+    }
+
+    &_header h2 {
+      @apply text-3xl;
+    }
+
+    &_grid {
+      @apply gap-6;
+    }
+
+    &_card {
+      @apply p-6 pl-10;
+
+      &::before {
+        width: 5px;
+      }
+
+      .feature_content {
+        h3 {
+          @apply text-lg;
+        }
+
+        p {
+          @apply text-sm;
+        }
+      }
+    }
+  }
+} 

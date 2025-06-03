@@ -5,29 +5,25 @@
   background-color: var(--light-bg);
 
   &-heading {
-    @apply flex items-center gap-2 px-4 text-center md:text-h4Big mb-fiftySixSmall md:mb-fiftySixBig font-bold relative;
+    @apply flex items-center justify-center gap-4 px-4 text-center md:text-h4Big mb-fiftySixSmall md:mb-fiftySixBig font-bold relative w-full;
 
     &::before,
     &::after {
       content: "";
-      @apply absolute top-1/2 h-[1px] w-[45%];
+      @apply h-[1px] flex-1;
       background-color: var(--divider);
     }
 
-    &::before {
-      left: -45%;
-    }
-
-    &::after {
-      right: -45%;
-    }
-
     .icon {
-      @apply w-6 h-7 transition-colors duration-300;
+      @apply w-6 h-7 transition-colors duration-300 flex-shrink-0;
       
       &:hover {
         color: var(--green);
       }
+    }
+
+    h4 {
+      @apply flex-shrink-0 whitespace-nowrap;
     }
 
     span {

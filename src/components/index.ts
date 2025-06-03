@@ -10,6 +10,7 @@ import Banner from "./Common/Banner";
 import Hero from "./Home/Hero";
 import BestDeals from "./Home/BestDeals";
 import BestOffers from "./Home/BestOffers";
+import WhatSetsUsApart from "./Home/WhatSetsUsApart";
 import Specialities from "./Home/Specialities";
 import Testimonials from "./Home/Testimonials";
 
@@ -57,6 +58,7 @@ export {
   SocialMediaNav,
   Footer,
   BestOffers,
+  WhatSetsUsApart,
   Specialities,
   Testimonials,
   AboutUsHero,
