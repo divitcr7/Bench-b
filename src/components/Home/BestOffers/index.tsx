@@ -71,9 +71,6 @@ export default function BestOffers() {
               return <Card key={item.id} item={item} />;
             })}
           </div>
-          <div className="bestOffers_button">
-            <button className="btn btn-filled">COMPARE OFFERS</button>
-          </div>
           <div className="bmVector">
             <img src="./assets/images/bm-vector.png"/>
           </div>

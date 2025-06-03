@@ -4,6 +4,12 @@
   @apply w-full h-full -mt-[4rem];
   @apply grid lg:grid-cols-[40%_60%] lg:grid-rows-[1fr_2fr];
 }
+
+.details-reduced-bottom {
+  padding-bottom: 0 !important;
+  margin-bottom: -11rem !important;
+}
+
 h2 {
   @apply lg:col-span-1 lg:col-start-1 lg:row-start-1 lg:row-span-1;
 }

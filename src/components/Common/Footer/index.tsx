@@ -22,15 +22,15 @@ const data = {
 
   ],
   personal: [
-    { label: "Homeowners", path: "" },
-    { label: "Auto", path: "" },
-    { label: "Rental Property", path: "" },
-    { label: "Condo", path: "" },
-    { label: "Classic Auto", path: "" },
-    { label: "Builder's Risk", path: "" },
-    { label: "Flood", path: "" },
-    { label: "Motorcycle", path: "" },
-    { label: "Life Insurance", path: "" },
+    { label: "Homeowners", path: "/personal/homeowners-insurance" },
+    { label: "Auto", path: "/personal/auto-insurance" },
+    { label: "Rental Property", path: "/personal/rental-property-insurance" },
+    { label: "Condo", path: "/personal/condo-insurance" },
+    { label: "Classic Auto", path: "/personal/classic-auto-insurance" },
+    { label: "Builder's Risk", path: "/personal/builders-risk-insurance" },
+    { label: "Flood", path: "/personal/flood-insurance" },
+    { label: "Motorcycle", path: "/personal/motorcycle-insurance" },
+    { label: "Life Insurance", path: "/personal/life-insurance" },
   ],
   services: [
     { 

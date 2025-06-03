@@ -72,16 +72,30 @@ export default function ContactUs() {
               <div className="contact-info-content-item">
                 <img src="/assets/icons/ic_email.png" alt="email icon" />
                 <span>EMAIL</span>
-                <h4>info@benchmarkbroker.com</h4>
+                <h4>sales@benchmarkbroker.com</h4>
               </div>
               <div className="contact-info-content-item">
                 <img src="/assets/icons/ic_pin.png" alt="location icon" />
                 <span>ADDRESS</span>
                 <h4>
-                  827 N Loop W,
+                  827 North Loop West Suite B,
                   <br /> Houston, TX 77008,
                   <br /> United States
                 </h4>
+                <a 
+                  href="https://maps.app.goo.gl/GBAUq6MovAvq16sAA" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  style={{
+                    color: 'var(--green)',
+                    textDecoration: 'none',
+                    fontSize: '14px',
+                    marginTop: '8px',
+                    display: 'inline-block'
+                  }}
+                >
+                  📍 Directions
+                </a>
               </div>
             </div>
           </div>

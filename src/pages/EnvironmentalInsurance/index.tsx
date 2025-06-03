@@ -2,9 +2,10 @@ import {
   Meta,
   IndustryHero,
   Details,
+  WhyBenchmarkIndustry,
   ProductAndServices,
-  Tools,
-  Associations,
+  WhoWeServe,
+  Partners,
   Questions,
   OurBlog,
   ContactUs,
@@ -27,14 +28,16 @@ export default function EnvironmentalInsurance() {
         description="Benchmark delivers comprehensive insurance solutions for environmental risks, helping you protect your business, community, and the environment."
         image="/assets/images/energy.png"
       />
-      {/* details */}
+      {/* our approach */}
       <Details />
+      {/* why benchmark */}
+      <WhyBenchmarkIndustry />
       {/* products and services */}
       <ProductAndServices />
-      {/* tools */}
-      <Tools />
-      {/* our customers and associations */}
-      <Associations />
+      {/* who we serve */}
+      <WhoWeServe />
+      {/* partners */}
+      <Partners />
       {/* frequently asked questions */}
       <Questions />
       {/* our blog */}

@@ -160,7 +160,7 @@ export default function CommercialProperty() {
             Don't trust your portfolio to generic coverage. Partner with Benchmark Insurance Group for commercial property protection that works like your business does: proactively, profit-minded, and professionally managed.
           </p>
           <p>Request a property risk review or quote today.</p>
-          <button className="cta-button">Request a Quote</button>
+          <button className="cta-button" onClick={() => window.open('https://app.benchmarkbroker.com', '_blank')}>Request a Quote</button>
         </div>
       </div>
     </section>

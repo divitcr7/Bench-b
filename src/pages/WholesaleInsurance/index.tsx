@@ -2,9 +2,10 @@ import {
   Meta,
   IndustryHero,
   Details,
+  WhyBenchmarkIndustry,
   ProductAndServices,
-  Tools,
-  Associations,
+  WhoWeServe,
+  Partners,
   Questions,
   OurBlog,
   ContactUs,
@@ -27,14 +28,16 @@ export default function WholesaleInsurance() {
         description="Benchmark delivers tailored insurance solutions for wholesalers, helping you protect your inventory, operations, and business relationships."
         image="/assets/images/wholesale.png"
       />
-      {/* details */}
+      {/* our approach */}
       <Details />
+      {/* why benchmark */}
+      <WhyBenchmarkIndustry />
       {/* products and services */}
       <ProductAndServices />
-      {/* tools */}
-      <Tools />
-      {/* our customers and associations */}
-      <Associations />
+      {/* who we serve */}
+      <WhoWeServe />
+      {/* partners */}
+      <Partners />
       {/* frequently asked questions */}
       <Questions />
       {/* our blog */}

@@ -2,9 +2,10 @@ import {
   Meta,
   IndustryHero,
   Details,
+  WhyBenchmarkIndustry,
   ProductAndServices,
-  Tools,
-  Associations,
+  WhoWeServe,
+  Partners,
   Questions,
   OurBlog,
   ContactUs,
@@ -27,14 +28,16 @@ export default function HealthcareInsurance() {
         description="Benchmark offers tailored insurance products and services for the healthcare industry, ensuring your practice and patients are covered from diagnosis to treatment."
         image="/assets/images/Hospital.png"
       />
-      {/* details */}
+      {/* our approach */}
       <Details />
+      {/* why benchmark */}
+      <WhyBenchmarkIndustry />
       {/* products and services */}
       <ProductAndServices />
-      {/* tools */}
-      <Tools />
-      {/* our customers and associations */}
-      <Associations />
+      {/* who we serve */}
+      <WhoWeServe />
+      {/* partners */}
+      <Partners />
       {/* frequently asked questions */}
       <Questions />
       {/* our blog */}

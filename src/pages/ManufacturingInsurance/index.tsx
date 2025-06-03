@@ -2,9 +2,10 @@ import {
   Meta,
   IndustryHero,
   Details,
+  WhyBenchmarkIndustry,
   ProductAndServices,
-  Tools,
-  Associations,
+  WhoWeServe,
+  Partners,
   Questions,
   OurBlog,
   ContactUs,
@@ -23,18 +24,20 @@ export default function ManufacturingInsurance() {
       {/* Manufacturing Insurance made simple */}
       <IndustryHero
         title="Manufacturing Insurance made simple"
-        subtitle="Protect your manufacturing business with comprehensive insurance solutions."
-        description="Benchmark offers tailored insurance products and services for the manufacturing industry, ensuring your operations are covered from production to distribution."
-        image="/assets/images/manufacturing.png"
+        subtitle="Protect your manufacturing operations with comprehensive insurance solutions."
+        description="Benchmark offers tailored insurance products and services for manufacturing companies, ensuring your operations are covered from raw materials to finished products."
+        image="/assets/images/industry.png"
       />
-      {/* details */}
+      {/* our approach */}
       <Details />
+      {/* why benchmark */}
+      <WhyBenchmarkIndustry />
       {/* products and services */}
       <ProductAndServices />
-      {/* tools */}
-      <Tools />
-      {/* our customers and associations */}
-      <Associations />
+      {/* who we serve */}
+      <WhoWeServe />
+      {/* partners */}
+      <Partners />
       {/* frequently asked questions */}
       <Questions />
       {/* our blog */}

@@ -39,6 +39,9 @@ import Associations from "./Industry/Associations";
 import AppDownload from "./Industry/AppDownload";
 import Questions from "./Industry/Questions";
 import OurBlog from "./Industry/OurBlog";
+import WhyBenchmarkIndustry from "./Industry/WhyBenchmark";
+import Partners from "./Industry/Partners";
+import WhoWeServe from "./Industry/WhoWeServe";
 
 //onboarding imports
 import OnboardingMain from "./Onboarding/OnboardingMain";
@@ -78,4 +81,7 @@ export {
   BlogGrid,
   BlogSearch,
   BlogSearchGrid,
+  WhyBenchmarkIndustry,
+  Partners,
+  WhoWeServe,
 };

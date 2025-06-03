@@ -38,6 +38,17 @@ import WholesaleInsurance from "./pages/WholesaleInsurance";
 import PrivacyNotice from "./pages/PrivacyNotice";
 import TermsOfService from "./pages/TermsOfService";
 
+// Personal Insurance Pages
+import HomeownersInsurance from "./pages/HomeownersInsurance";
+import AutoInsurance from "./pages/AutoInsurance";
+import RentalPropertyInsurance from "./pages/RentalPropertyInsurance";
+import CondoInsurance from "./pages/CondoInsurance";
+import ClassicAutoInsurance from "./pages/ClassicAutoInsurance";
+import BuildersRiskInsurance from "./pages/BuildersRiskInsurance";
+import FloodInsurance from "./pages/FloodInsurance";
+import MotorcycleInsurance from "./pages/MotorcycleInsurance";
+import LifeInsurance from "./pages/LifeInsurance";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -113,6 +124,47 @@ const router = createBrowserRouter([
           {
             path: "wholesale-insurance",
             element: <WholesaleInsurance />,
+          },
+        ]
+      },
+      {
+        path: "personal",
+        children: [
+          {
+            path: "homeowners-insurance",
+            element: <HomeownersInsurance />,
+          },
+          {
+            path: "auto-insurance",
+            element: <AutoInsurance />,
+          },
+          {
+            path: "rental-property-insurance",
+            element: <RentalPropertyInsurance />,
+          },
+          {
+            path: "condo-insurance",
+            element: <CondoInsurance />,
+          },
+          {
+            path: "classic-auto-insurance",
+            element: <ClassicAutoInsurance />,
+          },
+          {
+            path: "builders-risk-insurance",
+            element: <BuildersRiskInsurance />,
+          },
+          {
+            path: "flood-insurance",
+            element: <FloodInsurance />,
+          },
+          {
+            path: "motorcycle-insurance",
+            element: <MotorcycleInsurance />,
+          },
+          {
+            path: "life-insurance",
+            element: <LifeInsurance />,
           },
         ]
       },

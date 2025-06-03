@@ -1,0 +1,29 @@
+@use "@/styles/variables.scss";
+
+.partners-container {
+  @apply w-full bg-white;
+  
+  .partners {
+    @apply max-w-7xl mx-auto text-center;
+    
+    h2 {
+      @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4 font-gilroy;
+    }
+    
+    p {
+      @apply text-gray-600 text-lg mb-12 font-gilroy;
+    }
+    
+    .partners-grid {
+      @apply grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center;
+      
+      .partner-logo {
+        @apply flex items-center justify-center h-20 w-full;
+        
+        img {
+          @apply max-h-16 max-w-full object-contain transition-all duration-300;
+        }
+      }
+    }
+  }
+} 

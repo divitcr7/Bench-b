@@ -150,7 +150,7 @@ export default function PrivateClient() {
             your personal risk with the discretion, expertise, and service you expect.
           </p>
           <p>Schedule a confidential consultation today with our Private Client Team.</p>
-          <button className="cta-button">Schedule Consultation</button>
+          <button className="cta-button" onClick={() => window.open('https://app.benchmarkbroker.com', '_blank')}>Schedule Consultation</button>
         </div>
       </div>
     </section>

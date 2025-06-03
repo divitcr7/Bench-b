@@ -2,9 +2,10 @@ import {
   Meta,
   IndustryHero,
   Details,
+  WhyBenchmarkIndustry,
   ProductAndServices,
-  Tools,
-  Associations,
+  WhoWeServe,
+  Partners,
   Questions,
   OurBlog,
   ContactUs,
@@ -23,18 +24,20 @@ export default function HospitalityInsurance() {
       {/* Hospitality Insurance made simple */}
       <IndustryHero
         title="Hospitality Insurance made simple"
-        subtitle="Protect your hospitality business with comprehensive insurance solutions."
-        description="Benchmark offers tailored insurance products and services for the hospitality industry, ensuring your business is covered from kitchen to guest room."
-        image="/assets/images/Hospital.png"
+        subtitle="Comprehensive insurance solutions for the hospitality industry."
+        description="Benchmark provides specialized insurance coverage for hotels, restaurants, bars, and entertainment venues, protecting your business from unique hospitality risks."
+        image="/assets/images/industry.png"
       />
-      {/* details */}
+      {/* our approach */}
       <Details />
+      {/* why benchmark */}
+      <WhyBenchmarkIndustry />
       {/* products and services */}
       <ProductAndServices />
-      {/* tools */}
-      <Tools />
-      {/* our customers and associations */}
-      <Associations />
+      {/* who we serve */}
+      <WhoWeServe />
+      {/* partners */}
+      <Partners />
       {/* frequently asked questions */}
       <Questions />
       {/* our blog */}

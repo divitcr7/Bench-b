@@ -10,33 +10,102 @@ function SpecialityCard({ item }: { item: SpecialityCardType }) {
 
   const handleNavigation = () => {
     switch(item.name) {
+      // Commercial - Industry Pages Navigation (from footer data)
       case "Real Estate":
-        navigate("/services/commercial-property");
-        break;
-      case "Construction":
-        navigate("/services/commercial-property");
+        navigate("/industry/real-estate-insurance");
         break;
       case "Hospitality":
+        navigate("/industry/hospitality-insurance");
+        break;
+      case "Retail Service":
+        navigate("/industry/retail-service-insurance");
+        break;
+      case "Construction":
+        navigate("/industry/construction-insurance");
+        break;
+      case "Energy":
+        navigate("/industry/energy-insurance");
+        break;
+      case "Healthcare":
+        navigate("/industry/healthcare-insurance");
+        break;
+      case "Manufacturing":
+        navigate("/industry/manufacturing-insurance");
+        break;
+      case "Transportation":
+        navigate("/industry/transportation-insurance");
+        break;
+      case "Environmental":
+        navigate("/industry/environmental-insurance");
+        break;
+      case "Auto Service":
+        navigate("/industry/auto-service-insurance");
+        break;
+      case "Food & Beverage":
+        navigate("/industry/food-beverage-insurance");
+        break;
+      case "Wholesale":
+        navigate("/industry/wholesale-insurance");
+        break;
+      case "Non-Profit":
+        navigate("/industry/non-profit-insurance");
+        break;
+      case "Financial Services":
+        navigate("/industry/financial-services-insurance");
+        break;
+      
+      // Personal - Individual pages for each type
+      case "Homeowners":
+        navigate("/personal/homeowners-insurance");
+        break;
+      case "Auto":
+        navigate("/personal/auto-insurance");
+        break;
+      case "Rental Property":
+        navigate("/personal/rental-property-insurance");
+        break;
+      case "Condo":
+        navigate("/personal/condo-insurance");
+        break;
+      case "Classic Auto":
+        navigate("/personal/classic-auto-insurance");
+        break;
+      case "Builder's Risk":
+        navigate("/personal/builders-risk-insurance");
+        break;
+      case "Flood":
+        navigate("/personal/flood-insurance");
+        break;
+      case "Motorcycle":
+        navigate("/personal/motorcycle-insurance");
+        break;
+      case "Life Insurance":
+        navigate("/personal/life-insurance");
+        break;
+      
+      // Services Navigation (exact from footer)
+      case "Commercial Property":
         navigate("/services/commercial-property");
-        break;
-      case "High-Net-Worth":
-        navigate("/services/private-client");
-        break;
-      case "Risk Assessment":
-        navigate("/services/risk-management");
         break;
       case "Claims Advocacy":
         navigate("/services/commercial-property/claims-advocacy");
         break;
-      case "Risk Planning":
+      case "Alternative Risk Financing":
+        navigate("/services/commercial-property/alternative-risk-financing");
+        break;
+      case "Loss Control":
+        navigate("/services/commercial-property/loss-control");
+        break;
+      case "Private Client":
+        navigate("/services/private-client");
+        break;
+      case "Risk Management":
         navigate("/services/risk-management");
         break;
-      case "Analytics":
-        navigate("/services/risk-management");
+      case "Benchmark Network":
+        navigate("/services/benchmark-network");
         break;
-      case "Portfolio Management":
-        navigate("/services/commercial-property/portfolio-management");
-        break;
+      
       default:
         break;
     }
@@ -57,10 +126,11 @@ function SpecialityCard({ item }: { item: SpecialityCardType }) {
 }
 
 export default function Specialities() {
-  const [selectedCategory, setSelectedCategory] = useState("Industries");
+  const [selectedCategory, setSelectedCategory] = useState("Commercial");
   const [visibleData, setVisibleData] = useState<SpecialityCardType[]>([]);
 
-  const data = [
+  // Commercial data - matching footer structure
+  const commercialData = [
     {
       id: 1,
       name: "Real Estate",
@@ -69,60 +139,179 @@ export default function Specialities() {
     },
     {
       id: 2,
-      name: "Construction",
-      imgSrc: "/assets/icons/high-value-home.png",
-      title: "Specialized coverage for general contractors, specialty contractors, and construction projects.",
-    },
-    {
-      id: 3,
       name: "Hospitality",
-      imgSrc: "/assets/icons/insure.png",
+      imgSrc: "/assets/icons/high-value-home.png",
       title: "Tailored insurance programs for hotels, restaurants, and entertainment venues.",
     },
     {
+      id: 3,
+      name: "Retail Service",
+      imgSrc: "/assets/icons/insure.png",
+      title: "Tailored protection for retail stores, service providers, and customer-facing businesses.",
+    },
+    {
       id: 4,
-      name: "High-Net-Worth",
+      name: "Construction",
       imgSrc: "/assets/icons/industry.png",
-      title: "Premium protection for high-net-worth individuals and their valuable assets.",
+      title: "Specialized coverage for general contractors, specialty contractors, and construction projects.",
     },
     {
       id: 5,
-      name: "Risk Assessment",
+      name: "Energy",
       imgSrc: "/assets/icons/risk-analysis.png",
-      title: "Intelligent risk analysis and policy structuring for optimal protection.",
+      title: "Specialized insurance for energy companies and power generation facilities.",
     },
     {
       id: 6,
-      name: "Claims Advocacy",
+      name: "Healthcare",
       imgSrc: "/assets/icons/claim.png",
-      title: "Digital claims management and 24/7 support for seamless resolution.",
+      title: "Professional liability and comprehensive coverage for healthcare providers.",
     },
     {
       id: 7,
-      name: "Risk Planning",
+      name: "Manufacturing",
       imgSrc: "/assets/icons/risk.png",
-      title: "Long-term risk mitigation strategies aligned with your growth goals.",
+      title: "Industrial insurance solutions for manufacturing operations and production facilities.",
     },
     {
       id: 8,
-      name: "Analytics",
+      name: "Transportation",
       imgSrc: "/assets/icons/report.png",
-      title: "Real-time risk analytics and insurance tech integration.",
+      title: "Comprehensive coverage for transportation companies and logistics operations.",
     },
     {
       id: 9,
-      name: "Portfolio Management",
+      name: "Environmental",
       imgSrc: "/assets/icons/tech.png",
-      title: "Smart portfolio management tools for comprehensive asset protection.",
+      title: "Environmental liability coverage and pollution protection for businesses.",
     },
   ];
+
+  // Personal data - matching footer structure
+  const personalData = [
+    {
+      id: 1,
+      name: "Homeowners",
+      imgSrc: "/assets/icons/home.png",
+      title: "Comprehensive home insurance coverage for your most valuable asset.",
+    },
+    {
+      id: 2,
+      name: "Auto",
+      imgSrc: "/assets/icons/high-value-home.png",
+      title: "Complete auto insurance protection for vehicles and drivers.",
+    },
+    {
+      id: 3,
+      name: "Rental Property",
+      imgSrc: "/assets/icons/insure.png",
+      title: "Specialized coverage for rental property owners and landlords.",
+    },
+    {
+      id: 4,
+      name: "Condo",
+      imgSrc: "/assets/icons/industry.png",
+      title: "Condominium insurance for unit owners and HOA coverage.",
+    },
+    {
+      id: 5,
+      name: "Classic Auto",
+      imgSrc: "/assets/icons/risk-analysis.png",
+      title: "Specialty insurance for classic, vintage, and collector vehicles.",
+    },
+    {
+      id: 6,
+      name: "Builder's Risk",
+      imgSrc: "/assets/icons/claim.png",
+      title: "Construction insurance for new home builds and renovations.",
+    },
+    {
+      id: 7,
+      name: "Flood",
+      imgSrc: "/assets/icons/risk.png",
+      title: "Flood insurance protection for homes and personal property.",
+    },
+    {
+      id: 8,
+      name: "Motorcycle",
+      imgSrc: "/assets/icons/report.png",
+      title: "Motorcycle insurance coverage for bikes and recreational vehicles.",
+    },
+    {
+      id: 9,
+      name: "Life Insurance",
+      imgSrc: "/assets/icons/tech.png",
+      title: "Life insurance and beneficiary protection for families.",
+    },
+  ];
+
+  // Services data - exact from footer
+  const servicesData = [
+    {
+      id: 1,
+      name: "Commercial Property",
+      imgSrc: "/assets/icons/home.png",
+      title: "Comprehensive commercial property insurance and risk management solutions.",
+    },
+    {
+      id: 2,
+      name: "Claims Advocacy",
+      imgSrc: "/assets/icons/high-value-home.png",
+      title: "Expert claims management and advocacy services for maximum recovery.",
+    },
+    {
+      id: 3,
+      name: "Alternative Risk Financing",
+      imgSrc: "/assets/icons/insure.png",
+      title: "Innovative risk financing solutions including captives and self-insurance programs.",
+    },
+    {
+      id: 4,
+      name: "Loss Control",
+      imgSrc: "/assets/icons/industry.png",
+      title: "Comprehensive loss control services and risk assessments for prevention.",
+    },
+    {
+      id: 5,
+      name: "Private Client",
+      imgSrc: "/assets/icons/risk-analysis.png",
+      title: "High-net-worth personal insurance for luxury homes, collections, and assets.",
+    },
+    {
+      id: 6,
+      name: "Risk Management",
+      imgSrc: "/assets/icons/claim.png",
+      title: "Strategic risk assessment and mitigation planning for optimal business protection.",
+    },
+    {
+      id: 7,
+      name: "Benchmark Network",
+      imgSrc: "/assets/icons/risk.png",
+      title: "Access to our extensive network of insurance carriers and market relationships.",
+    },
+  ];
+
+  const getCurrentData = () => {
+    switch(selectedCategory) {
+      case "Commercial":
+        return commercialData;
+      case "Personal":
+        return personalData;
+      case "Services":
+        return servicesData;
+      default:
+        return commercialData;
+    }
+  };
+
   //to show a certain number of data on different screen sizes
   useEffect(() => {
     const updateVisibleData = () => {
+      const currentData = getCurrentData();
       if (window.innerWidth < 768) {
-        setVisibleData(data.slice(0, 5));
+        setVisibleData(currentData.slice(0, 5));
       } else {
-        setVisibleData(data);
+        setVisibleData(currentData);
       }
     };
 
@@ -130,7 +319,7 @@ export default function Specialities() {
     window.addEventListener("resize", updateVisibleData);
 
     return () => window.removeEventListener("resize", updateVisibleData);
-  }, []);
+  }, [selectedCategory]);
 
   return (
     <section className="speciality-container">
@@ -138,7 +327,7 @@ export default function Specialities() {
         <h2>Your Insurance Partner</h2>
         <h5>Specialized Solutions for Real Estate, Construction, and Hospitality</h5>
         <div className="speciality-nav">
-          {["Industries", "Products", "Services"].map((category) => (
+          {["Commercial", "Personal", "Services"].map((category) => (
             <span
               key={category}
               className={selectedCategory === category ? "active" : ""}

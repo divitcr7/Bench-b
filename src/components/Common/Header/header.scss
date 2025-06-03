@@ -11,7 +11,7 @@
 }
 
 .header nav {
-  @apply flex h-full w-screen justify-between items-center lg:pr-4;
+  @apply flex h-full w-screen justify-between items-center lg:pr-4 relative;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -29,7 +29,11 @@
 }
 
 .logo {
-  @apply h-full flex;
+  @apply h-full flex absolute left-1/2 transform -translate-x-1/2;
+  
+  a {
+    @apply h-full flex;
+  }
 }
 
 .logo img {

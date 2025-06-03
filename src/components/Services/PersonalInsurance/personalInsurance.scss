@@ -1,0 +1,173 @@
+@use "@/styles/variables.scss";
+
+.personal-insurance-container {
+  @apply min-h-screen w-full;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  
+  .personal-insurance {
+    @apply max-w-7xl mx-auto py-16;
+    
+    .hero-section {
+      @apply text-center mb-16;
+      
+      h1 {
+        @apply text-4xl md:text-5xl font-bold text-gray-800 mb-4;
+      }
+      
+      h2 {
+        @apply text-2xl md:text-3xl font-semibold text-blue-600 mb-2;
+      }
+      
+      h3 {
+        @apply text-lg md:text-xl text-gray-600 font-medium;
+      }
+    }
+    
+    .overview-section {
+      @apply mb-16 bg-white rounded-lg p-8 shadow-lg;
+      
+      h2 {
+        @apply text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2;
+      }
+      
+      p {
+        @apply text-gray-600 text-lg leading-relaxed mb-4;
+      }
+    }
+    
+    .coverage-section {
+      @apply mb-16 bg-white rounded-lg p-8 shadow-lg;
+      
+      h2 {
+        @apply text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2;
+      }
+      
+      p {
+        @apply text-gray-600 text-lg mb-6;
+      }
+      
+      .coverage-list {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+        
+        li {
+          @apply bg-blue-50 p-4 rounded-lg text-gray-700 font-medium;
+          @apply border-l-4 border-blue-500;
+        }
+      }
+    }
+    
+    .highlights-section {
+      @apply mb-16;
+      
+      h2 {
+        @apply text-2xl font-bold text-gray-800 mb-8 text-center;
+      }
+      
+      .highlights-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+        
+        .highlight-card {
+          @apply bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow;
+          @apply border-t-4 border-green-500;
+          
+          h3 {
+            @apply text-xl font-semibold text-gray-800 mb-3 flex items-center gap-2;
+          }
+          
+          p {
+            @apply text-gray-600 leading-relaxed;
+          }
+        }
+      }
+    }
+    
+    .enhancements-section {
+      @apply mb-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8;
+      
+      h2 {
+        @apply text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2;
+      }
+      
+      .enhancements-list {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-4;
+        
+        li {
+          @apply bg-white p-4 rounded-lg shadow-sm text-gray-700;
+          @apply border-l-4 border-indigo-500 font-medium;
+        }
+      }
+    }
+    
+    .differentiators-section {
+      @apply mb-16;
+      
+      h2 {
+        @apply text-2xl font-bold text-gray-800 mb-8 text-center;
+      }
+      
+      .differentiators-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+        
+        .differentiator-card {
+          @apply bg-white p-6 rounded-lg shadow-lg text-center;
+          @apply hover:transform hover:scale-105 transition-all duration-300;
+          
+          .icon {
+            @apply text-4xl mb-4 block;
+          }
+          
+          h3 {
+            @apply text-lg font-semibold text-gray-800 mb-3;
+          }
+          
+          p {
+            @apply text-gray-600 text-sm leading-relaxed;
+          }
+        }
+      }
+    }
+    
+    .clients-section {
+      @apply mb-16 bg-white rounded-lg p-8 shadow-lg;
+      
+      h2 {
+        @apply text-2xl font-bold text-gray-800 mb-6 flex items-center gap-2;
+      }
+      
+      p {
+        @apply text-gray-600 text-lg mb-6;
+      }
+      
+      .clients-list {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
+        
+        li {
+          @apply bg-gray-50 p-4 rounded-lg text-gray-700 font-medium;
+          @apply border-l-4 border-gray-400;
+        }
+      }
+    }
+    
+    .cta-section {
+      @apply text-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg p-12;
+      
+      h2 {
+        @apply text-3xl font-bold mb-6 flex items-center justify-center gap-2;
+      }
+      
+      p {
+        @apply text-xl mb-4 leading-relaxed opacity-90;
+        
+        &:last-of-type {
+          @apply text-lg mb-8;
+        }
+      }
+      
+      .cta-button {
+        @apply bg-white text-blue-600 font-bold py-4 px-8 rounded-lg;
+        @apply hover:bg-gray-100 transition-colors duration-300;
+        @apply text-lg shadow-lg;
+      }
+    }
+  }
+} 

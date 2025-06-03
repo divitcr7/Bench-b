@@ -29,11 +29,6 @@ const MENU = [
   },
   { label: "About Us/Careers", path: "/about" },
   {
-    label: "Portals",
-    path: "/portals",
-    subItems: ["Payment", "Client", "Agent"],
-  },
-  {
     label: "Services",
     path: "/services",
     subItems: [

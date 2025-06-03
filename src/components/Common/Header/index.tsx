@@ -41,7 +41,9 @@ const Header = forwardRef<HTMLElement, HeaderProps>(({ contactRef }, ref) => {
 
           {/* logo */}
           <div className="logo">
-            <img src="/assets/icons/logo.png" alt="Benchmark logo" />
+            <Link to="/">
+              <img src="/assets/icons/logo.png" alt="Benchmark logo" />
+            </Link>
           </div>
 
           {/* contact us */}

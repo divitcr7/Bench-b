@@ -138,7 +138,7 @@ const BenchmarkNetwork = () => {
               Our network didn't happen overnight—it's the product of years in the trenches, across insurance, real estate, construction, and hospitality. And we're proud to share it with our clients.
             </p>
             <p>Want access to our network for your next project, purchase, or portfolio strategy?</p>
-            <button className="cta-button">Let's Talk</button>
+            <button className="cta-button" onClick={() => window.open('https://app.benchmarkbroker.com', '_blank')}>Let's Talk</button>
           </div>
         </div>
       </section>

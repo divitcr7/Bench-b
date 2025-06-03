@@ -1,31 +1,11 @@
 import "./details.scss";
 import { Plus } from "lucide-react";
-export const whoWeServeData = [
-  [
-    "Property Managers",
-    "Real Estate Investors",
-    "Portfolio Managers",
-    "Private Money Lenders",
-  ],
-  [
-    "Real Estate Developers",
-    "Asset Managers",
-    "Private Equity Firms",
-    "Real Estate Agents",
-  ],
-  [
-    "Wholesalers",
-    "Single Family Investors",
-    "Multifamily Investors",
-    "Banks Forced Placed Policies",
-  ],
-];
 
 export default function Details() {
   return (
     <section className="details-container">
-      <div className="details padding-container">
-        <h2>Details</h2>
+      <div className="details padding-container details-reduced-bottom">
+        <h2>Our Approach</h2>
         <p>
           Real Estate - The unprecedented recession has caused significant
           long-term distress in the real estate sector and has had severe
@@ -38,21 +18,6 @@ export default function Details() {
             Read More <Plus />
           </span>
         </p>
-        <div className="who-we-serve">
-          <h3>Who We Serve</h3>
-          <div className="columns">
-            {whoWeServeData.map((column, index) => (
-              <ul key={index} className="column">
-                {column.map((item, idx) => (
-                  <h5>
-                    <img src="/assets/icons/gold-diamond.png" />
-                    <li key={idx}>{item}</li>
-                  </h5>
-                ))}
-              </ul>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
