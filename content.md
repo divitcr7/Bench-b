@@ -73,12 +73,12 @@ Quantum computing research for complex risk modeling
 Sustainable insurance solutions with ESG integration
 
 🌟 Why It Matters
-✅ Faster response times, lower admin costs
-✅ Better client retention and satisfaction
-✅ More accurate pricing and fewer claim disputes
-✅ Improved compliance and investor/lender confidence
-✅ Enhanced risk management and loss prevention
-✅ Sustainable and future-proof insurance solutions
+Faster response times, lower admin costs
+Better client retention and satisfaction
+More accurate pricing and fewer claim disputes
+Improved compliance and investor/lender confidence
+Enhanced risk management and loss prevention
+Sustainable and future-proof insurance solutions
 
 📈 Benchmarking the Future
 We're not waiting for change—we're building it. Benchmark Insurance Group is committed to leading the next chapter of commercial insurance through technology, data, and disruptive execution.

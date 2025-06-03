@@ -62,9 +62,9 @@ export default function BestDeals() {
         </div>
 
         {/* button */}
-        {/* <div className="bestDeals_button">
-          <button className="btn btn-empty">GET STARTED</button>
-        </div> */}
+        <div className="bestDeals_button">
+          <button className="btn btn-empty" onClick={() => window.open('https://app.benchmarkbroker.com', '_blank')}>GET STARTED</button>
+        </div>
       </div>
     </section>
   );

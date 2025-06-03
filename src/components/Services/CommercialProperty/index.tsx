@@ -115,7 +115,7 @@ export default function CommercialProperty() {
           <div className="highlights-grid">
             {coverageHighlights.map((highlight, index) => (
               <div key={index} className="highlight-card">
-                <h3>✅ {highlight.title}</h3>
+                <h3>{highlight.title}</h3>
                 <p>{highlight.description}</p>
               </div>
             ))}

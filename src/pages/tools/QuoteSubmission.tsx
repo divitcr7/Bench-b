@@ -50,8 +50,8 @@ const QuoteSubmission: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Implement quote submission logic
-    console.log('Quote submitted:', formData);
+    // Redirect to the quote application
+    window.open('https://app.benchmarkbroker.com', '_blank');
   };
 
   const renderStepContent = (step: number) => {

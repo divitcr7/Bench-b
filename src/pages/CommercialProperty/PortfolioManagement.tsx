@@ -142,7 +142,7 @@ const PortfolioManagement: React.FC = () => {
           <p className="cta__text">
             Schedule a portfolio review with our expert team.
           </p>
-          <button className="cta__button">
+          <button className="cta__button" onClick={() => window.open('https://app.benchmarkbroker.com', '_blank')}>
             Schedule Portfolio Review
           </button>
         </section>

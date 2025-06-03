@@ -142,7 +142,7 @@ const LossControl: React.FC = () => {
           <p className="cta__text">
             Book a consultation with our Risk Control & Safety Team today.
           </p>
-          <button className="cta__button">
+          <button className="cta__button" onClick={() => window.open('https://app.benchmarkbroker.com', '_blank')}>
             Schedule a Consultation
           </button>
         </section>

@@ -159,7 +159,7 @@ const VendorMarketplace: React.FC = () => {
                     />
                   ))}
                 </Box>
-                <Button variant="contained" color="primary" fullWidth>
+                <Button variant="contained" color="primary" fullWidth onClick={() => window.open('https://app.benchmarkbroker.com', '_blank')}>
                   Contact Vendor
                 </Button>
               </CardContent>

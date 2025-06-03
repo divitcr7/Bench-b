@@ -83,7 +83,7 @@ const RiskManagement: React.FC = () => {
           <p className="cta__text">
             Looking for smarter risk control strategies? Schedule a call with our Risk Advisory Team and see how Benchmark Insurance can help safeguard your future—beyond the policy.
           </p>
-          <button className="cta__button">
+          <button className="cta__button" onClick={() => window.open('https://app.benchmarkbroker.com', '_blank')}>
             Schedule a Consultation
           </button>
         </section>
