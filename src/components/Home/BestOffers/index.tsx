@@ -1,20 +1,16 @@
-import { ArrowRight } from "lucide-react";
 import "./bestoffers.scss";
 
 interface ItemProps {
   id: number;
   name: string;
   description: string;
-  icon: string;
 }
 
 function Card({ item }: { item: ItemProps }) {
   return (
     <div className="bestOffers_cards">
       <div className="bestOffers_cards_content">
-        <span className="bestOffers_cards_icon">
-          {item.icon}
-        </span>
+
         <div>
           <h3>{item.name}</h3>
           <p>{item.description}</p>
@@ -30,19 +26,16 @@ export default function BestOffers() {
       id: 1,
       name: "We Assess Risk Intelligently",
       description: "Our digital intake process uses dynamic questions and data validation to understand your risk profile — so you don't just get a quote, you get a plan that actually fits.",
-      icon: "🔍"
     },
     {
       id: 2,
       name: "Real-Time Underwriting Insights",
       description: "We connect directly with carrier systems to access real-time underwriting decisions. That means fewer delays, fewer surprises, and faster policy approvals.",
-      icon: "⚡"
     },
     {
       id: 3,
       name: "Instantly Compare Rates & Coverage",
       description: "Our platform scans pricing and coverage from 50+ A-rated carriers across personal and commercial lines. You'll see which options offer the best value — and why.",
-      icon: "💡"
     }
   ];
   return (

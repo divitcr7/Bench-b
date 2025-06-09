@@ -34,28 +34,28 @@ export default function BestDeals() {
         {/* we find you the best deal */}
         <div className="bestDeals-title">
           <h2>
-            We Find You The <span className="highlight">Best Deal</span>,<br />
-            It's That Simple
+            Insurance   <span className="highlight">Reimagined</span>,<br />
+            Fast, Informed, and Tailored
           </h2>
         </div>
 
         {/* cards */}
         <div className="bestDeals_cards ">
           <HowToCards
-            title="Fill in Your Basic Details"
-            info="Our platform makes it easy to provide the data we need to provide you a quote!"
+            title="Quick Risk Analysis"
+            info="Tell us a bit about your needs. Our advisors will analyze your risk profile not just give you a generic quote."
             img1="/assets/icons/fillDetails.png"
             img2="/assets/icons/01.png"
           />
           <HowToCards
-            title="Compare Prices And Customize Coverage"
-            info="We shop many carriers to help you find the right price as well as coverages!"
+            title="We Match You to the Market"
+            info="We leverage our industry knowledge and relationships with top-rated carriers to deliver more than just low rates"
             img1="/assets/icons/compare.png"
             img2="/assets/icons/02.png"
           />
           <HowToCards
-            title="Get Insured Today"
-            info="Our agents will find the best rates and coverages for you, and assist you in starting your policy immediately!"
+            title="Coverage With Confidence"
+            info="Our experienced team walks you through your options, answers your questions, and gets your policy started the right way"
             img1="/assets/icons/insure.png"
             img2="/assets/icons/03.png"
           />
