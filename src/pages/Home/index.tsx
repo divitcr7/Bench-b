@@ -20,8 +20,9 @@ interface HomeProps {
 export default function Home() {
   const { contactRef } = useOutletContext<HomeProps>();
   const metadata = {
-    title: "Home || Benchmark - Insurance",
-    description: "Benchmark - Insurance",
+    title: "Benchmark Insurance Group of Texas - Commercial Insurance Broker",
+    description:
+      "Benchmark Insurance Group of Texas - Commercial Insurance Broker",
   };
 
   // Preload critical images for better performance
