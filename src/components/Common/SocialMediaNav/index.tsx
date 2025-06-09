@@ -4,13 +4,28 @@ export default function SocialMediaNav() {
     <nav className="side-nav">
       <div>
         <a href="https://www.facebook.com/benchmarkinsurance/">
-          <img src="/assets/icons/facebook.png" alt="facebook icon" />
+          <img
+            src="/assets/icons/facebook.png"
+            alt="facebook icon"
+            loading="lazy"
+            decoding="async"
+          />
         </a>
         <a href="https://www.instagram.com/benchmarkinsurance/">
-          <img src="/assets/icons/instagram.png" alt="instagram icon" />
+          <img
+            src="/assets/icons/instagram.png"
+            alt="instagram icon"
+            loading="lazy"
+            decoding="async"
+          />
         </a>
         <a href="https://www.linkedin.com/company/benchmark-insurance-group-of-texas/">
-          <img src="/assets/icons/linkedin.png" alt="linkedin icon" />
+          <img
+            src="/assets/icons/linkedin.png"
+            alt="linkedin icon"
+            loading="lazy"
+            decoding="async"
+          />
         </a>
       </div>
     </nav>

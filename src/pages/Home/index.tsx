@@ -10,6 +10,8 @@ import {
   Testimonials,
 } from "./../../components";
 import { useOutletContext } from "react-router-dom";
+import { useEffect } from "react";
+import { preloadImages, CRITICAL_IMAGES } from "../../utils/imageOptimization";
 
 interface HomeProps {
   contactRef: React.RefObject<HTMLElement>;
@@ -21,6 +23,11 @@ export default function Home() {
     title: "Home || Benchmark - Insurance",
     description: "Benchmark - Insurance",
   };
+
+  // Preload critical images for better performance
+  useEffect(() => {
+    preloadImages(CRITICAL_IMAGES).catch(console.error);
+  }, []);
 
   return (
     <>

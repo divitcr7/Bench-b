@@ -1,25 +1,26 @@
 import "./association.scss";
+import OptimizedImage from "../../Common/OptimizedImage";
 
 const data = [
   {
     id: 1,
     imgSrc: "/assets/icons/aig.png",
-    alt: "Zurich Insurance"
+    alt: "Zurich Insurance",
   },
   {
     id: 2,
     imgSrc: "/assets/icons/zurich.png",
-    alt: "WSA Association"
+    alt: "WSA Association",
   },
   {
     id: 3,
     imgSrc: "/assets/icons/liberty.png",
-    alt: "WSA Association"
+    alt: "WSA Association",
   },
   {
     id: 4,
     imgSrc: "/assets/icons/berkshire.png",
-    alt: "WSA Association"
+    alt: "WSA Association",
   },
 ];
 
@@ -35,7 +36,12 @@ export default function Associations() {
         <div>
           {data.map((item) => (
             <span key={item.id}>
-              <img src={item.imgSrc} alt={item.alt} />
+              <OptimizedImage
+                src={item.imgSrc}
+                alt={item.alt}
+                aspectRatio="3/2"
+                className="association-logo"
+              />
             </span>
           ))}
         </div>

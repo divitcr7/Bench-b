@@ -23,13 +23,14 @@ export default function Memberships() {
           Benchmark Insurance Group works in collaboration with these membership
           organizations for the benefit of our customers.
         </h5>
-        <div >
+        <div>
           {images.map((image, index) => (
             <div key={index}>
               <img
                 src={`${imageBasePath}${image}.png`}
                 alt={image}
-                
+                loading="lazy"
+                decoding="async"
               />
             </div>
           ))}

@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import {
-  ChevronDown,
-  ChevronUp,
-  Linkedin,
-  Mail,
-  Calendar,
-} from "lucide-react";
+import { ChevronDown, ChevronUp, Linkedin, Mail, Calendar } from "lucide-react";
 import "./ourteam.scss";
 import { Chevron } from "@/components/Common";
 
@@ -126,7 +120,12 @@ const OurTeam = () => {
                 onMouseLeave={() => setHovered(null)}
               >
                 <div className="image-container">
-                  <img src={member.image} alt={member.name} />
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <h3>{member.name}</h3>
                 <p>{member.position}</p>
@@ -152,11 +151,11 @@ const OurTeam = () => {
                         <Mail size={20} />
                       </a>
                     </span>
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       onClick={(e) => {
                         e.preventDefault();
-                        navigate('/tools/booking-scheduler');
+                        navigate("/tools/booking-scheduler");
                       }}
                     >
                       <Calendar size={20} />
@@ -173,7 +172,12 @@ const OurTeam = () => {
             {teamMembers.slice(0, startIndex + 3).map((member) => (
               <div key={member.id} className="team-member">
                 <div className="image-container">
-                  <img src={member.image} alt={member.name} />
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </div>
                 <h3>{member.name}</h3>
                 <p>{member.position}</p>
@@ -191,11 +195,11 @@ const OurTeam = () => {
                       <Mail size={20} />
                     </a>
                   </span>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     onClick={(e) => {
                       e.preventDefault();
-                      navigate('/tools/booking-scheduler');
+                      navigate("/tools/booking-scheduler");
                     }}
                   >
                     <Calendar size={20} />

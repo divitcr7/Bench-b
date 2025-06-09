@@ -6,7 +6,12 @@ const SearchBar: React.FC = () => {
     <div className="search-bar">
       <input type="text" placeholder="Search..." className="search-input" />
       <button className="search-button">
-        <img src="/assets/icons/search.png" alt="Search" />
+        <img
+          src="/assets/icons/search.png"
+          alt="Search"
+          loading="lazy"
+          decoding="async"
+        />
       </button>
     </div>
   );

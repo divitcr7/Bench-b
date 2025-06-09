@@ -11,12 +11,23 @@ function ReviewCard({ item }: ReviewCardProps) {
   return (
     <div className="testimonial-reviews">
       <div className="apostrophe">
-        <img src="/assets/icons/apostrophe.png" alt="apostrophe" />
+        <img
+          src="/assets/icons/apostrophe.png"
+          alt="apostrophe"
+          loading="lazy"
+          decoding="async"
+        />
         <span></span>
       </div>
       <div className="rating">
         {Array.from({ length: item.rating }).map((_, index) => (
-          <img key={index} src="/assets/icons/Star.png" alt="star" />
+          <img
+            key={index}
+            src="/assets/icons/Star.png"
+            alt="star"
+            loading="lazy"
+            decoding="async"
+          />
         ))}
       </div>
       <div className="tags">
@@ -27,7 +38,7 @@ function ReviewCard({ item }: ReviewCardProps) {
       </div>
       <p className="review-text">{item.review}</p>
       <div className="reviewer">
-        <img src={item.image} alt={item.name} />
+        <img src={item.image} alt={item.name} loading="lazy" decoding="async" />
         <div>
           <span className="name">{item.name}</span>
           <span className="date">{item.date}</span>
@@ -118,12 +129,20 @@ export default function Testimonials() {
             className="googleLogo"
             src="/assets/icons/google.png"
             alt="Google logo"
+            loading="lazy"
+            decoding="async"
           />
           <p>112 VERIFIED GOOGLE REVIEWS</p>
           <span className="overall-rating">
             4.6
             {Array.from({ length: 5 }).map((_, index) => (
-              <img key={index} src="/assets/icons/Star.png" alt="star" />
+              <img
+                key={index}
+                src="/assets/icons/Star.png"
+                alt="star"
+                loading="lazy"
+                decoding="async"
+              />
             ))}
           </span>
           <Link className="allReviewLink" to="">

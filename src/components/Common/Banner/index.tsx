@@ -10,11 +10,14 @@ export default function Banner() {
     { name: "Group 22", url: "/assets/images/partners/Group 22.png" },
     { name: "Partner 1", url: "/assets/images/partners/image 1.png" },
     { name: "NAIOP", url: "/assets/images/partners/NAIOP LOGO 2.png" },
-    { name: "Northmarq Capital", url: "/assets/images/partners/Northmarq Capital 1.png" },
+    {
+      name: "Northmarq Capital",
+      url: "/assets/images/partners/Northmarq Capital 1.png",
+    },
     { name: "Unnamed Partner", url: "/assets/images/partners/unnamed 1.png" },
   ];
 
-  const imageUrls = images.map(img => img.url);
+  const imageUrls = images.map((img) => img.url);
   imageUrls.push("/assets/icons/trusted.png"); // Add the trusted icon
 
   return (
@@ -25,6 +28,8 @@ export default function Banner() {
             src="/assets/icons/trusted.png"
             alt="Trusted Icon"
             className="icon"
+            loading="eager"
+            decoding="async"
           />
           <h4>
             <span>Trusted by</span> Hundreds of Enterprises Worldwide
@@ -34,7 +39,13 @@ export default function Banner() {
         {/* Images for Large Screens */}
         <div className="banner-images">
           {images.map((item, index) => (
-            <img key={index} src={item.url} alt={item.name} />
+            <img
+              key={index}
+              src={item.url}
+              alt={item.name}
+              loading="eager"
+              decoding="async"
+            />
           ))}
         </div>
 
@@ -45,14 +56,19 @@ export default function Banner() {
           pagination={{ clickable: true }}
           modules={[Pagination]}
           breakpoints={{
-            768: { slidesPerView: 3 }, 
+            768: { slidesPerView: 3 },
             1024: { slidesPerView: images.length },
           }}
           className="banner-slider"
         >
           {images.map((item, index) => (
             <SwiperSlide key={index}>
-              <img src={item.url} alt={item.name} />
+              <img
+                src={item.url}
+                alt={item.name}
+                loading="eager"
+                decoding="async"
+              />
             </SwiperSlide>
           ))}
         </Swiper>

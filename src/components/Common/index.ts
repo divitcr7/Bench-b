@@ -9,8 +9,7 @@ export { default as Footer } from "./Footer";
 export { default as Header } from "./Header";
 export { default as HowToCards } from "./HowToCards";
 export { default as Meta } from "./Meta";
+export { default as OptimizedImage } from "./OptimizedImage";
 export { default as SearchBar } from "./SearchBar";
 export { default as SocialMediaNav } from "./SocialMediaNav";
 export { default as SubscribeCard } from "./SubscribeCard";
-
-
