@@ -78,11 +78,11 @@ export default function ContactUs() {
                 <img src="/assets/icons/ic_pin.png" alt="location icon" />
                 <span>ADDRESS</span>
                 <h4>
-                  827 North Loop West Suite B,
+                  827 north loop w ste b,
                   <br /> Houston, TX 77008,
                   <br /> United States
                 </h4>
-                <a 
+                <h4> <a 
                   href="https://maps.app.goo.gl/GBAUq6MovAvq16sAA" 
                   target="_blank" 
                   rel="noopener noreferrer"
@@ -95,7 +95,7 @@ export default function ContactUs() {
                   }}
                 >
                   📍 Directions
-                </a>
+                </a> </h4>
               </div>
             </div>
           </div>
