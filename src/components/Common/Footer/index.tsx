@@ -18,8 +18,10 @@ const data = {
     { label: "Food & Beverage", path: "/industry/food-beverage-insurance" },
     { label: "Wholesale", path: "/industry/wholesale-insurance" },
     { label: "Non-Profit", path: "/industry/non-profit-insurance" },
-    { label: "Financial Services", path: "/industry/financial-services-insurance" },
-
+    {
+      label: "Financial Services",
+      path: "/industry/financial-services-insurance",
+    },
   ],
   personal: [
     { label: "Homeowners", path: "/personal/homeowners-insurance" },
@@ -33,26 +35,40 @@ const data = {
     { label: "Life Insurance", path: "/personal/life-insurance" },
   ],
   services: [
-    { 
+    {
       label: "Commercial Property",
       path: "/services/commercial-property",
     },
-    { label: "Claims Advocacy", path: "/services/commercial-property/claims-advocacy" },
-    { label: "Alternative Risk Financing", path: "/services/commercial-property/alternative-risk-financing" },
-    { label: "Loss Control", path: "/services/commercial-property/loss-control" },
+    {
+      label: "Claims Advocacy",
+      path: "/services/commercial-property/claims-advocacy",
+    },
+    {
+      label: "Alternative Risk Financing",
+      path: "/services/commercial-property/alternative-risk-financing",
+    },
+    {
+      label: "Loss Control",
+      path: "/services/commercial-property/loss-control",
+    },
     { label: "Private Client", path: "/services/private-client" },
     { label: "Risk Management", path: "/services/risk-management" },
     { label: "Benchmark Network", path: "/services/benchmark-network" },
   ],
-  tools: [
-    { label: "Booking Scheduler", path: "/tools/booking-scheduler" },
+  portals: [
+    { label: "Booking Scheduler", path: "/portals/booking-scheduler" },
+    { label: "Payment Portal", path: "/portals/payment-portal" },
   ],
   company: [
     { label: "About Us", path: "/about" },
     { label: "Customer Service", path: "" },
     { label: "Careers", path: "/careers" },
     { label: "Blog", path: "/blog" },
-    { label: "Onboarding", path: "https://app.benchmarkbroker.com/", isExternal: true },
+    {
+      label: "Onboarding",
+      path: "https://app.benchmarkbroker.com/",
+      isExternal: true,
+    },
   ],
 };
 
@@ -67,7 +83,7 @@ interface FooterData {
   commercial: FooterItem[];
   personal: FooterItem[];
   services: FooterItem[];
-  tools: FooterItem[];
+  portals: FooterItem[];
   company: FooterItem[];
 }
 
@@ -93,7 +109,7 @@ const Footer = () => {
 
   const handleNavigation = (item: FooterItem) => {
     if (item.isExternal) {
-      window.open(item.path, '_blank', 'noopener,noreferrer');
+      window.open(item.path, "_blank", "noopener,noreferrer");
     } else if (item.path) {
       navigate(item.path);
     }
@@ -140,8 +156,18 @@ const Footer = () => {
             insurance brokerage for businesses of all sizes.
           </p>
           <div className="footer-links">
-            <span onClick={() => navigate('/privacy-notice')} style={{ cursor: 'pointer' }}>Privacy Notice</span>
-            <span onClick={() => navigate('/terms-of-service')} style={{ cursor: 'pointer' }}>Terms of Service</span>
+            <span
+              onClick={() => navigate("/privacy-notice")}
+              style={{ cursor: "pointer" }}
+            >
+              Privacy Notice
+            </span>
+            <span
+              onClick={() => navigate("/terms-of-service")}
+              style={{ cursor: "pointer" }}
+            >
+              Terms of Service
+            </span>
           </div>
         </div>
         <div className="footer-right">

@@ -155,7 +155,7 @@ const OurTeam = () => {
                       href="#"
                       onClick={(e) => {
                         e.preventDefault();
-                        navigate("/tools/booking-scheduler");
+                        navigate("/portals/booking-scheduler");
                       }}
                     >
                       <Calendar size={20} />
@@ -199,7 +199,7 @@ const OurTeam = () => {
                     href="#"
                     onClick={(e) => {
                       e.preventDefault();
-                      navigate("/tools/booking-scheduler");
+                      navigate("/portals/booking-scheduler");
                     }}
                   >
                     <Calendar size={20} />

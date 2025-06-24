@@ -1,20 +1,20 @@
 import React, { useEffect } from "react";
 import { Box, Container, Typography, Paper, Button } from "@mui/material";
-import { CalendarMonth as CalendarIcon } from "@mui/icons-material";
+import { Payment as PaymentIcon } from "@mui/icons-material";
 
-const BookingScheduler: React.FC = () => {
+const PaymentPortal: React.FC = () => {
   useEffect(() => {
-    // Open the external booking portal in a new tab
+    // Open the external payment portal in a new tab
     window.open(
-      "https://outlook.office365.com/book/BenchmarkBusinessDevelopmentTeam@benchmarkbroker.com/?ismsaljsauthenabled=true",
+      "https://portal.useascend.com/benchmark_broker",
       "_blank",
       "noopener,noreferrer"
     );
   }, []);
 
-  const handleOpenBooking = () => {
+  const handleOpenPayment = () => {
     window.open(
-      "https://outlook.office365.com/book/BenchmarkBusinessDevelopmentTeam@benchmarkbroker.com/?ismsaljsauthenabled=true",
+      "https://portal.useascend.com/benchmark_broker",
       "_blank",
       "noopener,noreferrer"
     );
@@ -31,22 +31,22 @@ const BookingScheduler: React.FC = () => {
             gap: 3,
           }}
         >
-          <CalendarIcon sx={{ fontSize: 80, color: "var(--green, #10b981)" }} />
+          <PaymentIcon sx={{ fontSize: 80, color: "var(--green, #10b981)" }} />
           <Typography variant="h4" component="h1" gutterBottom>
-            Booking Scheduler
+            Payment Portal
           </Typography>
           <Typography
             variant="body1"
             color="text.secondary"
             sx={{ maxWidth: 600 }}
           >
-            Schedule a meeting with our Business Development Team. The booking
-            scheduler should have opened in a new tab.
+            Access your secure payment portal to manage your insurance payments.
+            The portal should have opened in a new tab.
           </Typography>
           <Button
             variant="contained"
             size="large"
-            onClick={handleOpenBooking}
+            onClick={handleOpenPayment}
             sx={{
               mt: 2,
               backgroundColor: "var(--green, #10b981)",
@@ -55,13 +55,12 @@ const BookingScheduler: React.FC = () => {
               },
             }}
           >
-            Open Booking Scheduler
+            Open Payment Portal
           </Button>
           <Typography variant="body2" color="text.secondary">
-            If the scheduler didn't open automatically, click the button above
-            or{" "}
+            If the portal didn't open automatically, click the button above or{" "}
             <a
-              href="https://outlook.office365.com/book/BenchmarkBusinessDevelopmentTeam@benchmarkbroker.com/?ismsaljsauthenabled=true"
+              href="https://portal.useascend.com/benchmark_broker"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "var(--green, #10b981)", textDecoration: "none" }}
@@ -75,4 +74,4 @@ const BookingScheduler: React.FC = () => {
   );
 };
 
-export default BookingScheduler;
+export default PaymentPortal;

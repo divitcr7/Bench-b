@@ -11,6 +11,7 @@ import {
   BlogPost,
   BlogSearchResult,
   BookingScheduler,
+  PaymentPortal,
   Careers,
   CommercialPropertyPage,
   PrivateClientPage,
@@ -125,7 +126,7 @@ const router = createBrowserRouter([
             path: "wholesale-insurance",
             element: <WholesaleInsurance />,
           },
-        ]
+        ],
       },
       {
         path: "personal",
@@ -166,7 +167,7 @@ const router = createBrowserRouter([
             path: "life-insurance",
             element: <LifeInsurance />,
           },
-        ]
+        ],
       },
       {
         path: "onboarding",
@@ -201,7 +202,7 @@ const router = createBrowserRouter([
               {
                 path: "portfolio-management",
                 element: <PortfolioManagement />,
-              }
+              },
             ],
           },
           {
@@ -219,11 +220,15 @@ const router = createBrowserRouter([
         ],
       },
       {
-        path: "tools",
+        path: "portals",
         children: [
           {
             path: "booking-scheduler",
             element: <BookingScheduler />,
+          },
+          {
+            path: "payment-portal",
+            element: <PaymentPortal />,
           },
         ],
       },

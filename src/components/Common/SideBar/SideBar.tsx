@@ -24,7 +24,7 @@ const MENU = [
       "Environmental Insurance",
       "Financial Services Insurance",
       "Non-Profit Insurance",
-      "Wholesale Insurance"
+      "Wholesale Insurance",
     ],
   },
   { label: "About Us/Careers", path: "/about" },
@@ -35,43 +35,42 @@ const MENU = [
       {
         label: "Commercial Property",
         path: "/services/commercial-property",
-      },{
-        label : "Claims Advocacy",
-        path : "/services/commercial-property/claims-advocacy"
       },
       {
-        label : "Alternative Risk Financing",
-        path : "/services/commercial-property/alternative-risk-financing"
+        label: "Claims Advocacy",
+        path: "/services/commercial-property/claims-advocacy",
       },
       {
-        label : "Loss Control",
-        path : "/services/commercial-property/loss-control"
+        label: "Alternative Risk Financing",
+        path: "/services/commercial-property/alternative-risk-financing",
+      },
+      {
+        label: "Loss Control",
+        path: "/services/commercial-property/loss-control",
       },
       {
         label: "Private Client",
-        path: "/services/private-client"
+        path: "/services/private-client",
       },
       {
         label: "Risk Management",
-        path: "/services/risk-management"
+        path: "/services/risk-management",
       },
       {
         label: "Benchmark Network",
-        path: "/services/benchmark-network"
-      }
-    ]
+        path: "/services/benchmark-network",
+      },
+    ],
   },
   {
-    label: "Tools",
-    path: "/tools",
-    subItems: [
-      "Booking Scheduler"
-    ]
+    label: "Portals",
+    path: "/portals",
+    subItems: ["Booking Scheduler", "Payment Portal"],
   },
   {
     label: "Onboarding",
     path: "https://app.benchmarkbroker.com/",
-    isExternal: true
+    isExternal: true,
   },
 ];
 
@@ -98,9 +97,11 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
           <ul className="sidebar-submenu">
             {item.subItems.map((sub: any, subIdx: number) => (
               <li key={subIdx}>
-                {typeof sub === 'string' ? (
-                  <Link 
-                    to={`${parentPath}/${sub.toLowerCase().replace(/\s+/g, "-")}`} 
+                {typeof sub === "string" ? (
+                  <Link
+                    to={`${parentPath}/${sub
+                      .toLowerCase()
+                      .replace(/\s+/g, "-")}`}
                     onClick={onClose}
                     className="sidebar-submenu-link"
                   >
@@ -108,8 +109,8 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
                   </Link>
                 ) : (
                   <div className="nested-submenu">
-                    <Link 
-                      to={sub.path} 
+                    <Link
+                      to={sub.path}
                       onClick={onClose}
                       className="sidebar-submenu-link"
                     >
@@ -117,17 +118,21 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
                     </Link>
                     {sub.subItems && (
                       <ul className="nested-submenu-items">
-                        {sub.subItems.map((nestedSub: string, nestedIdx: number) => (
-                          <li key={nestedIdx}>
-                            <Link 
-                              to={`${sub.path}/${nestedSub.toLowerCase().replace(/\s+/g, "-")}`} 
-                              onClick={onClose}
-                              className="sidebar-submenu-link"
-                            >
-                              {nestedSub}
-                            </Link>
-                          </li>
-                        ))}
+                        {sub.subItems.map(
+                          (nestedSub: string, nestedIdx: number) => (
+                            <li key={nestedIdx}>
+                              <Link
+                                to={`${sub.path}/${nestedSub
+                                  .toLowerCase()
+                                  .replace(/\s+/g, "-")}`}
+                                onClick={onClose}
+                                className="sidebar-submenu-link"
+                              >
+                                {nestedSub}
+                              </Link>
+                            </li>
+                          )
+                        )}
                       </ul>
                     )}
                   </div>
@@ -147,7 +152,11 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
         <div className="sidebar-content">
           {/* Logo and Close */}
           <div className="sidebar-header">
-            <img src="/assets/icons/logo.png" alt="Benchmark logo" className="sidebar-logo" />
+            <img
+              src="/assets/icons/logo.png"
+              alt="Benchmark logo"
+              className="sidebar-logo"
+            />
             <button className="sidebar-close" onClick={onClose}>
               ×
             </button>
@@ -156,31 +165,43 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
           <nav className="sidebar-nav">
             <ul>
               {MENU.map((item, idx) => (
-                <li key={item.label} className={`sidebar-nav-item ${location.pathname.startsWith(item.path) ? "active" : ""}`}>
+                <li
+                  key={item.label}
+                  className={`sidebar-nav-item ${
+                    location.pathname.startsWith(item.path) ? "active" : ""
+                  }`}
+                >
                   {item.subItems && item.subItems.length > 0 ? (
                     <div
-                      className={`sidebar-menu-item${openIndex === idx ? " expanded" : ""}`}
+                      className={`sidebar-menu-item${
+                        openIndex === idx ? " expanded" : ""
+                      }`}
                       onClick={() => handleExpand(idx)}
                     >
                       <span className="sidebar-menu-label">{item.label}</span>
-                      <Chevron direction={openIndex === idx ? "down" : "right"} color="#3A3A3A" />
+                      <Chevron
+                        direction={openIndex === idx ? "down" : "right"}
+                        color="#3A3A3A"
+                      />
                     </div>
+                  ) : item.isExternal ? (
+                    <a
+                      href={item.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="sidebar-menu-item"
+                      onClick={onClose}
+                    >
+                      <span className="sidebar-menu-label">{item.label}</span>
+                    </a>
                   ) : (
-                    item.isExternal ? (
-                      <a 
-                        href={item.path} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
-                        className="sidebar-menu-item"
-                        onClick={onClose}
-                      >
-                        <span className="sidebar-menu-label">{item.label}</span>
-                      </a>
-                    ) : (
-                      <Link to={item.path} onClick={onClose} className="sidebar-menu-item">
-                        <span className="sidebar-menu-label">{item.label}</span>
-                      </Link>
-                    )
+                    <Link
+                      to={item.path}
+                      onClick={onClose}
+                      className="sidebar-menu-item"
+                    >
+                      <span className="sidebar-menu-label">{item.label}</span>
+                    </Link>
                   )}
                 </li>
               ))}
@@ -198,9 +219,9 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
           </div>
         </div>
         {/* Submenu - only render when expanded */}
-        {openIndex !== null && MENU[openIndex]?.subItems && 
-          renderSubItems(MENU[openIndex], MENU[openIndex].path)
-        }
+        {openIndex !== null &&
+          MENU[openIndex]?.subItems &&
+          renderSubItems(MENU[openIndex], MENU[openIndex].path)}
       </div>
     </div>
   );
